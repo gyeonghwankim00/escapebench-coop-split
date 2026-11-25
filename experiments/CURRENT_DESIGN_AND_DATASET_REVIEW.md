@@ -1,5 +1,7 @@
 # 협력형 EscapeBench: 현재 설계와 데이터셋 적합성 검토
 
+> **2026-11-25 데이터 갱신:** 분할 v4 전체 정비본은 [data/split_v4/README.md](../data/split_v4/README.md)를 따른다. 이 문서의 실행·과거 결과 설명은 v3 기준이다. 실험 설정은 변경하지 않았다.
+
 - 작성 기준: 2026-11-19, 현재 로컬 코드와 누적 실험·분석
 - 실행 프로토콜: `escapebench-adaptive-v7`
 - 새 실행 결과 폴더: `nightly-v6`

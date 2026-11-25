@@ -1,0 +1,1538 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "outside of the cabin house",
+    "action": "move(To the stairs close-up)",
+    "response": "Action executed successfully. Change to another scene: stairs close-up.",
+    "progress": 0.0
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "stairs close-up",
+    "action": "click(chalk)",
+    "response": "Action executed successfully. You have just collected a chalk. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 1.05
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "stairs close-up",
+    "action": "click(stone)",
+    "response": "Action executed successfully. You have just collected a stone. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 2.11
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "stairs close-up",
+    "action": "move(Back to the outside of the cabin house)",
+    "response": "Action executed successfully. Change to another scene: outside of the cabin house.",
+    "progress": 2.11
+  },
+  {
+    "step": 5,
+    "role": "A",
+    "at": "outside of the cabin house",
+    "action": "move(To the windows close-up)",
+    "response": "Action executed successfully. Change to another scene: windows close-up from outside.",
+    "progress": 2.11
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "windows close-up from outside",
+    "action": "apply(stone, window)",
+    "response": "Action executed successfully. You have successfully applied stone to window. The window on the outer wall is broken now. there is a workspace area inside.",
+    "progress": 3.16
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "windows close-up from outside",
+    "action": "move(To the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 3.16
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the workspace cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: workspace cabinet close-up.",
+    "progress": 3.16
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "workspace cabinet close-up",
+    "action": "click(cabinet door)",
+    "response": "Action executed successfully. You have clicked on cabinet door. The cabinet door is open now. there is a battery in the cabinet.",
+    "progress": 4.21
+  },
+  {
+    "step": 10,
+    "role": "A",
+    "at": "workspace cabinet close-up",
+    "action": "click(battery)",
+    "response": "Action executed successfully. You have just collected a battery. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 5.26
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "workspace cabinet close-up",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 5.26
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the desk close-up)",
+    "response": "Action executed successfully. Change to another scene: desk close-up.",
+    "progress": 5.26
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "click(ruler)",
+    "response": "Action executed successfully. You have just collected a ruler. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 6.32
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "click(second drawer on the right)",
+    "response": "Action executed successfully. You have clicked on second drawer on the right. The drawer is open now. but it is empty.",
+    "progress": 7.37
+  },
+  {
+    "step": 15,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 7.37
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the workspace shelf close-up)",
+    "response": "Action executed successfully. Change to another scene: workspace shelf close-up.",
+    "progress": 7.37
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "click(yellow cube)",
+    "response": "Action executed successfully. You have clicked on yellow cube. The yellow cube is turned over. there is a circle is on the bottom side of it.",
+    "progress": 8.42
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "click(red pyramid)",
+    "response": "Action executed successfully. You have clicked on red pyramid. The red pyramid is turned over. there is a diamond is on the bottom side of it.",
+    "progress": 9.47
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "click(blue hemisphere)",
+    "response": "Action executed successfully. You have clicked on blue hemisphere. The blue hemisphere is turned over. there is a triangle is on the bottom side of it.",
+    "progress": 10.53
+  },
+  {
+    "step": 20,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 10.53
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the car photos and map close-up)",
+    "response": "Action executed successfully. Change to another scene: car photos and map close-up.",
+    "progress": 10.53
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "car photos and map close-up",
+    "action": "click(map)",
+    "response": "Action executed successfully. You have just collected a map. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 11.58
+  },
+  {
+    "step": 23,
+    "role": "A",
+    "at": "car photos and map close-up",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 11.58
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the attic)",
+    "response": "Action executed successfully. Change to another scene: attic.",
+    "progress": 11.58
+  },
+  {
+    "step": 25,
+    "role": "A",
+    "at": "attic",
+    "action": "click(painting)",
+    "response": "Action executed successfully. You have clicked on painting. The painting is taken off the wall and there is a magnet on the wall used to stick the painting on the wall.",
+    "progress": 12.63
+  },
+  {
+    "step": 26,
+    "role": "A",
+    "at": "attic",
+    "action": "click(magnet)",
+    "response": "Action executed successfully. You have just collected a magnet. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 13.68
+  },
+  {
+    "step": 27,
+    "role": "A",
+    "at": "attic",
+    "action": "move(To the attic door close-up)",
+    "response": "Action executed successfully. Change to another scene: attic door close-up.",
+    "progress": 13.68
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "apply(ruler, attic door)",
+    "response": "Action executed successfully. You have successfully applied ruler to attic door. The attic door is open now. there is a storage space with some stuff inside.",
+    "progress": 14.74
+  },
+  {
+    "step": 29,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "click(adhesive tape)",
+    "response": "Action executed successfully. You have just collected a adhesive tape. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 15.79
+  },
+  {
+    "step": 30,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "click(green cylinder)",
+    "response": "Action executed successfully. You have just collected a green cylinder. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 16.84
+  },
+  {
+    "step": 31,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "move(Back to the attic)",
+    "response": "Action executed successfully. Change to another scene: attic.",
+    "progress": 16.84
+  },
+  {
+    "step": 32,
+    "role": "A",
+    "at": "attic",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 16.84
+  },
+  {
+    "step": 33,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 16.84
+  },
+  {
+    "step": 34,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the shelf above sink close-up)",
+    "response": "Action executed successfully. Change to another scene: shelf above sink close-up.",
+    "progress": 16.84
+  },
+  {
+    "step": 35,
+    "role": "A",
+    "at": "shelf above sink close-up",
+    "action": "click(glycerin)",
+    "response": "Action executed successfully. You have just collected a glycerin. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 17.89
+  },
+  {
+    "step": 36,
+    "role": "A",
+    "at": "shelf above sink close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 17.89
+  },
+  {
+    "step": 37,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the drawers below sink close-up)",
+    "response": "Action executed successfully. Change to another scene: drawers below sink close-up.",
+    "progress": 17.89
+  },
+  {
+    "step": 38,
+    "role": "A",
+    "at": "drawers below sink close-up",
+    "action": "click(lower left drawer below sink)",
+    "response": "Action executed successfully. You have clicked on lower left drawer below sink. The drawer on the lower left side of the sink is open now. there is a cookware set.",
+    "progress": 18.95
+  },
+  {
+    "step": 39,
+    "role": "A",
+    "at": "drawers below sink close-up",
+    "action": "click(lower right drawer below sink)",
+    "response": "Action executed successfully. You have clicked on lower right drawer below sink. The drawer on the lower right side of the sink is open now. there is a table sheet paper.",
+    "progress": 20.0
+  },
+  {
+    "step": 40,
+    "role": "A",
+    "at": "drawers below sink close-up",
+    "action": "click(table sheet)",
+    "response": "Action executed successfully. You have just collected a table sheet. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 21.05
+  },
+  {
+    "step": 41,
+    "role": "A",
+    "at": "drawers below sink close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 21.05
+  },
+  {
+    "step": 42,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the shelf above food preparation area close-up)",
+    "response": "Action executed successfully. Change to another scene: shelf above food preparation area close-up.",
+    "progress": 21.05
+  },
+  {
+    "step": 43,
+    "role": "A",
+    "at": "shelf above food preparation area close-up",
+    "action": "click(left door of the shelf above food preparation area)",
+    "response": "Action executed successfully. You have clicked on left door of the shelf above food preparation area. This half of shelf door is closed. something is outside of it.",
+    "progress": 22.11
+  },
+  {
+    "step": 44,
+    "role": "A",
+    "at": "shelf above food preparation area close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 22.11
+  },
+  {
+    "step": 45,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the drawers below food preparation area close-up)",
+    "response": "Action executed successfully. Change to another scene: drawers below food preparation area close-up.",
+    "progress": 22.11
+  },
+  {
+    "step": 46,
+    "role": "A",
+    "at": "drawers below food preparation area close-up",
+    "action": "click(shelf below food preparation area)",
+    "response": "Action executed successfully. You have clicked on shelf below food preparation area. The shelf below the food preparation area is open now. there is a pestle in it.",
+    "progress": 23.16
+  },
+  {
+    "step": 47,
+    "role": "A",
+    "at": "drawers below food preparation area close-up",
+    "action": "click(pestle)",
+    "response": "Action executed successfully. You have just collected a pestle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 24.21
+  },
+  {
+    "step": 48,
+    "role": "A",
+    "at": "drawers below food preparation area close-up",
+    "action": "click(drawer below food preparation area)",
+    "response": "Action executed successfully. You have clicked on drawer below food preparation area. The drawer below the food preparation area is open now. there is a cup of cold water in it.",
+    "progress": 25.26
+  },
+  {
+    "step": 49,
+    "role": "A",
+    "at": "drawers below food preparation area close-up",
+    "action": "click(cup of cold water)",
+    "response": "Action executed successfully. You have just collected a cup of cold water. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 26.32
+  },
+  {
+    "step": 50,
+    "role": "A",
+    "at": "drawers below food preparation area close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 26.32
+  },
+  {
+    "step": 51,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the sink close-up)",
+    "response": "Action executed successfully. Change to another scene: sink close-up.",
+    "progress": 26.32
+  },
+  {
+    "step": 52,
+    "role": "A",
+    "at": "sink close-up",
+    "action": "click(brush)",
+    "response": "Action executed successfully. You have just collected a brush. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 27.37
+  },
+  {
+    "step": 53,
+    "role": "A",
+    "at": "sink close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 27.37
+  },
+  {
+    "step": 54,
+    "role": "A",
+    "at": "kitchen",
+    "action": "craft(pestle, chalk)",
+    "response": "Action executed successfully. You have successfully crafted A pestle in the shelf in kitchen, might be used to grind something. and A piece of chalk, white and soft. Could be grinded into dust. together.\nYou get a new item: Some dust of chalk. You may apply it to some objects to reveal hidden information.. It is put into your bag.",
+    "progress": 28.42
+  },
+  {
+    "step": 55,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the mirror close-up)",
+    "response": "Action executed successfully. Change to another scene: mirror close-up.",
+    "progress": 28.42
+  },
+  {
+    "step": 56,
+    "role": "A",
+    "at": "mirror close-up",
+    "action": "apply(chalk, mirror)",
+    "response": "Action executed successfully. You have successfully applied chalk to mirror. The mirror is covered with chalk dust.",
+    "progress": 29.47
+  },
+  {
+    "step": 57,
+    "role": "A",
+    "at": "mirror close-up",
+    "action": "apply(brush, mirror)",
+    "response": "Action executed successfully. You have successfully applied brush to mirror. A clear fingerprint on the mirror shows up in chalk dust.",
+    "progress": 30.53
+  },
+  {
+    "step": 58,
+    "role": "A",
+    "at": "mirror close-up",
+    "action": "apply(adhesive tape, mirror)",
+    "response": "Action executed successfully. You have successfully applied adhesive tape to mirror. The fingerprint on the mirror is successfully copied onto the adhesive tape. you can tear that piece of tape off the mirror now.",
+    "progress": 31.58
+  },
+  {
+    "step": 59,
+    "role": "A",
+    "at": "mirror close-up",
+    "action": "click(adhesive tape with fingerprint)",
+    "response": "Action executed successfully. You have just collected a adhesive tape with fingerprint. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 32.63
+  },
+  {
+    "step": 60,
+    "role": "A",
+    "at": "mirror close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 32.63
+  },
+  {
+    "step": 61,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 32.63
+  },
+  {
+    "step": 62,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the attic)",
+    "response": "Action executed successfully. Change to another scene: attic.",
+    "progress": 32.63
+  },
+  {
+    "step": 63,
+    "role": "A",
+    "at": "attic",
+    "action": "move(To the attic door close-up)",
+    "response": "Action executed successfully. Change to another scene: attic door close-up.",
+    "progress": 32.63
+  },
+  {
+    "step": 64,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "move(To the fingerprint scanner close-up)",
+    "response": "Action executed successfully. Change to another scene: fingerprint scanner close-up.",
+    "progress": 32.63
+  },
+  {
+    "step": 65,
+    "role": "A",
+    "at": "fingerprint scanner close-up",
+    "action": "apply(adhesive tape with fingerprint, fingerprint scanner)",
+    "response": "Action executed successfully. You have successfully applied adhesive tape with fingerprint to fingerprint scanner. The safe in the attic storage space is unlocked now.",
+    "progress": 33.68
+  },
+  {
+    "step": 66,
+    "role": "A",
+    "at": "fingerprint scanner close-up",
+    "action": "move(Back to the attic door close-up)",
+    "response": "Action executed successfully. Change to another scene: attic door close-up.",
+    "progress": 33.68
+  },
+  {
+    "step": 67,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "click(attic safe)",
+    "response": "Action executed successfully. You have clicked on attic safe. The safe in the attic storage space is open. there is a badge with tree pattern in it.",
+    "progress": 34.74
+  },
+  {
+    "step": 68,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "click(badge with tree pattern)",
+    "response": "Action executed successfully. You have just collected a badge with tree pattern. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 35.79
+  },
+  {
+    "step": 69,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "move(Back to the attic)",
+    "response": "Action executed successfully. Change to another scene: attic.",
+    "progress": 35.79
+  },
+  {
+    "step": 70,
+    "role": "A",
+    "at": "attic",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 35.79
+  },
+  {
+    "step": 71,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 35.79
+  },
+  {
+    "step": 72,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the kitchen door close-up)",
+    "response": "Action executed successfully. Change to another scene: kitchen door close-up.",
+    "progress": 35.79
+  },
+  {
+    "step": 73,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "apply(badge with tree pattern, five badge slots)",
+    "response": "Action executed successfully. You have successfully applied badge with tree pattern to five badge slots.\nHowever, the apply of badge with tree pattern is not enough, and five badge slots is still missing something else ...",
+    "progress": 36.84
+  },
+  {
+    "step": 74,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the clock and photos close-up)",
+    "response": "Action executed successfully. Change to another scene: clock and photos close-up.",
+    "progress": 36.84
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "clock and photos close-up",
+    "action": "click(scalpel)",
+    "response": "Action executed successfully. You have just collected a scalpel. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 37.89
+  },
+  {
+    "step": 76,
+    "role": "B",
+    "at": "clock and photos close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 37.89
+  },
+  {
+    "step": 77,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the living room cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: living room cabinet close-up.",
+    "progress": 37.89
+  },
+  {
+    "step": 78,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "move(To the toolbox close-up)",
+    "response": "Action executed successfully. Change to another scene: toolbox close-up.",
+    "progress": 37.89
+  },
+  {
+    "step": 79,
+    "role": "B",
+    "at": "toolbox close-up",
+    "action": "input(5487, toolbox keypad pannel)",
+    "response": "Action executed successfully. You have given an input 5487 to toolbox keypad pannel. Now this toolbox has been unlocked. you should go back to the scene of living room cabinet close-up to open it.",
+    "progress": 38.95
+  },
+  {
+    "step": 80,
+    "role": "B",
+    "at": "toolbox close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room cabinet close-up.",
+    "progress": 38.95
+  },
+  {
+    "step": 81,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "click(unlocked toolbox)",
+    "response": "Action executed successfully. You have clicked on unlocked toolbox. The toolbox is open.",
+    "progress": 40.0
+  },
+  {
+    "step": 82,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "click(screwdriver)",
+    "response": "Action executed successfully. You have just collected a screwdriver. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 41.05
+  },
+  {
+    "step": 83,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "apply(scalpel, wooden barrel)",
+    "response": "Action executed successfully. You have successfully applied scalpel to wooden barrel. A piece of rope is cut off the barrel.",
+    "progress": 42.11
+  },
+  {
+    "step": 84,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "click(rope)",
+    "response": "Action executed successfully. You have just collected a rope. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 43.16
+  },
+  {
+    "step": 85,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "move(To the living room safe close-up)",
+    "response": "Action executed successfully. Change to another scene: living room safe close-up.",
+    "progress": 43.16
+  },
+  {
+    "step": 86,
+    "role": "B",
+    "at": "living room safe close-up",
+    "action": "apply(screwdriver, battery slot)",
+    "response": "Action executed successfully. You have successfully applied screwdriver to battery slot. The screw of the lid on the battery slot is removed. the lid is then removed.",
+    "progress": 44.21
+  },
+  {
+    "step": 87,
+    "role": "B",
+    "at": "living room safe close-up",
+    "action": "apply(battery, battery slot)",
+    "response": "Action executed successfully. You have successfully applied battery to battery slot. A battery is in the battery slot of the safe in the living room. the safe is in power and can be opened now. you should go back to the living room cabinet close-up to open it.",
+    "progress": 45.26
+  },
+  {
+    "step": 88,
+    "role": "B",
+    "at": "living room safe close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room cabinet close-up.",
+    "progress": 45.26
+  },
+  {
+    "step": 89,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "click(unlocked living room safe)",
+    "response": "Action executed successfully. You have clicked on unlocked living room safe. The safe in the living room is open. there is a wrench and a handbook in it.",
+    "progress": 46.32
+  },
+  {
+    "step": 90,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "click(wrench)",
+    "response": "Action executed successfully. You have just collected a wrench. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 47.37
+  },
+  {
+    "step": 91,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 47.37
+  },
+  {
+    "step": 92,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the fireplace close-up)",
+    "response": "Action executed successfully. Change to another scene: fireplace close-up.",
+    "progress": 47.37
+  },
+  {
+    "step": 93,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "click(spade card)",
+    "response": "Action executed successfully. You have just collected a spade card. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 48.42
+  },
+  {
+    "step": 94,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "click(fire stick)",
+    "response": "Action executed successfully. You have just collected a fire stick. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 49.47
+  },
+  {
+    "step": 95,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 49.47
+  },
+  {
+    "step": 96,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the clock and photos close-up)",
+    "response": "Action executed successfully. Change to another scene: clock and photos close-up.",
+    "progress": 49.47
+  },
+  {
+    "step": 97,
+    "role": "B",
+    "at": "clock and photos close-up",
+    "action": "apply(spade card, adhesive tape remaining)",
+    "response": "Action executed successfully. You have successfully applied spade card to adhesive tape remaining. The spade card is stuck onto the wall. now it is observed that there's a number 330 behind the card.",
+    "progress": 50.53
+  },
+  {
+    "step": 98,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 50.53
+  },
+  {
+    "step": 99,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 50.53
+  },
+  {
+    "step": 100,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the desk close-up)",
+    "response": "Action executed successfully. Change to another scene: desk close-up.",
+    "progress": 50.53
+  },
+  {
+    "step": 101,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "input(330, first drawer on the right)",
+    "response": "Action executed successfully. You have given an input 330 to first drawer on the right. The drawer is unlcoked. you can open it to see what is inside now.",
+    "progress": 51.58
+  },
+  {
+    "step": 102,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "click(first drawer on the right)",
+    "response": "Action executed successfully. You have clicked on first drawer on the right. The drawer is opened. there is a badge with castle pattern you might want to collect.",
+    "progress": 52.63
+  },
+  {
+    "step": 103,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "click(badge with castle pattern)",
+    "response": "Action executed successfully. You have just collected a badge with castle pattern. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 53.68
+  },
+  {
+    "step": 104,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 53.68
+  },
+  {
+    "step": 105,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the attic)",
+    "response": "Action executed successfully. Change to another scene: attic.",
+    "progress": 53.68
+  },
+  {
+    "step": 106,
+    "role": "A",
+    "at": "attic",
+    "action": "move(To the attic door close-up)",
+    "response": "Action executed successfully. Change to another scene: attic door close-up.",
+    "progress": 53.68
+  },
+  {
+    "step": 107,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "move(To the fingerprint scanner close-up)",
+    "response": "Action executed successfully. Change to another scene: fingerprint scanner close-up.",
+    "progress": 53.68
+  },
+  {
+    "step": 108,
+    "role": "A",
+    "at": "fingerprint scanner close-up",
+    "action": "apply(wrench, loose bolt)",
+    "response": "Action executed successfully. You have successfully applied wrench to loose bolt. The loose bolt is screwed off. there is a badge with bird pattern in the screw hole.",
+    "progress": 54.74
+  },
+  {
+    "step": 109,
+    "role": "A",
+    "at": "fingerprint scanner close-up",
+    "action": "click(badge with bird pattern)",
+    "response": "Action executed successfully. You have just collected a badge with bird pattern. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 55.79
+  },
+  {
+    "step": 110,
+    "role": "A",
+    "at": "fingerprint scanner close-up",
+    "action": "move(Back to the attic door close-up)",
+    "response": "Action executed successfully. Change to another scene: attic door close-up.",
+    "progress": 55.79
+  },
+  {
+    "step": 111,
+    "role": "A",
+    "at": "attic door close-up",
+    "action": "move(Back to the attic)",
+    "response": "Action executed successfully. Change to another scene: attic.",
+    "progress": 55.79
+  },
+  {
+    "step": 112,
+    "role": "A",
+    "at": "attic",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 55.79
+  },
+  {
+    "step": 113,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the workspace shelf close-up)",
+    "response": "Action executed successfully. Change to another scene: workspace shelf close-up.",
+    "progress": 55.79
+  },
+  {
+    "step": 114,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "apply(green cylinder, empty 4th shelf position)",
+    "response": "Action executed successfully. You have successfully applied green cylinder to empty 4th shelf position. The green cylinder has been placed onto the shelf.",
+    "progress": 56.84
+  },
+  {
+    "step": 115,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "click(green cylinder placed on shelf)",
+    "response": "Action executed successfully. You have clicked on green cylinder placed on shelf. The green cylinder is turned over. there is a square is on the bottom side of it.",
+    "progress": 57.89
+  },
+  {
+    "step": 116,
+    "role": "B",
+    "at": "clock and photos close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 57.89
+  },
+  {
+    "step": 117,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the living room drawer close-up)",
+    "response": "Action executed successfully. Change to another scene: living room drawer close-up.",
+    "progress": 57.89
+  },
+  {
+    "step": 118,
+    "role": "B",
+    "at": "living room drawer close-up",
+    "action": "input(diamond-square-triangle-circle, lock of living room drawer)",
+    "response": "Action executed successfully. You have given an input diamond-square-triangle-circle to lock of living room drawer. The drawer is unlocked and the lock is removed. the chain is also released.",
+    "progress": 58.95
+  },
+  {
+    "step": 119,
+    "role": "B",
+    "at": "living room drawer close-up",
+    "action": "click(chain)",
+    "response": "Action executed successfully. You have just collected a chain. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 60.0
+  },
+  {
+    "step": 120,
+    "role": "B",
+    "at": "living room drawer close-up",
+    "action": "click(left door of living room drawer)",
+    "response": "Action executed successfully. You have clicked on left door of living room drawer. The left door of the drawer is opened.",
+    "progress": 61.05
+  },
+  {
+    "step": 121,
+    "role": "B",
+    "at": "living room drawer close-up",
+    "action": "click(badge with hill pattern)",
+    "response": "Action executed successfully. You have just collected a badge with hill pattern. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 62.11
+  },
+  {
+    "step": 122,
+    "role": "B",
+    "at": "living room drawer close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 62.11
+  },
+  {
+    "step": 123,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the ceiling door close-up)",
+    "response": "Action executed successfully. Change to another scene: ceiling door close-up.",
+    "progress": 62.11
+  },
+  {
+    "step": 124,
+    "role": "B",
+    "at": "ceiling door close-up",
+    "action": "apply(rope, ceiling door)",
+    "response": "Action executed successfully. You have successfully applied rope to ceiling door. Now the rope has been tied to the hook on the ceiling door. you can enter the second floor by climbing the rope.",
+    "progress": 63.16
+  },
+  {
+    "step": 125,
+    "role": "B",
+    "at": "ceiling door close-up",
+    "action": "move(To the second floor)",
+    "response": "Action executed successfully. Change to another scene: second floor.",
+    "progress": 63.16
+  },
+  {
+    "step": 126,
+    "role": "B",
+    "at": "second floor",
+    "action": "click(handle)",
+    "response": "Action executed successfully. You have just collected a handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 64.21
+  },
+  {
+    "step": 127,
+    "role": "A",
+    "at": "workspace shelf close-up",
+    "action": "move(Back to the workspace area)",
+    "response": "Action executed successfully. Change to another scene: workspace area.",
+    "progress": 64.21
+  },
+  {
+    "step": 128,
+    "role": "A",
+    "at": "workspace area",
+    "action": "move(To the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 64.21
+  },
+  {
+    "step": 129,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the kitchen door close-up)",
+    "response": "Action executed successfully. Change to another scene: kitchen door close-up.",
+    "progress": 64.21
+  },
+  {
+    "step": 130,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "apply(badge with castle pattern, five badge slots)",
+    "response": "Action executed successfully. You have successfully applied badge with castle pattern to five badge slots.\nHowever, the apply of badge with castle pattern is not enough, and five badge slots is still missing something else ...",
+    "progress": 65.26
+  },
+  {
+    "step": 131,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "apply(badge with bird pattern, five badge slots)",
+    "response": "Action executed successfully. You have successfully applied badge with bird pattern to five badge slots.\nHowever, the apply of badge with bird pattern is not enough, and five badge slots is still missing something else ...",
+    "progress": 66.32
+  },
+  {
+    "step": 132,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "apply(badge with hill pattern, five badge slots)",
+    "response": "Action executed successfully. You have successfully applied badge with hill pattern to five badge slots. Four of the badge slots have been filled in. that is enough. now you should figure out the password below each badge slot.",
+    "progress": 67.37
+  },
+  {
+    "step": 133,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "input(D2-A5-D5-G5-D8, five password displays)",
+    "response": "Action executed successfully. You have given an input D2-A5-D5-G5-D8 to five password displays. The door in the kitchen is unlocked. the door goes to a storage room. now you should go back to the scene of kitchen to open it",
+    "progress": 68.42
+  },
+  {
+    "step": 134,
+    "role": "A",
+    "at": "kitchen door close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 68.42
+  },
+  {
+    "step": 135,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the storage room)",
+    "response": "Action executed successfully. Change to another scene: storage room.",
+    "progress": 68.42
+  },
+  {
+    "step": 136,
+    "role": "A",
+    "at": "storage room",
+    "action": "move(To the storage room safe close-up)",
+    "response": "Action executed successfully. Change to another scene: storage room safe close-up.",
+    "progress": 68.42
+  },
+  {
+    "step": 137,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "apply(magnet, magnet slot)",
+    "response": "Action executed successfully. You have successfully applied magnet to magnet slot. Now the right part of the storage room safe has been unlocked.",
+    "progress": 69.47
+  },
+  {
+    "step": 138,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "click(right door of storage room safe)",
+    "response": "Action executed successfully. You have clicked on right door of storage room safe. The right door of storage room safe is open now.",
+    "progress": 70.53
+  },
+  {
+    "step": 139,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "click(big brush)",
+    "response": "Action executed successfully. You have just collected a big brush. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 71.58
+  },
+  {
+    "step": 140,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "move(Back to the storage room)",
+    "response": "Action executed successfully. Change to another scene: storage room.",
+    "progress": 71.58
+  },
+  {
+    "step": 141,
+    "role": "A",
+    "at": "storage room",
+    "action": "move(To the storage shelf close-up)",
+    "response": "Action executed successfully. Change to another scene: storage shelf close-up.",
+    "progress": 71.58
+  },
+  {
+    "step": 142,
+    "role": "A",
+    "at": "storage shelf close-up",
+    "action": "click(lock block)",
+    "response": "Action executed successfully. You have just collected a lock block. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 72.63
+  },
+  {
+    "step": 143,
+    "role": "A",
+    "at": "storage shelf close-up",
+    "action": "click(weight)",
+    "response": "Action executed successfully. You have just collected a weight. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 73.68
+  },
+  {
+    "step": 144,
+    "role": "A",
+    "at": "storage shelf close-up",
+    "action": "move(Back to the storage room)",
+    "response": "Action executed successfully. Change to another scene: storage room.",
+    "progress": 73.68
+  },
+  {
+    "step": 145,
+    "role": "A",
+    "at": "storage room",
+    "action": "move(To the cellar door close-up)",
+    "response": "Action executed successfully. Change to another scene: cellar door close-up.",
+    "progress": 73.68
+  },
+  {
+    "step": 146,
+    "role": "A",
+    "at": "cellar door close-up",
+    "action": "apply(handle, handle slot)",
+    "response": "Action executed successfully. You have successfully applied handle to handle slot. The handle has been installed on the cellar door. now you can interact with the cellar door.",
+    "progress": 74.74
+  },
+  {
+    "step": 147,
+    "role": "A",
+    "at": "cellar door close-up",
+    "action": "click(cellar door)",
+    "response": "Action executed successfully. You have clicked on cellar door. The cellar door is opened.",
+    "progress": 75.79
+  },
+  {
+    "step": 148,
+    "role": "A",
+    "at": "cellar door close-up",
+    "action": "click(plier)",
+    "response": "Action executed successfully. You have just collected a plier. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 76.84
+  },
+  {
+    "step": 149,
+    "role": "A",
+    "at": "cellar door close-up",
+    "action": "click(firewood)",
+    "response": "Action executed successfully. You have just collected a firewood. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 77.89
+  },
+  {
+    "step": 150,
+    "role": "B",
+    "at": "second floor",
+    "action": "move(Back to the ceiling door close-up)",
+    "response": "Action executed successfully. Change to another scene: ceiling door close-up.",
+    "progress": 77.89
+  },
+  {
+    "step": 151,
+    "role": "B",
+    "at": "ceiling door close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 77.89
+  },
+  {
+    "step": 152,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the fireplace close-up)",
+    "response": "Action executed successfully. Change to another scene: fireplace close-up.",
+    "progress": 77.89
+  },
+  {
+    "step": 153,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "craft(weight, chain)",
+    "response": "Action executed successfully. You have successfully crafted A metal weight, heavy and solid, there's a hook on the top to be tied with something. and a long mental chain that could be used to connect and tie things together. together.\nHowever, a long mental chain that could be used to connect and tie things together. is still missing something ...",
+    "progress": 78.95
+  },
+  {
+    "step": 154,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "craft(big brush, chain)",
+    "response": "Action executed successfully. You have successfully crafted A big round brush, its end could be connected to something. It might be used for cleaning purposes. and a long mental chain that could be used to connect and tie things together. together.\nYou get a new item: A chain with a heavy weight tied on one end and a big brush on the other end.. It is put into your bag.",
+    "progress": 80.0
+  },
+  {
+    "step": 155,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 80.0
+  },
+  {
+    "step": 156,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the ceiling door close-up)",
+    "response": "Action executed successfully. Change to another scene: ceiling door close-up.",
+    "progress": 80.0
+  },
+  {
+    "step": 157,
+    "role": "B",
+    "at": "ceiling door close-up",
+    "action": "move(To the second floor)",
+    "response": "Action executed successfully. Change to another scene: second floor.",
+    "progress": 80.0
+  },
+  {
+    "step": 158,
+    "role": "B",
+    "at": "second floor",
+    "action": "apply(chain, fireplace pipe)",
+    "response": "Action executed successfully. You have successfully applied chain to fireplace pipe. The fireplace has been unclogged. now air can flow in the pipe and you use the fireplace. also, something falls off the pipe. maybe you need to check it in the fireplace on the first floor.",
+    "progress": 81.05
+  },
+  {
+    "step": 159,
+    "role": "B",
+    "at": "second floor",
+    "action": "move(Back to the ceiling door close-up)",
+    "response": "Action executed successfully. Change to another scene: ceiling door close-up.",
+    "progress": 81.05
+  },
+  {
+    "step": 160,
+    "role": "B",
+    "at": "ceiling door close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 81.05
+  },
+  {
+    "step": 161,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the fireplace close-up)",
+    "response": "Action executed successfully. Change to another scene: fireplace close-up.",
+    "progress": 81.05
+  },
+  {
+    "step": 162,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "click(key)",
+    "response": "Action executed successfully. You have just collected a key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 82.11
+  },
+  {
+    "step": 163,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "apply(firewood, fireplace)",
+    "response": "Action executed successfully. You have successfully applied firewood to fireplace.\nHowever, the apply of firewood is not enough, and fireplace is still missing something else ...",
+    "progress": 83.16
+  },
+  {
+    "step": 164,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 83.16
+  },
+  {
+    "step": 165,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the living room shelf close-up)",
+    "response": "Action executed successfully. Change to another scene: living room shelf close-up.",
+    "progress": 83.16
+  },
+  {
+    "step": 166,
+    "role": "B",
+    "at": "living room shelf close-up",
+    "action": "apply(key, book with lock)",
+    "response": "Action executed successfully. You have successfully applied key to book with lock. The book is unlocked",
+    "progress": 84.21
+  },
+  {
+    "step": 167,
+    "role": "B",
+    "at": "living room shelf close-up",
+    "action": "click(book with lock)",
+    "response": "Action executed successfully. You have clicked on book with lock. The book is open.",
+    "progress": 85.26
+  },
+  {
+    "step": 168,
+    "role": "B",
+    "at": "living room shelf close-up",
+    "action": "click(potassium)",
+    "response": "Action executed successfully. You have just collected a potassium. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 86.32
+  },
+  {
+    "step": 169,
+    "role": "B",
+    "at": "living room shelf close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 86.32
+  },
+  {
+    "step": 170,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the fireplace close-up)",
+    "response": "Action executed successfully. Change to another scene: fireplace close-up.",
+    "progress": 86.32
+  },
+  {
+    "step": 171,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "apply(potassium, fireplace)",
+    "response": "Action executed successfully. You have successfully applied potassium to fireplace.\nHowever, the apply of potassium is not enough, and fireplace is still missing something else ...",
+    "progress": 87.37
+  },
+  {
+    "step": 172,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "apply(glycerin, fireplace)",
+    "response": "Action executed successfully. You have successfully applied glycerin to fireplace. The fireplace is burning now.",
+    "progress": 88.42
+  },
+  {
+    "step": 173,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "apply(cup of cold water, fireplace)",
+    "response": "Action executed successfully. You have successfully applied cup of cold water to fireplace. The burning firewood in the fireplace has been put off. after pouring off the water, there is an empty mug left.",
+    "progress": 89.47
+  },
+  {
+    "step": 174,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "click(mug)",
+    "response": "Action executed successfully. You have just collected a mug. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 90.53
+  },
+  {
+    "step": 175,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "apply(fire stick, fireplace)",
+    "response": "Action executed successfully. You have successfully applied fire stick to fireplace. A weird container is found in the charcoal.",
+    "progress": 91.58
+  },
+  {
+    "step": 176,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "apply(plier, weird container)",
+    "response": "Action executed successfully. You have successfully applied plier to weird container. The weird container is open. there is a piece of note inside.",
+    "progress": 92.63
+  },
+  {
+    "step": 177,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "click(note sheet)",
+    "response": "Action executed successfully. You have just collected a note sheet. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 93.68
+  },
+  {
+    "step": 178,
+    "role": "A",
+    "at": "cellar door close-up",
+    "action": "move(Back to the storage room)",
+    "response": "Action executed successfully. Change to another scene: storage room.",
+    "progress": 93.68
+  },
+  {
+    "step": 179,
+    "role": "A",
+    "at": "storage room",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 93.68
+  },
+  {
+    "step": 180,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the sink close-up)",
+    "response": "Action executed successfully. Change to another scene: sink close-up.",
+    "progress": 93.68
+  },
+  {
+    "step": 181,
+    "role": "A",
+    "at": "sink close-up",
+    "action": "apply(mug, tap)",
+    "response": "Action executed successfully. You have successfully applied mug to tap. Now you can obtain a cup of hot water.",
+    "progress": 94.74
+  },
+  {
+    "step": 182,
+    "role": "A",
+    "at": "sink close-up",
+    "action": "click(cup of hot water)",
+    "response": "Action executed successfully. You have just collected a cup of hot water. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 95.79
+  },
+  {
+    "step": 183,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "input(| 1 | 4 |   | 8 |\\n|   |   | 6 |   |\\n| 2 | 7 | 5 |   |\\n|   |   | 3 |   |, inner fireplace wall)",
+    "response": "Action executed successfully. You have given an input | 1 | 4 |   | 8 |\\n|   |   | 6 |   |\\n| 2 | 7 | 5 |   |\\n|   |   | 3 |   | to inner fireplace wall. The password lock in the storage room is now activated.",
+    "progress": 96.84
+  },
+  {
+    "step": 184,
+    "role": "A",
+    "at": "sink close-up",
+    "action": "move(Back to the kitchen)",
+    "response": "Action executed successfully. Change to another scene: kitchen.",
+    "progress": 96.84
+  },
+  {
+    "step": 185,
+    "role": "A",
+    "at": "kitchen",
+    "action": "move(To the storage room)",
+    "response": "Action executed successfully. Change to another scene: storage room.",
+    "progress": 96.84
+  },
+  {
+    "step": 186,
+    "role": "A",
+    "at": "storage room",
+    "action": "move(To the storage room safe close-up)",
+    "response": "Action executed successfully. Change to another scene: storage room safe close-up.",
+    "progress": 96.84
+  },
+  {
+    "step": 187,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "apply(lock block, password lock)",
+    "response": "Action executed successfully. You have successfully applied lock block to password lock. Now the password lock is ready. you can input password now.",
+    "progress": 97.89
+  },
+  {
+    "step": 188,
+    "role": "B",
+    "at": "fireplace close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 97.89
+  },
+  {
+    "step": 189,
+    "role": "B",
+    "at": "living room",
+    "action": "move(To the living room cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: living room cabinet close-up.",
+    "progress": 97.89
+  },
+  {
+    "step": 190,
+    "role": "B",
+    "at": "living room cabinet close-up",
+    "action": "move(To the handbook close-up)",
+    "response": "Action executed successfully. Change to another scene: handbook close-up.",
+    "progress": 97.89
+  },
+  {
+    "step": 191,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "input(0368, password lock)",
+    "response": "Action executed successfully. You have given an input 0368 to password lock. Now the password lock is unlocked and open.",
+    "progress": 98.95
+  },
+  {
+    "step": 192,
+    "role": "A",
+    "at": "storage room safe close-up",
+    "action": "click(red button)",
+    "response": "Action executed successfully. You have clicked on red button. The exit door unlocks, and you can now leave. game end!",
+    "progress": 100.0
+  }
+]

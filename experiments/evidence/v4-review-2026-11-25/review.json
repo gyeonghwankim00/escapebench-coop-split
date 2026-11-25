@@ -1,0 +1,2168 @@
+{
+  "verification": {
+    "version": "v4",
+    "passed": true,
+    "scope": "Known-answer replays (Solo central, Peer with real give/send/yield) with no partner-area crossing, split constraints, steps made useless by the split (against the upstream unsplit game), remote effects, and whether each edited file is still a one-player game. Not a model performance test.",
+    "code_sha256": {
+      "scripts/split_v4.py": "3a9dd16bd289b61e5d7bd904476cfdbf73eafa1617cfc44cfe077b3f4ffcdc57",
+      "scripts/split_metrics.py": "5f7a661687746de29871b431db319e42b938f401862620c56d098b529a96d8e3",
+      "scripts/coop_original.py": "074b05744739f22b81d2c8ee7db9ce2224bb978ad2237f0edd2128b2f01a5a57",
+      "scripts/adaptive_escape.py": "779e72a36749d407762c4dc3d81024ad61cec1333bc4aa20ceb4f1736e7e69d4",
+      "scripts/check_protocol.py": "bc44a225d3413257008e874c2e54ed8672bd0b71d3b156e4bb1b106b4d95eff4"
+    },
+    "games": {
+      "game1-1-easy": {
+        "change": {
+          "split": "Same scenes as v3; the bathroom now opens off B's kitchen (game file edited).",
+          "game_file": "In v3 B's kitchen and bathroom lay on opposite sides of A's living room and bedroom, so B walked through A's rooms four times. The bathroom (and its door, which still needs the handle from A's cardboard box) now opens off the kitchen."
+        },
+        "files": {
+          "game_file": {
+            "path": "data/split_v4/games/game1-1-easy.yaml",
+            "sha256": "3c49fc05defa7bb9d52877b546f990aec97b1fb9a2ff01c80cc058c916ee7b73"
+          },
+          "reference_file": {
+            "path": "data/split_v4/reference/key_log_1-1.txt",
+            "sha256": "f9dca4f8eac5277e22230ed91ea6ab4e68b704066e0718fa224abf0817e74be5"
+          }
+        },
+        "stored_roles_match_recompute": true,
+        "metrics": {
+          "total": 40,
+          "alone_A": 11,
+          "alone_B": 6,
+          "together_no_give": 17,
+          "with_give": 40,
+          "b_share": 0.45,
+          "handoffs": 7,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 3
+        },
+        "v3_metrics": {
+          "total": 40,
+          "alone_A": 13,
+          "alone_B": 6,
+          "together_no_give": 25,
+          "with_give": 40,
+          "b_share": 0.39,
+          "handoffs": 6,
+          "components": {
+            "A": 1,
+            "B": 2
+          },
+          "clue_inputs_cross": 3
+        },
+        "constraints": {
+          "completable": true,
+          "no_idle_role": true,
+          "interdependent": true,
+          "thresholds": {
+            "alone_min": 4,
+            "give_min": 6
+          }
+        },
+        "dead_steps": {
+          "known_codes": [],
+          "observed_clues": []
+        },
+        "solo_replay": {
+          "max_prompt_chars": 19955,
+          "reveal_prompts": 0,
+          "escaped": true,
+          "decisions": 84,
+          "environment_actions": 84,
+          "skipped_reference_actions": [],
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "peer_replay": {
+          "escaped": true,
+          "decisions": 116,
+          "skipped_reference_actions": [],
+          "clue_sources_not_messaged": [],
+          "environment_actions": 98,
+          "messages": 4,
+          "gives": 8,
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "remote_effects": [],
+        "progress_denominator": {
+          "keys": 24,
+          "tools": 16
+        },
+        "original_mode": {
+          "file": "vendor/escapebench (upstream, unchanged)",
+          "replay_actions": 93,
+          "v4_file_winnable_alone": true,
+          "expected_winnable_alone": true
+        }
+      },
+      "game1-2-easy": {
+        "change": {
+          "split": "v3 scenes plus the ventilation fan close-up, which now belongs to room 805 (game file edited).",
+          "game_file": "B starts inside room 805 and A owns nothing behind its door. The two close-ups held only the key and the door; the cabinet close-up text (\"can be opened easily\") would describe a deleted door, so both scenes go. The hallway text still mentions the cabinet and room 805 as scenery. The ventilation fan that leads to the elevator room moves from the end of A's hallway into room 805, so B no longer walks through A's hallway to reach its elevator room."
+        },
+        "files": {
+          "game_file": {
+            "path": "data/split_v4/games/game1-2-easy.yaml",
+            "sha256": "e2940a204ee7d2c8082066b15c20798d317bd787980b878c1f69940a7ecd6916"
+          },
+          "reference_file": {
+            "path": "data/split_v4/reference/key_log_1-2.txt",
+            "sha256": "81c3e06215fe17c71678e257c053eea5a240f2c8ac830d6f3dae476cd4484c06"
+          }
+        },
+        "stored_roles_match_recompute": true,
+        "metrics": {
+          "total": 41,
+          "alone_A": 3,
+          "alone_B": 12,
+          "together_no_give": 15,
+          "with_give": 41,
+          "b_share": 0.49,
+          "handoffs": 9,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 1
+        },
+        "v3_metrics": {
+          "total": 45,
+          "alone_A": 7,
+          "alone_B": 12,
+          "together_no_give": 19,
+          "with_give": 45,
+          "b_share": 0.4,
+          "handoffs": 8,
+          "components": {
+            "A": 1,
+            "B": 2
+          },
+          "clue_inputs_cross": 1
+        },
+        "constraints": {
+          "completable": true,
+          "no_idle_role": false,
+          "interdependent": true,
+          "thresholds": {
+            "alone_min": 5,
+            "give_min": 7
+          }
+        },
+        "dead_steps": {
+          "known_codes": [],
+          "observed_clues": []
+        },
+        "solo_replay": {
+          "max_prompt_chars": 18076,
+          "reveal_prompts": 0,
+          "escaped": true,
+          "decisions": 77,
+          "environment_actions": 77,
+          "skipped_reference_actions": [],
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "peer_replay": {
+          "escaped": true,
+          "decisions": 104,
+          "skipped_reference_actions": [],
+          "clue_sources_not_messaged": [],
+          "environment_actions": 87,
+          "messages": 1,
+          "gives": 9,
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "remote_effects": [],
+        "progress_denominator": {
+          "keys": 30,
+          "tools": 12
+        },
+        "original_mode": {
+          "file": "vendor/escapebench (upstream, unchanged)",
+          "replay_actions": 93,
+          "v4_file_winnable_alone": false,
+          "expected_winnable_alone": false
+        }
+      },
+      "game1-3-easy": {
+        "change": {
+          "split": "Same scenes as v3 (game file edited).",
+          "game_file": "B starts inside the billiard room, which the gold key opens, and A owns nothing behind the black door. The chain and its 7428 clue (paper 1, book) only served to open it; the left corner close-up is empty afterwards."
+        },
+        "files": {
+          "game_file": {
+            "path": "data/split_v4/games/game1-3-easy.yaml",
+            "sha256": "d6806b2c060def19e55f9e0ddfed29f13dea74270a2da0c44e48fb86e754d431"
+          },
+          "reference_file": {
+            "path": "data/split_v4/reference/key_log_1-3.txt",
+            "sha256": "4ab29fc5be1708abb0688eda39660b0f7a972e22ed2f825266620500a15d808b"
+          }
+        },
+        "stored_roles_match_recompute": true,
+        "metrics": {
+          "total": 27,
+          "alone_A": 0,
+          "alone_B": 26,
+          "together_no_give": 26,
+          "with_give": 27,
+          "b_share": 0.96,
+          "handoffs": 1,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 0
+        },
+        "v3_metrics": {
+          "total": 38,
+          "alone_A": 11,
+          "alone_B": 26,
+          "together_no_give": 37,
+          "with_give": 38,
+          "b_share": 0.68,
+          "handoffs": 1,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 0
+        },
+        "constraints": {
+          "completable": true,
+          "no_idle_role": false,
+          "interdependent": false,
+          "thresholds": {
+            "alone_min": 3,
+            "give_min": 5
+          }
+        },
+        "dead_steps": {
+          "known_codes": [],
+          "observed_clues": []
+        },
+        "solo_replay": {
+          "max_prompt_chars": 11825,
+          "reveal_prompts": 0,
+          "escaped": true,
+          "decisions": 36,
+          "environment_actions": 36,
+          "skipped_reference_actions": [],
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "peer_replay": {
+          "escaped": true,
+          "decisions": 46,
+          "skipped_reference_actions": [],
+          "clue_sources_not_messaged": [],
+          "environment_actions": 37,
+          "messages": 0,
+          "gives": 1,
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "remote_effects": [],
+        "progress_denominator": {
+          "keys": 15,
+          "tools": 12
+        },
+        "original_mode": {
+          "file": "vendor/escapebench (upstream, unchanged)",
+          "replay_actions": 54,
+          "v4_file_winnable_alone": false,
+          "expected_winnable_alone": false
+        }
+      },
+      "game2-1-easy": {
+        "change": {
+          "split": "Same scenes as v3; A's utility room now opens off A's hallway (game file edited).",
+          "game_file": "In v3 A's utility room and sanctum lay beyond B's corridor and study, so A walked through them three times. The utility room (with the sanctum behind it) now opens off A's apartment hallway. No text states where it was."
+        },
+        "files": {
+          "game_file": {
+            "path": "data/split_v4/games/game2-1-easy.yaml",
+            "sha256": "8fe587df50ad775e0c391f88a098c7d82afef003ad59e9d55fe6fe150eb04493"
+          },
+          "reference_file": {
+            "path": "data/split_v4/reference/key_log_2-1.txt",
+            "sha256": "cba24367273f9de2a146f1b9da49f60dbff81b94ec43729b49d4df4f3a14cefc"
+          }
+        },
+        "stored_roles_match_recompute": true,
+        "metrics": {
+          "total": 45,
+          "alone_A": 11,
+          "alone_B": 16,
+          "together_no_give": 27,
+          "with_give": 45,
+          "b_share": 0.41,
+          "handoffs": 4,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 3
+        },
+        "v3_metrics": {
+          "total": 45,
+          "alone_A": 11,
+          "alone_B": 16,
+          "together_no_give": 27,
+          "with_give": 45,
+          "b_share": 0.41,
+          "handoffs": 4,
+          "components": {
+            "A": 2,
+            "B": 1
+          },
+          "clue_inputs_cross": 3
+        },
+        "constraints": {
+          "completable": true,
+          "no_idle_role": true,
+          "interdependent": true,
+          "thresholds": {
+            "alone_min": 5,
+            "give_min": 7
+          }
+        },
+        "dead_steps": {
+          "known_codes": [],
+          "observed_clues": []
+        },
+        "solo_replay": {
+          "max_prompt_chars": 16683,
+          "reveal_prompts": 0,
+          "escaped": true,
+          "decisions": 68,
+          "environment_actions": 68,
+          "skipped_reference_actions": [],
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "peer_replay": {
+          "escaped": true,
+          "decisions": 93,
+          "skipped_reference_actions": [],
+          "clue_sources_not_messaged": [],
+          "environment_actions": 75,
+          "messages": 3,
+          "gives": 4,
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "remote_effects": [],
+        "progress_denominator": {
+          "keys": 22,
+          "tools": 23
+        },
+        "original_mode": {
+          "file": "vendor/escapebench (upstream, unchanged)",
+          "replay_actions": 79,
+          "v4_file_winnable_alone": true,
+          "expected_winnable_alone": true
+        }
+      },
+      "game2-2-easy": {
+        "change": {
+          "split": "Same scenes as v3 (game file edited).",
+          "game_file": "B starts inside the inner office, the room the golden key opens, and A owns nothing behind that door. The whole chain (cable, pliers, flashlight, GB24 desk safe and mirror, air duct, golden key, door) only served to open it."
+        },
+        "files": {
+          "game_file": {
+            "path": "data/split_v4/games/game2-2-easy.yaml",
+            "sha256": "72c3840f08391ace069f8a573cad60f156e38686d828063ba9b894dc088a97db"
+          },
+          "reference_file": {
+            "path": "data/split_v4/reference/key_log_2-2.txt",
+            "sha256": "743d30242763d6caa81b2b22053b3831a1269ded59940776d261b995c9e8b349"
+          }
+        },
+        "stored_roles_match_recompute": true,
+        "metrics": {
+          "total": 52,
+          "alone_A": 6,
+          "alone_B": 14,
+          "together_no_give": 20,
+          "with_give": 52,
+          "b_share": 0.73,
+          "handoffs": 7,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 3
+        },
+        "v3_metrics": {
+          "total": 66,
+          "alone_A": 20,
+          "alone_B": 14,
+          "together_no_give": 34,
+          "with_give": 66,
+          "b_share": 0.58,
+          "handoffs": 7,
+          "components": {
+            "A": 1,
+            "B": 1
+          },
+          "clue_inputs_cross": 3
+        },
+        "constraints": {
+          "completable": true,
+          "no_idle_role": true,
+          "interdependent": true,
+          "thresholds": {
+            "alone_min": 6,
+            "give_min": 8
+          }
+        },
+        "dead_steps": {
+          "known_codes": [],
+          "observed_clues": []
+        },
+        "solo_replay": {
+          "max_prompt_chars": 18501,
+          "reveal_prompts": 61,
+          "escaped": true,
+          "decisions": 72,
+          "environment_actions": 72,
+          "skipped_reference_actions": [],
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "peer_replay": {
+          "escaped": true,
+          "decisions": 100,
+          "skipped_reference_actions": [],
+          "clue_sources_not_messaged": [],
+          "environment_actions": 82,
+          "messages": 3,
+          "gives": 7,
+          "invalid_actions": 0,
+          "partner_area_moves": []
+        },
+        "remote_effects": [],
+        "progress_denominator": {
+          "keys": 28,
+          "tools": 24
+        },
+        "original_mode": {
+          "file": "vendor/escapebench (upstream, unchanged)",
+          "replay_actions": 105,
+          "v4_file_winnable_alone": false,
+          "expected_winnable_alone": false
+        }
+      }
+    }
+  },
+  "evidence": {
+    "game1-1-easy": {
+      "stats": {
+        "escaped": true,
+        "decisions": 116,
+        "skipped_reference_actions": [],
+        "clue_sources_not_messaged": [],
+        "environment_actions": 98,
+        "messages": 4,
+        "gives": 8,
+        "invalid_actions": 0,
+        "partner_area_moves": []
+      },
+      "checks": [
+        {
+          "decision": 70,
+          "role": "A",
+          "action": "input(cs546, toolbox)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 110,
+          "role": "B",
+          "action": "input(4713, safe)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 115,
+          "role": "A",
+          "action": "input(655324223, right door to the exit)",
+          "missing_ever": [],
+          "missing_current": []
+        }
+      ],
+      "replacements": []
+    },
+    "game1-2-easy": {
+      "stats": {
+        "escaped": true,
+        "decisions": 104,
+        "skipped_reference_actions": [],
+        "clue_sources_not_messaged": [],
+        "environment_actions": 87,
+        "messages": 1,
+        "gives": 9,
+        "invalid_actions": 0,
+        "partner_area_moves": []
+      },
+      "checks": [
+        {
+          "decision": 22,
+          "role": "B",
+          "action": "input(150, bedside drawer)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 45,
+          "role": "A",
+          "action": "input(8*4+6=6*7-4, locked drawer)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 93,
+          "role": "A",
+          "action": "input(2333, safe)",
+          "missing_ever": [],
+          "missing_current": []
+        }
+      ],
+      "replacements": []
+    },
+    "game1-3-easy": {
+      "stats": {
+        "escaped": true,
+        "decisions": 46,
+        "skipped_reference_actions": [],
+        "clue_sources_not_messaged": [],
+        "environment_actions": 37,
+        "messages": 0,
+        "gives": 1,
+        "invalid_actions": 0,
+        "partner_area_moves": []
+      },
+      "checks": [
+        {
+          "decision": 17,
+          "role": "B",
+          "action": "input(4305, safe)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 36,
+          "role": "B",
+          "action": "input(2134, pockets)",
+          "missing_ever": [],
+          "missing_current": []
+        }
+      ],
+      "replacements": []
+    },
+    "game2-1-easy": {
+      "stats": {
+        "escaped": true,
+        "decisions": 93,
+        "skipped_reference_actions": [],
+        "clue_sources_not_messaged": [],
+        "environment_actions": 75,
+        "messages": 3,
+        "gives": 4,
+        "invalid_actions": 0,
+        "partner_area_moves": []
+      },
+      "checks": [
+        {
+          "decision": 28,
+          "role": "B",
+          "action": "input(424389, safe 2)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 54,
+          "role": "A",
+          "action": "input(47515, phone)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 87,
+          "role": "A",
+          "action": "input(870472, locked box 2)",
+          "missing_ever": [],
+          "missing_current": []
+        }
+      ],
+      "replacements": []
+    },
+    "game2-2-easy": {
+      "stats": {
+        "escaped": true,
+        "decisions": 100,
+        "skipped_reference_actions": [],
+        "clue_sources_not_messaged": [],
+        "environment_actions": 82,
+        "messages": 3,
+        "gives": 7,
+        "invalid_actions": 0,
+        "partner_area_moves": []
+      },
+      "checks": [
+        {
+          "decision": 17,
+          "role": "A",
+          "action": "input(1040, wall safe)",
+          "missing_ever": [
+            {
+              "object": "drawer",
+              "evidence": "1040"
+            }
+          ],
+          "missing_current": [
+            {
+              "object": "drawer",
+              "evidence": "1040"
+            }
+          ]
+        },
+        {
+          "decision": 48,
+          "role": "B",
+          "action": "input(3816, bookshelf safe)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 60,
+          "role": "B",
+          "action": "input(1986, bookshelf safe 2)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 97,
+          "role": "B",
+          "action": "input(Genshin, left bookshelf safe)",
+          "missing_ever": [],
+          "missing_current": []
+        },
+        {
+          "decision": 99,
+          "role": "B",
+          "action": "input(10011001, left bookshelf safe)",
+          "missing_ever": [],
+          "missing_current": []
+        }
+      ],
+      "replacements": []
+    }
+  },
+  "suitability": {
+    "game1-1-easy": {
+      "full": {
+        "escape": true,
+        "completed": 40,
+        "total": 40,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 27,
+        "total": 40,
+        "unobserved_clues": [
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "desk lamp",
+              "study wall"
+            ]
+          },
+          {
+            "target": "right door to the exit",
+            "missing_observed_evidence": [
+              "safe"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 12,
+        "total": 40,
+        "unobserved_clues": [
+          {
+            "target": "toolbox",
+            "missing_observed_evidence": [
+              "mirror"
+            ]
+          },
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "desk lamp",
+              "study wall"
+            ]
+          },
+          {
+            "target": "right door to the exit",
+            "missing_observed_evidence": [
+              "safe"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 7,
+        "total": 40,
+        "unobserved_clues": [
+          {
+            "target": "toolbox",
+            "missing_observed_evidence": [
+              "mirror"
+            ]
+          },
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "desk lamp",
+              "study wall"
+            ]
+          },
+          {
+            "target": "right door to the exit",
+            "missing_observed_evidence": [
+              "safe"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 5,
+        "total": 40,
+        "unobserved_clues": [
+          {
+            "target": "toolbox",
+            "missing_observed_evidence": [
+              "mirror"
+            ]
+          },
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "desk lamp",
+              "study wall"
+            ]
+          },
+          {
+            "target": "right door to the exit",
+            "missing_observed_evidence": [
+              "safe"
+            ]
+          }
+        ]
+      }
+    },
+    "game1-2-easy": {
+      "full": {
+        "escape": true,
+        "completed": 41,
+        "total": 41,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 36,
+        "total": 41,
+        "unobserved_clues": []
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 15,
+        "total": 41,
+        "unobserved_clues": [
+          {
+            "target": "locked drawer",
+            "missing_observed_evidence": [
+              "locked drawer"
+            ]
+          },
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "paper with code",
+              "drawer contents"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 3,
+        "total": 41,
+        "unobserved_clues": [
+          {
+            "target": "bedside drawer",
+            "missing_observed_evidence": [
+              "painting2"
+            ]
+          },
+          {
+            "target": "locked drawer",
+            "missing_observed_evidence": [
+              "locked drawer"
+            ]
+          },
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "paper with code",
+              "drawer contents"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 12,
+        "total": 41,
+        "unobserved_clues": [
+          {
+            "target": "locked drawer",
+            "missing_observed_evidence": [
+              "locked drawer"
+            ]
+          },
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "paper with code",
+              "drawer contents"
+            ]
+          }
+        ]
+      }
+    },
+    "game1-3-easy": {
+      "full": {
+        "escape": true,
+        "completed": 27,
+        "total": 27,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": true,
+        "completed": 27,
+        "total": 27,
+        "unobserved_clues": []
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 26,
+        "total": 27,
+        "unobserved_clues": []
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 0,
+        "total": 27,
+        "unobserved_clues": [
+          {
+            "target": "safe",
+            "missing_observed_evidence": [
+              "paper 2"
+            ]
+          },
+          {
+            "target": "pockets",
+            "missing_observed_evidence": [
+              "pockets"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 26,
+        "total": 27,
+        "unobserved_clues": []
+      }
+    },
+    "game1-4-easy": {
+      "full": {
+        "escape": false,
+        "completed": 53,
+        "total": 64,
+        "unobserved_clues": [
+          {
+            "target": "keypad safe",
+            "missing_observed_evidence": [
+              "front door"
+            ]
+          }
+        ]
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 53,
+        "total": 64,
+        "unobserved_clues": [
+          {
+            "target": "keypad safe",
+            "missing_observed_evidence": [
+              "front door"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 42,
+        "total": 64,
+        "unobserved_clues": [
+          {
+            "target": "keypad safe",
+            "missing_observed_evidence": [
+              "front door"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 29,
+        "total": 64,
+        "unobserved_clues": [
+          {
+            "target": "keypad safe",
+            "missing_observed_evidence": [
+              "front door"
+            ]
+          },
+          {
+            "target": "front door",
+            "missing_observed_evidence": [
+              "birthday chart"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 13,
+        "total": 64,
+        "unobserved_clues": [
+          {
+            "target": "coded lock",
+            "missing_observed_evidence": [
+              "watch"
+            ]
+          },
+          {
+            "target": "keypad safe",
+            "missing_observed_evidence": [
+              "front door"
+            ]
+          }
+        ]
+      }
+    },
+    "game1-5-easy": {
+      "full": {
+        "escape": true,
+        "completed": 62,
+        "total": 62,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 31,
+        "total": 62,
+        "unobserved_clues": [
+          {
+            "target": "strange lock",
+            "missing_observed_evidence": [
+              "imprinted photo paper"
+            ]
+          },
+          {
+            "target": "shaking mirror",
+            "missing_observed_evidence": [
+              "graffiti",
+              "paper 4",
+              "shaking mirror"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 28,
+        "total": 62,
+        "unobserved_clues": [
+          {
+            "target": "combination lock",
+            "missing_observed_evidence": [
+              "paper 3"
+            ]
+          },
+          {
+            "target": "strange lock",
+            "missing_observed_evidence": [
+              "imprinted photo paper"
+            ]
+          },
+          {
+            "target": "shaking mirror",
+            "missing_observed_evidence": [
+              "graffiti",
+              "paper 4",
+              "shaking mirror"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 16,
+        "total": 62,
+        "unobserved_clues": [
+          {
+            "target": "rotary lock",
+            "missing_observed_evidence": [
+              "paper",
+              "paper 2"
+            ]
+          },
+          {
+            "target": "combination lock",
+            "missing_observed_evidence": [
+              "paper 3"
+            ]
+          },
+          {
+            "target": "strange lock",
+            "missing_observed_evidence": [
+              "imprinted photo paper"
+            ]
+          },
+          {
+            "target": "shaking mirror",
+            "missing_observed_evidence": [
+              "graffiti",
+              "paper 4",
+              "shaking mirror"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 12,
+        "total": 62,
+        "unobserved_clues": [
+          {
+            "target": "iron box",
+            "missing_observed_evidence": [
+              "paper 1",
+              "iron box"
+            ]
+          },
+          {
+            "target": "combination lock",
+            "missing_observed_evidence": [
+              "paper 3"
+            ]
+          },
+          {
+            "target": "strange lock",
+            "missing_observed_evidence": [
+              "imprinted photo paper"
+            ]
+          },
+          {
+            "target": "shaking mirror",
+            "missing_observed_evidence": [
+              "graffiti",
+              "paper 4",
+              "shaking mirror"
+            ]
+          }
+        ]
+      }
+    },
+    "game2-1-easy": {
+      "full": {
+        "escape": true,
+        "completed": 45,
+        "total": 45,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 13,
+        "total": 45,
+        "unobserved_clues": [
+          {
+            "target": "phone",
+            "missing_observed_evidence": [
+              "credential"
+            ]
+          },
+          {
+            "target": "locked box 2",
+            "missing_observed_evidence": [
+              "paper 2"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 27,
+        "total": 45,
+        "unobserved_clues": []
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 11,
+        "total": 45,
+        "unobserved_clues": [
+          {
+            "target": "phone",
+            "missing_observed_evidence": [
+              "credential"
+            ]
+          },
+          {
+            "target": "locked box 2",
+            "missing_observed_evidence": [
+              "paper 2"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 2,
+        "total": 45,
+        "unobserved_clues": [
+          {
+            "target": "safe 2",
+            "missing_observed_evidence": [
+              "scrip 2"
+            ]
+          },
+          {
+            "target": "phone",
+            "missing_observed_evidence": [
+              "credential"
+            ]
+          },
+          {
+            "target": "locked box 2",
+            "missing_observed_evidence": [
+              "paper 2"
+            ]
+          }
+        ]
+      }
+    },
+    "game2-2-easy": {
+      "full": {
+        "escape": true,
+        "completed": 52,
+        "total": 52,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 9,
+        "total": 52,
+        "unobserved_clues": [
+          {
+            "target": "bookshelf safe",
+            "missing_observed_evidence": [
+              "code note"
+            ]
+          },
+          {
+            "target": "bookshelf safe 2",
+            "missing_observed_evidence": [
+              "old photo in frame"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "camera"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "printed note",
+              "wooden door",
+              "large mouse pad"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 11,
+        "total": 52,
+        "unobserved_clues": [
+          {
+            "target": "bookshelf safe",
+            "missing_observed_evidence": [
+              "code note"
+            ]
+          },
+          {
+            "target": "bookshelf safe 2",
+            "missing_observed_evidence": [
+              "old photo in frame"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "camera"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "printed note",
+              "wooden door",
+              "large mouse pad"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 4,
+        "total": 52,
+        "unobserved_clues": [
+          {
+            "target": "wall safe",
+            "missing_observed_evidence": [
+              "drawer"
+            ]
+          },
+          {
+            "target": "bookshelf safe",
+            "missing_observed_evidence": [
+              "code note"
+            ]
+          },
+          {
+            "target": "bookshelf safe 2",
+            "missing_observed_evidence": [
+              "old photo in frame"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "camera"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "printed note",
+              "wooden door",
+              "large mouse pad"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 5,
+        "total": 52,
+        "unobserved_clues": [
+          {
+            "target": "bookshelf safe",
+            "missing_observed_evidence": [
+              "code note"
+            ]
+          },
+          {
+            "target": "bookshelf safe 2",
+            "missing_observed_evidence": [
+              "old photo in frame"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "camera"
+            ]
+          },
+          {
+            "target": "left bookshelf safe",
+            "missing_observed_evidence": [
+              "printed note",
+              "wooden door",
+              "large mouse pad"
+            ]
+          }
+        ]
+      }
+    },
+    "game2-3-easy": {
+      "full": {
+        "escape": true,
+        "completed": 94,
+        "total": 95,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 54,
+        "total": 95,
+        "unobserved_clues": [
+          {
+            "target": "five password displays",
+            "missing_observed_evidence": [
+              "five badge slots"
+            ]
+          },
+          {
+            "target": "inner fireplace wall",
+            "missing_observed_evidence": [
+              "cup of hot water"
+            ]
+          },
+          {
+            "target": "password lock",
+            "missing_observed_evidence": [
+              "note sheet"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 47,
+        "total": 95,
+        "unobserved_clues": [
+          {
+            "target": "five password displays",
+            "missing_observed_evidence": [
+              "five badge slots"
+            ]
+          },
+          {
+            "target": "inner fireplace wall",
+            "missing_observed_evidence": [
+              "cup of hot water"
+            ]
+          },
+          {
+            "target": "password lock",
+            "missing_observed_evidence": [
+              "note sheet",
+              "@handbook close-up"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 15,
+        "total": 95,
+        "unobserved_clues": [
+          {
+            "target": "lock of living room drawer",
+            "missing_observed_evidence": [
+              "colored car photo",
+              "red pyramid",
+              "green cylinder placed on shelf",
+              "blue hemisphere",
+              "yellow cube"
+            ]
+          },
+          {
+            "target": "five password displays",
+            "missing_observed_evidence": [
+              "five badge slots",
+              "map"
+            ]
+          },
+          {
+            "target": "inner fireplace wall",
+            "missing_observed_evidence": [
+              "table sheet",
+              "cup of hot water"
+            ]
+          },
+          {
+            "target": "password lock",
+            "missing_observed_evidence": [
+              "note sheet",
+              "@handbook close-up"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 24,
+        "total": 95,
+        "unobserved_clues": [
+          {
+            "target": "toolbox keypad pannel",
+            "missing_observed_evidence": [
+              "@clock and photos close-up"
+            ]
+          },
+          {
+            "target": "first drawer on the right",
+            "missing_observed_evidence": [
+              "adhesive tape remaining"
+            ]
+          },
+          {
+            "target": "five password displays",
+            "missing_observed_evidence": [
+              "five badge slots"
+            ]
+          },
+          {
+            "target": "inner fireplace wall",
+            "missing_observed_evidence": [
+              "cup of hot water"
+            ]
+          },
+          {
+            "target": "password lock",
+            "missing_observed_evidence": [
+              "note sheet",
+              "@handbook close-up"
+            ]
+          }
+        ]
+      }
+    },
+    "game2-4-easy": {
+      "full": {
+        "escape": true,
+        "completed": 57,
+        "total": 57,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 54,
+        "total": 57,
+        "unobserved_clues": [
+          {
+            "target": "iron door",
+            "missing_observed_evidence": [
+              "waveform detector"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 33,
+        "total": 57,
+        "unobserved_clues": [
+          {
+            "target": "safe 2",
+            "missing_observed_evidence": [
+              "printed code paper"
+            ]
+          },
+          {
+            "target": "drawer 1",
+            "missing_observed_evidence": [
+              "printed code paper"
+            ]
+          },
+          {
+            "target": "waveform detector",
+            "missing_observed_evidence": [
+              "sound list"
+            ]
+          },
+          {
+            "target": "waveform detector",
+            "missing_observed_evidence": [
+              "frequency list"
+            ]
+          },
+          {
+            "target": "iron door",
+            "missing_observed_evidence": [
+              "waveform detector"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 20,
+        "total": 57,
+        "unobserved_clues": [
+          {
+            "target": "safe 2",
+            "missing_observed_evidence": [
+              "printed code paper"
+            ]
+          },
+          {
+            "target": "cabinate 1",
+            "missing_observed_evidence": [
+              "lighter"
+            ]
+          },
+          {
+            "target": "drawer 1",
+            "missing_observed_evidence": [
+              "printed code paper"
+            ]
+          },
+          {
+            "target": "waveform detector",
+            "missing_observed_evidence": [
+              "sound list"
+            ]
+          },
+          {
+            "target": "waveform detector",
+            "missing_observed_evidence": [
+              "frequency list"
+            ]
+          },
+          {
+            "target": "iron door",
+            "missing_observed_evidence": [
+              "waveform detector"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 13,
+        "total": 57,
+        "unobserved_clues": [
+          {
+            "target": "safe 2",
+            "missing_observed_evidence": [
+              "printed code paper"
+            ]
+          },
+          {
+            "target": "drawer 1",
+            "missing_observed_evidence": [
+              "printed code paper"
+            ]
+          },
+          {
+            "target": "waveform detector",
+            "missing_observed_evidence": [
+              "sound list"
+            ]
+          },
+          {
+            "target": "waveform detector",
+            "missing_observed_evidence": [
+              "frequency list"
+            ]
+          },
+          {
+            "target": "iron door",
+            "missing_observed_evidence": [
+              "waveform detector"
+            ]
+          }
+        ]
+      }
+    },
+    "game2-5-easy": {
+      "full": {
+        "escape": true,
+        "completed": 58,
+        "total": 58,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 47,
+        "total": 58,
+        "unobserved_clues": [
+          {
+            "target": "safe box",
+            "missing_observed_evidence": [
+              "spotlight"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "paper with names"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 34,
+        "total": 58,
+        "unobserved_clues": [
+          {
+            "target": "safe box",
+            "missing_observed_evidence": [
+              "spotlight"
+            ]
+          },
+          {
+            "target": "bottom drawer",
+            "missing_observed_evidence": [
+              "license plate"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "mud"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "paper with names"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 21,
+        "total": 58,
+        "unobserved_clues": [
+          {
+            "target": "safe box",
+            "missing_observed_evidence": [
+              "spotlight"
+            ]
+          },
+          {
+            "target": "bottom drawer",
+            "missing_observed_evidence": [
+              "license plate"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "mud"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "paper with names"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 11,
+        "total": 58,
+        "unobserved_clues": [
+          {
+            "target": "top drawer",
+            "missing_observed_evidence": [
+              "old thesis paper"
+            ]
+          },
+          {
+            "target": "safe box",
+            "missing_observed_evidence": [
+              "spotlight"
+            ]
+          },
+          {
+            "target": "bottom drawer",
+            "missing_observed_evidence": [
+              "license plate",
+              "magazine"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "mud"
+            ]
+          },
+          {
+            "target": "computer",
+            "missing_observed_evidence": [
+              "paper with names",
+              "@book shelf"
+            ]
+          }
+        ]
+      }
+    },
+    "game3-1-easy": {
+      "full": {
+        "escape": true,
+        "completed": 72,
+        "total": 72,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 56,
+        "total": 72,
+        "unobserved_clues": [
+          {
+            "target": "front desk locker lock",
+            "missing_observed_evidence": [
+              "old-fashioned phone"
+            ]
+          },
+          {
+            "target": "exit door",
+            "missing_observed_evidence": [
+              "exit code paper"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 21,
+        "total": 72,
+        "unobserved_clues": [
+          {
+            "target": "brown box with missing number",
+            "missing_observed_evidence": [
+              "wet shipping list"
+            ]
+          },
+          {
+            "target": "digit password lock",
+            "missing_observed_evidence": [
+              "name slot"
+            ]
+          },
+          {
+            "target": "iron safe",
+            "missing_observed_evidence": [
+              "painting",
+              "iron safe"
+            ]
+          },
+          {
+            "target": "blue tool box",
+            "missing_observed_evidence": [
+              "communicator"
+            ]
+          },
+          {
+            "target": "old-fashioned phone",
+            "missing_observed_evidence": [
+              "piece of paper code"
+            ]
+          },
+          {
+            "target": "front desk locker lock",
+            "missing_observed_evidence": [
+              "old-fashioned phone"
+            ]
+          },
+          {
+            "target": "exit door",
+            "missing_observed_evidence": [
+              "exit code paper"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 15,
+        "total": 72,
+        "unobserved_clues": [
+          {
+            "target": "brown box with missing number",
+            "missing_observed_evidence": [
+              "wet shipping list"
+            ]
+          },
+          {
+            "target": "digit password lock",
+            "missing_observed_evidence": [
+              "name slot"
+            ]
+          },
+          {
+            "target": "iron safe",
+            "missing_observed_evidence": [
+              "painting",
+              "iron safe"
+            ]
+          },
+          {
+            "target": "blue tool box",
+            "missing_observed_evidence": [
+              "communicator"
+            ]
+          },
+          {
+            "target": "old-fashioned phone",
+            "missing_observed_evidence": [
+              "piece of paper code"
+            ]
+          },
+          {
+            "target": "front desk locker lock",
+            "missing_observed_evidence": [
+              "old-fashioned phone"
+            ]
+          },
+          {
+            "target": "exit door",
+            "missing_observed_evidence": [
+              "exit code paper"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 6,
+        "total": 72,
+        "unobserved_clues": [
+          {
+            "target": "brown box with missing number",
+            "missing_observed_evidence": [
+              "wet shipping list"
+            ]
+          },
+          {
+            "target": "digit password lock",
+            "missing_observed_evidence": [
+              "daily service password",
+              "name slot"
+            ]
+          },
+          {
+            "target": "iron safe",
+            "missing_observed_evidence": [
+              "painting",
+              "iron safe"
+            ]
+          },
+          {
+            "target": "blue tool box",
+            "missing_observed_evidence": [
+              "communicator"
+            ]
+          },
+          {
+            "target": "old-fashioned phone",
+            "missing_observed_evidence": [
+              "piece of paper code"
+            ]
+          },
+          {
+            "target": "front desk locker lock",
+            "missing_observed_evidence": [
+              "old-fashioned phone"
+            ]
+          },
+          {
+            "target": "exit door",
+            "missing_observed_evidence": [
+              "exit code paper",
+              "exit door"
+            ]
+          }
+        ]
+      }
+    },
+    "game3-2-easy": {
+      "full": {
+        "escape": true,
+        "completed": 48,
+        "total": 48,
+        "unobserved_clues": []
+      },
+      "no_messages": {
+        "escape": false,
+        "completed": 19,
+        "total": 48,
+        "unobserved_clues": [
+          {
+            "target": "office door password pad",
+            "missing_observed_evidence": [
+              "left half paper"
+            ]
+          },
+          {
+            "target": "red mail box",
+            "missing_observed_evidence": [
+              "graffiti"
+            ]
+          }
+        ]
+      },
+      "no_give": {
+        "escape": false,
+        "completed": 18,
+        "total": 48,
+        "unobserved_clues": [
+          {
+            "target": "information board",
+            "missing_observed_evidence": [
+              "game machine"
+            ]
+          },
+          {
+            "target": "office door password pad",
+            "missing_observed_evidence": [
+              "left half paper"
+            ]
+          },
+          {
+            "target": "red mail box",
+            "missing_observed_evidence": [
+              "graffiti"
+            ]
+          }
+        ]
+      },
+      "only_A": {
+        "escape": false,
+        "completed": 16,
+        "total": 48,
+        "unobserved_clues": [
+          {
+            "target": "information board",
+            "missing_observed_evidence": [
+              "game machine"
+            ]
+          },
+          {
+            "target": "office door password pad",
+            "missing_observed_evidence": [
+              "left half paper"
+            ]
+          },
+          {
+            "target": "red mail box",
+            "missing_observed_evidence": [
+              "graffiti",
+              "red mail box"
+            ]
+          },
+          {
+            "target": "tool box",
+            "missing_observed_evidence": [
+              "piece of paper hint"
+            ]
+          }
+        ]
+      },
+      "only_B": {
+        "escape": false,
+        "completed": 0,
+        "total": 48,
+        "unobserved_clues": [
+          {
+            "target": "information board",
+            "missing_observed_evidence": [
+              "game machine"
+            ]
+          },
+          {
+            "target": "office door password pad",
+            "missing_observed_evidence": [
+              "left half paper",
+              "right half paper"
+            ]
+          },
+          {
+            "target": "red mail box",
+            "missing_observed_evidence": [
+              "graffiti"
+            ]
+          },
+          {
+            "target": "tool box",
+            "missing_observed_evidence": [
+              "code paper"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "feedback_repair_probe": {
+    "stats": {
+      "escaped": true,
+      "decisions": 100,
+      "skipped_reference_actions": [],
+      "clue_sources_not_messaged": [],
+      "environment_actions": 82,
+      "messages": 3,
+      "gives": 7,
+      "invalid_actions": 0,
+      "partner_area_moves": []
+    },
+    "checks": [
+      {
+        "decision": 17,
+        "role": "A",
+        "action": "input(1040, wall safe)",
+        "missing_ever": [],
+        "missing_current": []
+      },
+      {
+        "decision": 48,
+        "role": "B",
+        "action": "input(3816, bookshelf safe)",
+        "missing_ever": [],
+        "missing_current": []
+      },
+      {
+        "decision": 60,
+        "role": "B",
+        "action": "input(1986, bookshelf safe 2)",
+        "missing_ever": [],
+        "missing_current": []
+      },
+      {
+        "decision": 97,
+        "role": "B",
+        "action": "input(Genshin, left bookshelf safe)",
+        "missing_ever": [],
+        "missing_current": []
+      },
+      {
+        "decision": 99,
+        "role": "B",
+        "action": "input(10011001, left bookshelf safe)",
+        "missing_ever": [],
+        "missing_current": []
+      }
+    ],
+    "replacements": [
+      {
+        "decision": 14,
+        "role": "B",
+        "before": "send(drawer: an opened drawer)",
+        "after": "send(The drawer is opened, and there is a paper with a number \"1040\")"
+      }
+    ]
+  },
+  "provenance": {
+    "data/clues.json": "dc67982e793bfc876e709c1d7608a8c462cbb1e8cb250d38cf8a921a12eb3983",
+    "data/roles/game1-1-easy.json": "c658189ee8d5bb84518764547b5960997ddead07b7170adc54d13e9fedd371e7",
+    "data/roles/game1-2-easy.json": "841e68abe82c39e834643c14768128d7698f349c63c83044eecd7cf771fbf726",
+    "data/roles/game1-3-easy.json": "58dec0ac14cdfb7ab6eab9090747fa76fa366904af3ab5a449fda3dbce7446a4",
+    "data/roles/game1-4-easy.json": "24b1df9c9df50956d5f16ad9cfc0a807090e112ee290f16b8bce190ce4ec7316",
+    "data/roles/game1-5-easy.json": "e4c25831cb1fbdfbcf73ec56379d3e758733d584e3032d1ac4f4a5c4b8b6d8a3",
+    "data/roles/game2-1-easy.json": "e605633a50d8858d70c61e3644554214d1749fa343ee934244626fd62113cdd9",
+    "data/roles/game2-2-easy.json": "2878bc784f32edfca28c80a70e685470283eb2ccc2625f3b754691cf42a7e389",
+    "data/roles/game2-3-easy.json": "f802ba46baa1ae4de5b4f8cd810db0982352f11b253f497a6d80792a30c1f20e",
+    "data/roles/game2-4-easy.json": "055ea5b6fe6f83bb9d67d226ae1da0a9aba35d6a6dca42eba5f46d703c848bf3",
+    "data/roles/game2-5-easy.json": "621bbc0550e72a023f76fdb2e1446aa1d367db7ee0236d6c1e5b68692bfa6320",
+    "data/roles/game3-1-easy.json": "8c0495b30563c69a1c711365418d3935a8450f8d41fe2677b1a0faa56652d7b6",
+    "data/roles/game3-2-easy.json": "c9192aacb1779f675561ebcaeab53ec57a4fd9190c2bbe2cb522645967deb2f3",
+    "data/split_v4/README.md": "f2b860eeb9f5134c5111b1ab4b4a9a9b491fe315161fe3c17fbc81f23503dfda",
+    "data/split_v4/artifact_games.json": "3063c7c07de3060db66edf26022da09d2bd8d1f862bcbaae8d4c372faf1773af",
+    "data/split_v4/clues.json": "c74f668b6068e2f1a5234f71574d990b8ad65e37392ad8ed2952974ac5790023",
+    "data/split_v4/cohort_policy.json": "9ea2d4ec0513dacb74515a34fbf07eee0d9acbd20841c0992411a5f567accd2e",
+    "data/split_v4/edits.json": "a18c5263a8337acc7e4730bae06c67c9cbe3aec59182bf2ba56588771b5e17db",
+    "data/split_v4/games/game1-1-easy.yaml": "3c49fc05defa7bb9d52877b546f990aec97b1fb9a2ff01c80cc058c916ee7b73",
+    "data/split_v4/games/game1-2-easy.yaml": "e2940a204ee7d2c8082066b15c20798d317bd787980b878c1f69940a7ecd6916",
+    "data/split_v4/games/game1-3-easy.yaml": "d6806b2c060def19e55f9e0ddfed29f13dea74270a2da0c44e48fb86e754d431",
+    "data/split_v4/games/game2-1-easy.yaml": "8fe587df50ad775e0c391f88a098c7d82afef003ad59e9d55fe6fe150eb04493",
+    "data/split_v4/games/game2-2-easy.yaml": "72c3840f08391ace069f8a573cad60f156e38686d828063ba9b894dc088a97db",
+    "data/split_v4/reference/key_log_1-1.txt": "f9dca4f8eac5277e22230ed91ea6ab4e68b704066e0718fa224abf0817e74be5",
+    "data/split_v4/reference/key_log_1-2.txt": "81c3e06215fe17c71678e257c053eea5a240f2c8ac830d6f3dae476cd4484c06",
+    "data/split_v4/reference/key_log_1-3.txt": "4ab29fc5be1708abb0688eda39660b0f7a972e22ed2f825266620500a15d808b",
+    "data/split_v4/reference/key_log_2-1.txt": "cba24367273f9de2a146f1b9da49f60dbff81b94ec43729b49d4df4f3a14cefc",
+    "data/split_v4/reference/key_log_2-2.txt": "743d30242763d6caa81b2b22053b3831a1269ded59940776d261b995c9e8b349",
+    "data/split_v4/replays/game1-1-easy.peer.json": "839ae54927503d8b84bde7eaa7c5ba6252c6a1e31f7d333685658d26954b8a57",
+    "data/split_v4/replays/game1-1-easy.solo.json": "5632152b47ce82cc8ef55b2a5f2d61285e43bf4cffede18f65d74baf7cb5941e",
+    "data/split_v4/replays/game1-2-easy.peer.json": "5d5317391c4157e493cedc7044459176377416134984d56aedebd452963ec3df",
+    "data/split_v4/replays/game1-2-easy.solo.json": "58512e1773972929a36fe1e37d30cc87b2cb24e23dd2a45b2065261337ec1e13",
+    "data/split_v4/replays/game1-3-easy.peer.json": "32750f38a11ef22f6b496409f262b16152c814c97a6b8a3393ccf70da22f4fb3",
+    "data/split_v4/replays/game1-3-easy.solo.json": "48fa0542ca2c5d86fb67f264eb3c1d2921936949cbaefd1d7d45c8a7e57e85e7",
+    "data/split_v4/replays/game2-1-easy.peer.json": "dd29fdf320ffb448255d82b580ad01df45e2c6a3269bf045c348570c34245c6c",
+    "data/split_v4/replays/game2-1-easy.solo.json": "05bc58aba26985f352800fa4082f3fca4a8fbd902ec62a50054f30f989764633",
+    "data/split_v4/replays/game2-2-easy.peer.json": "cb156198f2aacef5c64f0a1aba98184fdd955d375e06ada24347594a058d8460",
+    "data/split_v4/replays/game2-2-easy.solo.json": "a8217b2768fb5dc2259c302456d4b56691e09f4426f4ea897ffba0533b990b89",
+    "data/split_v4/roles/game1-1-easy.json": "7a3eafa784ab81017787b9394135b8250bdce318c40780c077c218258799769a",
+    "data/split_v4/roles/game1-2-easy.json": "d55612ad4165c84950fff46971a9fff2b25ad90801ed11662b92dead09d3739c",
+    "data/split_v4/roles/game1-3-easy.json": "3eb5fad2515dc93a09139aa46634c957226dbac1def5f63328d30efdb54c4284",
+    "data/split_v4/roles/game2-1-easy.json": "796f9545250b01f3d0fc2c7c5e8ec20daba97d17099e2087b7c15bc17a634cc9",
+    "data/split_v4/roles/game2-2-easy.json": "5267cf626c19699ff13edc2d138a5e02ac3b1feafd52edb97c717a30efa6158b",
+    "data/split_v4/verification.json": "1df346b07940accff2b800d0775a4274db58330209ab8b86a7ecf69c3f164083",
+    "experiments/evidence/v4-review-2026-11-25/review.py": "dd73a60af4d3e3d9a90d9555a40afcd913d17cf7971db99963e7815b302cfb3c",
+    "scripts/analyze_suitability.py": "9448eef6f96f9a5843803567b278bc572090fa42f08e7ae1e9438fa9ce86eee2",
+    "scripts/split_metrics.py": "5f7a661687746de29871b431db319e42b938f401862620c56d098b529a96d8e3",
+    "scripts/split_v4.py": "3a9dd16bd289b61e5d7bd904476cfdbf73eafa1617cfc44cfe077b3f4ffcdc57"
+  },
+  "object_preservation": {
+    "game2-2-easy": {
+      "remaining_objects_unchanged": true,
+      "original_objects": 55,
+      "remaining_objects": 44
+    },
+    "game1-2-easy": {
+      "remaining_objects_unchanged": true,
+      "original_objects": 34,
+      "remaining_objects": 31
+    },
+    "game1-3-easy": {
+      "remaining_objects_unchanged": true,
+      "original_objects": 34,
+      "remaining_objects": 25
+    },
+    "game1-1-easy": {
+      "remaining_objects_unchanged": true,
+      "original_objects": 38,
+      "remaining_objects": 38
+    },
+    "game2-1-easy": {
+      "remaining_objects_unchanged": true,
+      "original_objects": 40,
+      "remaining_objects": 40
+    }
+  },
+  "test_suite": {
+    "command": "python -m unittest discover -s tests",
+    "run": 123,
+    "passed": 120,
+    "skipped": 3,
+    "errors": 0,
+    "failures": 0
+  }
+}

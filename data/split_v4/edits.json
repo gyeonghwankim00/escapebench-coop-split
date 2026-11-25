@@ -1,0 +1,893 @@
+{
+  "version": "v4",
+  "policy": "Delete split-obsolete chains; move connections with door puzzles preserved; restore the explicitly documented missing 2-3 easy shelf edge. No object state/transition changes. Original mode always uses upstream.",
+  "games": {
+    "game2-2-easy": {
+      "why": "B starts inside the inner office, the room the golden key opens, and A owns nothing behind that door. The whole chain (cable, pliers, flashlight, GB24 desk safe and mirror, air duct, golden key, door) only served to open it.",
+      "upstream_game_sha256": "4b076014cd4688cf3d35d548d7a1cb9581461adeaed88a5ce67934461cd4b0dd",
+      "upstream_reference_sha256": "031a2bd26f656c1501f624b41b273b898022233246035d2440b6edab0284feaa",
+      "deleted_objects": [
+        {
+          "scene": "entrace of a shop",
+          "object": "cable"
+        },
+        {
+          "scene": "reception room",
+          "object": "pliers"
+        },
+        {
+          "scene": "administration office",
+          "object": "flashlight"
+        },
+        {
+          "scene": "administration office",
+          "object": "air duct"
+        },
+        {
+          "scene": "administration office",
+          "object": "golden key"
+        },
+        {
+          "scene": "administration office",
+          "object": "administration office door"
+        },
+        {
+          "scene": "administration office corner",
+          "object": "draft"
+        },
+        {
+          "scene": "administration office corner",
+          "object": "desk safe"
+        },
+        {
+          "scene": "administration office corner",
+          "object": "pencil"
+        },
+        {
+          "scene": "administration office corner",
+          "object": "waste paper"
+        },
+        {
+          "scene": "administration office corner",
+          "object": "mirror"
+        }
+      ],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [
+        {
+          "index": 2,
+          "position": "entrace of a shop",
+          "action": "click(cable)"
+        },
+        {
+          "index": 4,
+          "position": "entrace of a shop -> reception room",
+          "action": "click(pliers)"
+        },
+        {
+          "index": 5,
+          "position": "entrace of a shop",
+          "action": "craft(cable, pliers)"
+        },
+        {
+          "index": 6,
+          "position": "entrace of a shop -> reception room -> administration office",
+          "action": "click(flashlight)"
+        },
+        {
+          "index": 8,
+          "position": "entrace of a shop -> reception room -> administration office -> administration office corner",
+          "action": "click(pencil)"
+        },
+        {
+          "index": 9,
+          "position": "entrace of a shop -> reception room -> administration office -> administration office corner",
+          "action": "click(waste paper)"
+        },
+        {
+          "index": 10,
+          "position": "entrace of a shop -> reception room -> administration office -> administration office corner",
+          "action": "apply(pencil, draft)"
+        },
+        {
+          "index": 11,
+          "position": "entrace of a shop -> reception room -> administration office -> administration office corner",
+          "action": "input(GB24, desk safe)"
+        },
+        {
+          "index": 12,
+          "position": "entrace of a shop -> reception room -> administration office -> administration office corner",
+          "action": "click(mirror)"
+        },
+        {
+          "index": 13,
+          "position": "entrace of a shop -> reception room -> administration office",
+          "action": "apply(flashlight, air duct)"
+        },
+        {
+          "index": 14,
+          "position": "entrace of a shop -> reception room -> administration office",
+          "action": "apply(mirror, air duct)"
+        },
+        {
+          "index": 15,
+          "position": "entrace of a shop -> reception room -> administration office",
+          "action": "apply(cable, air duct)"
+        },
+        {
+          "index": 16,
+          "position": "entrace of a shop -> reception room -> administration office",
+          "action": "click(golden key)"
+        },
+        {
+          "index": 17,
+          "position": "entrace of a shop -> reception room -> administration office",
+          "action": "apply(golden key, administration office door)"
+        }
+      ],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 66,
+        "v4": 52
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game2-2-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_2-2.txt"
+    },
+    "game1-2-easy": {
+      "why": "B starts inside room 805 and A owns nothing behind its door. The two close-ups held only the key and the door; the cabinet close-up text (\"can be opened easily\") would describe a deleted door, so both scenes go. The hallway right text no longer mentions them: A cannot enter room 805 and the large cabinet has no close-up left. The ventilation fan that leads to the elevator room moves from the end of A's hallway into room 805, so B no longer walks through A's hallway to reach its elevator room.",
+      "upstream_game_sha256": "f1bd9224166d0df510d80a4688806246fa5195492191c55618ac3b6d58f10c55",
+      "upstream_reference_sha256": "f72622dec0ff3145be0f92ab8358701ed10c100d576a9e7ce9569213904f8c3b",
+      "deleted_objects": [
+        {
+          "scene": "large cabinet close-up",
+          "object": "large cabinet door"
+        },
+        {
+          "scene": "large cabinet close-up",
+          "object": "key for room 805"
+        },
+        {
+          "scene": "room 805 door view",
+          "object": "room 805 door"
+        }
+      ],
+      "deleted_scenes": [
+        "large cabinet close-up",
+        "room 805 door view"
+      ],
+      "dropped_reference_steps": [
+        {
+          "index": 3,
+          "position": "hallway -> hallway right -> large cabinet close-up",
+          "action": "click(large cabinet door)"
+        },
+        {
+          "index": 4,
+          "position": "hallway -> hallway right -> large cabinet close-up",
+          "action": "click(key for room 805)"
+        },
+        {
+          "index": 5,
+          "position": "hallway -> hallway right -> room 805 door view",
+          "action": "apply(key for room 805, room 805 door)"
+        },
+        {
+          "index": 6,
+          "position": "hallway -> hallway right -> room 805 door view",
+          "action": "click(room 805 door)"
+        }
+      ],
+      "moved_objects": [],
+      "removed_links": [
+        {
+          "scene": "hallway right",
+          "label": "To the ventilation fan close-up"
+        }
+      ],
+      "added_links": [
+        {
+          "scene": "room 805",
+          "label": "To the ventilation fan close-up",
+          "target": "ventilation fan close-up"
+        }
+      ],
+      "changed_links": [
+        {
+          "scene": "ventilation fan close-up",
+          "old_label": "Back to the hallway right",
+          "new_label": "Back to room 805",
+          "target": "room 805"
+        }
+      ],
+      "changed_texts": [
+        {
+          "scene": "ventilation fan close-up",
+          "old": "A closer look at the ventilation fan at the end of the hallway.",
+          "new": "A closer look at the ventilation fan high on the wall of room 805."
+        },
+        {
+          "scene": "room 805",
+          "old": "You are inside room 805. There is a desk, a left bookshelf, a right bookshelf, a bed, and a bedside table.",
+          "new": "You are inside room 805. There is a desk, a left bookshelf, a right bookshelf, a bed, and a bedside table. A ventilation fan is mounted high on the wall."
+        },
+        {
+          "scene": "hallway right",
+          "old": "A hallway with doors leading to Room 805, a small locked cabinet on the left, and a large open cabinet on the right. There's also a door leading to another room at the end of the hallway.",
+          "new": "A hallway with a small locked cabinet on the left. There's also a door leading to another room at the end of the hallway."
+        }
+      ],
+      "repositioned_reference_steps": [
+        {
+          "index": 38,
+          "action": "apply(ladder, ventilation fan)",
+          "old": "hallway -> hallway right -> ventilation fan close-up",
+          "new": "hallway -> hallway right -> room 805 -> ventilation fan close-up"
+        },
+        {
+          "index": 39,
+          "action": "click(ventilation fan)",
+          "old": "hallway -> hallway right -> ventilation fan close-up",
+          "new": "hallway -> hallway right -> room 805 -> ventilation fan close-up"
+        },
+        {
+          "index": 44,
+          "action": "apply(electric drill, circuit board)",
+          "old": "hallway -> hallway right -> ventilation fan close-up -> elevator room -> elevator interior",
+          "new": "hallway -> hallway right -> room 805 -> ventilation fan close-up -> elevator room -> elevator interior"
+        }
+      ],
+      "reference_steps": {
+        "upstream": 45,
+        "v4": 41
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game1-2-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_1-2.txt"
+    },
+    "game1-3-easy": {
+      "why": "B starts inside the billiard room, which the gold key opens, and A owns nothing behind the black door. The chain and its 7428 clue (paper 1, book) only served to open it; the left corner close-up is empty afterwards.",
+      "upstream_game_sha256": "a1ca0dda3f632a3be56a3a39fc2c4155e13236556f3272ded99d3a274973ff69",
+      "upstream_reference_sha256": "695dfa400052f7ba68e5950506bd704cc39cc91bb5e00f0d768b73ad770f71f4",
+      "deleted_objects": [
+        {
+          "scene": "left corner of the hallway",
+          "object": "pipe"
+        },
+        {
+          "scene": "left corner of the hallway",
+          "object": "book"
+        },
+        {
+          "scene": "the hallway",
+          "object": "brick wall"
+        },
+        {
+          "scene": "the hallway",
+          "object": "strange key"
+        },
+        {
+          "scene": "the hallway",
+          "object": "black door"
+        },
+        {
+          "scene": "the hallway",
+          "object": "paper 1"
+        },
+        {
+          "scene": "the elevator room",
+          "object": "wooden groove"
+        },
+        {
+          "scene": "the elevator room",
+          "object": "lockbox"
+        },
+        {
+          "scene": "the elevator room",
+          "object": "gold key"
+        }
+      ],
+      "deleted_scenes": [
+        "left corner of the hallway"
+      ],
+      "dropped_reference_steps": [
+        {
+          "index": 0,
+          "position": "the hallway",
+          "action": "click(paper 1)"
+        },
+        {
+          "index": 1,
+          "position": "the hallway -> left corner of the hallway",
+          "action": "click(book)"
+        },
+        {
+          "index": 2,
+          "position": "the hallway -> left corner of the hallway",
+          "action": "click(book)"
+        },
+        {
+          "index": 3,
+          "position": "the hallway -> left corner of the hallway",
+          "action": "click(book)"
+        },
+        {
+          "index": 4,
+          "position": "the hallway -> left corner of the hallway",
+          "action": "click(pipe)"
+        },
+        {
+          "index": 5,
+          "position": "the hallway",
+          "action": "apply(pipe, brick wall)"
+        },
+        {
+          "index": 6,
+          "position": "the hallway",
+          "action": "click(strange key)"
+        },
+        {
+          "index": 7,
+          "position": "the hallway -> the elevator room",
+          "action": "apply(strange key, wooden groove)"
+        },
+        {
+          "index": 8,
+          "position": "the hallway -> the elevator room",
+          "action": "input(7428, lockbox)"
+        },
+        {
+          "index": 9,
+          "position": "the hallway -> the elevator room",
+          "action": "click(gold key)"
+        },
+        {
+          "index": 10,
+          "position": "the hallway",
+          "action": "apply(gold key, black door)"
+        }
+      ],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 38,
+        "v4": 27
+      },
+      "name_mentions_kept": [
+        {
+          "name": "brick wall",
+          "text": "You opened the door. Behind it was a brick wall. Someone wrote on the wall -- you don't want to get there.",
+          "accepted": "the wall behind the wooden door in the billiard room, not the hallway brick wall"
+        },
+        {
+          "name": "brick wall",
+          "text": "A brick wall behind the wooden door. Someone wrote on the wall -- 'you don't want to get there'.",
+          "accepted": "the wall behind the wooden door in the billiard room, not the hallway brick wall"
+        }
+      ],
+      "game_file": "data/split_v4/games/game1-3-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_1-3.txt"
+    },
+    "game1-1-easy": {
+      "why": "In v3 B's kitchen and bathroom lay on opposite sides of A's living room and bedroom, so B walked through A's rooms four times. The bathroom (and its door, which still needs the handle from A's cardboard box) now opens off the kitchen.",
+      "upstream_game_sha256": "f4fc2fe67a0ea29a951203507ceb5d0c047305aedbc0393f6fcf8c7dc5b99c1b",
+      "upstream_reference_sha256": "8df817bbc8572bdf0dd5fa3883a738d3b6f128693b6cd4e9d327028e61664c92",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [
+        {
+          "object": "bathroom door",
+          "from_scene": "bedroom",
+          "to_scene": "dining room and kitchen"
+        }
+      ],
+      "removed_links": [
+        {
+          "scene": "bedroom",
+          "label": "To the bathroom"
+        }
+      ],
+      "added_links": [
+        {
+          "scene": "dining room and kitchen",
+          "label": "To the bathroom",
+          "target": "bathroom"
+        }
+      ],
+      "changed_links": [
+        {
+          "scene": "bathroom",
+          "old_label": "To the bedroom",
+          "new_label": "To the dining room and kitchen",
+          "target": "dining room and kitchen"
+        }
+      ],
+      "changed_texts": [
+        {
+          "scene": "bedroom",
+          "old": "There is a bed, a visible hammer handle, a toolbox, a cardboard box, and a door leading to the bathroom.",
+          "new": "There is a bed, a visible hammer handle, a toolbox, and a cardboard box."
+        },
+        {
+          "scene": "dining room and kitchen",
+          "old": "A kitchen with several interactable areas. the dining table, the cabinet above the stove, the left and right cabinets, the sink, and the cabinet above the sink.",
+          "new": "A kitchen with several interactable areas. the dining table, the cabinet above the stove, the left and right cabinets, the sink, and the cabinet above the sink. A door on the side leads to the bathroom."
+        }
+      ],
+      "repositioned_reference_steps": [
+        {
+          "index": 7,
+          "action": "apply(door handle, bathroom door)",
+          "old": "living room -> bedroom",
+          "new": "living room -> dining room and kitchen"
+        },
+        {
+          "index": 8,
+          "action": "click(bathroom door)",
+          "old": "living room -> bedroom",
+          "new": "living room -> dining room and kitchen"
+        },
+        {
+          "index": 9,
+          "action": "click(plunger)",
+          "old": "living room -> bedroom -> bathroom",
+          "new": "living room -> dining room and kitchen -> bathroom"
+        },
+        {
+          "index": 22,
+          "action": "apply(shard_3, mirror)",
+          "old": "living room -> bedroom -> bathroom -> mirror close-up",
+          "new": "living room -> dining room and kitchen -> bathroom -> mirror close-up"
+        },
+        {
+          "index": 23,
+          "action": "apply(shard_4, mirror)",
+          "old": "living room -> bedroom -> bathroom -> mirror close-up",
+          "new": "living room -> dining room and kitchen -> bathroom -> mirror close-up"
+        },
+        {
+          "index": 24,
+          "action": "apply(shard_2, mirror)",
+          "old": "living room -> bedroom -> bathroom -> mirror close-up",
+          "new": "living room -> dining room and kitchen -> bathroom -> mirror close-up"
+        },
+        {
+          "index": 25,
+          "action": "apply(shard_1, mirror)",
+          "old": "living room -> bedroom -> bathroom -> mirror close-up",
+          "new": "living room -> dining room and kitchen -> bathroom -> mirror close-up"
+        },
+        {
+          "index": 29,
+          "action": "apply(screwdriver, ventilation fan)",
+          "old": "living room -> bedroom -> bathroom -> ventilation fan close-up",
+          "new": "living room -> dining room and kitchen -> bathroom -> ventilation fan close-up"
+        },
+        {
+          "index": 30,
+          "action": "click(locker key)",
+          "old": "living room -> bedroom -> bathroom -> ventilation fan close-up",
+          "new": "living room -> dining room and kitchen -> bathroom -> ventilation fan close-up"
+        }
+      ],
+      "reference_steps": {
+        "upstream": 40,
+        "v4": 40
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game1-1-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_1-1.txt"
+    },
+    "game2-1-easy": {
+      "why": "In v3 A's utility room and sanctum lay beyond B's corridor and study, so A walked through them three times. The utility room (with the sanctum behind it) now opens off A's apartment hallway. No text states where it was.",
+      "upstream_game_sha256": "c24f05470b6f7268491abbc24fe3a089c9cc1a23d4bddc1c31fd48326ec8a475",
+      "upstream_reference_sha256": "a491d05bef0e2ef59ba8b44cbb7f2508c7df450c4312aba3cb65f3680108da70",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [
+        {
+          "scene": "study room",
+          "label": "Turn left"
+        }
+      ],
+      "added_links": [
+        {
+          "scene": "apartment hallway",
+          "label": "Go to the utility room",
+          "target": "utility room"
+        }
+      ],
+      "changed_links": [
+        {
+          "scene": "utility room",
+          "old_label": "Turn right",
+          "new_label": "Go back",
+          "target": "apartment hallway"
+        }
+      ],
+      "changed_texts": [],
+      "repositioned_reference_steps": [
+        {
+          "index": 8,
+          "action": "click(fragment 2)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 9,
+          "action": "click(scrip 2)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 10,
+          "action": "apply(crowbar, a painting)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 24,
+          "action": "apply(cylindrical key, locked box)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 25,
+          "action": "click(sim card)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 26,
+          "action": "apply(sim card, phone)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 27,
+          "action": "input(47515, phone)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 28,
+          "action": "apply(fragment, safe)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 29,
+          "action": "apply(fragment 2, safe)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 30,
+          "action": "apply(fragment 3, safe)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 31,
+          "action": "apply(fragment 4, safe)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 32,
+          "action": "click(gem)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room"
+        },
+        {
+          "index": 34,
+          "action": "click(paper)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room -> sanctum",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room -> sanctum"
+        },
+        {
+          "index": 40,
+          "action": "input(870472, locked box 2)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room -> sanctum",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room -> sanctum"
+        },
+        {
+          "index": 41,
+          "action": "click(round key)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room -> sanctum",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room -> sanctum"
+        },
+        {
+          "index": 42,
+          "action": "apply(round key, tellurion)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room -> sanctum",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room -> sanctum"
+        },
+        {
+          "index": 43,
+          "action": "click(tap)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room -> sanctum",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room -> sanctum"
+        },
+        {
+          "index": 44,
+          "action": "apply(tap, pipe)",
+          "old": "letter -> apartment entrance -> apartment hallway -> corridor -> study room -> utility room -> sanctum",
+          "new": "letter -> apartment entrance -> apartment hallway -> utility room -> sanctum"
+        }
+      ],
+      "reference_steps": {
+        "upstream": 45,
+        "v4": 45
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game2-1-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_2-1.txt"
+    },
+    "game1-5-easy": {
+      "why": "Move the system control room to the dormitory side; retain all puzzles and electrical triggers.",
+      "upstream_game_sha256": "49701ae073b13e77ea16dbdaeb9e48df74ccf74a581b5c5279bf619a36456e27",
+      "upstream_reference_sha256": "79b32ddcb1ab74a8fbc0c2b29d54679232a60481992bde8b26e34cdb8cd3aa49",
+      "deleted_objects": [],
+      "deleted_scenes": [
+        "room on the left"
+      ],
+      "dropped_reference_steps": [],
+      "moved_objects": [
+        {
+          "object": "safety door 3",
+          "from_scene": "room on the left",
+          "to_scene": "the dormitory"
+        }
+      ],
+      "removed_links": [],
+      "added_links": [
+        {
+          "scene": "the dormitory",
+          "label": "Go to the control room",
+          "target": "the control room"
+        }
+      ],
+      "changed_links": [
+        {
+          "scene": "the control room",
+          "old_label": "Back to room on the left",
+          "new_label": "Back to the dormitory",
+          "target": "the dormitory"
+        }
+      ],
+      "changed_texts": [
+        {
+          "scene": "the dormitory",
+          "old": "An abandoned dormitory. The beds are covered with dust.",
+          "new": "An abandoned dormitory. The beds are covered with dust. An electrically controlled safety door leads to the control room."
+        }
+      ],
+      "repositioned_reference_steps": [
+        {
+          "index": 29,
+          "action": "click(paper 3)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 30,
+          "action": "click(photo paper)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 34,
+          "action": "apply(duct tape, computer)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 35,
+          "action": "apply(pickable plug, computer)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 36,
+          "action": "apply(disk 1, computer)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 37,
+          "action": "apply(disk 3, computer)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 38,
+          "action": "click(ultra-voilet light)",
+          "old": "initial room -> room on the left -> the control room -> the emergency exit",
+          "new": "initial room -> room on the right -> the dormitory -> the control room -> the emergency exit"
+        },
+        {
+          "index": 39,
+          "action": "click(knife)",
+          "old": "initial room -> room on the left -> the control room -> the emergency exit",
+          "new": "initial room -> room on the right -> the dormitory -> the control room -> the emergency exit"
+        },
+        {
+          "index": 40,
+          "action": "apply(knife, silk painting)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 41,
+          "action": "click(wire cutter)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 42,
+          "action": "click(remote detonator)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        },
+        {
+          "index": 45,
+          "action": "apply(disk 2, computer)",
+          "old": "initial room -> room on the left -> the control room",
+          "new": "initial room -> room on the right -> the dormitory -> the control room"
+        }
+      ],
+      "reference_steps": {
+        "upstream": 62,
+        "v4": 62
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game1-5-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_1-5.txt"
+    },
+    "game2-3-easy": {
+      "why": "Restore the kitchen-to-shelf link present in upstream default/hard and required by the shared reference. Reassign living room and upper floor to B to remove transit through partner scenes.",
+      "upstream_game_sha256": "1ec162bfe8e3f2bf64e37b3405da9da32b99314c8a5ae00c7df53410369f7f46",
+      "upstream_reference_sha256": "5e9386b87133cc4dc77228bc37b121253a2a9d52784833b9869a4d0354272baa",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [
+        {
+          "scene": "kitchen",
+          "label": "To the shelf above food preparation area close-up",
+          "target": "shelf above food preparation area close-up"
+        }
+      ],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 95,
+        "v4": 95
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game2-3-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_2-3.txt"
+    },
+    "game1-4-easy": {
+      "why": "Unmodified upstream puzzle and map.",
+      "upstream_game_sha256": "280daa2968884c933f539ce902e4986d430bc477e4b4d77d3338fded97d58f31",
+      "upstream_reference_sha256": "e4a0d931ea5ad4b8816e0c30823c4c096b6c7d1ca652b0e88725587d9a5eaa6f",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 64,
+        "v4": 64
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game1-4-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_1-4.txt"
+    },
+    "game2-4-easy": {
+      "why": "Unmodified upstream puzzle and map.",
+      "upstream_game_sha256": "7cc28c51167e3f1e07b4e18eefdc8ab03dd91aa17ee249b07cf6542c4e989899",
+      "upstream_reference_sha256": "ff8662626421d29269b6d5c393d9830426d828704a37078bda34332430787c98",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 57,
+        "v4": 57
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game2-4-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_2-4.txt"
+    },
+    "game2-5-easy": {
+      "why": "Unmodified upstream puzzle and map.",
+      "upstream_game_sha256": "5def45c9b7ce1e430adcea7432e58c82d3f676a69f6698b2b918c0f59faf4239",
+      "upstream_reference_sha256": "19abc97e4d1c6ad30799a146ab64a267ea89c9872f9eb8495ce71fb4e300a5a1",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 58,
+        "v4": 58
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game2-5-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_2-5.txt"
+    },
+    "game3-1-easy": {
+      "why": "Unmodified upstream puzzle and map.",
+      "upstream_game_sha256": "6b86c14dc7ae239b90598154f4f01738e82907f004bbdb804759bf6ceffb5ffb",
+      "upstream_reference_sha256": "36235047b9eef53cdbb294abb60f8d9b0e6b63dadfcc13a3b4a6e042a2426bbe",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 72,
+        "v4": 72
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game3-1-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_3-1.txt"
+    },
+    "game3-2-easy": {
+      "why": "Unmodified upstream puzzle and map.",
+      "upstream_game_sha256": "f216145ba9d8cb602eb70cd869287a31183130c56b9fe4f7ef709022b1a807e7",
+      "upstream_reference_sha256": "57d801f7ba5a38360e125342835467f415b451a8d5c3b4e9c74ca7cd957693fe",
+      "deleted_objects": [],
+      "deleted_scenes": [],
+      "dropped_reference_steps": [],
+      "moved_objects": [],
+      "removed_links": [],
+      "added_links": [],
+      "changed_links": [],
+      "changed_texts": [],
+      "repositioned_reference_steps": [],
+      "reference_steps": {
+        "upstream": 48,
+        "v4": 48
+      },
+      "name_mentions_kept": [],
+      "game_file": "data/split_v4/games/game3-2-easy.yaml",
+      "reference_file": "data/split_v4/reference/key_log_3-2.txt"
+    }
+  }
+}

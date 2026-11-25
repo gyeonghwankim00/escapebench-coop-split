@@ -1,0 +1,746 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "letter",
+    "action": "move(Start the game)",
+    "response": "Action executed successfully. Change to another scene: apartment entrance.",
+    "progress": 0.0
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "apartment entrance",
+    "action": "click(bronze key)",
+    "response": "Action executed successfully. You have just collected a bronze key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 2.22
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "apartment entrance",
+    "action": "apply(bronze key, apartment door)",
+    "response": "Action executed successfully. You have successfully applied bronze key to apartment door. The apartment door is opened, there is a hallway inside",
+    "progress": 4.44
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "apartment entrance",
+    "action": "move(Enter the apartment)",
+    "response": "Action executed successfully. Change to another scene: apartment hallway.",
+    "progress": 4.44
+  },
+  {
+    "step": 5,
+    "role": "B",
+    "at": "corridor",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 4.44
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "apartment hallway",
+    "action": "move(Turn left)",
+    "response": "Action executed successfully. Change to another scene: cloakroom.",
+    "progress": 4.44
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "click(fragment)",
+    "response": "Action executed successfully. You have just collected a fragment. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 6.67
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "click(shoelaces)",
+    "response": "Action executed successfully. You have just collected a shoelaces. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 8.89
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "apply(bronze key, locker)",
+    "response": "Action executed successfully. You have successfully applied bronze key to locker. The locker is opened, there is a crowbar inside",
+    "progress": 11.11
+  },
+  {
+    "step": 10,
+    "role": "B",
+    "at": "corridor",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 11.11
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "click(crowbar)",
+    "response": "Action executed successfully. You have just collected a crowbar. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 13.33
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "move(Turn right)",
+    "response": "Action executed successfully. Change to another scene: apartment hallway.",
+    "progress": 13.33
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "apartment hallway",
+    "action": "move(Turn right)",
+    "response": "Action executed successfully. Change to another scene: hallway cabinet.",
+    "progress": 13.33
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "hallway cabinet",
+    "action": "click(hook)",
+    "response": "Action executed successfully. You have just collected a hook. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 15.56
+  },
+  {
+    "step": 15,
+    "role": "B",
+    "at": "corridor",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 15.56
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "hallway cabinet",
+    "action": "craft(shoelaces, hook)",
+    "response": "Action executed successfully. You have successfully crafted a hook made of iron, with a curved open end, could be bound with something and a bundle of shoelaces, made of cord, very thin, long, and strong together.\nYou get a new item: a bundle of shoelaces with a hook, like a fishing rod. It is put into your bag.",
+    "progress": 17.78
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "hallway cabinet",
+    "action": "move(Turn left)",
+    "response": "Action executed successfully. Change to another scene: apartment hallway.",
+    "progress": 17.78
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "apartment hallway",
+    "action": "move(Go to the utility room)",
+    "response": "Action executed successfully. Change to another scene: utility room.",
+    "progress": 17.78
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "utility room",
+    "action": "click(fragment 2)",
+    "response": "Action executed successfully. You have just collected a fragment 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 20.0
+  },
+  {
+    "step": 20,
+    "role": "B",
+    "at": "corridor",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 20.0
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "utility room",
+    "action": "click(scrip 2)",
+    "response": "Action executed successfully. You have just collected a scrip 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 22.22
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(crowbar, a painting)",
+    "response": "Action executed successfully. You have successfully applied crowbar to a painting. The painting is taken off, there is a safe behind the painting",
+    "progress": 24.44
+  },
+  {
+    "step": 23,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 24.44
+  },
+  {
+    "step": 24,
+    "role": "B",
+    "at": "corridor",
+    "action": "move(Go straight)",
+    "response": "Action executed successfully. Change to another scene: study room.",
+    "progress": 24.44
+  },
+  {
+    "step": 25,
+    "role": "B",
+    "at": "study room",
+    "action": "move(Turn right)",
+    "response": "Action executed successfully. Change to another scene: utility room 2.",
+    "progress": 24.44
+  },
+  {
+    "step": 26,
+    "role": "B",
+    "at": "utility room 2",
+    "action": "click(screwdriver)",
+    "response": "Action executed successfully. You have just collected a screwdriver. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 26.67
+  },
+  {
+    "step": 27,
+    "role": "B",
+    "at": "utility room 2",
+    "action": "click(scrip)",
+    "response": "Action executed successfully. You have just collected a scrip. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 28.89
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "utility room",
+    "action": "send(a scrip with a string of numbers \"424389\")",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 28.89
+  },
+  {
+    "step": 29,
+    "role": "B",
+    "at": "utility room 2",
+    "action": "input(424389, safe 2)",
+    "response": "Action executed successfully. You have given an input 424389 to safe 2.",
+    "progress": 31.11
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "utility room 2",
+    "action": "click(picklock)",
+    "response": "Action executed successfully. You have just collected a picklock. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 33.33
+  },
+  {
+    "step": 31,
+    "role": "B",
+    "at": "utility room 2",
+    "action": "move(Turn left)",
+    "response": "Action executed successfully. Change to another scene: study room.",
+    "progress": 33.33
+  },
+  {
+    "step": 32,
+    "role": "B",
+    "at": "study room",
+    "action": "move(Go back)",
+    "response": "Action executed successfully. Change to another scene: corridor.",
+    "progress": 33.33
+  },
+  {
+    "step": 33,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 33.33
+  },
+  {
+    "step": 34,
+    "role": "B",
+    "at": "corridor",
+    "action": "apply(picklock, bathroom door)",
+    "response": "Action executed successfully. You have successfully applied picklock to bathroom door. The bathroom door is opened",
+    "progress": 35.56
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "corridor",
+    "action": "move(Go to bathroom)",
+    "response": "Action executed successfully. Change to another scene: bathroom.",
+    "progress": 35.56
+  },
+  {
+    "step": 36,
+    "role": "B",
+    "at": "bathroom",
+    "action": "click(golden key)",
+    "response": "Action executed successfully. You have just collected a golden key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 37.78
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "bathroom",
+    "action": "click(fragment 3)",
+    "response": "Action executed successfully. You have just collected a fragment 3. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 40.0
+  },
+  {
+    "step": 38,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 40.0
+  },
+  {
+    "step": 39,
+    "role": "B",
+    "at": "bathroom",
+    "action": "click(connector)",
+    "response": "Action executed successfully. You have just collected a connector. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 42.22
+  },
+  {
+    "step": 40,
+    "role": "B",
+    "at": "bathroom",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 42.22
+  },
+  {
+    "step": 41,
+    "role": "A",
+    "at": "utility room",
+    "action": "give(shoelaces)",
+    "response": "Action executed successfully. You have given the shoelaces to your partner. It is no longer in your bag.",
+    "progress": 42.22
+  },
+  {
+    "step": 42,
+    "role": "B",
+    "at": "bathroom",
+    "action": "apply(shoelaces, sewer)",
+    "response": "Action executed successfully. You have successfully applied shoelaces to sewer. The sewer is unblocked, there is a cylindrical key inside",
+    "progress": 44.44
+  },
+  {
+    "step": 43,
+    "role": "B",
+    "at": "bathroom",
+    "action": "click(cylindrical key)",
+    "response": "Action executed successfully. You have just collected a cylindrical key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 46.67
+  },
+  {
+    "step": 44,
+    "role": "B",
+    "at": "bathroom",
+    "action": "move(Go back)",
+    "response": "Action executed successfully. Change to another scene: corridor.",
+    "progress": 46.67
+  },
+  {
+    "step": 45,
+    "role": "B",
+    "at": "corridor",
+    "action": "apply(golden key, suitcase)",
+    "response": "Action executed successfully. You have successfully applied golden key to suitcase. The suitcase is opened, there is a metal fragment and a credential inside",
+    "progress": 48.89
+  },
+  {
+    "step": 46,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 48.89
+  },
+  {
+    "step": 47,
+    "role": "B",
+    "at": "corridor",
+    "action": "click(fragment 4)",
+    "response": "Action executed successfully. You have just collected a fragment 4. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 51.11
+  },
+  {
+    "step": 48,
+    "role": "B",
+    "at": "corridor",
+    "action": "click(credential)",
+    "response": "Action executed successfully. You have just collected a credential. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 53.33
+  },
+  {
+    "step": 49,
+    "role": "B",
+    "at": "corridor",
+    "action": "give(cylindrical key)",
+    "response": "Action executed successfully. You have given the cylindrical key to your partner. It is no longer in your bag.",
+    "progress": 53.33
+  },
+  {
+    "step": 50,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(cylindrical key, locked box)",
+    "response": "Action executed successfully. You have successfully applied cylindrical key to locked box. The locked box is opened",
+    "progress": 55.56
+  },
+  {
+    "step": 51,
+    "role": "A",
+    "at": "utility room",
+    "action": "click(sim card)",
+    "response": "Action executed successfully. You have just collected a sim card. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 57.78
+  },
+  {
+    "step": 52,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(sim card, phone)",
+    "response": "Action executed successfully. You have successfully applied sim card to phone. The sim card is inserted into the phone",
+    "progress": 60.0
+  },
+  {
+    "step": 53,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 60.0
+  },
+  {
+    "step": 54,
+    "role": "B",
+    "at": "corridor",
+    "action": "send(a credential, with a phone number \"47515\")",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 60.0
+  },
+  {
+    "step": 55,
+    "role": "A",
+    "at": "utility room",
+    "action": "input(47515, phone)",
+    "response": "Action executed successfully. You have given an input 47515 to phone. The phone is ringing",
+    "progress": 62.22
+  },
+  {
+    "step": 56,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(fragment, safe)",
+    "response": "Action executed successfully. You have successfully applied fragment to safe.\nHowever, the apply of fragment is not enough, and safe is still missing something else ...",
+    "progress": 64.44
+  },
+  {
+    "step": 57,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(fragment 2, safe)",
+    "response": "Action executed successfully. You have successfully applied fragment 2 to safe.\nHowever, the apply of fragment 2 is not enough, and safe is still missing something else ...",
+    "progress": 66.67
+  },
+  {
+    "step": 58,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 66.67
+  },
+  {
+    "step": 59,
+    "role": "B",
+    "at": "corridor",
+    "action": "give(fragment 3)",
+    "response": "Action executed successfully. You have given the fragment 3 to your partner. It is no longer in your bag.",
+    "progress": 66.67
+  },
+  {
+    "step": 60,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(fragment 3, safe)",
+    "response": "Action executed successfully. You have successfully applied fragment 3 to safe.\nHowever, the apply of fragment 3 is not enough, and safe is still missing something else ...",
+    "progress": 68.89
+  },
+  {
+    "step": 61,
+    "role": "A",
+    "at": "utility room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 68.89
+  },
+  {
+    "step": 62,
+    "role": "B",
+    "at": "corridor",
+    "action": "give(fragment 4)",
+    "response": "Action executed successfully. You have given the fragment 4 to your partner. It is no longer in your bag.",
+    "progress": 68.89
+  },
+  {
+    "step": 63,
+    "role": "A",
+    "at": "utility room",
+    "action": "apply(fragment 4, safe)",
+    "response": "Action executed successfully. You have successfully applied fragment 4 to safe. The safe is opened, there is a gem inside",
+    "progress": 71.11
+  },
+  {
+    "step": 64,
+    "role": "A",
+    "at": "utility room",
+    "action": "click(gem)",
+    "response": "Action executed successfully. You have just collected a gem. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 73.33
+  },
+  {
+    "step": 65,
+    "role": "A",
+    "at": "utility room",
+    "action": "move(Go back)",
+    "response": "Action executed successfully. Change to another scene: apartment hallway.",
+    "progress": 73.33
+  },
+  {
+    "step": 66,
+    "role": "A",
+    "at": "apartment hallway",
+    "action": "move(Turn left)",
+    "response": "Action executed successfully. Change to another scene: cloakroom.",
+    "progress": 73.33
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "corridor",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 73.33
+  },
+  {
+    "step": 68,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "apply(gem, Cthulhu ornament)",
+    "response": "Action executed successfully. You have successfully applied gem to Cthulhu ornament. The gem is put on the cthulhu ornament",
+    "progress": 75.56
+  },
+  {
+    "step": 69,
+    "role": "A",
+    "at": "cloakroom",
+    "action": "move(Turn right)",
+    "response": "Action executed successfully. Change to another scene: apartment hallway.",
+    "progress": 75.56
+  },
+  {
+    "step": 70,
+    "role": "A",
+    "at": "apartment hallway",
+    "action": "move(Go to the utility room)",
+    "response": "Action executed successfully. Change to another scene: utility room.",
+    "progress": 75.56
+  },
+  {
+    "step": 71,
+    "role": "A",
+    "at": "utility room",
+    "action": "move(Go to the sanctum)",
+    "response": "Action executed successfully. Change to another scene: sanctum.",
+    "progress": 75.56
+  },
+  {
+    "step": 72,
+    "role": "B",
+    "at": "corridor",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 75.56
+  },
+  {
+    "step": 73,
+    "role": "A",
+    "at": "sanctum",
+    "action": "click(paper)",
+    "response": "Action executed successfully. You have just collected a paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 77.78
+  },
+  {
+    "step": 74,
+    "role": "A",
+    "at": "sanctum",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 77.78
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "corridor",
+    "action": "move(Go straight)",
+    "response": "Action executed successfully. Change to another scene: study room.",
+    "progress": 77.78
+  },
+  {
+    "step": 76,
+    "role": "B",
+    "at": "study room",
+    "action": "apply(connector, tool box)",
+    "response": "Action executed successfully. You have successfully applied connector to tool box.\nHowever, the apply of connector is not enough, and tool box is still missing something else ...",
+    "progress": 80.0
+  },
+  {
+    "step": 77,
+    "role": "B",
+    "at": "study room",
+    "action": "move(Go back)",
+    "response": "Action executed successfully. Change to another scene: corridor.",
+    "progress": 80.0
+  },
+  {
+    "step": 78,
+    "role": "B",
+    "at": "corridor",
+    "action": "move(Go to bathroom)",
+    "response": "Action executed successfully. Change to another scene: bathroom.",
+    "progress": 80.0
+  },
+  {
+    "step": 79,
+    "role": "A",
+    "at": "sanctum",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 80.0
+  },
+  {
+    "step": 80,
+    "role": "B",
+    "at": "bathroom",
+    "action": "apply(screwdriver, drawer of the cabinet)",
+    "response": "Action executed successfully. You have successfully applied screwdriver to drawer of the cabinet. The drawer is opened, there is a lever inside",
+    "progress": 82.22
+  },
+  {
+    "step": 81,
+    "role": "B",
+    "at": "bathroom",
+    "action": "click(lever)",
+    "response": "Action executed successfully. You have just collected a lever. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 84.44
+  },
+  {
+    "step": 82,
+    "role": "B",
+    "at": "bathroom",
+    "action": "move(Go back)",
+    "response": "Action executed successfully. Change to another scene: corridor.",
+    "progress": 84.44
+  },
+  {
+    "step": 83,
+    "role": "B",
+    "at": "corridor",
+    "action": "move(Go straight)",
+    "response": "Action executed successfully. Change to another scene: study room.",
+    "progress": 84.44
+  },
+  {
+    "step": 84,
+    "role": "A",
+    "at": "sanctum",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 84.44
+  },
+  {
+    "step": 85,
+    "role": "B",
+    "at": "study room",
+    "action": "apply(lever, tool box)",
+    "response": "Action executed successfully. You have successfully applied lever to tool box. The tool box is opened, there is a paper inside",
+    "progress": 86.67
+  },
+  {
+    "step": 86,
+    "role": "B",
+    "at": "study room",
+    "action": "click(paper 2)",
+    "response": "Action executed successfully. You have just collected a paper 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 88.89
+  },
+  {
+    "step": 87,
+    "role": "B",
+    "at": "study room",
+    "action": "send(a paper with a 6-digit string \"870472\", seems like a password)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 88.89
+  },
+  {
+    "step": 88,
+    "role": "A",
+    "at": "sanctum",
+    "action": "input(870472, locked box 2)",
+    "response": "Action executed successfully. You have given an input 870472 to locked box 2. The locked box is opened, there is a round key inside",
+    "progress": 91.11
+  },
+  {
+    "step": 89,
+    "role": "A",
+    "at": "sanctum",
+    "action": "click(round key)",
+    "response": "Action executed successfully. You have just collected a round key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 93.33
+  },
+  {
+    "step": 90,
+    "role": "A",
+    "at": "sanctum",
+    "action": "apply(round key, tellurion)",
+    "response": "Action executed successfully. You have successfully applied round key to tellurion. The tellurion is turned, there is a tap inside",
+    "progress": 95.56
+  },
+  {
+    "step": 91,
+    "role": "A",
+    "at": "sanctum",
+    "action": "click(tap)",
+    "response": "Action executed successfully. You have just collected a tap. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 97.78
+  },
+  {
+    "step": 92,
+    "role": "B",
+    "at": "study room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 97.78
+  },
+  {
+    "step": 93,
+    "role": "A",
+    "at": "sanctum",
+    "action": "apply(tap, pipe)",
+    "response": "Action executed successfully. You have successfully applied tap to pipe. The pipe is tapped. suddenly, the exit door is opened. game end!",
+    "progress": 100.0
+  }
+]

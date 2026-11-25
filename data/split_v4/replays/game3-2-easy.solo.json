@@ -1,0 +1,626 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Go to the right corridor)",
+    "response": "Action executed successfully. Change to another scene: right corridor overview.",
+    "progress": 0.0
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "click(dollar bill)",
+    "response": "Action executed successfully. You have just collected a dollar bill. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 2.08
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "click(clothes)",
+    "response": "Action executed successfully. You have just collected a clothes. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 4.17
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "move(Go to end of the corridor)",
+    "response": "Action executed successfully. Change to another scene: end of right corridor.",
+    "progress": 4.17
+  },
+  {
+    "step": 5,
+    "role": "A",
+    "at": "end of right corridor",
+    "action": "click(plug)",
+    "response": "Action executed successfully. You have clicked on plug. You plug it into the socket, now electricity is on.",
+    "progress": 6.25
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "end of right corridor",
+    "action": "apply(dollar bill, iron)",
+    "response": "Action executed successfully. You have successfully applied dollar bill to iron. The dollar bill is dry and flat to use now.",
+    "progress": 8.33
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "end of right corridor",
+    "action": "move(Back to the right corridor overview)",
+    "response": "Action executed successfully. Change to another scene: right corridor overview.",
+    "progress": 8.33
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "move(Back to the laundry room overview)",
+    "response": "Action executed successfully. Change to another scene: laundry room overview.",
+    "progress": 8.33
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Turn right side)",
+    "response": "Action executed successfully. Change to another scene: laundry room right corner.",
+    "progress": 8.33
+  },
+  {
+    "step": 10,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "apply(dollar bill, money exchanger)",
+    "response": "Action executed successfully. You have successfully applied dollar bill to money exchanger. Two coins come out the machine, each worth 1 dollar.",
+    "progress": 10.42
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(dollar coins)",
+    "response": "Action executed successfully. You have just collected a dollar coins. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 12.5
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(right half paper)",
+    "response": "Action executed successfully. You have just collected a right half paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 14.58
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "move(Back to the laundry room overview)",
+    "response": "Action executed successfully. Change to another scene: laundry room overview.",
+    "progress": 14.58
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "apply(dollar coins, vending machine)",
+    "response": "Action executed successfully. You have successfully applied dollar coins to vending machine. A soap drop out from the machine, and returns you some coins. you have 1.5 dollars remaining.",
+    "progress": 16.67
+  },
+  {
+    "step": 15,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "click(soap)",
+    "response": "Action executed successfully. You have just collected a soap. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 18.75
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Turn right side)",
+    "response": "Action executed successfully. Change to another scene: laundry room right corner.",
+    "progress": 18.75
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "apply(soap, handbag)",
+    "response": "Action executed successfully. You have successfully applied soap to handbag. The zip is now lubricated with soap foam all over it.",
+    "progress": 20.83
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(handbag)",
+    "response": "Action executed successfully. You have clicked on handbag. You open the handbag, and there's a piler inside.",
+    "progress": 22.92
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(piler)",
+    "response": "Action executed successfully. You have just collected a piler. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 25.0
+  },
+  {
+    "step": 20,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "move(Back to the laundry room overview)",
+    "response": "Action executed successfully. Change to another scene: laundry room overview.",
+    "progress": 25.0
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Turn left side)",
+    "response": "Action executed successfully. Change to another scene: laundry room left corner.",
+    "progress": 25.0
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "laundry room left corner",
+    "action": "click(game ticket)",
+    "response": "Action executed successfully. You have just collected a game ticket. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 27.08
+  },
+  {
+    "step": 23,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go to end of the corridor)",
+    "response": "Action executed successfully. Change to another scene: end of left corridor.",
+    "progress": 27.08
+  },
+  {
+    "step": 24,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "apply(game ticket, game machine)",
+    "response": "Action executed successfully. You have successfully applied game ticket to game machine. You start playing the game. you achieve top 1 and the screen shows your score is 5974.",
+    "progress": 29.17
+  },
+  {
+    "step": 25,
+    "role": "A",
+    "at": "laundry room left corner",
+    "action": "move(Back to the laundry room overview)",
+    "response": "Action executed successfully. Change to another scene: laundry room overview.",
+    "progress": 29.17
+  },
+  {
+    "step": 26,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Turn right side)",
+    "response": "Action executed successfully. Change to another scene: laundry room right corner.",
+    "progress": 29.17
+  },
+  {
+    "step": 27,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "input(5974, information board)",
+    "response": "Action executed successfully. You have given an input 5974 to information board. The window of the information board is now open. there's lots of notice inside.",
+    "progress": 31.25
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(left half paper)",
+    "response": "Action executed successfully. You have just collected a left half paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 33.33
+  },
+  {
+    "step": 29,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "move(Back to the left corridor overview)",
+    "response": "Action executed successfully. Change to another scene: left corridor overview.",
+    "progress": 33.33
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "apply(dollar coins, drying machine)",
+    "response": "Action executed successfully. You have successfully applied dollar coins to drying machine. The lid of the machine opens, and there's a yellow key card inside.",
+    "progress": 35.42
+  },
+  {
+    "step": 31,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "click(key card)",
+    "response": "Action executed successfully. You have just collected a key card. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 37.5
+  },
+  {
+    "step": 32,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "input(5891, office door password pad)",
+    "response": "Action executed successfully. You have given an input 5891 to office door password pad. The office door opens, you could get in now.",
+    "progress": 39.58
+  },
+  {
+    "step": 33,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go into office room)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 39.58
+  },
+  {
+    "step": 34,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Turn right)",
+    "response": "Action executed successfully. Change to another scene: office room right side.",
+    "progress": 39.58
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "office room right side",
+    "action": "click(besom)",
+    "response": "Action executed successfully. You have just collected a besom. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 41.67
+  },
+  {
+    "step": 36,
+    "role": "B",
+    "at": "office room right side",
+    "action": "click(gas tank)",
+    "response": "Action executed successfully. You have just collected a gas tank. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 43.75
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "office room right side",
+    "action": "apply(key card, drawer)",
+    "response": "Action executed successfully. You have successfully applied key card to drawer. The drawer is open, there's a handle inside.",
+    "progress": 45.83
+  },
+  {
+    "step": 38,
+    "role": "B",
+    "at": "office room right side",
+    "action": "click(safe handle 2)",
+    "response": "Action executed successfully. You have just collected a safe handle 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 47.92
+  },
+  {
+    "step": 39,
+    "role": "B",
+    "at": "office room right side",
+    "action": "move(Back to the office room overview)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 47.92
+  },
+  {
+    "step": 40,
+    "role": "B",
+    "at": "office room overview",
+    "action": "apply(safe handle 2, safe)",
+    "response": "Action executed successfully. You have successfully applied safe handle 2 to safe.\nHowever, the apply of safe handle 2 is not enough, and safe is still missing something else ...",
+    "progress": 50.0
+  },
+  {
+    "step": 41,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "move(Back to the laundry room overview)",
+    "response": "Action executed successfully. Change to another scene: laundry room overview.",
+    "progress": 50.0
+  },
+  {
+    "step": 42,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Go to the right corridor)",
+    "response": "Action executed successfully. Change to another scene: right corridor overview.",
+    "progress": 50.0
+  },
+  {
+    "step": 43,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "apply(clothes, blue basin)",
+    "response": "Action executed successfully. You have successfully applied clothes to blue basin. The clothes is now wet after soaking in the water.",
+    "progress": 52.08
+  },
+  {
+    "step": 44,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "craft(clothes, besom)",
+    "response": "Action executed successfully. You have successfully crafted a white shirt currenly wet, soaked with water and a wood besom with long handle, its head already broken and needs to be wrapped by some cloth together.\nYou get a new item: a wood besom with long handle, its head now wrapped with wet clothes for mopping. It is put into your bag.",
+    "progress": 54.17
+  },
+  {
+    "step": 45,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "apply(besom, graffiti)",
+    "response": "Action executed successfully. You have successfully applied besom to graffiti. The dirty things over graffiti is wiped out, you see some characters on the wall.",
+    "progress": 56.25
+  },
+  {
+    "step": 46,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Back to the left corridor overview)",
+    "response": "Action executed successfully. Change to another scene: left corridor overview.",
+    "progress": 56.25
+  },
+  {
+    "step": 47,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "input(1998, red mail box)",
+    "response": "Action executed successfully. You have given an input 1998 to red mail box. The mail box opens, and there drops a safe handle.",
+    "progress": 58.33
+  },
+  {
+    "step": 48,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "click(safe handle 1)",
+    "response": "Action executed successfully. You have just collected a safe handle 1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 60.42
+  },
+  {
+    "step": 49,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go into office room)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 60.42
+  },
+  {
+    "step": 50,
+    "role": "B",
+    "at": "office room overview",
+    "action": "apply(safe handle 1, safe)",
+    "response": "Action executed successfully. You have successfully applied safe handle 1 to safe. Two handles are assembled, the safe could be opened now.",
+    "progress": 62.5
+  },
+  {
+    "step": 51,
+    "role": "B",
+    "at": "office room overview",
+    "action": "click(safe)",
+    "response": "Action executed successfully. You have clicked on safe. You open the safe, there's a drawing and a wrench inside.",
+    "progress": 64.58
+  },
+  {
+    "step": 52,
+    "role": "B",
+    "at": "office room overview",
+    "action": "click(wrench)",
+    "response": "Action executed successfully. You have just collected a wrench. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 66.67
+  },
+  {
+    "step": 53,
+    "role": "B",
+    "at": "office room overview",
+    "action": "click(drawing)",
+    "response": "Action executed successfully. You have just collected a drawing. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 68.75
+  },
+  {
+    "step": 54,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Back to the left corridor overview)",
+    "response": "Action executed successfully. Change to another scene: left corridor overview.",
+    "progress": 68.75
+  },
+  {
+    "step": 55,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go to end of the corridor)",
+    "response": "Action executed successfully. Change to another scene: end of left corridor.",
+    "progress": 68.75
+  },
+  {
+    "step": 56,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "apply(wrench, pipe on machine)",
+    "response": "Action executed successfully. You have successfully applied wrench to pipe on machine. The pipe is unscrewed from the machine, you can collect it now.",
+    "progress": 70.83
+  },
+  {
+    "step": 57,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "click(pipe)",
+    "response": "Action executed successfully. You have just collected a pipe. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 72.92
+  },
+  {
+    "step": 58,
+    "role": "A",
+    "at": "right corridor overview",
+    "action": "move(Back to the laundry room overview)",
+    "response": "Action executed successfully. Change to another scene: laundry room overview.",
+    "progress": 72.92
+  },
+  {
+    "step": 59,
+    "role": "A",
+    "at": "laundry room overview",
+    "action": "move(Turn right side)",
+    "response": "Action executed successfully. Change to another scene: laundry room right corner.",
+    "progress": 72.92
+  },
+  {
+    "step": 60,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(pot culture)",
+    "response": "Action executed successfully. You have clicked on pot culture. You dig into the soil and find a gold key hidden beneath.",
+    "progress": 75.0
+  },
+  {
+    "step": 61,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(gold key)",
+    "response": "Action executed successfully. You have just collected a gold key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 77.08
+  },
+  {
+    "step": 62,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "apply(piler, hanger)",
+    "response": "Action executed successfully. You have successfully applied piler to hanger. The hanger is pulled down, and there's a piece of paper inside the wall behind.",
+    "progress": 79.17
+  },
+  {
+    "step": 63,
+    "role": "A",
+    "at": "laundry room right corner",
+    "action": "click(code paper)",
+    "response": "Action executed successfully. You have just collected a code paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 81.25
+  },
+  {
+    "step": 64,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "input(1232, tool box)",
+    "response": "Action executed successfully. You have given an input 1232 to tool box. The tool box is open, there's a nozzle inside",
+    "progress": 83.33
+  },
+  {
+    "step": 65,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "click(nozzle)",
+    "response": "Action executed successfully. You have just collected a nozzle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 85.42
+  },
+  {
+    "step": 66,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "move(Back to the left corridor overview)",
+    "response": "Action executed successfully. Change to another scene: left corridor overview.",
+    "progress": 85.42
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go into office room)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 85.42
+  },
+  {
+    "step": 68,
+    "role": "B",
+    "at": "office room overview",
+    "action": "apply(gold key, iron gate)",
+    "response": "Action executed successfully. You have successfully applied gold key to iron gate. The iron gate is open, you could get inside now and retrieve the ladder.",
+    "progress": 87.5
+  },
+  {
+    "step": 69,
+    "role": "B",
+    "at": "office room overview",
+    "action": "click(ladder)",
+    "response": "Action executed successfully. You have just collected a ladder. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 89.58
+  },
+  {
+    "step": 70,
+    "role": "B",
+    "at": "office room overview",
+    "action": "craft(pipe, gas tank)",
+    "response": "Action executed successfully. You have successfully crafted a silver metal pipe with that could connect ends together and an empty metal gas tank with a connection port on the top, needs to be connected with something together.\nYou get a new item: an empty metal gas tank, currently connected with a pipe on the top, needs gas filling. It is put into your bag.",
+    "progress": 91.67
+  },
+  {
+    "step": 71,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Back to the left corridor overview)",
+    "response": "Action executed successfully. Change to another scene: left corridor overview.",
+    "progress": 91.67
+  },
+  {
+    "step": 72,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go to end of the corridor)",
+    "response": "Action executed successfully. Change to another scene: end of left corridor.",
+    "progress": 91.67
+  },
+  {
+    "step": 73,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "apply(ladder, air vent)",
+    "response": "Action executed successfully. You have successfully applied ladder to air vent. You could now reach the vent.",
+    "progress": 93.75
+  },
+  {
+    "step": 74,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "apply(gas tank, air vent)",
+    "response": "Action executed successfully. You have successfully applied gas tank to air vent. The gas tank is now filled with gas, the air pressure is enough now.",
+    "progress": 95.83
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "craft(nozzle, gas tank)",
+    "response": "Action executed successfully. You have successfully crafted a nozzle with a silver mouth, seems should connect with something else to control and work. and a gas tank full of flammable air inside, currently connected with a pipe on the top, but missing a mouth for control together.\nYou get a new item: a gas tank full of flammable air, connected to the nozzle through a pipe, ready to produce heat to burn things now.. It is put into your bag.",
+    "progress": 97.92
+  },
+  {
+    "step": 76,
+    "role": "B",
+    "at": "end of left corridor",
+    "action": "move(Back to the left corridor overview)",
+    "response": "Action executed successfully. Change to another scene: left corridor overview.",
+    "progress": 97.92
+  },
+  {
+    "step": 77,
+    "role": "B",
+    "at": "left corridor overview",
+    "action": "move(Go into office room)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 97.92
+  },
+  {
+    "step": 78,
+    "role": "B",
+    "at": "office room overview",
+    "action": "apply(gas tank, ventilation pipe fence)",
+    "response": "Action executed successfully. You have successfully applied gas tank to ventilation pipe fence. The mental fence is off, you could escape from here now. game end!",
+    "progress": 100.0
+  }
+]

@@ -1,0 +1,1570 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "click(wet shipping list)",
+    "response": "Action executed successfully. You have just collected a wet shipping list. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 1.39
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Go to the garbage disposal place)",
+    "response": "Action executed successfully. Change to another scene: garbage disposal place.",
+    "progress": 1.39
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "garbage disposal place",
+    "action": "click(hammer)",
+    "response": "Action executed successfully. You have just collected a hammer. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 2.78
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "garbage disposal place",
+    "action": "click(diagram)",
+    "response": "Action executed successfully. You have just collected a diagram. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 4.17
+  },
+  {
+    "step": 5,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 4.17
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "garbage disposal place",
+    "action": "move(Back to the warehouse outside)",
+    "response": "Action executed successfully. Change to another scene: warehouse outside.",
+    "progress": 4.17
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Explore the crane in the front)",
+    "response": "Action executed successfully. Change to another scene: crane overview.",
+    "progress": 4.17
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "crane overview",
+    "action": "click(silver key)",
+    "response": "Action executed successfully. You have just collected a silver key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 5.56
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "crane overview",
+    "action": "move(Back to the warehouse outside)",
+    "response": "Action executed successfully. Change to another scene: warehouse outside.",
+    "progress": 5.56
+  },
+  {
+    "step": 10,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 5.56
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Go to the door in left corner)",
+    "response": "Action executed successfully. Change to another scene: warehouse door corner.",
+    "progress": 5.56
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "apply(silver key, electric box)",
+    "response": "Action executed successfully. You have successfully applied silver key to electric box. The electric box is now open, there are some switches inside",
+    "progress": 6.94
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "move(Explore inside the electric box)",
+    "response": "Action executed successfully. Change to another scene: electric box inside.",
+    "progress": 6.94
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "electric box inside",
+    "action": "click(switch A03)",
+    "response": "Action executed successfully. You have clicked on switch A03. Switch a03 is now green (on)",
+    "progress": 8.33
+  },
+  {
+    "step": 15,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 8.33
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "electric box inside",
+    "action": "click(switch A09)",
+    "response": "Action executed successfully. You have clicked on switch A09. Switch a09 is now green (on)",
+    "progress": 9.72
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "electric box inside",
+    "action": "click(switch A12)",
+    "response": "Action executed successfully. You have clicked on switch A12. Switch a12 is now green (on)",
+    "progress": 11.11
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "electric box inside",
+    "action": "click(switch A13)",
+    "response": "Action executed successfully. You have clicked on switch A13. Switch a13 is now green (on)",
+    "progress": 12.5
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "electric box inside",
+    "action": "move(Back to the corner of the warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse door corner.",
+    "progress": 12.5
+  },
+  {
+    "step": 20,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 12.5
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "move(Back to the warehouse outside)",
+    "response": "Action executed successfully. Change to another scene: warehouse outside.",
+    "progress": 12.5
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Explore the crane in the front)",
+    "response": "Action executed successfully. Change to another scene: crane overview.",
+    "progress": 12.5
+  },
+  {
+    "step": 23,
+    "role": "A",
+    "at": "crane overview",
+    "action": "click(crane)",
+    "response": "Action executed successfully. You have clicked on crane. The crane is on now, it is lifting up",
+    "progress": 13.89
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "crane overview",
+    "action": "click(chisel)",
+    "response": "Action executed successfully. You have just collected a chisel. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 15.28
+  },
+  {
+    "step": 25,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 15.28
+  },
+  {
+    "step": 26,
+    "role": "A",
+    "at": "crane overview",
+    "action": "move(Back to the warehouse outside)",
+    "response": "Action executed successfully. Change to another scene: warehouse outside.",
+    "progress": 15.28
+  },
+  {
+    "step": 27,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Go to the door in left corner)",
+    "response": "Action executed successfully. Change to another scene: warehouse door corner.",
+    "progress": 15.28
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "apply(chisel, warehouse door)",
+    "response": "Action executed successfully. You have successfully applied chisel to warehouse door. You have stuck the chisel into the door",
+    "progress": 16.67
+  },
+  {
+    "step": 29,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "apply(hammer, warehouse door)",
+    "response": "Action executed successfully. You have successfully applied hammer to warehouse door. The door's lock is broken, the door is now open",
+    "progress": 18.06
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 18.06
+  },
+  {
+    "step": 31,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "move(Go inside the warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse leftside overview.",
+    "progress": 18.06
+  },
+  {
+    "step": 32,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "move(Go to the left hall way to exit)",
+    "response": "Action executed successfully. Change to another scene: left hallway.",
+    "progress": 18.06
+  },
+  {
+    "step": 33,
+    "role": "A",
+    "at": "left hallway",
+    "action": "click(paper piece 'a')",
+    "response": "Action executed successfully. You have just collected a paper piece 'a'. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 19.44
+  },
+  {
+    "step": 34,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 19.44
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go straight to the shelves region)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 19.44
+  },
+  {
+    "step": 36,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to check the table)",
+    "response": "Action executed successfully. Change to another scene: shelves region table.",
+    "progress": 19.44
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "click(alarm clock)",
+    "response": "Action executed successfully. You have clicked on alarm clock. The alarm closk is pushed down, there's a key below",
+    "progress": 20.83
+  },
+  {
+    "step": 38,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "click(gold key with bolt sign)",
+    "response": "Action executed successfully. You have just collected a gold key with bolt sign. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 22.22
+  },
+  {
+    "step": 39,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 22.22
+  },
+  {
+    "step": 40,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 22.22
+  },
+  {
+    "step": 41,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 22.22
+  },
+  {
+    "step": 42,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go to office door overview on left side)",
+    "response": "Action executed successfully. Change to another scene: office door overview.",
+    "progress": 22.22
+  },
+  {
+    "step": 43,
+    "role": "B",
+    "at": "office door overview",
+    "action": "click(paper piece 'k')",
+    "response": "Action executed successfully. You have just collected a paper piece 'k'. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 23.61
+  },
+  {
+    "step": 44,
+    "role": "A",
+    "at": "left hallway",
+    "action": "apply(paper piece 'a', name slot)",
+    "response": "Action executed successfully. You have successfully applied paper piece 'a' to name slot.\nHowever, the apply of paper piece 'a' is not enough, and name slot is still missing something else ...",
+    "progress": 25.0
+  },
+  {
+    "step": 45,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 25.0
+  },
+  {
+    "step": 46,
+    "role": "B",
+    "at": "office door overview",
+    "action": "give(paper piece 'k')",
+    "response": "Action executed successfully. You have given the paper piece 'k' to your partner. It is no longer in your bag.",
+    "progress": 25.0
+  },
+  {
+    "step": 47,
+    "role": "A",
+    "at": "left hallway",
+    "action": "apply(paper piece 'k', name slot)",
+    "response": "Action executed successfully. You have successfully applied paper piece 'k' to name slot.\nHowever, the apply of paper piece 'k' is not enough, and name slot is still missing something else ...",
+    "progress": 26.39
+  },
+  {
+    "step": 48,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 26.39
+  },
+  {
+    "step": 49,
+    "role": "B",
+    "at": "office door overview",
+    "action": "give(gold key with bolt sign)",
+    "response": "Action executed successfully. You have given the gold key with bolt sign to your partner. It is no longer in your bag.",
+    "progress": 26.39
+  },
+  {
+    "step": 50,
+    "role": "A",
+    "at": "left hallway",
+    "action": "apply(gold key with bolt sign, cabinet key lock)",
+    "response": "Action executed successfully. You have successfully applied gold key with bolt sign to cabinet key lock. The lock is now open, there's a pile of things in the cabinet.",
+    "progress": 27.78
+  },
+  {
+    "step": 51,
+    "role": "A",
+    "at": "left hallway",
+    "action": "click(blue tape)",
+    "response": "Action executed successfully. You have just collected a blue tape. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 29.17
+  },
+  {
+    "step": 52,
+    "role": "A",
+    "at": "left hallway",
+    "action": "click(blower dryer)",
+    "response": "Action executed successfully. You have just collected a blower dryer. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 30.56
+  },
+  {
+    "step": 53,
+    "role": "A",
+    "at": "left hallway",
+    "action": "craft(wet shipping list, blower dryer)",
+    "response": "Action executed successfully. You have successfully crafted a blower with green color appearance, could give both hot and cold wind and a wet shipping list with title \"consignment notes\" on it, can only see what's inside after drying together.\nYou get a new item: shipping list is dry now, with a large \"S-16\" written on the second page, seems like a hint. It is put into your bag.",
+    "progress": 31.94
+  },
+  {
+    "step": 54,
+    "role": "B",
+    "at": "office door overview",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 31.94
+  },
+  {
+    "step": 55,
+    "role": "A",
+    "at": "left hallway",
+    "action": "give(blue tape)",
+    "response": "Action executed successfully. You have given the blue tape to your partner. It is no longer in your bag.",
+    "progress": 31.94
+  },
+  {
+    "step": 56,
+    "role": "B",
+    "at": "office door overview",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 31.94
+  },
+  {
+    "step": 57,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go straight to the shelves region)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 31.94
+  },
+  {
+    "step": 58,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to the middle of all the shelves)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 31.94
+  },
+  {
+    "step": 59,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Go to explore device on pillar)",
+    "response": "Action executed successfully. Change to another scene: control device on pillar.",
+    "progress": 31.94
+  },
+  {
+    "step": 60,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 31.94
+  },
+  {
+    "step": 61,
+    "role": "B",
+    "at": "control device on pillar",
+    "action": "apply(blue tape, wire on pillar)",
+    "response": "Action executed successfully. You have successfully applied blue tape to wire on pillar. Both ends of the wire are now connected, you may use this device normally now",
+    "progress": 33.33
+  },
+  {
+    "step": 62,
+    "role": "B",
+    "at": "control device on pillar",
+    "action": "move(Back to shelves region middle)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 33.33
+  },
+  {
+    "step": 63,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Go to left side wash basin)",
+    "response": "Action executed successfully. Change to another scene: wash basin place.",
+    "progress": 33.33
+  },
+  {
+    "step": 64,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "click(paper piece 'c')",
+    "response": "Action executed successfully. You have just collected a paper piece 'c'. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 34.72
+  },
+  {
+    "step": 65,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 34.72
+  },
+  {
+    "step": 66,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "click(toilet plunger)",
+    "response": "Action executed successfully. You have just collected a toilet plunger. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 36.11
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "click(tennis ball)",
+    "response": "Action executed successfully. You have just collected a tennis ball. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 37.5
+  },
+  {
+    "step": 68,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 37.5
+  },
+  {
+    "step": 69,
+    "role": "A",
+    "at": "left hallway",
+    "action": "send(shipping list is dry now, with a large \"S-16\" written on the second page, seems like a hint)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 37.5
+  },
+  {
+    "step": 70,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "move(Back to shelves region middle)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 37.5
+  },
+  {
+    "step": 71,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 37.5
+  },
+  {
+    "step": 72,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to check shelves on the left)",
+    "response": "Action executed successfully. Change to another scene: shelves region left.",
+    "progress": 37.5
+  },
+  {
+    "step": 73,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "input(16, brown box with missing number)",
+    "response": "Action executed successfully. You have given an input 16 to brown box with missing number. The brown box is now ready to be opened",
+    "progress": 38.89
+  },
+  {
+    "step": 74,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 38.89
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "give(toilet plunger)",
+    "response": "Action executed successfully. You have given the toilet plunger to your partner. It is no longer in your bag.",
+    "progress": 38.89
+  },
+  {
+    "step": 76,
+    "role": "A",
+    "at": "left hallway",
+    "action": "move(Back to left side of warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse leftside overview.",
+    "progress": 38.89
+  },
+  {
+    "step": 77,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "apply(toilet plunger, frosted glass window)",
+    "response": "Action executed successfully. You have successfully applied toilet plunger to frosted glass window. The window is now broken open, you could see inside, there's a square key on the table",
+    "progress": 40.28
+  },
+  {
+    "step": 78,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "click(square key)",
+    "response": "Action executed successfully. You have just collected a square key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 41.67
+  },
+  {
+    "step": 79,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 41.67
+  },
+  {
+    "step": 80,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "give(tennis ball)",
+    "response": "Action executed successfully. You have given the tennis ball to your partner. It is no longer in your bag.",
+    "progress": 41.67
+  },
+  {
+    "step": 81,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "move(Back to outside the door of the warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse door corner.",
+    "progress": 41.67
+  },
+  {
+    "step": 82,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "move(Back to the warehouse outside)",
+    "response": "Action executed successfully. Change to another scene: warehouse outside.",
+    "progress": 41.67
+  },
+  {
+    "step": 83,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "apply(tennis ball, dagger inserted in sign)",
+    "response": "Action executed successfully. You have successfully applied tennis ball to dagger inserted in sign. The dagger falls down, you can now pick it up",
+    "progress": 43.06
+  },
+  {
+    "step": 84,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "click(dagger)",
+    "response": "Action executed successfully. You have just collected a dagger. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 44.44
+  },
+  {
+    "step": 85,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 44.44
+  },
+  {
+    "step": 86,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Go to the garbage disposal place)",
+    "response": "Action executed successfully. Change to another scene: garbage disposal place.",
+    "progress": 44.44
+  },
+  {
+    "step": 87,
+    "role": "A",
+    "at": "garbage disposal place",
+    "action": "apply(square key, green garbage bin)",
+    "response": "Action executed successfully. You have successfully applied square key to green garbage bin. The garbage bin is now open, there's a piece of paper inside",
+    "progress": 45.83
+  },
+  {
+    "step": 88,
+    "role": "A",
+    "at": "garbage disposal place",
+    "action": "click(paper piece 'J')",
+    "response": "Action executed successfully. You have just collected a paper piece 'J'. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 47.22
+  },
+  {
+    "step": 89,
+    "role": "A",
+    "at": "garbage disposal place",
+    "action": "move(Back to the warehouse outside)",
+    "response": "Action executed successfully. Change to another scene: warehouse outside.",
+    "progress": 47.22
+  },
+  {
+    "step": 90,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 47.22
+  },
+  {
+    "step": 91,
+    "role": "A",
+    "at": "warehouse outside",
+    "action": "move(Go to the door in left corner)",
+    "response": "Action executed successfully. Change to another scene: warehouse door corner.",
+    "progress": 47.22
+  },
+  {
+    "step": 92,
+    "role": "A",
+    "at": "warehouse door corner",
+    "action": "move(Go inside the warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse leftside overview.",
+    "progress": 47.22
+  },
+  {
+    "step": 93,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "move(Go to the left hall way to exit)",
+    "response": "Action executed successfully. Change to another scene: left hallway.",
+    "progress": 47.22
+  },
+  {
+    "step": 94,
+    "role": "A",
+    "at": "left hallway",
+    "action": "apply(paper piece 'J', name slot)",
+    "response": "Action executed successfully. You have successfully applied paper piece 'J' to name slot.\nHowever, the apply of paper piece 'J' is not enough, and name slot is still missing something else ...",
+    "progress": 48.61
+  },
+  {
+    "step": 95,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "give(paper piece 'c')",
+    "response": "Action executed successfully. You have given the paper piece 'c' to your partner. It is no longer in your bag.",
+    "progress": 48.61
+  },
+  {
+    "step": 96,
+    "role": "A",
+    "at": "left hallway",
+    "action": "apply(paper piece 'c', name slot)",
+    "response": "Action executed successfully. You have successfully applied paper piece 'c' to name slot. The name slot is now fully filled, with the owner's name \"jack\". the digit lock is now open for input.",
+    "progress": 50.0
+  },
+  {
+    "step": 97,
+    "role": "A",
+    "at": "left hallway",
+    "action": "input(1325, digit password lock)",
+    "response": "Action executed successfully. You have given an input 1325 to digit password lock. There's a keycard with lanyard inside the cabinate",
+    "progress": 51.39
+  },
+  {
+    "step": 98,
+    "role": "A",
+    "at": "left hallway",
+    "action": "click(keycard with lanyard)",
+    "response": "Action executed successfully. You have just collected a keycard with lanyard. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 52.78
+  },
+  {
+    "step": 99,
+    "role": "A",
+    "at": "left hallway",
+    "action": "give(keycard with lanyard)",
+    "response": "Action executed successfully. You have given the keycard with lanyard to your partner. It is no longer in your bag.",
+    "progress": 52.78
+  },
+  {
+    "step": 100,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 52.78
+  },
+  {
+    "step": 101,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 52.78
+  },
+  {
+    "step": 102,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go to office door overview on left side)",
+    "response": "Action executed successfully. Change to another scene: office door overview.",
+    "progress": 52.78
+  },
+  {
+    "step": 103,
+    "role": "B",
+    "at": "office door overview",
+    "action": "apply(keycard with lanyard, office door)",
+    "response": "Action executed successfully. You have successfully applied keycard with lanyard to office door. The office door is now open, you could enter the room.",
+    "progress": 54.17
+  },
+  {
+    "step": 104,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 54.17
+  },
+  {
+    "step": 105,
+    "role": "B",
+    "at": "office door overview",
+    "action": "move(Go into the office)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 54.17
+  },
+  {
+    "step": 106,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Go to explore behind the desk)",
+    "response": "Action executed successfully. Change to another scene: office room desk.",
+    "progress": 54.17
+  },
+  {
+    "step": 107,
+    "role": "B",
+    "at": "office room desk",
+    "action": "click(ruler)",
+    "response": "Action executed successfully. You have just collected a ruler. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 55.56
+  },
+  {
+    "step": 108,
+    "role": "B",
+    "at": "office room desk",
+    "action": "click(painting)",
+    "response": "Action executed successfully. You have just collected a painting. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 56.94
+  },
+  {
+    "step": 109,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 56.94
+  },
+  {
+    "step": 110,
+    "role": "B",
+    "at": "office room desk",
+    "action": "move(Back to office room overview)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 56.94
+  },
+  {
+    "step": 111,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Go to check the drawers)",
+    "response": "Action executed successfully. Change to another scene: office room drawers.",
+    "progress": 56.94
+  },
+  {
+    "step": 112,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "click(measuring cup)",
+    "response": "Action executed successfully. You have just collected a measuring cup. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 58.33
+  },
+  {
+    "step": 113,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "input(blue, iron safe)",
+    "response": "Action executed successfully. You have given an input blue to iron safe. The safe is now open, there's a karabiner inside",
+    "progress": 59.72
+  },
+  {
+    "step": 114,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 59.72
+  },
+  {
+    "step": 115,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "click(karabiner)",
+    "response": "Action executed successfully. You have just collected a karabiner. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 61.11
+  },
+  {
+    "step": 116,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "apply(ruler, closed cabinet under drawer)",
+    "response": "Action executed successfully. You have successfully applied ruler to closed cabinet under drawer. The cabinet is now open, there's a pair of scissors and a pair of tweezers inside",
+    "progress": 62.5
+  },
+  {
+    "step": 117,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "click(scissors)",
+    "response": "Action executed successfully. You have just collected a scissors. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 63.89
+  },
+  {
+    "step": 118,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "click(tweezers)",
+    "response": "Action executed successfully. You have just collected a tweezers. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 65.28
+  },
+  {
+    "step": 119,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 65.28
+  },
+  {
+    "step": 120,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "apply(tweezers, corner of piece of paper)",
+    "response": "Action executed successfully. You have successfully applied tweezers to corner of piece of paper. The paper falls on the ground, there's a code on it",
+    "progress": 66.67
+  },
+  {
+    "step": 121,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "click(piece of paper code)",
+    "response": "Action executed successfully. You have just collected a piece of paper code. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 68.06
+  },
+  {
+    "step": 122,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "move(Back to office room overview)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 68.06
+  },
+  {
+    "step": 123,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Back to outside the office)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 68.06
+  },
+  {
+    "step": 124,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 68.06
+  },
+  {
+    "step": 125,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Explore a pile of boxes beside office door)",
+    "response": "Action executed successfully. Change to another scene: boxes pile in hallway.",
+    "progress": 68.06
+  },
+  {
+    "step": 126,
+    "role": "B",
+    "at": "boxes pile in hallway",
+    "action": "apply(scissors, yellow wire roll)",
+    "response": "Action executed successfully. You have successfully applied scissors to yellow wire roll. You have cut a piece of wire from the roll",
+    "progress": 69.44
+  },
+  {
+    "step": 127,
+    "role": "B",
+    "at": "boxes pile in hallway",
+    "action": "click(yellow wire)",
+    "response": "Action executed successfully. You have just collected a yellow wire. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 70.83
+  },
+  {
+    "step": 128,
+    "role": "B",
+    "at": "boxes pile in hallway",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 70.83
+  },
+  {
+    "step": 129,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 70.83
+  },
+  {
+    "step": 130,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go straight to the shelves region)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 70.83
+  },
+  {
+    "step": 131,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to the middle of all the shelves)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 70.83
+  },
+  {
+    "step": 132,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Go to left side wash basin)",
+    "response": "Action executed successfully. Change to another scene: wash basin place.",
+    "progress": 70.83
+  },
+  {
+    "step": 133,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "apply(measuring cup, wash basin)",
+    "response": "Action executed successfully. You have successfully applied measuring cup to wash basin. The water is now in the measuring cup",
+    "progress": 72.22
+  },
+  {
+    "step": 134,
+    "role": "A",
+    "at": "left hallway",
+    "action": "give(dagger)",
+    "response": "Action executed successfully. You have given the dagger to your partner. It is no longer in your bag.",
+    "progress": 72.22
+  },
+  {
+    "step": 135,
+    "role": "B",
+    "at": "wash basin place",
+    "action": "move(Back to shelves region middle)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 72.22
+  },
+  {
+    "step": 136,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 72.22
+  },
+  {
+    "step": 137,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to check shelves on the left)",
+    "response": "Action executed successfully. Change to another scene: shelves region left.",
+    "progress": 72.22
+  },
+  {
+    "step": 138,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "apply(dagger, brown box with missing number)",
+    "response": "Action executed successfully. You have successfully applied dagger to brown box with missing number. The brown box is now open, there's a bunch of blue plasticine inside",
+    "progress": 73.61
+  },
+  {
+    "step": 139,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 73.61
+  },
+  {
+    "step": 140,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "click(blue plasticine)",
+    "response": "Action executed successfully. You have just collected a blue plasticine. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 75.0
+  },
+  {
+    "step": 141,
+    "role": "B",
+    "at": "shelves region left",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 75.0
+  },
+  {
+    "step": 142,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 75.0
+  },
+  {
+    "step": 143,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go to office door overview on left side)",
+    "response": "Action executed successfully. Change to another scene: office door overview.",
+    "progress": 75.0
+  },
+  {
+    "step": 144,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 75.0
+  },
+  {
+    "step": 145,
+    "role": "B",
+    "at": "office door overview",
+    "action": "move(Go into the office)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 75.0
+  },
+  {
+    "step": 146,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Go to check the drawers)",
+    "response": "Action executed successfully. Change to another scene: office room drawers.",
+    "progress": 75.0
+  },
+  {
+    "step": 147,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "apply(measuring cup, communicator)",
+    "response": "Action executed successfully. You have successfully applied measuring cup to communicator. The water inside the communicator is has height level 2, 3, 4, 1, 5 respectively in each channel",
+    "progress": 76.39
+  },
+  {
+    "step": 148,
+    "role": "B",
+    "at": "office room drawers",
+    "action": "move(Back to office room overview)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 76.39
+  },
+  {
+    "step": 149,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 76.39
+  },
+  {
+    "step": 150,
+    "role": "B",
+    "at": "office room overview",
+    "action": "move(Back to outside the office)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 76.39
+  },
+  {
+    "step": 151,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Explore a pile of boxes beside office door)",
+    "response": "Action executed successfully. Change to another scene: boxes pile in hallway.",
+    "progress": 76.39
+  },
+  {
+    "step": 152,
+    "role": "B",
+    "at": "boxes pile in hallway",
+    "action": "input(23415, blue tool box)",
+    "response": "Action executed successfully. You have given an input 23415 to blue tool box. The tool box is now open, there's a screwdriver inside",
+    "progress": 77.78
+  },
+  {
+    "step": 153,
+    "role": "B",
+    "at": "boxes pile in hallway",
+    "action": "click(screwdriver)",
+    "response": "Action executed successfully. You have just collected a screwdriver. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 79.17
+  },
+  {
+    "step": 154,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 79.17
+  },
+  {
+    "step": 155,
+    "role": "B",
+    "at": "boxes pile in hallway",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 79.17
+  },
+  {
+    "step": 156,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go straight to the shelves region)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 79.17
+  },
+  {
+    "step": 157,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to check the table)",
+    "response": "Action executed successfully. Change to another scene: shelves region table.",
+    "progress": 79.17
+  },
+  {
+    "step": 158,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "apply(screwdriver, alarm clock)",
+    "response": "Action executed successfully. You have successfully applied screwdriver to alarm clock. The alarm closk is opened from the back, there's a battery inside",
+    "progress": 80.56
+  },
+  {
+    "step": 159,
+    "role": "A",
+    "at": "left hallway",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 80.56
+  },
+  {
+    "step": 160,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "click(alarm clock battery)",
+    "response": "Action executed successfully. You have just collected a alarm clock battery. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 81.94
+  },
+  {
+    "step": 161,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "craft(alarm clock battery, blue plasticine)",
+    "response": "Action executed successfully. You have successfully crafted a blue plasticine, seems still soft, can stick wire and battery together and a blue battery with a sign of 1.5V together.\nYou get a new item: a blue battery with a sign of 1.5V, a piece of blue plasticine is sticked on the battery. It is put into your bag.",
+    "progress": 83.33
+  },
+  {
+    "step": 162,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "craft(alarm clock battery, yellow wire)",
+    "response": "Action executed successfully. You have successfully crafted a wire with a yellow cover, with one end exposed, could be connected with a power source and a blue battery with a sign of 1.5V, a piece of blue plasticine is sticked on the battery together.\nYou get a new item: a blue battery with a sign of 1.5V, a piece of yellow wire is sticked on the battery. It could now o short-circuit an appliance. It is put into your bag.",
+    "progress": 84.72
+  },
+  {
+    "step": 163,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "give(alarm clock battery)",
+    "response": "Action executed successfully. You have given the alarm clock battery to your partner. It is no longer in your bag.",
+    "progress": 84.72
+  },
+  {
+    "step": 164,
+    "role": "A",
+    "at": "left hallway",
+    "action": "move(Back to left side of warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse leftside overview.",
+    "progress": 84.72
+  },
+  {
+    "step": 165,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "apply(alarm clock battery, card reader)",
+    "response": "Action executed successfully. You have successfully applied alarm clock battery to card reader. The door should be open now, you could enter the room.",
+    "progress": 86.11
+  },
+  {
+    "step": 166,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 86.11
+  },
+  {
+    "step": 167,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "send(a piece of code written \"PKU-code 84459731\")",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 86.11
+  },
+  {
+    "step": 168,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "move(Go into the front desk office)",
+    "response": "Action executed successfully. Change to another scene: front desk office overview.",
+    "progress": 86.11
+  },
+  {
+    "step": 169,
+    "role": "A",
+    "at": "front desk office overview",
+    "action": "input(84459731, old-fashioned phone)",
+    "response": "Action executed successfully. You have given an input 84459731 to old-fashioned phone. The phone is now unlocked, there's a chat hostory with harry on the phone",
+    "progress": 87.5
+  },
+  {
+    "step": 170,
+    "role": "A",
+    "at": "front desk office overview",
+    "action": "move(Go to front desk locker)",
+    "response": "Action executed successfully. Change to another scene: front desk locker.",
+    "progress": 87.5
+  },
+  {
+    "step": 171,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "input(3499, front desk locker lock)",
+    "response": "Action executed successfully. You have given an input 3499 to front desk locker lock. The locker is now open, there's a long white wire and a telescopic hook inside",
+    "progress": 88.89
+  },
+  {
+    "step": 172,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 88.89
+  },
+  {
+    "step": 173,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "click(telescopic hook)",
+    "response": "Action executed successfully. You have just collected a telescopic hook. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 90.28
+  },
+  {
+    "step": 174,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "give(telescopic hook)",
+    "response": "Action executed successfully. You have given the telescopic hook to your partner. It is no longer in your bag.",
+    "progress": 90.28
+  },
+  {
+    "step": 175,
+    "role": "B",
+    "at": "shelves region table",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 90.28
+  },
+  {
+    "step": 176,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Go to the middle of all the shelves)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 90.28
+  },
+  {
+    "step": 177,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "apply(telescopic hook, messy wire wrapped on ceiling)",
+    "response": "Action executed successfully. You have successfully applied telescopic hook to messy wire wrapped on ceiling. The alarm closk is pushed down, there's a key below",
+    "progress": 91.67
+  },
+  {
+    "step": 178,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "apply(karabiner, blue container)",
+    "response": "Action executed successfully. You have successfully applied karabiner to blue container. The alarm closk is pushed down, there's a key below",
+    "progress": 93.06
+  },
+  {
+    "step": 179,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 93.06
+  },
+  {
+    "step": 180,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Go to explore device on pillar)",
+    "response": "Action executed successfully. Change to another scene: control device on pillar.",
+    "progress": 93.06
+  },
+  {
+    "step": 181,
+    "role": "B",
+    "at": "control device on pillar",
+    "action": "click(red buttons on box)",
+    "response": "Action executed successfully. You have clicked on red buttons on box. The electric machine is now on, the blue container is lifted up, something appears below",
+    "progress": 94.44
+  },
+  {
+    "step": 182,
+    "role": "B",
+    "at": "control device on pillar",
+    "action": "move(Back to shelves region middle)",
+    "response": "Action executed successfully. Change to another scene: shelves region middle.",
+    "progress": 94.44
+  },
+  {
+    "step": 183,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "click(sledghammer)",
+    "response": "Action executed successfully. You have just collected a sledghammer. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 95.83
+  },
+  {
+    "step": 184,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 95.83
+  },
+  {
+    "step": 185,
+    "role": "B",
+    "at": "shelves region middle",
+    "action": "move(Back to shelves region overview)",
+    "response": "Action executed successfully. Change to another scene: shelves region overview.",
+    "progress": 95.83
+  },
+  {
+    "step": 186,
+    "role": "B",
+    "at": "shelves region overview",
+    "action": "move(Back to middle hallway)",
+    "response": "Action executed successfully. Change to another scene: middle hallway.",
+    "progress": 95.83
+  },
+  {
+    "step": 187,
+    "role": "B",
+    "at": "middle hallway",
+    "action": "move(Go to office door overview on left side)",
+    "response": "Action executed successfully. Change to another scene: office door overview.",
+    "progress": 95.83
+  },
+  {
+    "step": 188,
+    "role": "B",
+    "at": "office door overview",
+    "action": "move(Go into the office)",
+    "response": "Action executed successfully. Change to another scene: office room overview.",
+    "progress": 95.83
+  },
+  {
+    "step": 189,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 95.83
+  },
+  {
+    "step": 190,
+    "role": "B",
+    "at": "office room overview",
+    "action": "apply(sledghammer, wall in office room)",
+    "response": "Action executed successfully. You have successfully applied sledghammer to wall in office room. The wall is now broken, there's a piece of paper with a code behind the wall",
+    "progress": 97.22
+  },
+  {
+    "step": 191,
+    "role": "B",
+    "at": "office room overview",
+    "action": "click(exit code paper)",
+    "response": "Action executed successfully. You have just collected a exit code paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 98.61
+  },
+  {
+    "step": 192,
+    "role": "B",
+    "at": "office room overview",
+    "action": "send(a piece of paper with a code written \"12 + 28 + 25 + 35\", seems like a math problem)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 98.61
+  },
+  {
+    "step": 193,
+    "role": "A",
+    "at": "front desk locker",
+    "action": "move(Back to the front desk office)",
+    "response": "Action executed successfully. Change to another scene: front desk office overview.",
+    "progress": 98.61
+  },
+  {
+    "step": 194,
+    "role": "A",
+    "at": "front desk office overview",
+    "action": "move(Back to the left side of warehouse)",
+    "response": "Action executed successfully. Change to another scene: warehouse leftside overview.",
+    "progress": 98.61
+  },
+  {
+    "step": 195,
+    "role": "A",
+    "at": "warehouse leftside overview",
+    "action": "move(Go to the left hall way to exit)",
+    "response": "Action executed successfully. Change to another scene: left hallway.",
+    "progress": 98.61
+  },
+  {
+    "step": 196,
+    "role": "A",
+    "at": "left hallway",
+    "action": "input(100, exit door)",
+    "response": "Action executed successfully. You have given an input 100 to exit door. The exit door is now open, game end!",
+    "progress": 100.0
+  }
+]

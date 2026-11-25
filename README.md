@@ -1,5 +1,7 @@
 # Cooperative Escape Room Lab
 
+> **최신 분할 데이터:** [v4 전체 데이터와 검증](data/split_v4/README.md) — easy 12개 정비, 사용 가능 11개·원본 결함 제외 1개. `data/roles/`와 기존 실행기는 과거 v3를 유지하며, 실험 전환은 아직 하지 않았습니다.
+
 EscapeBench의 같은 A/B 분할 환경에서 **Solo 중앙 통제와 Peer 협력**을 비교합니다.
 현재 실행은 **프로토콜 v7 / `nightly-v6`**입니다. 과거 결과와 합쳐 집계하지 않습니다.
 

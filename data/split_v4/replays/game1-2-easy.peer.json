@@ -1,0 +1,834 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "hallway",
+    "action": "move(To the blocked path close-up)",
+    "response": "Action executed successfully. Change to another scene: blocked path close-up.",
+    "progress": 0.0
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "click(drawer without lock)",
+    "response": "Action executed successfully. You have clicked on drawer without lock.",
+    "progress": 2.38
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "click(drawer without lock)",
+    "response": "Action executed successfully. You have clicked on drawer without lock. You've found a piece of paper with a code on it.",
+    "progress": 4.76
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "click(paper1)",
+    "response": "Action executed successfully. You have just collected a paper1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 7.14
+  },
+  {
+    "step": 5,
+    "role": "B",
+    "at": "room 805",
+    "action": "move(To the right part of the room)",
+    "response": "Action executed successfully. Change to another scene: 805 right room.",
+    "progress": 7.14
+  },
+  {
+    "step": 6,
+    "role": "B",
+    "at": "805 right room",
+    "action": "click(drill bit)",
+    "response": "Action executed successfully. You have just collected a drill bit. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 9.52
+  },
+  {
+    "step": 7,
+    "role": "B",
+    "at": "805 right room",
+    "action": "move(Back to the room 805)",
+    "response": "Action executed successfully. Change to another scene: room 805.",
+    "progress": 9.52
+  },
+  {
+    "step": 8,
+    "role": "B",
+    "at": "room 805",
+    "action": "move(To the left bookshelf close-up)",
+    "response": "Action executed successfully. Change to another scene: left bookshelf close-up.",
+    "progress": 9.52
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 9.52
+  },
+  {
+    "step": 10,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "click(book1)",
+    "response": "Action executed successfully. You have clicked on book1.",
+    "progress": 11.9
+  },
+  {
+    "step": 11,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "click(book4)",
+    "response": "Action executed successfully. You have clicked on book4.",
+    "progress": 14.29
+  },
+  {
+    "step": 12,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "click(book2)",
+    "response": "Action executed successfully. You have clicked on book2.",
+    "progress": 16.67
+  },
+  {
+    "step": 13,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "click(book3)",
+    "response": "Action executed successfully. You have clicked on book3.",
+    "progress": 19.05
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 19.05
+  },
+  {
+    "step": 15,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "click(book5)",
+    "response": "Action executed successfully. You have clicked on book5.",
+    "progress": 21.43
+  },
+  {
+    "step": 16,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "click(keycard)",
+    "response": "Action executed successfully. You have just collected a keycard. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 23.81
+  },
+  {
+    "step": 17,
+    "role": "B",
+    "at": "left bookshelf close-up",
+    "action": "move(Back to room 805)",
+    "response": "Action executed successfully. Change to another scene: room 805.",
+    "progress": 23.81
+  },
+  {
+    "step": 18,
+    "role": "B",
+    "at": "room 805",
+    "action": "move(To the right bookshelf close-up)",
+    "response": "Action executed successfully. Change to another scene: right bookshelf close-up.",
+    "progress": 23.81
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 23.81
+  },
+  {
+    "step": 20,
+    "role": "B",
+    "at": "right bookshelf close-up",
+    "action": "click(battery)",
+    "response": "Action executed successfully. You have just collected a battery. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 26.19
+  },
+  {
+    "step": 21,
+    "role": "B",
+    "at": "right bookshelf close-up",
+    "action": "move(Back to room 805)",
+    "response": "Action executed successfully. Change to another scene: room 805.",
+    "progress": 26.19
+  },
+  {
+    "step": 22,
+    "role": "B",
+    "at": "room 805",
+    "action": "move(To the bedside table close-up)",
+    "response": "Action executed successfully. Change to another scene: bedside table close-up.",
+    "progress": 26.19
+  },
+  {
+    "step": 23,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "input(150, bedside drawer)",
+    "response": "Action executed successfully. You have given an input 150 to bedside drawer.",
+    "progress": 28.57
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 28.57
+  },
+  {
+    "step": 25,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "click(bedside drawer)",
+    "response": "Action executed successfully. You have clicked on bedside drawer. You've found a piece of paper with part of the code on it.",
+    "progress": 30.95
+  },
+  {
+    "step": 26,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "click(paper2)",
+    "response": "Action executed successfully. You have just collected a paper2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 33.33
+  },
+  {
+    "step": 27,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "give(keycard)",
+    "response": "Action executed successfully. You have given the keycard to your partner. It is no longer in your bag.",
+    "progress": 33.33
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "blocked path close-up",
+    "action": "move(Back to the hallway)",
+    "response": "Action executed successfully. Change to another scene: hallway.",
+    "progress": 33.33
+  },
+  {
+    "step": 29,
+    "role": "A",
+    "at": "hallway",
+    "action": "move(To the hallway right)",
+    "response": "Action executed successfully. Change to another scene: hallway right.",
+    "progress": 33.33
+  },
+  {
+    "step": 30,
+    "role": "A",
+    "at": "hallway right",
+    "action": "move(To the operating room door overview)",
+    "response": "Action executed successfully. Change to another scene: operating room door overview.",
+    "progress": 33.33
+  },
+  {
+    "step": 31,
+    "role": "A",
+    "at": "operating room door overview",
+    "action": "apply(keycard, operating room door)",
+    "response": "Action executed successfully. You have successfully applied keycard to operating room door.",
+    "progress": 35.71
+  },
+  {
+    "step": 32,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 35.71
+  },
+  {
+    "step": 33,
+    "role": "A",
+    "at": "operating room door overview",
+    "action": "move(Back to the hallway right)",
+    "response": "Action executed successfully. Change to another scene: hallway right.",
+    "progress": 35.71
+  },
+  {
+    "step": 34,
+    "role": "A",
+    "at": "hallway right",
+    "action": "move(To the operating room)",
+    "response": "Action executed successfully. Change to another scene: operating room.",
+    "progress": 35.71
+  },
+  {
+    "step": 35,
+    "role": "A",
+    "at": "operating room",
+    "action": "move(To the surgical table close-up)",
+    "response": "Action executed successfully. Change to another scene: surgical table close-up.",
+    "progress": 35.71
+  },
+  {
+    "step": 36,
+    "role": "A",
+    "at": "surgical table close-up",
+    "action": "click(small key)",
+    "response": "Action executed successfully. You have just collected a small key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 38.1
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 38.1
+  },
+  {
+    "step": 38,
+    "role": "A",
+    "at": "surgical table close-up",
+    "action": "move(Back to the operating room)",
+    "response": "Action executed successfully. Change to another scene: operating room.",
+    "progress": 38.1
+  },
+  {
+    "step": 39,
+    "role": "A",
+    "at": "operating room",
+    "action": "move(To the cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: operating room cabinet close-up.",
+    "progress": 38.1
+  },
+  {
+    "step": 40,
+    "role": "A",
+    "at": "operating room cabinet close-up",
+    "action": "move(To the upper cabinet)",
+    "response": "Action executed successfully. Change to another scene: upper cabinet close-up.",
+    "progress": 38.1
+  },
+  {
+    "step": 41,
+    "role": "A",
+    "at": "upper cabinet close-up",
+    "action": "click(paper3)",
+    "response": "Action executed successfully. You have just collected a paper3. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 40.48
+  },
+  {
+    "step": 42,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 40.48
+  },
+  {
+    "step": 43,
+    "role": "A",
+    "at": "upper cabinet close-up",
+    "action": "move(Back to the operating room cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: operating room cabinet close-up.",
+    "progress": 40.48
+  },
+  {
+    "step": 44,
+    "role": "A",
+    "at": "operating room cabinet close-up",
+    "action": "move(To the lower cabinet)",
+    "response": "Action executed successfully. Change to another scene: lower cabinet close-up.",
+    "progress": 40.48
+  },
+  {
+    "step": 45,
+    "role": "A",
+    "at": "lower cabinet close-up",
+    "action": "click(door handle)",
+    "response": "Action executed successfully. You have just collected a door handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 42.86
+  },
+  {
+    "step": 46,
+    "role": "A",
+    "at": "lower cabinet close-up",
+    "action": "input(8*4+6=6*7-4, locked drawer)",
+    "response": "Action executed successfully. You have given an input 8*4+6=6*7-4 to locked drawer.",
+    "progress": 45.24
+  },
+  {
+    "step": 47,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 45.24
+  },
+  {
+    "step": 48,
+    "role": "A",
+    "at": "lower cabinet close-up",
+    "action": "click(locked drawer)",
+    "response": "Action executed successfully. You have clicked on locked drawer.",
+    "progress": 47.62
+  },
+  {
+    "step": 49,
+    "role": "A",
+    "at": "lower cabinet close-up",
+    "action": "move(Back to the operating room cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: operating room cabinet close-up.",
+    "progress": 47.62
+  },
+  {
+    "step": 50,
+    "role": "A",
+    "at": "operating room cabinet close-up",
+    "action": "move(Back to the operating room)",
+    "response": "Action executed successfully. Change to another scene: operating room.",
+    "progress": 47.62
+  },
+  {
+    "step": 51,
+    "role": "A",
+    "at": "operating room",
+    "action": "move(To the hallway right)",
+    "response": "Action executed successfully. Change to another scene: hallway right.",
+    "progress": 47.62
+  },
+  {
+    "step": 52,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 47.62
+  },
+  {
+    "step": 53,
+    "role": "A",
+    "at": "hallway right",
+    "action": "move(To the small cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: small cabinet close-up.",
+    "progress": 47.62
+  },
+  {
+    "step": 54,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "apply(door handle, small cabinet door)",
+    "response": "Action executed successfully. You have successfully applied door handle to small cabinet door.",
+    "progress": 50.0
+  },
+  {
+    "step": 55,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "click(small cabinet door)",
+    "response": "Action executed successfully. You have clicked on small cabinet door.",
+    "progress": 52.38
+  },
+  {
+    "step": 56,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "click(paper4)",
+    "response": "Action executed successfully. You have just collected a paper4. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 54.76
+  },
+  {
+    "step": 57,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 54.76
+  },
+  {
+    "step": 58,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "give(paper1)",
+    "response": "Action executed successfully. You have given the paper1 to your partner. It is no longer in your bag.",
+    "progress": 54.76
+  },
+  {
+    "step": 59,
+    "role": "B",
+    "at": "bedside table close-up",
+    "action": "move(Back to room 805)",
+    "response": "Action executed successfully. Change to another scene: room 805.",
+    "progress": 54.76
+  },
+  {
+    "step": 60,
+    "role": "B",
+    "at": "room 805",
+    "action": "move(To the desk close-up)",
+    "response": "Action executed successfully. Change to another scene: desk close-up.",
+    "progress": 54.76
+  },
+  {
+    "step": 61,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "apply(paper1, drawer with code lock)",
+    "response": "Action executed successfully. You have successfully applied paper1 to drawer with code lock.\nHowever, the apply of paper1 is not enough, and drawer with code lock is still missing something else ...",
+    "progress": 57.14
+  },
+  {
+    "step": 62,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "apply(paper2, drawer with code lock)",
+    "response": "Action executed successfully. You have successfully applied paper2 to drawer with code lock.\nHowever, the apply of paper2 is not enough, and drawer with code lock is still missing something else ...",
+    "progress": 59.52
+  },
+  {
+    "step": 63,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "give(paper3)",
+    "response": "Action executed successfully. You have given the paper3 to your partner. It is no longer in your bag.",
+    "progress": 59.52
+  },
+  {
+    "step": 64,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "apply(paper3, drawer with code lock)",
+    "response": "Action executed successfully. You have successfully applied paper3 to drawer with code lock.\nHowever, the apply of paper3 is not enough, and drawer with code lock is still missing something else ...",
+    "progress": 61.9
+  },
+  {
+    "step": 65,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 61.9
+  },
+  {
+    "step": 66,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "give(paper4)",
+    "response": "Action executed successfully. You have given the paper4 to your partner. It is no longer in your bag.",
+    "progress": 61.9
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "apply(paper4, drawer with code lock)",
+    "response": "Action executed successfully. You have successfully applied paper4 to drawer with code lock.",
+    "progress": 64.29
+  },
+  {
+    "step": 68,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "click(drawer with code lock)",
+    "response": "Action executed successfully. You have clicked on drawer with code lock.",
+    "progress": 66.67
+  },
+  {
+    "step": 69,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "click(lubricant)",
+    "response": "Action executed successfully. You have just collected a lubricant. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 69.05
+  },
+  {
+    "step": 70,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "give(lubricant)",
+    "response": "Action executed successfully. You have given the lubricant to your partner. It is no longer in your bag.",
+    "progress": 69.05
+  },
+  {
+    "step": 71,
+    "role": "A",
+    "at": "small cabinet close-up",
+    "action": "move(Back to the hallway right)",
+    "response": "Action executed successfully. Change to another scene: hallway right.",
+    "progress": 69.05
+  },
+  {
+    "step": 72,
+    "role": "A",
+    "at": "hallway right",
+    "action": "move(To the hallway)",
+    "response": "Action executed successfully. Change to another scene: hallway.",
+    "progress": 69.05
+  },
+  {
+    "step": 73,
+    "role": "A",
+    "at": "hallway",
+    "action": "move(To the cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: cabinet close-up.",
+    "progress": 69.05
+  },
+  {
+    "step": 74,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "apply(lubricant, padlock)",
+    "response": "Action executed successfully. You have successfully applied lubricant to padlock.",
+    "progress": 71.43
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 71.43
+  },
+  {
+    "step": 76,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "apply(small key, padlock)",
+    "response": "Action executed successfully. You have successfully applied small key to padlock.",
+    "progress": 73.81
+  },
+  {
+    "step": 77,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "click(padlock)",
+    "response": "Action executed successfully. You have clicked on padlock.",
+    "progress": 76.19
+  },
+  {
+    "step": 78,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "click(padlock)",
+    "response": "Action executed successfully. You have clicked on padlock. You've found a ladder hidden in the clothes.",
+    "progress": 78.57
+  },
+  {
+    "step": 79,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "click(ladder)",
+    "response": "Action executed successfully. You have just collected a ladder. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 80.95
+  },
+  {
+    "step": 80,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 80.95
+  },
+  {
+    "step": 81,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "give(ladder)",
+    "response": "Action executed successfully. You have given the ladder to your partner. It is no longer in your bag.",
+    "progress": 80.95
+  },
+  {
+    "step": 82,
+    "role": "B",
+    "at": "desk close-up",
+    "action": "move(Back to the room 805)",
+    "response": "Action executed successfully. Change to another scene: room 805.",
+    "progress": 80.95
+  },
+  {
+    "step": 83,
+    "role": "B",
+    "at": "room 805",
+    "action": "move(To the ventilation fan close-up)",
+    "response": "Action executed successfully. Change to another scene: ventilation fan close-up.",
+    "progress": 80.95
+  },
+  {
+    "step": 84,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "apply(ladder, ventilation fan)",
+    "response": "Action executed successfully. You have successfully applied ladder to ventilation fan.",
+    "progress": 83.33
+  },
+  {
+    "step": 85,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "click(ventilation fan)",
+    "response": "Action executed successfully. You have clicked on ventilation fan.",
+    "progress": 85.71
+  },
+  {
+    "step": 86,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 85.71
+  },
+  {
+    "step": 87,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "move(To the elevator room)",
+    "response": "Action executed successfully. Change to another scene: elevator room.",
+    "progress": 85.71
+  },
+  {
+    "step": 88,
+    "role": "B",
+    "at": "elevator room",
+    "action": "send(A piece of paper with the code \"1121 = \" written on it, seems like part of a code for math solving.)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 85.71
+  },
+  {
+    "step": 89,
+    "role": "A",
+    "at": "cabinet close-up",
+    "action": "move(Back to the hallway)",
+    "response": "Action executed successfully. Change to another scene: hallway.",
+    "progress": 85.71
+  },
+  {
+    "step": 90,
+    "role": "A",
+    "at": "hallway",
+    "action": "move(To the hallway right)",
+    "response": "Action executed successfully. Change to another scene: hallway right.",
+    "progress": 85.71
+  },
+  {
+    "step": 91,
+    "role": "A",
+    "at": "hallway right",
+    "action": "move(To the operating room)",
+    "response": "Action executed successfully. Change to another scene: operating room.",
+    "progress": 85.71
+  },
+  {
+    "step": 92,
+    "role": "A",
+    "at": "operating room",
+    "action": "move(To the anatomy poster close-up)",
+    "response": "Action executed successfully. Change to another scene: anatomy poster close-up.",
+    "progress": 85.71
+  },
+  {
+    "step": 93,
+    "role": "B",
+    "at": "elevator room",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 85.71
+  },
+  {
+    "step": 94,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "input(2333, safe)",
+    "response": "Action executed successfully. You have given an input 2333 to safe.",
+    "progress": 88.1
+  },
+  {
+    "step": 95,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "click(safe)",
+    "response": "Action executed successfully. You have clicked on safe.",
+    "progress": 90.48
+  },
+  {
+    "step": 96,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 90.48
+  },
+  {
+    "step": 97,
+    "role": "B",
+    "at": "elevator room",
+    "action": "give(battery)",
+    "response": "Action executed successfully. You have given the battery to your partner. It is no longer in your bag.",
+    "progress": 90.48
+  },
+  {
+    "step": 98,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "apply(battery, unfunctional drill)",
+    "response": "Action executed successfully. You have successfully applied battery to unfunctional drill.",
+    "progress": 92.86
+  },
+  {
+    "step": 99,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 92.86
+  },
+  {
+    "step": 100,
+    "role": "B",
+    "at": "elevator room",
+    "action": "give(drill bit)",
+    "response": "Action executed successfully. You have given the drill bit to your partner. It is no longer in your bag.",
+    "progress": 92.86
+  },
+  {
+    "step": 101,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "apply(drill bit, unfunctional drill)",
+    "response": "Action executed successfully. You have successfully applied drill bit to unfunctional drill.",
+    "progress": 97.62
+  },
+  {
+    "step": 102,
+    "role": "A",
+    "at": "anatomy poster close-up",
+    "action": "give(electric drill)",
+    "response": "Action executed successfully. You have given the electric drill to your partner. It is no longer in your bag.",
+    "progress": 97.62
+  },
+  {
+    "step": 103,
+    "role": "B",
+    "at": "elevator room",
+    "action": "move(To the elevator interior)",
+    "response": "Action executed successfully. Change to another scene: elevator interior.",
+    "progress": 97.62
+  },
+  {
+    "step": 104,
+    "role": "B",
+    "at": "elevator interior",
+    "action": "apply(electric drill, circuit board)",
+    "response": "Action executed successfully. You have successfully applied electric drill to circuit board. Congratulations! you've fixed the elevator and completed the game. game end!",
+    "progress": 100.0
+  }
+]

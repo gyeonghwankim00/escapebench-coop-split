@@ -1,0 +1,124 @@
+{
+  "version": "v4",
+  "game": "game1-2-easy",
+  "eligible": true,
+  "spatial_exception": null,
+  "A": [
+    "hallway",
+    "blocked path close-up",
+    "cabinet close-up",
+    "hallway right",
+    "small cabinet close-up",
+    "operating room door overview",
+    "operating room",
+    "surgical table close-up",
+    "operating room cabinet close-up",
+    "upper cabinet close-up",
+    "lower cabinet close-up",
+    "anatomy poster close-up"
+  ],
+  "B": [
+    "ventilation fan close-up",
+    "elevator room",
+    "elevator interior",
+    "room 805",
+    "desk close-up",
+    "left bookshelf close-up",
+    "bedside table close-up",
+    "right bookshelf close-up",
+    "805 right room"
+  ],
+  "starts": {
+    "B": "room 805"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game1-2-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_1-2.txt",
+  "change": {
+    "split": "v3 scenes plus the ventilation fan close-up, which now belongs to room 805 (game file edited).",
+    "game_file": "B starts inside room 805 and A owns nothing behind its door. The two close-ups held only the key and the door; the cabinet close-up text (\"can be opened easily\") would describe a deleted door, so both scenes go. The hallway right text no longer mentions them: A cannot enter room 805 and the large cabinet has no close-up left. The ventilation fan that leads to the elevator room moves from the end of A's hallway into room 805, so B no longer walks through A's hallway to reach its elevator room."
+  },
+  "metrics": {
+    "total": 41,
+    "alone_A": 3,
+    "alone_B": 12,
+    "together_no_give": 15,
+    "with_give": 41,
+    "b_share": 0.49,
+    "handoffs": 9,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 1
+  },
+  "cross_clues": [
+    {
+      "answer": "2333",
+      "target": "safe",
+      "target_role": "A",
+      "partner_sources": [
+        "paper with code"
+      ],
+      "all_sources_with_partner": false
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "keycard",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(keycard, operating room door)"
+    },
+    {
+      "tool": "paper1",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(paper1, drawer with code lock)"
+    },
+    {
+      "tool": "paper3",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(paper3, drawer with code lock)"
+    },
+    {
+      "tool": "paper4",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(paper4, drawer with code lock)"
+    },
+    {
+      "tool": "lubricant",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(lubricant, padlock)"
+    },
+    {
+      "tool": "ladder",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(ladder, ventilation fan)"
+    },
+    {
+      "tool": "battery",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(battery, unfunctional drill)"
+    },
+    {
+      "tool": "drill bit",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(drill bit, unfunctional drill)"
+    },
+    {
+      "tool": "electric drill",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(electric drill, circuit board)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

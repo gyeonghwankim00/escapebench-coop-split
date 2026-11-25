@@ -1,0 +1,1154 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "click(wood stick)",
+    "response": "Action executed successfully. You have just collected a wood stick. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 1.69
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "move(Go to trunk of the van)",
+    "response": "Action executed successfully. Change to another scene: trunk of the van.",
+    "progress": 1.69
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "trunk of the van",
+    "action": "click(trunk door)",
+    "response": "Action executed successfully. You have clicked on trunk door. The trunk door is opened",
+    "progress": 3.39
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "trunk of the van",
+    "action": "click(rag)",
+    "response": "Action executed successfully. You have just collected a rag. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 5.08
+  },
+  {
+    "step": 5,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 5.08
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "trunk of the van",
+    "action": "click(wire cutter)",
+    "response": "Action executed successfully. You have just collected a wire cutter. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 6.78
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "trunk of the van",
+    "action": "move(Back to the van in dessert)",
+    "response": "Action executed successfully. Change to another scene: van in dessert.",
+    "progress": 6.78
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "move(Go to back of the van)",
+    "response": "Action executed successfully. Change to another scene: back of the van.",
+    "progress": 6.78
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "back of the van",
+    "action": "move(Explore the underneath part of the van)",
+    "response": "Action executed successfully. Change to another scene: underneath part of the van.",
+    "progress": 6.78
+  },
+  {
+    "step": 10,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 6.78
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "click(bunch of keys)",
+    "response": "Action executed successfully. You have just collected a bunch of keys. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 8.47
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "apply(wire cutter, iron wire)",
+    "response": "Action executed successfully. You have successfully applied wire cutter to iron wire. The iron wire is untied, now the stepladder is free",
+    "progress": 10.17
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "click(stepladder)",
+    "response": "Action executed successfully. You have clicked on stepladder. The stepladder is unfolded, now you can reach the top of the van",
+    "progress": 11.86
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "move(Back to the back of the van)",
+    "response": "Action executed successfully. Change to another scene: back of the van.",
+    "progress": 11.86
+  },
+  {
+    "step": 15,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 11.86
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "back of the van",
+    "action": "move(Go to the top of the van)",
+    "response": "Action executed successfully. Change to another scene: top of the van.",
+    "progress": 11.86
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "top of the van",
+    "action": "apply(wood stick, skylight)",
+    "response": "Action executed successfully. You have successfully applied wood stick to skylight. The skylight is opened, there is a key on the top of the shelf inside the skylight",
+    "progress": 13.56
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "top of the van",
+    "action": "click(silver key)",
+    "response": "Action executed successfully. You have just collected a silver key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 15.25
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "top of the van",
+    "action": "move(Back to the back of the van)",
+    "response": "Action executed successfully. Change to another scene: back of the van.",
+    "progress": 15.25
+  },
+  {
+    "step": 20,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 15.25
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "back of the van",
+    "action": "move(Back to the van in dessert)",
+    "response": "Action executed successfully. Change to another scene: van in dessert.",
+    "progress": 15.25
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "move(Go to trunk of the van)",
+    "response": "Action executed successfully. Change to another scene: trunk of the van.",
+    "progress": 15.25
+  },
+  {
+    "step": 23,
+    "role": "A",
+    "at": "trunk of the van",
+    "action": "move(Explore a repair toolkit in the trunk)",
+    "response": "Action executed successfully. Change to another scene: repair kit in the trunk.",
+    "progress": 15.25
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "repair kit in the trunk",
+    "action": "apply(silver key, repair kit box)",
+    "response": "Action executed successfully. You have successfully applied silver key to repair kit box. The repair kit box is opened, there is an engine oil inside",
+    "progress": 16.95
+  },
+  {
+    "step": 25,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 16.95
+  },
+  {
+    "step": 26,
+    "role": "A",
+    "at": "repair kit in the trunk",
+    "action": "click(engine oil)",
+    "response": "Action executed successfully. You have just collected a engine oil. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 18.64
+  },
+  {
+    "step": 27,
+    "role": "A",
+    "at": "repair kit in the trunk",
+    "action": "craft(engine oil, rag)",
+    "response": "Action executed successfully. You have successfully crafted a bottle of engine oil, good for lubricating things and a white and clean rag, seems easily soak in some chemical together.\nYou get a new item: a rag soaked with engine oil, seems more useful now to clean something. It is put into your bag.",
+    "progress": 20.34
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "repair kit in the trunk",
+    "action": "craft(rag, bunch of keys)",
+    "response": "Action executed successfully. You have successfully crafted a rag soaked with engine oil, seems more useful now to clean something and a bunch of keys with a chain, there's dust and rust on the chain waiting to be cleaned together.\nYou get a new item: a bunch of keys with a chain, the chain is cleaned now with a silver color. It is put into your bag.",
+    "progress": 22.03
+  },
+  {
+    "step": 29,
+    "role": "A",
+    "at": "repair kit in the trunk",
+    "action": "move(Back to the trunk of the van)",
+    "response": "Action executed successfully. Change to another scene: trunk of the van.",
+    "progress": 22.03
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 22.03
+  },
+  {
+    "step": 31,
+    "role": "A",
+    "at": "trunk of the van",
+    "action": "move(Back to the van in dessert)",
+    "response": "Action executed successfully. Change to another scene: van in dessert.",
+    "progress": 22.03
+  },
+  {
+    "step": 32,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "move(Go to door of the van)",
+    "response": "Action executed successfully. Change to another scene: door of the van.",
+    "progress": 22.03
+  },
+  {
+    "step": 33,
+    "role": "A",
+    "at": "door of the van",
+    "action": "apply(bunch of keys, van door)",
+    "response": "Action executed successfully. You have successfully applied bunch of keys to van door. The van door is unlocked, now you can get in.",
+    "progress": 23.73
+  },
+  {
+    "step": 34,
+    "role": "A",
+    "at": "door of the van",
+    "action": "move(Go into inside of the door)",
+    "response": "Action executed successfully. Change to another scene: van indoor front overview.",
+    "progress": 23.73
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 23.73
+  },
+  {
+    "step": 36,
+    "role": "A",
+    "at": "van indoor front overview",
+    "action": "click(seat switch)",
+    "response": "Action executed successfully. You have clicked on seat switch. The switch is on, something happens",
+    "progress": 25.42
+  },
+  {
+    "step": 37,
+    "role": "A",
+    "at": "van indoor front overview",
+    "action": "click(water bottle)",
+    "response": "Action executed successfully. You have just collected a water bottle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 27.12
+  },
+  {
+    "step": 38,
+    "role": "A",
+    "at": "van indoor front overview",
+    "action": "move(Explore the front desk in the van)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 27.12
+  },
+  {
+    "step": 39,
+    "role": "A",
+    "at": "front desk",
+    "action": "click(left seat)",
+    "response": "Action executed successfully. You have clicked on left seat. The seat is down, there's something behind",
+    "progress": 28.81
+  },
+  {
+    "step": 40,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 28.81
+  },
+  {
+    "step": 41,
+    "role": "A",
+    "at": "front desk",
+    "action": "click(solar panel)",
+    "response": "Action executed successfully. You have just collected a solar panel. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 30.51
+  },
+  {
+    "step": 42,
+    "role": "A",
+    "at": "front desk",
+    "action": "click(magazine)",
+    "response": "Action executed successfully. You have just collected a magazine. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 32.2
+  },
+  {
+    "step": 43,
+    "role": "A",
+    "at": "front desk",
+    "action": "move(Explore the book shelf on the top)",
+    "response": "Action executed successfully. Change to another scene: book shelf.",
+    "progress": 32.2
+  },
+  {
+    "step": 44,
+    "role": "A",
+    "at": "book shelf",
+    "action": "click(wrench)",
+    "response": "Action executed successfully. You have just collected a wrench. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 33.9
+  },
+  {
+    "step": 45,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 33.9
+  },
+  {
+    "step": 46,
+    "role": "A",
+    "at": "book shelf",
+    "action": "move(Back to the front desk)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 33.9
+  },
+  {
+    "step": 47,
+    "role": "A",
+    "at": "front desk",
+    "action": "move(Explore the computer on the desk)",
+    "response": "Action executed successfully. Change to another scene: computer on the desk.",
+    "progress": 33.9
+  },
+  {
+    "step": 48,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "click(old thesis paper)",
+    "response": "Action executed successfully. You have just collected a old thesis paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 35.59
+  },
+  {
+    "step": 49,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 35.59
+  },
+  {
+    "step": 50,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(screwdriver)",
+    "response": "Action executed successfully. You have just collected a screwdriver. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 37.29
+  },
+  {
+    "step": 51,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(shelf door 1)",
+    "response": "Action executed successfully. You have clicked on shelf door 1. The shelf's door opens",
+    "progress": 38.98
+  },
+  {
+    "step": 52,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(cup)",
+    "response": "Action executed successfully. You have just collected a cup. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 40.68
+  },
+  {
+    "step": 53,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 40.68
+  },
+  {
+    "step": 54,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "give(water bottle)",
+    "response": "Action executed successfully. You have given the water bottle to your partner. It is no longer in your bag.",
+    "progress": 40.68
+  },
+  {
+    "step": 55,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "craft(water bottle, cup)",
+    "response": "Action executed successfully. You have successfully crafted a water bottle with some water inside, may need a container to hold the water and an empty cup together.\nYou get a new item: a cup with water inside, currently not heated. It is put into your bag.",
+    "progress": 42.37
+  },
+  {
+    "step": 56,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(microwave)",
+    "response": "Action executed successfully. You have clicked on microwave. The microwave is opened",
+    "progress": 44.07
+  },
+  {
+    "step": 57,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "apply(cup, microwave)",
+    "response": "Action executed successfully. You have successfully applied cup to microwave. The water in the cup is heated up",
+    "progress": 45.76
+  },
+  {
+    "step": 58,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(cup with hot water)",
+    "response": "Action executed successfully. You have just collected a cup with hot water. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 47.46
+  },
+  {
+    "step": 59,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 47.46
+  },
+  {
+    "step": 60,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(shelf door 2)",
+    "response": "Action executed successfully. You have clicked on shelf door 2. The shelf's door opens",
+    "progress": 49.15
+  },
+  {
+    "step": 61,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "click(tin foil)",
+    "response": "Action executed successfully. You have just collected a tin foil. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 50.85
+  },
+  {
+    "step": 62,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "move(Go to the bed)",
+    "response": "Action executed successfully. Change to another scene: bed overview.",
+    "progress": 50.85
+  },
+  {
+    "step": 63,
+    "role": "B",
+    "at": "bed overview",
+    "action": "click(battery)",
+    "response": "Action executed successfully. You have just collected a battery. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 52.54
+  },
+  {
+    "step": 64,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 52.54
+  },
+  {
+    "step": 65,
+    "role": "B",
+    "at": "bed overview",
+    "action": "apply(tin foil, torch light)",
+    "response": "Action executed successfully. You have successfully applied tin foil to torch light. The tin foil is wrapped to the tail of the torch light, now it can pass the electricity",
+    "progress": 54.24
+  },
+  {
+    "step": 66,
+    "role": "B",
+    "at": "bed overview",
+    "action": "apply(battery, torch light)",
+    "response": "Action executed successfully. You have successfully applied battery to torch light. You have a torch light with power now",
+    "progress": 57.63
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "bed overview",
+    "action": "click(bed shelf 1)",
+    "response": "Action executed successfully. You have clicked on bed shelf 1. The shelf is open, there is a light bulb inside",
+    "progress": 59.32
+  },
+  {
+    "step": 68,
+    "role": "B",
+    "at": "bed overview",
+    "action": "click(light bulb)",
+    "response": "Action executed successfully. You have just collected a light bulb. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 61.02
+  },
+  {
+    "step": 69,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "give(wrench)",
+    "response": "Action executed successfully. You have given the wrench to your partner. It is no longer in your bag.",
+    "progress": 61.02
+  },
+  {
+    "step": 70,
+    "role": "B",
+    "at": "bed overview",
+    "action": "move(Go to see the right side of bed)",
+    "response": "Action executed successfully. Change to another scene: right side of bed.",
+    "progress": 61.02
+  },
+  {
+    "step": 71,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "apply(wrench, generator)",
+    "response": "Action executed successfully. You have successfully applied wrench to generator. The board is pulled off, the generator is exposed",
+    "progress": 62.71
+  },
+  {
+    "step": 72,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 62.71
+  },
+  {
+    "step": 73,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "send(a paper with title \"[26] impact of solar panel to [10] years of energy consumption\", seems like a hint for a digital password)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 62.71
+  },
+  {
+    "step": 74,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "move(Back to the bed overview)",
+    "response": "Action executed successfully. Change to another scene: bed overview.",
+    "progress": 62.71
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "bed overview",
+    "action": "move(Back to the passage way)",
+    "response": "Action executed successfully. Change to another scene: passage way in van.",
+    "progress": 62.71
+  },
+  {
+    "step": 76,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "move(Explore the drawers)",
+    "response": "Action executed successfully. Change to another scene: drawers.",
+    "progress": 62.71
+  },
+  {
+    "step": 77,
+    "role": "B",
+    "at": "drawers",
+    "action": "input(2610, top drawer)",
+    "response": "Action executed successfully. You have given an input 2610 to top drawer. The drawer is unlocked, there is a battery clip inside",
+    "progress": 64.41
+  },
+  {
+    "step": 78,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 64.41
+  },
+  {
+    "step": 79,
+    "role": "B",
+    "at": "drawers",
+    "action": "click(battery clip)",
+    "response": "Action executed successfully. You have just collected a battery clip. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 66.1
+  },
+  {
+    "step": 80,
+    "role": "B",
+    "at": "drawers",
+    "action": "move(Back to the passage way)",
+    "response": "Action executed successfully. Change to another scene: passage way in van.",
+    "progress": 66.1
+  },
+  {
+    "step": 81,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "move(Go to the bed)",
+    "response": "Action executed successfully. Change to another scene: bed overview.",
+    "progress": 66.1
+  },
+  {
+    "step": 82,
+    "role": "B",
+    "at": "bed overview",
+    "action": "move(Go to see the right side of bed)",
+    "response": "Action executed successfully. Change to another scene: right side of bed.",
+    "progress": 66.1
+  },
+  {
+    "step": 83,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 66.1
+  },
+  {
+    "step": 84,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "apply(battery clip, generator)",
+    "response": "Action executed successfully. You have successfully applied battery clip to generator. The generator is powered on, the solar panel slot opens now",
+    "progress": 67.8
+  },
+  {
+    "step": 85,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "give(screwdriver)",
+    "response": "Action executed successfully. You have given the screwdriver to your partner. It is no longer in your bag.",
+    "progress": 67.8
+  },
+  {
+    "step": 86,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "move(Back to the front desk)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 67.8
+  },
+  {
+    "step": 87,
+    "role": "A",
+    "at": "front desk",
+    "action": "move(Back to the front of the van overview)",
+    "response": "Action executed successfully. Change to another scene: van indoor front overview.",
+    "progress": 67.8
+  },
+  {
+    "step": 88,
+    "role": "A",
+    "at": "van indoor front overview",
+    "action": "move(Back to the door of the van)",
+    "response": "Action executed successfully. Change to another scene: door of the van.",
+    "progress": 67.8
+  },
+  {
+    "step": 89,
+    "role": "A",
+    "at": "door of the van",
+    "action": "move(Back to the van in dessert)",
+    "response": "Action executed successfully. Change to another scene: van in dessert.",
+    "progress": 67.8
+  },
+  {
+    "step": 90,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 67.8
+  },
+  {
+    "step": 91,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "move(Go to back of the van)",
+    "response": "Action executed successfully. Change to another scene: back of the van.",
+    "progress": 67.8
+  },
+  {
+    "step": 92,
+    "role": "A",
+    "at": "back of the van",
+    "action": "move(Explore the underneath part of the van)",
+    "response": "Action executed successfully. Change to another scene: underneath part of the van.",
+    "progress": 67.8
+  },
+  {
+    "step": 93,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "apply(screwdriver, license plate space)",
+    "response": "Action executed successfully. You have successfully applied screwdriver to license plate space. The license plate dropped to the ground",
+    "progress": 69.49
+  },
+  {
+    "step": 94,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "click(license plate)",
+    "response": "Action executed successfully. You have just collected a license plate. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 71.19
+  },
+  {
+    "step": 95,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "give(torch light with power)",
+    "response": "Action executed successfully. You have given the torch light with power to your partner. It is no longer in your bag.",
+    "progress": 71.19
+  },
+  {
+    "step": 96,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "apply(torch light with power, license plate space)",
+    "response": "Action executed successfully. You have successfully applied torch light with power to license plate space. The license plate dropped to the ground",
+    "progress": 72.88
+  },
+  {
+    "step": 97,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "click(shelf key)",
+    "response": "Action executed successfully. You have just collected a shelf key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 74.58
+  },
+  {
+    "step": 98,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "click(mental card)",
+    "response": "Action executed successfully. You have just collected a mental card. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 76.27
+  },
+  {
+    "step": 99,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 76.27
+  },
+  {
+    "step": 100,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "give(light bulb)",
+    "response": "Action executed successfully. You have given the light bulb to your partner. It is no longer in your bag.",
+    "progress": 76.27
+  },
+  {
+    "step": 101,
+    "role": "A",
+    "at": "underneath part of the van",
+    "action": "move(Back to the back of the van)",
+    "response": "Action executed successfully. Change to another scene: back of the van.",
+    "progress": 76.27
+  },
+  {
+    "step": 102,
+    "role": "A",
+    "at": "back of the van",
+    "action": "move(Go to the top of the van)",
+    "response": "Action executed successfully. Change to another scene: top of the van.",
+    "progress": 76.27
+  },
+  {
+    "step": 103,
+    "role": "A",
+    "at": "top of the van",
+    "action": "apply(light bulb, spotlight)",
+    "response": "Action executed successfully. You have successfully applied light bulb to spotlight. The spotlight is intact now, but still there's no power.",
+    "progress": 77.97
+  },
+  {
+    "step": 104,
+    "role": "A",
+    "at": "top of the van",
+    "action": "apply(solar panel, solar panel slot)",
+    "response": "Action executed successfully. You have successfully applied solar panel to solar panel slot. The solar panel is put on the top of the van, spotlight is on now",
+    "progress": 79.66
+  },
+  {
+    "step": 105,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "give(cup with hot water)",
+    "response": "Action executed successfully. You have given the cup with hot water to your partner. It is no longer in your bag.",
+    "progress": 79.66
+  },
+  {
+    "step": 106,
+    "role": "A",
+    "at": "top of the van",
+    "action": "move(Back to the back of the van)",
+    "response": "Action executed successfully. Change to another scene: back of the van.",
+    "progress": 79.66
+  },
+  {
+    "step": 107,
+    "role": "A",
+    "at": "back of the van",
+    "action": "move(Back to the van in dessert)",
+    "response": "Action executed successfully. Change to another scene: van in dessert.",
+    "progress": 79.66
+  },
+  {
+    "step": 108,
+    "role": "A",
+    "at": "van in dessert",
+    "action": "move(Go to door of the van)",
+    "response": "Action executed successfully. Change to another scene: door of the van.",
+    "progress": 79.66
+  },
+  {
+    "step": 109,
+    "role": "A",
+    "at": "door of the van",
+    "action": "apply(cup with hot water, mud)",
+    "response": "Action executed successfully. You have successfully applied cup with hot water to mud. The mud is warmed now, it's easier to scrape it",
+    "progress": 81.36
+  },
+  {
+    "step": 110,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 81.36
+  },
+  {
+    "step": 111,
+    "role": "A",
+    "at": "door of the van",
+    "action": "give(shelf key)",
+    "response": "Action executed successfully. You have given the shelf key to your partner. It is no longer in your bag.",
+    "progress": 81.36
+  },
+  {
+    "step": 112,
+    "role": "B",
+    "at": "right side of bed",
+    "action": "move(Back to the bed overview)",
+    "response": "Action executed successfully. Change to another scene: bed overview.",
+    "progress": 81.36
+  },
+  {
+    "step": 113,
+    "role": "B",
+    "at": "bed overview",
+    "action": "apply(shelf key, bed shelf 2)",
+    "response": "Action executed successfully. You have successfully applied shelf key to bed shelf 2. The shelf is unlocked, there is a something inside",
+    "progress": 83.05
+  },
+  {
+    "step": 114,
+    "role": "B",
+    "at": "bed overview",
+    "action": "move(Explore what's inside the bed shelf)",
+    "response": "Action executed successfully. Change to another scene: bed shelf inside.",
+    "progress": 83.05
+  },
+  {
+    "step": 115,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "click(scraper)",
+    "response": "Action executed successfully. You have just collected a scraper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 84.75
+  },
+  {
+    "step": 116,
+    "role": "A",
+    "at": "door of the van",
+    "action": "give(mental card)",
+    "response": "Action executed successfully. You have given the mental card to your partner. It is no longer in your bag.",
+    "progress": 84.75
+  },
+  {
+    "step": 117,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "apply(mental card, safe box)",
+    "response": "Action executed successfully. You have successfully applied mental card to safe box. The safe box is filled with 16 cards, a panel in need of password is shown",
+    "progress": 86.44
+  },
+  {
+    "step": 118,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 86.44
+  },
+  {
+    "step": 119,
+    "role": "A",
+    "at": "door of the van",
+    "action": "send(the spotlight is on, showing the 4 digits \"3149\", seems like a 4-digit password hint)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 86.44
+  },
+  {
+    "step": 120,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "input(3149, safe box)",
+    "response": "Action executed successfully. You have given an input 3149 to safe box. The safe box openes, there is a usb flash disk inside",
+    "progress": 88.14
+  },
+  {
+    "step": 121,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "click(USB flash disk)",
+    "response": "Action executed successfully. You have just collected a USB flash disk. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 89.83
+  },
+  {
+    "step": 122,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 89.83
+  },
+  {
+    "step": 123,
+    "role": "A",
+    "at": "door of the van",
+    "action": "send(a license plate with written \"May California 2011\", seems like hinting on a digital password)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 89.83
+  },
+  {
+    "step": 124,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 89.83
+  },
+  {
+    "step": 125,
+    "role": "A",
+    "at": "door of the van",
+    "action": "send(a magazine with title \"California 06\", seems like a hint for a password)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 89.83
+  },
+  {
+    "step": 126,
+    "role": "B",
+    "at": "bed shelf inside",
+    "action": "move(Back to the bed overview)",
+    "response": "Action executed successfully. Change to another scene: bed overview.",
+    "progress": 89.83
+  },
+  {
+    "step": 127,
+    "role": "B",
+    "at": "bed overview",
+    "action": "move(Back to the passage way)",
+    "response": "Action executed successfully. Change to another scene: passage way in van.",
+    "progress": 89.83
+  },
+  {
+    "step": 128,
+    "role": "B",
+    "at": "passage way in van",
+    "action": "move(Explore the drawers)",
+    "response": "Action executed successfully. Change to another scene: drawers.",
+    "progress": 89.83
+  },
+  {
+    "step": 129,
+    "role": "B",
+    "at": "drawers",
+    "action": "input(05062011, bottom drawer)",
+    "response": "Action executed successfully. You have given an input 05062011 to bottom drawer. The drawer is unlocked, there is a paper with names inside",
+    "progress": 91.53
+  },
+  {
+    "step": 130,
+    "role": "A",
+    "at": "door of the van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 91.53
+  },
+  {
+    "step": 131,
+    "role": "B",
+    "at": "drawers",
+    "action": "click(paper with names)",
+    "response": "Action executed successfully. You have just collected a paper with names. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 93.22
+  },
+  {
+    "step": 132,
+    "role": "B",
+    "at": "drawers",
+    "action": "give(scraper)",
+    "response": "Action executed successfully. You have given the scraper to your partner. It is no longer in your bag.",
+    "progress": 93.22
+  },
+  {
+    "step": 133,
+    "role": "A",
+    "at": "door of the van",
+    "action": "apply(scraper, mud)",
+    "response": "Action executed successfully. You have successfully applied scraper to mud. The mud is off now, there writes jacob korakon beside the door",
+    "progress": 94.92
+  },
+  {
+    "step": 134,
+    "role": "A",
+    "at": "door of the van",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 94.92
+  },
+  {
+    "step": 135,
+    "role": "B",
+    "at": "drawers",
+    "action": "give(USB flash disk)",
+    "response": "Action executed successfully. You have given the USB flash disk to your partner. It is no longer in your bag.",
+    "progress": 94.92
+  },
+  {
+    "step": 136,
+    "role": "A",
+    "at": "door of the van",
+    "action": "move(Go into inside of the door)",
+    "response": "Action executed successfully. Change to another scene: van indoor front overview.",
+    "progress": 94.92
+  },
+  {
+    "step": 137,
+    "role": "A",
+    "at": "van indoor front overview",
+    "action": "move(Explore the front desk in the van)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 94.92
+  },
+  {
+    "step": 138,
+    "role": "A",
+    "at": "front desk",
+    "action": "move(Explore the computer on the desk)",
+    "response": "Action executed successfully. Change to another scene: computer on the desk.",
+    "progress": 94.92
+  },
+  {
+    "step": 139,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "apply(USB flash disk, computer)",
+    "response": "Action executed successfully. You have successfully applied USB flash disk to computer. The computer is on now, on the screen it shows you have to input the owner's name",
+    "progress": 96.61
+  },
+  {
+    "step": 140,
+    "role": "B",
+    "at": "drawers",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 96.61
+  },
+  {
+    "step": 141,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "input(Jacob Korakon, computer)",
+    "response": "Action executed successfully. You have given an input Jacob Korakon to computer. The name is correct, now you have to enter a 4 digit password",
+    "progress": 98.31
+  },
+  {
+    "step": 142,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 98.31
+  },
+  {
+    "step": 143,
+    "role": "B",
+    "at": "drawers",
+    "action": "send(a paper with different names on it, showing \"Ally Liam Michael Violet\", seems familiar as previously seen on the book shelf)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 98.31
+  },
+  {
+    "step": 144,
+    "role": "A",
+    "at": "computer on the desk",
+    "action": "input(1927, computer)",
+    "response": "Action executed successfully. You have given an input 1927 to computer. The password is correct, game end!",
+    "progress": 100.0
+  }
+]

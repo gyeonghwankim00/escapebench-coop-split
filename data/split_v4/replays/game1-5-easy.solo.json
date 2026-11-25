@@ -1,0 +1,834 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 0.0
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "stair",
+    "action": "click(hose)",
+    "response": "Action executed successfully. You have just collected a hose. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 1.61
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "stair",
+    "action": "click(key 1)",
+    "response": "Action executed successfully. You have just collected a key 1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 3.23
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "stair",
+    "action": "click(paper 1)",
+    "response": "Action executed successfully. You have just collected a paper 1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 4.84
+  },
+  {
+    "step": 5,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Go to the boiler room)",
+    "response": "Action executed successfully. Change to another scene: the boiler room.",
+    "progress": 4.84
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "click(key 2)",
+    "response": "Action executed successfully. You have just collected a key 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 6.45
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "click(hacksaw)",
+    "response": "Action executed successfully. You have just collected a hacksaw. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 8.06
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "input(3141, iron box)",
+    "response": "Action executed successfully. You have given an input 3141 to iron box. You opened the box and found a saw blade inside.",
+    "progress": 9.68
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "click(saw blade)",
+    "response": "Action executed successfully. You have just collected a saw blade. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 11.29
+  },
+  {
+    "step": 10,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "craft(hacksaw, saw blade)",
+    "response": "Action executed successfully. You have successfully crafted A saw blade. Cannot be used directly now, need to connect with something to hold. and A saw but missing th blade now, only the handle is left. Find the missing part and assemble them. together.\nYou get a new item: A complete saw, with blade made of iron, sharp to cut things open.. It is put into your bag.",
+    "progress": 12.9
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "move(Back to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 12.9
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Back to Initial room)",
+    "response": "Action executed successfully. Change to another scene: initial room.",
+    "progress": 12.9
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to iron fence close-up)",
+    "response": "Action executed successfully. Change to another scene: iron fence close-up.",
+    "progress": 12.9
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "iron fence close-up",
+    "action": "apply(hacksaw, old bar)",
+    "response": "Action executed successfully. You have successfully applied hacksaw to old bar. You cut the bar open.",
+    "progress": 14.52
+  },
+  {
+    "step": 15,
+    "role": "A",
+    "at": "iron fence close-up",
+    "action": "click(gas can)",
+    "response": "Action executed successfully. You have just collected a gas can. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 16.13
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "iron fence close-up",
+    "action": "move(Beck to Initial room)",
+    "response": "Action executed successfully. Change to another scene: initial room.",
+    "progress": 16.13
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 16.13
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "stair",
+    "action": "apply(hose, oil drum)",
+    "response": "Action executed successfully. You have successfully applied hose to oil drum. You put the hose on the oil drum.",
+    "progress": 17.74
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "stair",
+    "action": "apply(gas can, oil drum)",
+    "response": "Action executed successfully. You have successfully applied gas can to oil drum. You extracted the oil and stored it in the container.",
+    "progress": 19.35
+  },
+  {
+    "step": 20,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Go to the boiler room)",
+    "response": "Action executed successfully. Change to another scene: the boiler room.",
+    "progress": 19.35
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "apply(gas can, boiler)",
+    "response": "Action executed successfully. You have successfully applied gas can to boiler. You filled the boiler with oil. it's now running and you san see a lock on its control panel.",
+    "progress": 20.97
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "move(Back to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 20.97
+  },
+  {
+    "step": 23,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Back to Initial room)",
+    "response": "Action executed successfully. Change to another scene: initial room.",
+    "progress": 20.97
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to room on the right)",
+    "response": "Action executed successfully. Change to another scene: room on the right.",
+    "progress": 20.97
+  },
+  {
+    "step": 25,
+    "role": "A",
+    "at": "room on the right",
+    "action": "apply(key 1, lock of power distribution box)",
+    "response": "Action executed successfully. You have successfully applied key 1 to lock of power distribution box. You opened the distribution box. now you can go to its close-up.",
+    "progress": 22.58
+  },
+  {
+    "step": 26,
+    "role": "A",
+    "at": "room on the right",
+    "action": "move(Back to Initial room)",
+    "response": "Action executed successfully. Change to another scene: initial room.",
+    "progress": 22.58
+  },
+  {
+    "step": 27,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 22.58
+  },
+  {
+    "step": 28,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Go to the boiler room)",
+    "response": "Action executed successfully. Change to another scene: the boiler room.",
+    "progress": 22.58
+  },
+  {
+    "step": 29,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "apply(key 2, boiler)",
+    "response": "Action executed successfully. You have successfully applied key 2 to boiler. You opened the control panel and switched a lever. you heard a electric sound outside, something happens ...",
+    "progress": 24.19
+  },
+  {
+    "step": 30,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "move(Back to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 24.19
+  },
+  {
+    "step": 31,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Back to Initial room)",
+    "response": "Action executed successfully. Change to another scene: initial room.",
+    "progress": 24.19
+  },
+  {
+    "step": 32,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to room on the right)",
+    "response": "Action executed successfully. Change to another scene: room on the right.",
+    "progress": 24.19
+  },
+  {
+    "step": 33,
+    "role": "A",
+    "at": "room on the right",
+    "action": "move(Go to distribution box close-up)",
+    "response": "Action executed successfully. Change to another scene: distribution box close-up.",
+    "progress": 24.19
+  },
+  {
+    "step": 34,
+    "role": "A",
+    "at": "distribution box close-up",
+    "action": "click(power distribution box)",
+    "response": "Action executed successfully. You have clicked on power distribution box. You turned on the lever. a door is opened ...",
+    "progress": 25.81
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to bed close-up)",
+    "response": "Action executed successfully. Change to another scene: bed close-up.",
+    "progress": 25.81
+  },
+  {
+    "step": 36,
+    "role": "B",
+    "at": "bed close-up",
+    "action": "click(pillow)",
+    "response": "Action executed successfully. You have clicked on pillow. You picked up the pillow and found a disk under it.",
+    "progress": 27.42
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "bed close-up",
+    "action": "click(disk 1)",
+    "response": "Action executed successfully. You have just collected a disk 1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 29.03
+  },
+  {
+    "step": 38,
+    "role": "B",
+    "at": "bed close-up",
+    "action": "click(film)",
+    "response": "Action executed successfully. You have just collected a film. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 30.65
+  },
+  {
+    "step": 39,
+    "role": "B",
+    "at": "bed close-up",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 30.65
+  },
+  {
+    "step": 40,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: cabinet close-up.",
+    "progress": 30.65
+  },
+  {
+    "step": 41,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(iodine)",
+    "response": "Action executed successfully. You have just collected a iodine. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 32.26
+  },
+  {
+    "step": 42,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(blue liquid)",
+    "response": "Action executed successfully. You have just collected a blue liquid. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 33.87
+  },
+  {
+    "step": 43,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(paper 2)",
+    "response": "Action executed successfully. You have just collected a paper 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 35.48
+  },
+  {
+    "step": 44,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 35.48
+  },
+  {
+    "step": 45,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "apply(iodine, paper)",
+    "response": "Action executed successfully. You have successfully applied iodine to paper. Some blue writings appeared on the paper -- zz, 40, az, x0.",
+    "progress": 37.1
+  },
+  {
+    "step": 46,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: cabinet close-up.",
+    "progress": 37.1
+  },
+  {
+    "step": 47,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "input(55401530, rotary lock)",
+    "response": "Action executed successfully. You have given an input 55401530 to rotary lock. You opened the lock and found a screwdriver and a lever inside.",
+    "progress": 38.71
+  },
+  {
+    "step": 48,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(screwdriver)",
+    "response": "Action executed successfully. You have just collected a screwdriver. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 40.32
+  },
+  {
+    "step": 49,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(lever)",
+    "response": "Action executed successfully. You have just collected a lever. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 41.94
+  },
+  {
+    "step": 50,
+    "role": "A",
+    "at": "distribution box close-up",
+    "action": "apply(lever, power distribution box)",
+    "response": "Action executed successfully. You have successfully applied lever to power distribution box. You put on another lever and turned it on. a door is opened ...",
+    "progress": 43.55
+  },
+  {
+    "step": 51,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 43.55
+  },
+  {
+    "step": 52,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "apply(screwdriver, plug)",
+    "response": "Action executed successfully. You have successfully applied screwdriver to plug. You loosened the screw with the screwdriver. now you can pick up the plug.",
+    "progress": 45.16
+  },
+  {
+    "step": 53,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "click(pickable plug)",
+    "response": "Action executed successfully. You have just collected a pickable plug. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 46.77
+  },
+  {
+    "step": 54,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to the control room)",
+    "response": "Action executed successfully. Change to another scene: the control room.",
+    "progress": 46.77
+  },
+  {
+    "step": 55,
+    "role": "B",
+    "at": "the control room",
+    "action": "click(paper 3)",
+    "response": "Action executed successfully. You have just collected a paper 3. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 48.39
+  },
+  {
+    "step": 56,
+    "role": "B",
+    "at": "the control room",
+    "action": "click(photo paper)",
+    "response": "Action executed successfully. You have just collected a photo paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 50.0
+  },
+  {
+    "step": 57,
+    "role": "B",
+    "at": "the control room",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 50.0
+  },
+  {
+    "step": 58,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: cabinet close-up.",
+    "progress": 50.0
+  },
+  {
+    "step": 59,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "input(2451, combination lock)",
+    "response": "Action executed successfully. You have given an input 2451 to combination lock. You opened the lock and found a disk and a duct tape inside.",
+    "progress": 51.61
+  },
+  {
+    "step": 60,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(duct tape)",
+    "response": "Action executed successfully. You have just collected a duct tape. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 53.23
+  },
+  {
+    "step": 61,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "click(disk 3)",
+    "response": "Action executed successfully. You have just collected a disk 3. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 54.84
+  },
+  {
+    "step": 62,
+    "role": "B",
+    "at": "cabinet close-up",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 54.84
+  },
+  {
+    "step": 63,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to the control room)",
+    "response": "Action executed successfully. Change to another scene: the control room.",
+    "progress": 54.84
+  },
+  {
+    "step": 64,
+    "role": "B",
+    "at": "the control room",
+    "action": "apply(duct tape, computer)",
+    "response": "Action executed successfully. You have successfully applied duct tape to computer. You fixed the wire with duct tape. but the plug is still missing.",
+    "progress": 56.45
+  },
+  {
+    "step": 65,
+    "role": "B",
+    "at": "the control room",
+    "action": "apply(pickable plug, computer)",
+    "response": "Action executed successfully. You have successfully applied pickable plug to computer. Now the computer is open. you can see 2 disk slots.",
+    "progress": 58.06
+  },
+  {
+    "step": 66,
+    "role": "B",
+    "at": "the control room",
+    "action": "apply(disk 1, computer)",
+    "response": "Action executed successfully. You have successfully applied disk 1 to computer.\nHowever, the apply of disk 1 is not enough, and computer is still missing something else ...",
+    "progress": 59.68
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "the control room",
+    "action": "apply(disk 3, computer)",
+    "response": "Action executed successfully. You have successfully applied disk 3 to computer. You inserted the disks nad authorized the computer. a door opened and you saw another disk slot coming out.",
+    "progress": 61.29
+  },
+  {
+    "step": 68,
+    "role": "B",
+    "at": "the control room",
+    "action": "move(Go to the emergency exit)",
+    "response": "Action executed successfully. Change to another scene: the emergency exit.",
+    "progress": 61.29
+  },
+  {
+    "step": 69,
+    "role": "B",
+    "at": "the emergency exit",
+    "action": "click(ultra-voilet light)",
+    "response": "Action executed successfully. You have just collected a ultra-voilet light. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 62.9
+  },
+  {
+    "step": 70,
+    "role": "B",
+    "at": "the emergency exit",
+    "action": "click(knife)",
+    "response": "Action executed successfully. You have just collected a knife. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 64.52
+  },
+  {
+    "step": 71,
+    "role": "B",
+    "at": "the emergency exit",
+    "action": "move(Back to the control room)",
+    "response": "Action executed successfully. Change to another scene: the control room.",
+    "progress": 64.52
+  },
+  {
+    "step": 72,
+    "role": "B",
+    "at": "the control room",
+    "action": "apply(knife, silk painting)",
+    "response": "Action executed successfully. You have successfully applied knife to silk painting. You cut the painting open and found a secret storage space inside.",
+    "progress": 66.13
+  },
+  {
+    "step": 73,
+    "role": "B",
+    "at": "the control room",
+    "action": "click(wire cutter)",
+    "response": "Action executed successfully. You have just collected a wire cutter. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 67.74
+  },
+  {
+    "step": 74,
+    "role": "B",
+    "at": "the control room",
+    "action": "click(remote detonator)",
+    "response": "Action executed successfully. You have just collected a remote detonator. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 69.35
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "the control room",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 69.35
+  },
+  {
+    "step": 76,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "apply(wire cutter, vent pipe)",
+    "response": "Action executed successfully. You have successfully applied wire cutter to vent pipe. You found a disk inside.",
+    "progress": 70.97
+  },
+  {
+    "step": 77,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "click(disk 2)",
+    "response": "Action executed successfully. You have just collected a disk 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 72.58
+  },
+  {
+    "step": 78,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "move(Go to the control room)",
+    "response": "Action executed successfully. Change to another scene: the control room.",
+    "progress": 72.58
+  },
+  {
+    "step": 79,
+    "role": "B",
+    "at": "the control room",
+    "action": "apply(disk 2, computer)",
+    "response": "Action executed successfully. You have successfully applied disk 2 to computer. You inserted another disk and authorized the computer with higher priority. a door opened ...",
+    "progress": 74.19
+  },
+  {
+    "step": 80,
+    "role": "A",
+    "at": "distribution box close-up",
+    "action": "move(Back to room on the right)",
+    "response": "Action executed successfully. Change to another scene: room on the right.",
+    "progress": 74.19
+  },
+  {
+    "step": 81,
+    "role": "A",
+    "at": "room on the right",
+    "action": "move(Back to Initial room)",
+    "response": "Action executed successfully. Change to another scene: initial room.",
+    "progress": 74.19
+  },
+  {
+    "step": 82,
+    "role": "A",
+    "at": "initial room",
+    "action": "move(Go to the stair)",
+    "response": "Action executed successfully. Change to another scene: stair.",
+    "progress": 74.19
+  },
+  {
+    "step": 83,
+    "role": "A",
+    "at": "stair",
+    "action": "move(Go to the boiler room)",
+    "response": "Action executed successfully. Change to another scene: the boiler room.",
+    "progress": 74.19
+  },
+  {
+    "step": 84,
+    "role": "A",
+    "at": "the boiler room",
+    "action": "move(Go to the secret office)",
+    "response": "Action executed successfully. Change to another scene: secret office.",
+    "progress": 74.19
+  },
+  {
+    "step": 85,
+    "role": "A",
+    "at": "secret office",
+    "action": "click(yellow liquid)",
+    "response": "Action executed successfully. You have just collected a yellow liquid. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 75.81
+  },
+  {
+    "step": 86,
+    "role": "A",
+    "at": "secret office",
+    "action": "click(wrench)",
+    "response": "Action executed successfully. You have just collected a wrench. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 77.42
+  },
+  {
+    "step": 87,
+    "role": "A",
+    "at": "secret office",
+    "action": "apply(photo paper, film processing toolset)",
+    "response": "Action executed successfully. You have successfully applied photo paper to film processing toolset.\nHowever, the apply of photo paper is not enough, and film processing toolset is still missing something else ...",
+    "progress": 79.03
+  },
+  {
+    "step": 88,
+    "role": "A",
+    "at": "secret office",
+    "action": "apply(film, film processing toolset)",
+    "response": "Action executed successfully. You have successfully applied film to film processing toolset.\nHowever, the apply of film is not enough, and film processing toolset is still missing something else ...",
+    "progress": 80.65
+  },
+  {
+    "step": 89,
+    "role": "A",
+    "at": "secret office",
+    "action": "apply(ultra-voilet light, film processing toolset)",
+    "response": "Action executed successfully. You have successfully applied ultra-voilet light to film processing toolset.\nHowever, the apply of ultra-voilet light is not enough, and film processing toolset is still missing something else ...",
+    "progress": 82.26
+  },
+  {
+    "step": 90,
+    "role": "A",
+    "at": "secret office",
+    "action": "apply(yellow liquid, film processing toolset)",
+    "response": "Action executed successfully. You have successfully applied yellow liquid to film processing toolset.\nHowever, the apply of yellow liquid is not enough, and film processing toolset is still missing something else ...",
+    "progress": 83.87
+  },
+  {
+    "step": 91,
+    "role": "A",
+    "at": "secret office",
+    "action": "apply(blue liquid, film processing toolset)",
+    "response": "Action executed successfully. You have successfully applied blue liquid to film processing toolset. You successfully processed the film and now you can pick up the imprinted photo paper.",
+    "progress": 85.48
+  },
+  {
+    "step": 92,
+    "role": "A",
+    "at": "secret office",
+    "action": "click(imprinted photo paper)",
+    "response": "Action executed successfully. You have just collected a imprinted photo paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 87.1
+  },
+  {
+    "step": 93,
+    "role": "B",
+    "at": "the control room",
+    "action": "move(Back to the dormitory)",
+    "response": "Action executed successfully. Change to another scene: the dormitory.",
+    "progress": 87.1
+  },
+  {
+    "step": 94,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "input(1991281, strange lock)",
+    "response": "Action executed successfully. You have given an input 1991281 to strange lock. The lock was opened and you found some dynamite inside.",
+    "progress": 88.71
+  },
+  {
+    "step": 95,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "click(dynamite)",
+    "response": "Action executed successfully. You have just collected a dynamite. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 90.32
+  },
+  {
+    "step": 96,
+    "role": "B",
+    "at": "the dormitory",
+    "action": "craft(remote detonator, dynamite)",
+    "response": "Action executed successfully. You have successfully crafted A remote detonator. You can use it to ignite other explosives and control them to avoid hurting yourself. and Some dynamite, but you can't ignite them now. Try assembling it with something to control it. together.\nYou get a new item: Some dynamite. You can ignite it on the place you want now.. It is put into your bag.",
+    "progress": 91.94
+  },
+  {
+    "step": 97,
+    "role": "A",
+    "at": "secret office",
+    "action": "move(Go to the bathroom)",
+    "response": "Action executed successfully. Change to another scene: the bathroom.",
+    "progress": 91.94
+  },
+  {
+    "step": 98,
+    "role": "A",
+    "at": "the bathroom",
+    "action": "click(shaking mirror)",
+    "response": "Action executed successfully. You have clicked on shaking mirror. You broke the mirror and was a combination lock behind it.",
+    "progress": 93.55
+  },
+  {
+    "step": 99,
+    "role": "A",
+    "at": "the bathroom",
+    "action": "apply(wrench, water pipe)",
+    "response": "Action executed successfully. You have successfully applied wrench to water pipe. You unscrewed the pipe and found a piece of paper inside.",
+    "progress": 95.16
+  },
+  {
+    "step": 100,
+    "role": "A",
+    "at": "the bathroom",
+    "action": "click(paper 4)",
+    "response": "Action executed successfully. You have just collected a paper 4. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 96.77
+  },
+  {
+    "step": 101,
+    "role": "A",
+    "at": "the bathroom",
+    "action": "input(18437, shaking mirror)",
+    "response": "Action executed successfully. You have given an input 18437 to shaking mirror. You opened the lock. a mechanism was triggered on the room nearby ...",
+    "progress": 98.39
+  },
+  {
+    "step": 102,
+    "role": "A",
+    "at": "the bathroom",
+    "action": "move(Back to the secret office)",
+    "response": "Action executed successfully. Change to another scene: secret office.",
+    "progress": 98.39
+  },
+  {
+    "step": 103,
+    "role": "A",
+    "at": "secret office",
+    "action": "move(Go to second floor passage)",
+    "response": "Action executed successfully. Change to another scene: second floor passage.",
+    "progress": 98.39
+  },
+  {
+    "step": 104,
+    "role": "A",
+    "at": "second floor passage",
+    "action": "apply(dynamite, safety door 5)",
+    "response": "Action executed successfully. You have successfully applied dynamite to safety door 5. You ignited the dynamite and blew the door open. you escaped. game end!",
+    "progress": 100.0
+  }
+]

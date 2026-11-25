@@ -1,0 +1,130 @@
+{
+  "version": "v4",
+  "game": "game1-1-easy",
+  "eligible": true,
+  "spatial_exception": null,
+  "A": [
+    "living room",
+    "telephone cabinet close-up",
+    "bedroom",
+    "toolbox close-up",
+    "cardboard box close-up",
+    "study",
+    "wall close-up",
+    "photo close-up",
+    "desk close-up",
+    "locker close-up"
+  ],
+  "B": [
+    "bathroom",
+    "mirror close-up",
+    "ventilation fan close-up",
+    "dining room and kitchen",
+    "dining table close-up",
+    "cabinet above stove close-up",
+    "left cabinet close-up",
+    "right cabinet close-up",
+    "cabinet above sink close-up",
+    "sink close-up"
+  ],
+  "starts": {
+    "B": "dining room and kitchen"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game1-1-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_1-1.txt",
+  "change": {
+    "split": "Same scenes as v3; the bathroom now opens off B's kitchen (game file edited).",
+    "game_file": "In v3 B's kitchen and bathroom lay on opposite sides of A's living room and bedroom, so B walked through A's rooms four times. The bathroom (and its door, which still needs the handle from A's cardboard box) now opens off the kitchen."
+  },
+  "metrics": {
+    "total": 40,
+    "alone_A": 11,
+    "alone_B": 6,
+    "together_no_give": 17,
+    "with_give": 40,
+    "b_share": 0.45,
+    "handoffs": 7,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "cs546",
+      "target": "toolbox",
+      "target_role": "A",
+      "partner_sources": [
+        "mirror"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "4713",
+      "target": "safe",
+      "target_role": "B",
+      "partner_sources": [
+        "desk lamp",
+        "study wall"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "655324223",
+      "target": "right door to the exit",
+      "target_role": "A",
+      "partner_sources": [
+        "safe"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "door handle",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(door handle, bathroom door)"
+    },
+    {
+      "tool": "study key",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(study key, left door to the study)"
+    },
+    {
+      "tool": "shard_3",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shard_3, mirror)"
+    },
+    {
+      "tool": "shard_4",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shard_4, mirror)"
+    },
+    {
+      "tool": "screwdriver",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(screwdriver, ventilation fan)"
+    },
+    {
+      "tool": "locker key",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(locker key, locked locker door)"
+    },
+    {
+      "tool": "flashlight",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(flashlight, study wall)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

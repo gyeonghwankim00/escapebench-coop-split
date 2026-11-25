@@ -1,0 +1,594 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(floor tile area)",
+    "response": "Action executed successfully. You have clicked on floor tile area. You remove the floor tile from the ground, there's soil below it.",
+    "progress": 1.75
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(piece of trash paper)",
+    "response": "Action executed successfully. You have clicked on piece of trash paper. You look below the white trash paper, and found there's a key beneath it.",
+    "progress": 3.51
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(key card)",
+    "response": "Action executed successfully. You have just collected a key card. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 5.26
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(silver key)",
+    "response": "Action executed successfully. You have just collected a silver key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 7.02
+  },
+  {
+    "step": 5,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(belt)",
+    "response": "Action executed successfully. You have just collected a belt. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 8.77
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(wrench)",
+    "response": "Action executed successfully. You have just collected a wrench. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 10.53
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "move(Explore left side of the basment)",
+    "response": "Action executed successfully. Change to another scene: basement leftside.",
+    "progress": 10.53
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "apply(silver key, rusty cabinate)",
+    "response": "Action executed successfully. You have successfully applied silver key to rusty cabinate. The cabinate opens, and there's a spade inside.",
+    "progress": 12.28
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "click(spade)",
+    "response": "Action executed successfully. You have just collected a spade. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 14.04
+  },
+  {
+    "step": 10,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "apply(wrench, water pipe)",
+    "response": "Action executed successfully. You have successfully applied wrench to water pipe. The valve is unscrewed from the pipe, and you get a valve handle.",
+    "progress": 15.79
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "click(valve handle)",
+    "response": "Action executed successfully. You have just collected a valve handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 17.54
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "move(Explore the machine device set)",
+    "response": "Action executed successfully. Change to another scene: control machine set.",
+    "progress": 17.54
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "control machine set",
+    "action": "apply(valve handle, distribution box control)",
+    "response": "Action executed successfully. You have successfully applied valve handle to distribution box control. The valve handle is assembled to the port.",
+    "progress": 19.3
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "control machine set",
+    "action": "apply(belt, gear set)",
+    "response": "Action executed successfully. You have successfully applied belt to gear set. The gears are all connect together now, it could work normally now with power.",
+    "progress": 21.05
+  },
+  {
+    "step": 15,
+    "role": "A",
+    "at": "control machine set",
+    "action": "click(distribution box control)",
+    "response": "Action executed successfully. You have clicked on distribution box control. The electric box is switeched on, the gear set near it starts to move. you may get the valve handle back and use it else where.",
+    "progress": 22.81
+  },
+  {
+    "step": 16,
+    "role": "A",
+    "at": "control machine set",
+    "action": "click(used valve handle)",
+    "response": "Action executed successfully. You have just collected a used valve handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 24.56
+  },
+  {
+    "step": 17,
+    "role": "A",
+    "at": "control machine set",
+    "action": "move(Back to the left side of basement)",
+    "response": "Action executed successfully. Change to another scene: basement leftside.",
+    "progress": 24.56
+  },
+  {
+    "step": 18,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "apply(used valve handle, water pipe)",
+    "response": "Action executed successfully. You have successfully applied used valve handle to water pipe. The handle is assembled back to the pipe. you could take control over it again.",
+    "progress": 26.32
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "click(water pipe)",
+    "response": "Action executed successfully. You have clicked on water pipe. The handle is turned on, water can now pass the pipe valve and enter the huge machine in the room.",
+    "progress": 28.07
+  },
+  {
+    "step": 20,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "move(Back to the basement entrance)",
+    "response": "Action executed successfully. Change to another scene: basement entrance.",
+    "progress": 28.07
+  },
+  {
+    "step": 21,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "apply(spade, floor tile area)",
+    "response": "Action executed successfully. You have successfully applied spade to floor tile area. The hard soil is digged by the spade, and a control handle appears beneath the soil.",
+    "progress": 29.82
+  },
+  {
+    "step": 22,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "click(control handle)",
+    "response": "Action executed successfully. You have just collected a control handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 31.58
+  },
+  {
+    "step": 23,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "move(Explore left side of the basment)",
+    "response": "Action executed successfully. Change to another scene: basement leftside.",
+    "progress": 31.58
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "apply(control handle, machine control panel)",
+    "response": "Action executed successfully. You have successfully applied control handle to machine control panel. The control handle is now asssembled to it. you may finally turn on the machine set now.",
+    "progress": 33.33
+  },
+  {
+    "step": 25,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "click(machine control panel)",
+    "response": "Action executed successfully. You have clicked on machine control panel. The machine is turned on now, there's a huge cracking sound, a hidden door opens from basement entrance ...",
+    "progress": 35.09
+  },
+  {
+    "step": 26,
+    "role": "B",
+    "at": "hallway behind door",
+    "action": "move(Go into the room it leads to)",
+    "response": "Action executed successfully. Change to another scene: lab room overview.",
+    "progress": 35.09
+  },
+  {
+    "step": 27,
+    "role": "B",
+    "at": "lab room overview",
+    "action": "move(Explore the computer desk)",
+    "response": "Action executed successfully. Change to another scene: computer desk.",
+    "progress": 35.09
+  },
+  {
+    "step": 28,
+    "role": "B",
+    "at": "computer desk",
+    "action": "apply(key card, card reader)",
+    "response": "Action executed successfully. You have successfully applied key card to card reader. The computer and printer are both on. the printer prints out a code paper.",
+    "progress": 36.84
+  },
+  {
+    "step": 29,
+    "role": "B",
+    "at": "computer desk",
+    "action": "click(lighter)",
+    "response": "Action executed successfully. You have just collected a lighter. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 38.6
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "computer desk",
+    "action": "click(printed code paper)",
+    "response": "Action executed successfully. You have just collected a printed code paper. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 40.35
+  },
+  {
+    "step": 31,
+    "role": "B",
+    "at": "computer desk",
+    "action": "move(Back to the lab room overview)",
+    "response": "Action executed successfully. Change to another scene: lab room overview.",
+    "progress": 40.35
+  },
+  {
+    "step": 32,
+    "role": "B",
+    "at": "lab room overview",
+    "action": "move(Explore left wall full of safes)",
+    "response": "Action executed successfully. Change to another scene: wall of safes.",
+    "progress": 40.35
+  },
+  {
+    "step": 33,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "apply(key card, safe 2)",
+    "response": "Action executed successfully. You have successfully applied key card to safe 2. The key card is inserted, authorization succeeds.",
+    "progress": 42.11
+  },
+  {
+    "step": 34,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "input(7248, safe 2)",
+    "response": "Action executed successfully. You have given an input 7248 to safe 2. The safe 2 opens, and there's something in it.",
+    "progress": 43.86
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "click(measuring cup)",
+    "response": "Action executed successfully. You have just collected a measuring cup. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 45.61
+  },
+  {
+    "step": 36,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "move(Back to the lab room overview)",
+    "response": "Action executed successfully. Change to another scene: lab room overview.",
+    "progress": 45.61
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "lab room overview",
+    "action": "move(Explore the experiment table area)",
+    "response": "Action executed successfully. Change to another scene: experiment table area.",
+    "progress": 45.61
+  },
+  {
+    "step": 38,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(drawer 2)",
+    "response": "Action executed successfully. You have clicked on drawer 2. The drawer 2 is now open, there's something inside it.",
+    "progress": 47.37
+  },
+  {
+    "step": 39,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(flask)",
+    "response": "Action executed successfully. You have just collected a flask. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 49.12
+  },
+  {
+    "step": 40,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(solution bottles)",
+    "response": "Action executed successfully. You have just collected a solution bottles. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 50.88
+  },
+  {
+    "step": 41,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(iron hoop)",
+    "response": "Action executed successfully. You have just collected a iron hoop. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 52.63
+  },
+  {
+    "step": 42,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "apply(solution bottles, blender machine)",
+    "response": "Action executed successfully. You have successfully applied solution bottles to blender machine. You blend three solutions together and the machine produces a concentration.",
+    "progress": 54.39
+  },
+  {
+    "step": 43,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(concentrated solution)",
+    "response": "Action executed successfully. You have just collected a concentrated solution. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 56.14
+  },
+  {
+    "step": 44,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "apply(measuring cup, water box)",
+    "response": "Action executed successfully. You have successfully applied measuring cup to water box. The measuring cup is now filled with some water.",
+    "progress": 57.89
+  },
+  {
+    "step": 45,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "craft(measuring cup, flask)",
+    "response": "Action executed successfully. You have successfully crafted A measuring cup about 100ml, with some water in it now. and An normal flask that could be used as container for chemical reaction. It's empty currently. together.\nYou get a new item: An flask with some water in it, could dilute chemicals further added into it.. It is put into your bag.",
+    "progress": 59.65
+  },
+  {
+    "step": 46,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "craft(concentrated solution, flask)",
+    "response": "Action executed successfully. You have successfully crafted A concentrated chemical solution, need to be diluted before using. and An flask with some water in it, could dilute chemicals further added into it. together.\nYou get a new item: An flask with diluted solution in it. It's ready to be used for experiment now.. It is put into your bag.",
+    "progress": 61.4
+  },
+  {
+    "step": 47,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "input(9750, cabinate 1)",
+    "response": "Action executed successfully. You have given an input 9750 to cabinate 1. The cabinate opens and there's an alcohol burner inside.",
+    "progress": 63.16
+  },
+  {
+    "step": 48,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(alcohol burner)",
+    "response": "Action executed successfully. You have just collected a alcohol burner. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 64.91
+  },
+  {
+    "step": 49,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "craft(lighter, alcohol burner)",
+    "response": "Action executed successfully. You have successfully crafted A normal lighter that could give fire. On it there writes 'IX VII L', the roman numerals seem like password hint if turned into number. and An alcohol burner, could be used to heat chemicals in experiments, not lighted currently. together.\nYou get a new item: An alcohol burner, now with the fire lighted and burning, ready to be used.. It is put into your bag.",
+    "progress": 66.67
+  },
+  {
+    "step": 50,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "apply(alcohol burner, experiment table pad)",
+    "response": "Action executed successfully. You have successfully applied alcohol burner to experiment table pad.\nHowever, the apply of alcohol burner is not enough, and experiment table pad is still missing something else ...",
+    "progress": 68.42
+  },
+  {
+    "step": 51,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "apply(flask, experiment table pad)",
+    "response": "Action executed successfully. You have successfully applied flask to experiment table pad. The solution is heated, producing a kind of strong acid.",
+    "progress": 70.18
+  },
+  {
+    "step": 52,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(strong acid)",
+    "response": "Action executed successfully. You have just collected a strong acid. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 71.93
+  },
+  {
+    "step": 53,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "input(7509, drawer 1)",
+    "response": "Action executed successfully. You have given an input 7509 to drawer 1. The drawer 1 is now open, there's a piece of paper inside it.",
+    "progress": 73.68
+  },
+  {
+    "step": 54,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "click(frequency list)",
+    "response": "Action executed successfully. You have just collected a frequency list. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 75.44
+  },
+  {
+    "step": 55,
+    "role": "B",
+    "at": "experiment table area",
+    "action": "move(Back to the lab room overview)",
+    "response": "Action executed successfully. Change to another scene: lab room overview.",
+    "progress": 75.44
+  },
+  {
+    "step": 56,
+    "role": "B",
+    "at": "lab room overview",
+    "action": "apply(strong acid, cabin door lock)",
+    "response": "Action executed successfully. You have successfully applied strong acid to cabin door lock. The cabin door lock is break open, you can get into the cabin room now.",
+    "progress": 77.19
+  },
+  {
+    "step": 57,
+    "role": "A",
+    "at": "basement leftside",
+    "action": "move(Back to the basement entrance)",
+    "response": "Action executed successfully. Change to another scene: basement entrance.",
+    "progress": 77.19
+  },
+  {
+    "step": 58,
+    "role": "A",
+    "at": "basement entrance",
+    "action": "move(Go to cabin room via partner area)",
+    "response": "Action executed successfully. Change to another scene: cabin room.",
+    "progress": 77.19
+  },
+  {
+    "step": 59,
+    "role": "A",
+    "at": "cabin room",
+    "action": "click(blue tool box)",
+    "response": "Action executed successfully. You have clicked on blue tool box. The tool box opens, and there's a metal plate inside it.",
+    "progress": 78.95
+  },
+  {
+    "step": 60,
+    "role": "A",
+    "at": "cabin room",
+    "action": "click(metal plate)",
+    "response": "Action executed successfully. You have just collected a metal plate. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 80.7
+  },
+  {
+    "step": 61,
+    "role": "A",
+    "at": "cabin room",
+    "action": "apply(metal plate, grinding wheel)",
+    "response": "Action executed successfully. You have successfully applied metal plate to grinding wheel. The metal plate is polished, and it's now ready to be used.",
+    "progress": 82.46
+  },
+  {
+    "step": 62,
+    "role": "A",
+    "at": "cabin room",
+    "action": "apply(metal plate, mechanical case)",
+    "response": "Action executed successfully. You have successfully applied metal plate to mechanical case. The mechanical case opens, and there's a safe key inside it.",
+    "progress": 84.21
+  },
+  {
+    "step": 63,
+    "role": "A",
+    "at": "cabin room",
+    "action": "click(safe key)",
+    "response": "Action executed successfully. You have just collected a safe key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 85.96
+  },
+  {
+    "step": 64,
+    "role": "B",
+    "at": "lab room overview",
+    "action": "move(Explore left wall full of safes)",
+    "response": "Action executed successfully. Change to another scene: wall of safes.",
+    "progress": 85.96
+  },
+  {
+    "step": 65,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "apply(safe key, safe 1)",
+    "response": "Action executed successfully. You have successfully applied safe key to safe 1. The safe 1 opens, and there's something in it.",
+    "progress": 87.72
+  },
+  {
+    "step": 66,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "click(sound list)",
+    "response": "Action executed successfully. You have just collected a sound list. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 89.47
+  },
+  {
+    "step": 67,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "apply(iron hoop, safe 3)",
+    "response": "Action executed successfully. You have successfully applied iron hoop to safe 3. The safe 3 opens, and there's something in it.",
+    "progress": 91.23
+  },
+  {
+    "step": 68,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "click(cable)",
+    "response": "Action executed successfully. You have just collected a cable. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 92.98
+  },
+  {
+    "step": 69,
+    "role": "A",
+    "at": "cabin room",
+    "action": "apply(cable, recorder)",
+    "response": "Action executed successfully. You have successfully applied cable to recorder. The recorder is connected with the waveform detector now.",
+    "progress": 94.74
+  },
+  {
+    "step": 70,
+    "role": "A",
+    "at": "cabin room",
+    "action": "input(crow, waveform detector)",
+    "response": "Action executed successfully. You have given an input crow to waveform detector. The detector screen shows input is correct.",
+    "progress": 96.49
+  },
+  {
+    "step": 71,
+    "role": "A",
+    "at": "cabin room",
+    "action": "input(130, waveform detector)",
+    "response": "Action executed successfully. You have given an input 130 to waveform detector. The detector screen shows input is correct.",
+    "progress": 98.25
+  },
+  {
+    "step": 72,
+    "role": "B",
+    "at": "wall of safes",
+    "action": "move(Back to the lab room overview)",
+    "response": "Action executed successfully. Change to another scene: lab room overview.",
+    "progress": 98.25
+  },
+  {
+    "step": 73,
+    "role": "B",
+    "at": "lab room overview",
+    "action": "move(Back to the hallway)",
+    "response": "Action executed successfully. Change to another scene: hallway behind door.",
+    "progress": 98.25
+  },
+  {
+    "step": 74,
+    "role": "B",
+    "at": "hallway behind door",
+    "action": "input(2463, iron door)",
+    "response": "Action executed successfully. You have given an input 2463 to iron door. The iron door opens, you can escpae from it now. game end!",
+    "progress": 100.0
+  }
+]

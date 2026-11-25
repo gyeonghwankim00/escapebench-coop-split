@@ -1,0 +1,90 @@
+{
+  "version": "v4",
+  "game": "game1-4-easy",
+  "eligible": false,
+  "spatial_exception": null,
+  "A": [
+    "hallway",
+    "washroom",
+    "hidden room"
+  ],
+  "B": [
+    "kitchen",
+    "storage room"
+  ],
+  "starts": {
+    "B": "kitchen"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game1-4-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_1-4.txt",
+  "change": {
+    "split": "Retain v3 scene ownership; audited in the complete v4 package.",
+    "game_file": "Unmodified upstream puzzle and map."
+  },
+  "metrics": {
+    "total": 64,
+    "alone_A": 29,
+    "alone_B": 13,
+    "together_no_give": 42,
+    "with_give": 64,
+    "b_share": 0.4,
+    "handoffs": 6,
+    "components": {
+      "A": 2,
+      "B": 1
+    },
+    "clue_inputs_cross": 1
+  },
+  "cross_clues": [
+    {
+      "answer": "690716",
+      "target": "front door",
+      "target_role": "A",
+      "partner_sources": [
+        "birthday chart"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "piece 1",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(piece 1, circuit board)"
+    },
+    {
+      "tool": "piece 2",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(piece 2, circuit board)"
+    },
+    {
+      "tool": "chisel",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(chisel, block of ice)"
+    },
+    {
+      "tool": "flexible tube + garden shears",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(garden shears, flexible tube)"
+    },
+    {
+      "tool": "flexible tube",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(flexible tube, hearth)"
+    },
+    {
+      "tool": "swipe card",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(swipe card, front door)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

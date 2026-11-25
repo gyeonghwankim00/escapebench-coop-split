@@ -1,0 +1,100 @@
+{
+  "version": "v4",
+  "game": "game2-4-easy",
+  "eligible": true,
+  "spatial_exception": "A reaches the cabin through B after the original gates open. Retain the machine puzzle and cabin evidence loop; this is an access-zone task, not two disjoint rooms.",
+  "A": [
+    "basement entrance",
+    "basement leftside",
+    "control machine set",
+    "cabin room"
+  ],
+  "B": [
+    "hallway behind door",
+    "lab room overview",
+    "computer desk",
+    "wall of safes",
+    "experiment table area"
+  ],
+  "starts": {
+    "B": "hallway behind door"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game2-4-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_2-4.txt",
+  "change": {
+    "split": "Retain v3 scene ownership; audited in the complete v4 package.",
+    "game_file": "Unmodified upstream puzzle and map."
+  },
+  "metrics": {
+    "total": 57,
+    "alone_A": 20,
+    "alone_B": 16,
+    "together_no_give": 36,
+    "with_give": 57,
+    "b_share": 0.48,
+    "handoffs": 4,
+    "components": {
+      "A": 2,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "crow",
+      "target": "waveform detector",
+      "target_role": "A",
+      "partner_sources": [
+        "sound list"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "130",
+      "target": "waveform detector",
+      "target_role": "A",
+      "partner_sources": [
+        "frequency list"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "2463",
+      "target": "iron door",
+      "target_role": "B",
+      "partner_sources": [
+        "waveform detector"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "key card",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(key card, card reader)"
+    },
+    {
+      "tool": "key card",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(key card, safe 2)"
+    },
+    {
+      "tool": "safe key",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(safe key, safe 1)"
+    },
+    {
+      "tool": "cable",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(cable, recorder)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

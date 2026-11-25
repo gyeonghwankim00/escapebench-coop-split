@@ -1,0 +1,974 @@
+{
+  "note": "Evaluator-only. Complete v4 clue annotations; deleted-branch clues removed. Never show annotations or answers to players.",
+  "games": {
+    "game1-1-easy": [
+      {
+        "target": "toolbox",
+        "target_scene": "toolbox close-up",
+        "answer": "cs546",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "mirror",
+            "scene": "mirror close-up",
+            "evidence": [
+              "cs546"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "safe",
+        "target_scene": "left cabinet close-up",
+        "answer": "4713",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "desk lamp",
+            "scene": "desk close-up",
+            "evidence": [
+              "AMDG"
+            ]
+          },
+          {
+            "object": "study wall",
+            "scene": "wall close-up",
+            "evidence": [
+              "A=4 D=1 G=3 M=7"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "right door to the exit",
+        "target_scene": "living room",
+        "answer": "655324223",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "safe",
+            "scene": "left cabinet close-up",
+            "evidence": [
+              "655324223"
+            ]
+          }
+        ]
+      }
+    ],
+    "game1-2-easy": [
+      {
+        "target": "bedside drawer",
+        "target_scene": "bedside table close-up",
+        "answer": "150",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "painting2",
+            "scene": "805 right room",
+            "evidence": [
+              "150"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "locked drawer",
+        "target_scene": "lower cabinet close-up",
+        "answer": "8*4+6=6*7-4",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "locked drawer",
+            "scene": "lower cabinet close-up",
+            "evidence": [
+              "8 4 6 = 6 7 4"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "safe",
+        "target_scene": "anatomy poster close-up",
+        "answer": "2333",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "paper with code",
+            "scene": "elevator room",
+            "evidence": [
+              "1121 ="
+            ]
+          },
+          {
+            "object": "drawer contents",
+            "scene": "lower cabinet close-up",
+            "evidence": [
+              "1212 +"
+            ]
+          }
+        ]
+      }
+    ],
+    "game1-3-easy": [
+      {
+        "target": "safe",
+        "target_scene": "front desk",
+        "answer": "4305",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "paper 2",
+            "scene": "pool table",
+            "evidence": [
+              "square, triangle, circle and pentagon"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "pockets",
+        "target_scene": "pool table",
+        "answer": "2134",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "pockets",
+            "scene": "pool table",
+            "evidence": [
+              "XI-IX, XV-XIV, X-VII, IX-V"
+            ]
+          }
+        ]
+      }
+    ],
+    "game2-1-easy": [
+      {
+        "target": "safe 2",
+        "target_scene": "utility room 2",
+        "answer": "424389",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "scrip 2",
+            "scene": "utility room",
+            "evidence": [
+              "424389"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "phone",
+        "target_scene": "utility room",
+        "answer": "47515",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "credential",
+            "scene": "corridor",
+            "evidence": [
+              "47515"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "locked box 2",
+        "target_scene": "sanctum",
+        "answer": "870472",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "paper 2",
+            "scene": "study room",
+            "evidence": [
+              "870472"
+            ]
+          }
+        ]
+      }
+    ],
+    "game2-2-easy": [
+      {
+        "target": "wall safe",
+        "target_scene": "reception room",
+        "answer": "1040",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "drawer",
+            "scene": "inner office",
+            "evidence": [
+              "1040"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "bookshelf safe",
+        "target_scene": "left side of inner office",
+        "answer": "3816",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "code note",
+            "scene": "reception room",
+            "evidence": [
+              "3816"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "bookshelf safe 2",
+        "target_scene": "right side of inner office",
+        "answer": "1986",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "old photo in frame",
+            "scene": "inner office",
+            "evidence": [
+              "1986"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "left bookshelf safe",
+        "target_scene": "store room",
+        "answer": "Genshin",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "camera",
+            "scene": "inner office",
+            "evidence": [
+              "Genshin"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "left bookshelf safe",
+        "target_scene": "store room",
+        "answer": "10011001",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "printed note",
+            "scene": "administration office",
+            "evidence": [
+              "11000011"
+            ]
+          },
+          {
+            "object": "wooden door",
+            "scene": "left side of inner office",
+            "evidence": [
+              "01011010"
+            ]
+          },
+          {
+            "object": "large mouse pad",
+            "scene": "inner office",
+            "evidence": [
+              "XOR"
+            ]
+          }
+        ]
+      }
+    ],
+    "game1-4-easy": [
+      {
+        "target": "coded lock",
+        "target_scene": "hallway",
+        "answer": "17:45",
+        "derivation": "time shown on the watch",
+        "sources": [
+          {
+            "object": "watch",
+            "scene": "hallway",
+            "evidence": [
+              "17:45"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "keypad safe",
+        "target_scene": "hidden room",
+        "answer": "7049",
+        "derivation": "number that appears on the front door after authorization",
+        "sources": [
+          {
+            "object": "front door",
+            "scene": "hidden room",
+            "evidence": [
+              "7049"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "front door",
+        "target_scene": "hidden room",
+        "answer": "690716",
+        "derivation": "six-digit number on the birthday chart",
+        "sources": [
+          {
+            "object": "birthday chart",
+            "scene": "kitchen",
+            "evidence": [
+              "690716"
+            ]
+          }
+        ]
+      }
+    ],
+    "game1-5-easy": [
+      {
+        "target": "iron box",
+        "target_scene": "the boiler room",
+        "answer": "3141",
+        "derivation": "first digits of pi; the box says to skip the dot",
+        "sources": [
+          {
+            "object": "paper 1",
+            "scene": "stair",
+            "evidence": [
+              "large pi"
+            ]
+          },
+          {
+            "object": "iron box",
+            "scene": "the boiler room",
+            "evidence": [
+              "dot between the first and the second digit"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "rotary lock",
+        "target_scene": "cabinet close-up",
+        "answer": "55401530",
+        "derivation": "ZZ=55 and ZX+AZ=68 give Z=5, X=3, A=1; substitute into ZZ, 40, AZ, X0",
+        "sources": [
+          {
+            "object": "paper",
+            "scene": "the dormitory",
+            "evidence": [
+              "ZZ, 40, AZ, X0"
+            ]
+          },
+          {
+            "object": "paper 2",
+            "scene": "cabinet close-up",
+            "evidence": [
+              "ZZ=55, ZX+AZ=68"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "combination lock",
+        "target_scene": "cabinet close-up",
+        "answer": "2451",
+        "derivation": "pattern on paper 3",
+        "sources": [
+          {
+            "object": "paper 3",
+            "scene": "the control room",
+            "evidence": [
+              "2451"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "strange lock",
+        "target_scene": "the dormitory",
+        "answer": "1991281",
+        "derivation": "characters on the imprinted photo paper",
+        "sources": [
+          {
+            "object": "imprinted photo paper",
+            "scene": "secret office",
+            "evidence": [
+              "1991281"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "shaking mirror",
+        "target_scene": "the bathroom",
+        "answer": "18437",
+        "derivation": "graffiti initials C Y O D W map to 1 7 4 8 3; reorder as CDOWY",
+        "sources": [
+          {
+            "object": "graffiti",
+            "scene": "the bathroom",
+            "evidence": [
+              "^Care ^Yourself ^Or the ^Doctor ^Will"
+            ]
+          },
+          {
+            "object": "paper 4",
+            "scene": "the bathroom",
+            "evidence": [
+              "17483"
+            ]
+          },
+          {
+            "object": "shaking mirror",
+            "scene": "the bathroom",
+            "evidence": [
+              "CDOWY"
+            ]
+          }
+        ]
+      }
+    ],
+    "game2-3-easy": [
+      {
+        "target": "toolbox keypad pannel",
+        "target_scene": "toolbox close-up",
+        "answer": "5487",
+        "derivation": "swapped clock digits",
+        "sources": [
+          {
+            "object": "@clock and photos close-up",
+            "scene": "clock and photos close-up",
+            "evidence": [
+              "5487"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "first drawer on the right",
+        "target_scene": "desk close-up",
+        "answer": "330",
+        "derivation": "number behind the spade card once it is stuck on the wall",
+        "sources": [
+          {
+            "object": "adhesive tape remaining",
+            "scene": "clock and photos close-up",
+            "evidence": [
+              "330"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "lock of living room drawer",
+        "target_scene": "living room drawer close-up",
+        "answer": "diamond-square-triangle-circle",
+        "derivation": "car colours red, green, blue, yellow -> shapes under the same-coloured solids",
+        "sources": [
+          {
+            "object": "colored car photo",
+            "scene": "car photos and map close-up",
+            "evidence": [
+              "red, green, blue, and yellow"
+            ]
+          },
+          {
+            "object": "red pyramid",
+            "scene": "workspace shelf close-up",
+            "evidence": [
+              "diamond"
+            ]
+          },
+          {
+            "object": "green cylinder placed on shelf",
+            "scene": "workspace shelf close-up",
+            "evidence": [
+              "square"
+            ]
+          },
+          {
+            "object": "blue hemisphere",
+            "scene": "workspace shelf close-up",
+            "evidence": [
+              "triangle"
+            ]
+          },
+          {
+            "object": "yellow cube",
+            "scene": "workspace shelf close-up",
+            "evidence": [
+              "circle"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "five password displays",
+        "target_scene": "kitchen door close-up",
+        "answer": "D2-A5-D5-G5-D8",
+        "derivation": "badge order bird, tree, flag, hill, castle -> map coordinates",
+        "sources": [
+          {
+            "object": "five badge slots",
+            "scene": "kitchen door close-up",
+            "evidence": [
+              "a bird badge, a tree badge, a flag badge, a hill badge, and a castle badge"
+            ]
+          },
+          {
+            "object": "map",
+            "scene": "car photos and map close-up",
+            "evidence": [
+              "Tree (A 5). Flag (D 5). Castle (D 8). Birds (D 2)"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "inner fireplace wall",
+        "target_scene": "fireplace close-up",
+        "answer": "| 1 | 4 |   | 8 |\\n|   |   | 6 |   |\\n| 2 | 7 | 5 |   |\\n|   |   | 3 |   |",
+        "derivation": "numbers of the table sheet at the cells that turn blue on the heated mug",
+        "sources": [
+          {
+            "object": "table sheet",
+            "scene": "drawers below sink close-up",
+            "evidence": [
+              "| 1 | 4 | 2 | 8 |"
+            ]
+          },
+          {
+            "object": "cup of hot water",
+            "scene": "sink close-up",
+            "evidence": [
+              "| x | x |   | x |"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "password lock",
+        "target_scene": "storage room safe close-up",
+        "answer": "0368",
+        "derivation": "ROT13 of the note gives NIHILUM TRES SEX OCTO; the handbook maps Latin to digits",
+        "sources": [
+          {
+            "object": "note sheet",
+            "scene": "fireplace close-up",
+            "evidence": [
+              "AVUVYHZGERFFRKBPGB"
+            ]
+          },
+          {
+            "object": "@handbook close-up",
+            "scene": "handbook close-up",
+            "evidence": [
+              "0 - zero - nihilum"
+            ]
+          }
+        ]
+      }
+    ],
+    "game2-4-easy": [
+      {
+        "target": "safe 2",
+        "target_scene": "wall of safes",
+        "answer": "7248",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "printed code paper",
+            "scene": "computer desk",
+            "evidence": [
+              "7(black)-7(blue)-5(blue)-2(black)-4(black)-0(blue)-8(black)-9(blue)"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "cabinate 1",
+        "target_scene": "experiment table area",
+        "answer": "9750",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "lighter",
+            "scene": "computer desk",
+            "evidence": [
+              "IX VII L"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "drawer 1",
+        "target_scene": "experiment table area",
+        "answer": "7509",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "printed code paper",
+            "scene": "computer desk",
+            "evidence": [
+              "7(black)-7(blue)-5(blue)-2(black)-4(black)-0(blue)-8(black)-9(blue)"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "waveform detector",
+        "target_scene": "cabin room",
+        "answer": "crow",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "sound list",
+            "scene": "wall of safes",
+            "evidence": [
+              "crow(circled)"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "waveform detector",
+        "target_scene": "cabin room",
+        "answer": "130",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "frequency list",
+            "scene": "experiment table area",
+            "evidence": [
+              "crow 130 Hz"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "iron door",
+        "target_scene": "hallway behind door",
+        "answer": "2463",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "waveform detector",
+            "scene": "cabin room",
+            "evidence": [
+              "2, 4, 6, 3"
+            ]
+          }
+        ]
+      }
+    ],
+    "game2-5-easy": [
+      {
+        "target": "top drawer",
+        "target_scene": "drawers",
+        "answer": "2610",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "old thesis paper",
+            "scene": "computer on the desk",
+            "evidence": [
+              "[26]",
+              "[10]"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "safe box",
+        "target_scene": "bed shelf inside",
+        "answer": "3149",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "spotlight",
+            "scene": "top of the van",
+            "evidence": [
+              "3149"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "bottom drawer",
+        "target_scene": "drawers",
+        "answer": "05062011",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "license plate",
+            "scene": "underneath part of the van",
+            "evidence": [
+              "May California 2011"
+            ]
+          },
+          {
+            "object": "magazine",
+            "scene": "front desk",
+            "evidence": [
+              "California 06"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "computer",
+        "target_scene": "computer on the desk",
+        "answer": "Jacob Korakon",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "mud",
+            "scene": "door of the van",
+            "evidence": [
+              "Jacob Korakon"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "computer",
+        "target_scene": "computer on the desk",
+        "answer": "1927",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "paper with names",
+            "scene": "drawers",
+            "evidence": [
+              "Ally Liam Michael Violet"
+            ]
+          },
+          {
+            "object": "@book shelf",
+            "scene": "book shelf",
+            "evidence": [
+              "Ally 1",
+              "Violet 7",
+              "Michael 2",
+              "Liam 9"
+            ]
+          }
+        ]
+      }
+    ],
+    "game3-1-easy": [
+      {
+        "target": "brown box with missing number",
+        "target_scene": "shelves region left",
+        "answer": "16",
+        "derivation": "S-16 on the dried shipping list",
+        "sources": [
+          {
+            "object": "wet shipping list",
+            "scene": "warehouse outside",
+            "evidence": [
+              "S-16"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "digit password lock",
+        "target_scene": "left hallway",
+        "answer": "1325",
+        "derivation": "owner name Jack looked up in the daily table: J 1, A 3, C 2, K 5",
+        "sources": [
+          {
+            "object": "daily service password",
+            "scene": "warehouse leftside overview",
+            "evidence": [
+              "Place 1 - H 5, N 6, J 1"
+            ]
+          },
+          {
+            "object": "name slot",
+            "scene": "left hallway",
+            "evidence": [
+              "Jack"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "iron safe",
+        "target_scene": "office room drawers",
+        "answer": "blue",
+        "derivation": "missing colour of the painting sequence",
+        "sources": [
+          {
+            "object": "painting",
+            "scene": "office room desk",
+            "evidence": [
+              "yellow, red, blue, and green"
+            ]
+          },
+          {
+            "object": "iron safe",
+            "scene": "office room drawers",
+            "evidence": [
+              "red, green, __ , yellow"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "blue tool box",
+        "target_scene": "boxes pile in hallway",
+        "answer": "23415",
+        "derivation": "water levels in the communicator channels",
+        "sources": [
+          {
+            "object": "communicator",
+            "scene": "office room drawers",
+            "evidence": [
+              "2, 3, 4, 1, 5"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "old-fashioned phone",
+        "target_scene": "front desk office overview",
+        "answer": "84459731",
+        "derivation": "PUK code on the paper from the drawer",
+        "sources": [
+          {
+            "object": "piece of paper code",
+            "scene": "office room drawers",
+            "evidence": [
+              "84459731"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "front desk locker lock",
+        "target_scene": "front desk locker",
+        "answer": "3499",
+        "derivation": "chat on the unlocked phone",
+        "sources": [
+          {
+            "object": "old-fashioned phone",
+            "scene": "front desk office overview",
+            "evidence": [
+              "3499"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "exit door",
+        "target_scene": "left hallway",
+        "answer": "100",
+        "derivation": "12 + 28 + 25 + 35; the door shows a Sigma sign",
+        "sources": [
+          {
+            "object": "exit code paper",
+            "scene": "office room overview",
+            "evidence": [
+              "12 + 28 + 25 + 35"
+            ]
+          },
+          {
+            "object": "exit door",
+            "scene": "left hallway",
+            "evidence": [
+              "Sigma"
+            ]
+          }
+        ]
+      }
+    ],
+    "game3-2-easy": [
+      {
+        "target": "information board",
+        "target_scene": "laundry room right corner",
+        "answer": "5974",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "game machine",
+            "scene": "end of left corridor",
+            "evidence": [
+              "5974"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "office door password pad",
+        "target_scene": "left corridor overview",
+        "answer": "5891",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "left half paper",
+            "scene": "laundry room right corner",
+            "evidence": [
+              "58"
+            ]
+          },
+          {
+            "object": "right half paper",
+            "scene": "laundry room right corner",
+            "evidence": [
+              "91"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "red mail box",
+        "target_scene": "left corridor overview",
+        "answer": "1998",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "graffiti",
+            "scene": "right corridor overview",
+            "evidence": [
+              "I - 9, II - 1, III - 4, IV - 2"
+            ]
+          },
+          {
+            "object": "red mail box",
+            "scene": "left corridor overview",
+            "evidence": [
+              "II I I/II I-II"
+            ]
+          }
+        ]
+      },
+      {
+        "target": "tool box",
+        "target_scene": "end of left corridor",
+        "answer": "1232",
+        "derivation": "pilot annotation (scripts/build_pilot.py)",
+        "sources": [
+          {
+            "object": "piece of paper hint",
+            "scene": "left corridor overview",
+            "evidence": [
+              "1 4 2 3 +"
+            ]
+          },
+          {
+            "object": "code paper",
+            "scene": "laundry room right corner",
+            "evidence": [
+              "4 2 1 3 (mod 4)"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

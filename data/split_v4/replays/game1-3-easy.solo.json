@@ -1,0 +1,290 @@
+[
+  {
+    "step": 1,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "click(bottle of wine)",
+    "response": "Action executed successfully. You have just collected a bottle of wine. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 3.7
+  },
+  {
+    "step": 2,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "click(pool ball 1)",
+    "response": "Action executed successfully. You have just collected a pool ball 1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 7.41
+  },
+  {
+    "step": 3,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "move(Go to front desk close-up)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 7.41
+  },
+  {
+    "step": 4,
+    "role": "B",
+    "at": "front desk",
+    "action": "click(button)",
+    "response": "Action executed successfully. You have clicked on button. Something happened. a key appears somewhere in the wall, you should find it.",
+    "progress": 11.11
+  },
+  {
+    "step": 5,
+    "role": "B",
+    "at": "front desk",
+    "action": "click(knife)",
+    "response": "Action executed successfully. You have just collected a knife. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 14.81
+  },
+  {
+    "step": 6,
+    "role": "B",
+    "at": "front desk",
+    "action": "move(Back to the billiard room)",
+    "response": "Action executed successfully. Change to another scene: the billiard room.",
+    "progress": 14.81
+  },
+  {
+    "step": 7,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "move(Go the the pool table close-up)",
+    "response": "Action executed successfully. Change to another scene: pool table.",
+    "progress": 14.81
+  },
+  {
+    "step": 8,
+    "role": "B",
+    "at": "pool table",
+    "action": "click(chair)",
+    "response": "Action executed successfully. You have clicked on chair. You saw a key embedded in the chair.",
+    "progress": 18.52
+  },
+  {
+    "step": 9,
+    "role": "B",
+    "at": "pool table",
+    "action": "click(bronze key)",
+    "response": "Action executed successfully. You have just collected a bronze key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 22.22
+  },
+  {
+    "step": 10,
+    "role": "B",
+    "at": "pool table",
+    "action": "apply(knife, chair)",
+    "response": "Action executed successfully. You have successfully applied knife to chair. You cut the cushion of the chair and found a paper inside.",
+    "progress": 25.93
+  },
+  {
+    "step": 11,
+    "role": "B",
+    "at": "pool table",
+    "action": "click(paper 2)",
+    "response": "Action executed successfully. You have just collected a paper 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 29.63
+  },
+  {
+    "step": 12,
+    "role": "B",
+    "at": "pool table",
+    "action": "move(Back to the billiard room)",
+    "response": "Action executed successfully. Change to another scene: the billiard room.",
+    "progress": 29.63
+  },
+  {
+    "step": 13,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "move(Go to front desk close-up)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 29.63
+  },
+  {
+    "step": 14,
+    "role": "B",
+    "at": "front desk",
+    "action": "input(4305, safe)",
+    "response": "Action executed successfully. You have given an input 4305 to safe. You opened the safe and found a pool ball inside.",
+    "progress": 33.33
+  },
+  {
+    "step": 15,
+    "role": "B",
+    "at": "front desk",
+    "action": "click(pool ball 3)",
+    "response": "Action executed successfully. You have just collected a pool ball 3. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 37.04
+  },
+  {
+    "step": 16,
+    "role": "B",
+    "at": "front desk",
+    "action": "move(Back to the billiard room)",
+    "response": "Action executed successfully. Change to another scene: the billiard room.",
+    "progress": 37.04
+  },
+  {
+    "step": 17,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "apply(bronze key, wooden door)",
+    "response": "Action executed successfully. You have successfully applied bronze key to wooden door. You opened the door. behind it was a brick wall. someone wrote on the wall -- you don't want to get there.",
+    "progress": 40.74
+  },
+  {
+    "step": 18,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "click(key in the wall)",
+    "response": "Action executed successfully. You have just collected a key in the wall. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 44.44
+  },
+  {
+    "step": 19,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "apply(key in the wall, suitcase)",
+    "response": "Action executed successfully. You have successfully applied key in the wall to suitcase. You opened the suitcase.",
+    "progress": 48.15
+  },
+  {
+    "step": 20,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "click(pool ball 4)",
+    "response": "Action executed successfully. You have just collected a pool ball 4. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 51.85
+  },
+  {
+    "step": 21,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "click(hammer)",
+    "response": "Action executed successfully. You have just collected a hammer. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 55.56
+  },
+  {
+    "step": 22,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "apply(hammer, nails and board)",
+    "response": "Action executed successfully. You have successfully applied hammer to nails and board. You knocked off the nails with the hammer. behind the wooden board was another pool ball.",
+    "progress": 59.26
+  },
+  {
+    "step": 23,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "click(pool ball 2)",
+    "response": "Action executed successfully. You have just collected a pool ball 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 62.96
+  },
+  {
+    "step": 24,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "move(Go the the pool table close-up)",
+    "response": "Action executed successfully. Change to another scene: pool table.",
+    "progress": 62.96
+  },
+  {
+    "step": 25,
+    "role": "B",
+    "at": "pool table",
+    "action": "apply(pool ball 1, pockets)",
+    "response": "Action executed successfully. You have successfully applied pool ball 1 to pockets.\nHowever, the apply of pool ball 1 is not enough, and pockets is still missing something else ...",
+    "progress": 66.67
+  },
+  {
+    "step": 26,
+    "role": "B",
+    "at": "pool table",
+    "action": "apply(pool ball 3, pockets)",
+    "response": "Action executed successfully. You have successfully applied pool ball 3 to pockets.\nHowever, the apply of pool ball 3 is not enough, and pockets is still missing something else ...",
+    "progress": 70.37
+  },
+  {
+    "step": 27,
+    "role": "B",
+    "at": "pool table",
+    "action": "apply(pool ball 4, pockets)",
+    "response": "Action executed successfully. You have successfully applied pool ball 4 to pockets.\nHowever, the apply of pool ball 4 is not enough, and pockets is still missing something else ...",
+    "progress": 74.07
+  },
+  {
+    "step": 28,
+    "role": "B",
+    "at": "pool table",
+    "action": "apply(pool ball 2, pockets)",
+    "response": "Action executed successfully. You have successfully applied pool ball 2 to pockets. You put balls inside but they're in the wrong direction. please input a 4-digit permutation of balls numbered 1 to 4.",
+    "progress": 77.78
+  },
+  {
+    "step": 29,
+    "role": "B",
+    "at": "pool table",
+    "action": "input(2134, pockets)",
+    "response": "Action executed successfully. You have given an input 2134 to pockets. You permutated the balls correctly and found a key card.",
+    "progress": 81.48
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "pool table",
+    "action": "click(key card 1)",
+    "response": "Action executed successfully. You have just collected a key card 1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 85.19
+  },
+  {
+    "step": 31,
+    "role": "B",
+    "at": "pool table",
+    "action": "move(Back to the billiard room)",
+    "response": "Action executed successfully. Change to another scene: the billiard room.",
+    "progress": 85.19
+  },
+  {
+    "step": 32,
+    "role": "B",
+    "at": "the billiard room",
+    "action": "move(Go to front desk close-up)",
+    "response": "Action executed successfully. Change to another scene: front desk.",
+    "progress": 85.19
+  },
+  {
+    "step": 33,
+    "role": "B",
+    "at": "front desk",
+    "action": "apply(key card 1, cashier)",
+    "response": "Action executed successfully. You have successfully applied key card 1 to cashier. Using the key card, you authorized the identity. the cashier is now working.",
+    "progress": 88.89
+  },
+  {
+    "step": 34,
+    "role": "B",
+    "at": "front desk",
+    "action": "apply(bottle of wine, cashier)",
+    "response": "Action executed successfully. You have successfully applied bottle of wine to cashier. After scanning the bottle of wine, the locker for change opens. you found another key card inside the cashier.",
+    "progress": 92.59
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "front desk",
+    "action": "click(key card 2)",
+    "response": "Action executed successfully. You have just collected a key card 2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 96.3
+  },
+  {
+    "step": 36,
+    "role": "A",
+    "at": "the hallway",
+    "action": "apply(key card 2, exit door)",
+    "response": "Action executed successfully. You have successfully applied key card 2 to exit door. You opened the door and exited. game end!",
+    "progress": 100.0
+  }
+]

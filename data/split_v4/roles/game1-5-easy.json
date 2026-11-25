@@ -1,0 +1,99 @@
+{
+  "version": "v4",
+  "game": "game1-5-easy",
+  "eligible": true,
+  "spatial_exception": null,
+  "A": [
+    "initial room",
+    "iron fence close-up",
+    "room on the right",
+    "distribution box close-up",
+    "stair",
+    "the boiler room",
+    "secret office",
+    "the bathroom",
+    "second floor passage"
+  ],
+  "B": [
+    "the dormitory",
+    "bed close-up",
+    "cabinet close-up",
+    "the control room",
+    "the emergency exit"
+  ],
+  "starts": {
+    "B": "the dormitory"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game1-5-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_1-5.txt",
+  "change": {
+    "split": "Dormitory and control room form one B area; A keeps the power distribution and downstream rooms.",
+    "game_file": "Move the system control room to the dormitory side; retain all puzzles and electrical triggers."
+  },
+  "metrics": {
+    "total": 62,
+    "alone_A": 16,
+    "alone_B": 17,
+    "together_no_give": 33,
+    "with_give": 62,
+    "b_share": 0.52,
+    "handoffs": 6,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 1
+  },
+  "cross_clues": [
+    {
+      "answer": "1991281",
+      "target": "strange lock",
+      "target_role": "B",
+      "partner_sources": [
+        "imprinted photo paper"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "lever",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(lever, power distribution box)"
+    },
+    {
+      "tool": "photo paper",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(photo paper, film processing toolset)"
+    },
+    {
+      "tool": "film",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(film, film processing toolset)"
+    },
+    {
+      "tool": "ultra-voilet light",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(ultra-voilet light, film processing toolset)"
+    },
+    {
+      "tool": "blue liquid",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(blue liquid, film processing toolset)"
+    },
+    {
+      "tool": "dynamite",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(dynamite, safety door 5)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

@@ -22,6 +22,7 @@
 | 분할 생성·검사 | `scripts/make_roles.py`, `search_splits.py`, `export_roles.py`, `split_metrics.py`, `analyze_suitability.py`, `audit_split_paths.py` |
 | 로그 해석 | `scripts/analyze_collaboration.py`, `matrix_report.py`, `check_matrix_smoke.py` |
 | 재현 근거 | `experiments/evidence/` |
+| 분할 v4 정비본 (전체 12게임: 사용 11·제외 1, 실험 연결 전) | [`data/split_v4/`](../data/split_v4/README.md), `scripts/split_v4.py`, [제안](SPLIT_V4_PROPOSAL.md) |
 
 `run_cohort.py`의 report 함수와 `run_model.py`의 모델 로더 등은 현재 코드가 사용합니다.
 이름이 옛 실험처럼 보여도 파일을 옮기면 import·재개 해시·명령 경로가 깨질 수 있습니다.

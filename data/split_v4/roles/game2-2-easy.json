@@ -1,0 +1,117 @@
+{
+  "version": "v4",
+  "game": "game2-2-easy",
+  "eligible": true,
+  "spatial_exception": null,
+  "A": [
+    "entrace of a shop",
+    "reception room",
+    "administration office",
+    "administration office corner"
+  ],
+  "B": [
+    "inner office",
+    "right side of inner office",
+    "left side of inner office",
+    "store room"
+  ],
+  "starts": {
+    "B": "inner office"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game2-2-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_2-2.txt",
+  "change": {
+    "split": "Same scenes as v3 (game file edited).",
+    "game_file": "B starts inside the inner office, the room the golden key opens, and A owns nothing behind that door. The whole chain (cable, pliers, flashlight, GB24 desk safe and mirror, air duct, golden key, door) only served to open it."
+  },
+  "metrics": {
+    "total": 52,
+    "alone_A": 6,
+    "alone_B": 14,
+    "together_no_give": 20,
+    "with_give": 52,
+    "b_share": 0.73,
+    "handoffs": 7,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "1040",
+      "target": "wall safe",
+      "target_role": "A",
+      "partner_sources": [
+        "drawer"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "3816",
+      "target": "bookshelf safe",
+      "target_role": "B",
+      "partner_sources": [
+        "code note"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "10011001",
+      "target": "left bookshelf safe",
+      "target_role": "B",
+      "partner_sources": [
+        "printed note"
+      ],
+      "all_sources_with_partner": false
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "bronze key",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(bronze key, left inner office door)"
+    },
+    {
+      "tool": "photographic film",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(photographic film, white board)"
+    },
+    {
+      "tool": "crowbar",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(crowbar, cracked floor)"
+    },
+    {
+      "tool": "package item + scissors",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(scissors, package item)"
+    },
+    {
+      "tool": "abrasive paper + package item",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(abrasive paper, package item)"
+    },
+    {
+      "tool": "cartridge",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(cartridge, printer)"
+    },
+    {
+      "tool": "package item",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(package item, large mouse pad)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

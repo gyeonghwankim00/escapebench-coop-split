@@ -1,0 +1,148 @@
+{
+  "version": "v4",
+  "game": "game3-1-easy",
+  "eligible": true,
+  "spatial_exception": null,
+  "A": [
+    "warehouse outside",
+    "garbage disposal place",
+    "crane overview",
+    "warehouse door corner",
+    "electric box inside",
+    "warehouse leftside overview",
+    "front desk office overview",
+    "front desk locker",
+    "left hallway"
+  ],
+  "B": [
+    "middle hallway",
+    "boxes pile in hallway",
+    "office door overview",
+    "office room overview",
+    "office room desk",
+    "office room drawers",
+    "shelves region overview",
+    "shelves region table",
+    "shelves region left",
+    "shelves region middle",
+    "control device on pillar",
+    "wash basin place"
+  ],
+  "starts": {
+    "B": "middle hallway"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game3-1-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_3-1.txt",
+  "change": {
+    "split": "Retain v3 scene ownership; audited in the complete v4 package.",
+    "game_file": "Unmodified upstream puzzle and map."
+  },
+  "metrics": {
+    "total": 72,
+    "alone_A": 16,
+    "alone_B": 11,
+    "together_no_give": 27,
+    "with_give": 72,
+    "b_share": 0.51,
+    "handoffs": 10,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "16",
+      "target": "brown box with missing number",
+      "target_role": "B",
+      "partner_sources": [
+        "wet shipping list"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "84459731",
+      "target": "old-fashioned phone",
+      "target_role": "A",
+      "partner_sources": [
+        "piece of paper code"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "100",
+      "target": "exit door",
+      "target_role": "A",
+      "partner_sources": [
+        "exit code paper"
+      ],
+      "all_sources_with_partner": false
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "paper piece 'k'",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(paper piece 'k', name slot)"
+    },
+    {
+      "tool": "gold key with bolt sign",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(gold key with bolt sign, cabinet key lock)"
+    },
+    {
+      "tool": "blue tape",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(blue tape, wire on pillar)"
+    },
+    {
+      "tool": "toilet plunger",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(toilet plunger, frosted glass window)"
+    },
+    {
+      "tool": "tennis ball",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(tennis ball, dagger inserted in sign)"
+    },
+    {
+      "tool": "paper piece 'c'",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(paper piece 'c', name slot)"
+    },
+    {
+      "tool": "keycard with lanyard",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(keycard with lanyard, office door)"
+    },
+    {
+      "tool": "dagger",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(dagger, brown box with missing number)"
+    },
+    {
+      "tool": "alarm clock battery",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(alarm clock battery, card reader)"
+    },
+    {
+      "tool": "telescopic hook",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(telescopic hook, messy wire wrapped on ceiling)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

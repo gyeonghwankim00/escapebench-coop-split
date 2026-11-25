@@ -1,0 +1,914 @@
+[
+  {
+    "step": 1,
+    "role": "A",
+    "at": "living room",
+    "action": "click(telephone cabinet)",
+    "response": "Action executed successfully. You have clicked on telephone cabinet. You can see telephone cabinet now.",
+    "progress": 2.5
+  },
+  {
+    "step": 2,
+    "role": "A",
+    "at": "living room",
+    "action": "move(To the telephone cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: telephone cabinet close-up.",
+    "progress": 2.5
+  },
+  {
+    "step": 3,
+    "role": "A",
+    "at": "telephone cabinet close-up",
+    "action": "click(hairpin)",
+    "response": "Action executed successfully. You have just collected a hairpin. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 5.0
+  },
+  {
+    "step": 4,
+    "role": "A",
+    "at": "telephone cabinet close-up",
+    "action": "apply(hairpin, drawer)",
+    "response": "Action executed successfully. You have successfully applied hairpin to drawer. The drawer unlocks, revealing the carving knife.",
+    "progress": 7.5
+  },
+  {
+    "step": 5,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 7.5
+  },
+  {
+    "step": 6,
+    "role": "A",
+    "at": "telephone cabinet close-up",
+    "action": "click(carving knife)",
+    "response": "Action executed successfully. You have just collected a carving knife. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 10.0
+  },
+  {
+    "step": 7,
+    "role": "A",
+    "at": "telephone cabinet close-up",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 10.0
+  },
+  {
+    "step": 8,
+    "role": "A",
+    "at": "living room",
+    "action": "move(To the bedroom)",
+    "response": "Action executed successfully. Change to another scene: bedroom.",
+    "progress": 10.0
+  },
+  {
+    "step": 9,
+    "role": "A",
+    "at": "bedroom",
+    "action": "click(hammer handle)",
+    "response": "Action executed successfully. You have just collected a hammer handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 12.5
+  },
+  {
+    "step": 10,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 12.5
+  },
+  {
+    "step": 11,
+    "role": "A",
+    "at": "bedroom",
+    "action": "move(To the cardboard box close-up)",
+    "response": "Action executed successfully. Change to another scene: cardboard box close-up.",
+    "progress": 12.5
+  },
+  {
+    "step": 12,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "apply(carving knife, cardboard box)",
+    "response": "Action executed successfully. You have successfully applied carving knife to cardboard box. The cardboard box is now open.",
+    "progress": 15.0
+  },
+  {
+    "step": 13,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "click(door handle)",
+    "response": "Action executed successfully. You have just collected a door handle. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 17.5
+  },
+  {
+    "step": 14,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "give(door handle)",
+    "response": "Action executed successfully. You have given the door handle to your partner. It is no longer in your bag.",
+    "progress": 17.5
+  },
+  {
+    "step": 15,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "apply(door handle, bathroom door)",
+    "response": "Action executed successfully. You have successfully applied door handle to bathroom door. The door now has a handle and can be opened.",
+    "progress": 20.0
+  },
+  {
+    "step": 16,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "click(bathroom door)",
+    "response": "Action executed successfully. You have clicked on bathroom door. The door is now open. you could enter the bathroom.",
+    "progress": 22.5
+  },
+  {
+    "step": 17,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the bathroom)",
+    "response": "Action executed successfully. Change to another scene: bathroom.",
+    "progress": 22.5
+  },
+  {
+    "step": 18,
+    "role": "B",
+    "at": "bathroom",
+    "action": "click(plunger)",
+    "response": "Action executed successfully. You have just collected a plunger. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 25.0
+  },
+  {
+    "step": 19,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 25.0
+  },
+  {
+    "step": 20,
+    "role": "B",
+    "at": "bathroom",
+    "action": "move(To the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 25.0
+  },
+  {
+    "step": 21,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the dining table close-up)",
+    "response": "Action executed successfully. Change to another scene: dining table close-up.",
+    "progress": 25.0
+  },
+  {
+    "step": 22,
+    "role": "B",
+    "at": "dining table close-up",
+    "action": "click(shard_1)",
+    "response": "Action executed successfully. You have just collected a shard_1. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 27.5
+  },
+  {
+    "step": 23,
+    "role": "B",
+    "at": "dining table close-up",
+    "action": "move(Back to the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 27.5
+  },
+  {
+    "step": 24,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 27.5
+  },
+  {
+    "step": 25,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the cabinet above stove close-up)",
+    "response": "Action executed successfully. Change to another scene: cabinet above stove close-up.",
+    "progress": 27.5
+  },
+  {
+    "step": 26,
+    "role": "B",
+    "at": "cabinet above stove close-up",
+    "action": "click(flashlight)",
+    "response": "Action executed successfully. You have just collected a flashlight. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 30.0
+  },
+  {
+    "step": 27,
+    "role": "B",
+    "at": "cabinet above stove close-up",
+    "action": "move(Back to the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 30.0
+  },
+  {
+    "step": 28,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the right cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: right cabinet close-up.",
+    "progress": 30.0
+  },
+  {
+    "step": 29,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 30.0
+  },
+  {
+    "step": 30,
+    "role": "B",
+    "at": "right cabinet close-up",
+    "action": "click(battery)",
+    "response": "Action executed successfully. You have just collected a battery. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 32.5
+  },
+  {
+    "step": 31,
+    "role": "B",
+    "at": "right cabinet close-up",
+    "action": "move(Back to the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 32.5
+  },
+  {
+    "step": 32,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the sink close-up)",
+    "response": "Action executed successfully. Change to another scene: sink close-up.",
+    "progress": 32.5
+  },
+  {
+    "step": 33,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "apply(plunger, garbage)",
+    "response": "Action executed successfully. You have successfully applied plunger to garbage. The garbage has been cleared, revealing something shiny at the bottom.",
+    "progress": 35.0
+  },
+  {
+    "step": 34,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 35.0
+  },
+  {
+    "step": 35,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "click(garbage)",
+    "response": "Action executed successfully. You have clicked on garbage. You've cleared the garbage and found a key at the bottom of the sink.",
+    "progress": 37.5
+  },
+  {
+    "step": 36,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "click(study key)",
+    "response": "Action executed successfully. You have just collected a study key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 40.0
+  },
+  {
+    "step": 37,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "give(study key)",
+    "response": "Action executed successfully. You have given the study key to your partner. It is no longer in your bag.",
+    "progress": 40.0
+  },
+  {
+    "step": 38,
+    "role": "A",
+    "at": "cardboard box close-up",
+    "action": "move(Back to the bedroom)",
+    "response": "Action executed successfully. Change to another scene: bedroom.",
+    "progress": 40.0
+  },
+  {
+    "step": 39,
+    "role": "A",
+    "at": "bedroom",
+    "action": "move(To the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 40.0
+  },
+  {
+    "step": 40,
+    "role": "A",
+    "at": "living room",
+    "action": "apply(study key, left door to the study)",
+    "response": "Action executed successfully. You have successfully applied study key to left door to the study. The door is now unlocked now.",
+    "progress": 42.5
+  },
+  {
+    "step": 41,
+    "role": "A",
+    "at": "living room",
+    "action": "click(left door to the study)",
+    "response": "Action executed successfully. You have clicked on left door to the study. The door to the study is open, and you can enter the study.",
+    "progress": 45.0
+  },
+  {
+    "step": 42,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 45.0
+  },
+  {
+    "step": 43,
+    "role": "A",
+    "at": "living room",
+    "action": "move(To the study after unlocking)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 45.0
+  },
+  {
+    "step": 44,
+    "role": "A",
+    "at": "study",
+    "action": "move(To the photo close-up)",
+    "response": "Action executed successfully. Change to another scene: photo close-up.",
+    "progress": 45.0
+  },
+  {
+    "step": 45,
+    "role": "A",
+    "at": "photo close-up",
+    "action": "click(photo_3)",
+    "response": "Action executed successfully. You have clicked on photo_3. You found a piece of broken mirror hidden behind this photo.",
+    "progress": 47.5
+  },
+  {
+    "step": 46,
+    "role": "A",
+    "at": "photo close-up",
+    "action": "click(shard_3)",
+    "response": "Action executed successfully. You have just collected a shard_3. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 50.0
+  },
+  {
+    "step": 47,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 50.0
+  },
+  {
+    "step": 48,
+    "role": "A",
+    "at": "photo close-up",
+    "action": "move(Back to the wall close-up)",
+    "response": "Action executed successfully. Change to another scene: wall close-up.",
+    "progress": 50.0
+  },
+  {
+    "step": 49,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "move(Back to the study)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 50.0
+  },
+  {
+    "step": 50,
+    "role": "A",
+    "at": "study",
+    "action": "move(To the locker close-up)",
+    "response": "Action executed successfully. Change to another scene: locker close-up.",
+    "progress": 50.0
+  },
+  {
+    "step": 51,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "click(shard_4)",
+    "response": "Action executed successfully. You have just collected a shard_4. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 52.5
+  },
+  {
+    "step": 52,
+    "role": "B",
+    "at": "sink close-up",
+    "action": "move(Back to the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 52.5
+  },
+  {
+    "step": 53,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the cabinet above sink close-up)",
+    "response": "Action executed successfully. Change to another scene: cabinet above sink close-up.",
+    "progress": 52.5
+  },
+  {
+    "step": 54,
+    "role": "B",
+    "at": "cabinet above sink close-up",
+    "action": "click(shard_2)",
+    "response": "Action executed successfully. You have just collected a shard_2. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 55.0
+  },
+  {
+    "step": 55,
+    "role": "B",
+    "at": "cabinet above sink close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 55.0
+  },
+  {
+    "step": 56,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "give(shard_3)",
+    "response": "Action executed successfully. You have given the shard_3 to your partner. It is no longer in your bag.",
+    "progress": 55.0
+  },
+  {
+    "step": 57,
+    "role": "B",
+    "at": "cabinet above sink close-up",
+    "action": "move(Back to the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 55.0
+  },
+  {
+    "step": 58,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the bathroom)",
+    "response": "Action executed successfully. Change to another scene: bathroom.",
+    "progress": 55.0
+  },
+  {
+    "step": 59,
+    "role": "B",
+    "at": "bathroom",
+    "action": "move(To the mirror close-up)",
+    "response": "Action executed successfully. Change to another scene: mirror close-up.",
+    "progress": 55.0
+  },
+  {
+    "step": 60,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "apply(shard_3, mirror)",
+    "response": "Action executed successfully. You have successfully applied shard_3 to mirror.\nHowever, the apply of shard_3 is not enough, and mirror is still missing something else ...",
+    "progress": 57.5
+  },
+  {
+    "step": 61,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "give(shard_4)",
+    "response": "Action executed successfully. You have given the shard_4 to your partner. It is no longer in your bag.",
+    "progress": 57.5
+  },
+  {
+    "step": 62,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "apply(shard_4, mirror)",
+    "response": "Action executed successfully. You have successfully applied shard_4 to mirror.\nHowever, the apply of shard_4 is not enough, and mirror is still missing something else ...",
+    "progress": 60.0
+  },
+  {
+    "step": 63,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "apply(shard_2, mirror)",
+    "response": "Action executed successfully. You have successfully applied shard_2 to mirror.\nHowever, the apply of shard_2 is not enough, and mirror is still missing something else ...",
+    "progress": 62.5
+  },
+  {
+    "step": 64,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "apply(shard_1, mirror)",
+    "response": "Action executed successfully. You have successfully applied shard_1 to mirror. The mirror is now complete. it reflects a vague message saying 'cs546'",
+    "progress": 65.0
+  },
+  {
+    "step": 65,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "send(All mirror shards have been placed, and the mirror now reflects a message 'cs546'.)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 65.0
+  },
+  {
+    "step": 66,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "move(Back to the study)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 65.0
+  },
+  {
+    "step": 67,
+    "role": "A",
+    "at": "study",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 65.0
+  },
+  {
+    "step": 68,
+    "role": "A",
+    "at": "living room",
+    "action": "move(To the bedroom)",
+    "response": "Action executed successfully. Change to another scene: bedroom.",
+    "progress": 65.0
+  },
+  {
+    "step": 69,
+    "role": "A",
+    "at": "bedroom",
+    "action": "move(To the toolbox close-up)",
+    "response": "Action executed successfully. Change to another scene: toolbox close-up.",
+    "progress": 65.0
+  },
+  {
+    "step": 70,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 65.0
+  },
+  {
+    "step": 71,
+    "role": "A",
+    "at": "toolbox close-up",
+    "action": "input(cs546, toolbox)",
+    "response": "Action executed successfully. You have given an input cs546 to toolbox. The toolbox is now open.",
+    "progress": 67.5
+  },
+  {
+    "step": 72,
+    "role": "A",
+    "at": "toolbox close-up",
+    "action": "click(screwdriver)",
+    "response": "Action executed successfully. You have just collected a screwdriver. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 70.0
+  },
+  {
+    "step": 73,
+    "role": "A",
+    "at": "toolbox close-up",
+    "action": "click(fuse)",
+    "response": "Action executed successfully. You have just collected a fuse. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 72.5
+  },
+  {
+    "step": 74,
+    "role": "A",
+    "at": "toolbox close-up",
+    "action": "give(screwdriver)",
+    "response": "Action executed successfully. You have given the screwdriver to your partner. It is no longer in your bag.",
+    "progress": 72.5
+  },
+  {
+    "step": 75,
+    "role": "B",
+    "at": "mirror close-up",
+    "action": "move(Back to the bathroom)",
+    "response": "Action executed successfully. Change to another scene: bathroom.",
+    "progress": 72.5
+  },
+  {
+    "step": 76,
+    "role": "B",
+    "at": "bathroom",
+    "action": "move(To the ventilation fan close-up)",
+    "response": "Action executed successfully. Change to another scene: ventilation fan close-up.",
+    "progress": 72.5
+  },
+  {
+    "step": 77,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "apply(screwdriver, ventilation fan)",
+    "response": "Action executed successfully. You have successfully applied screwdriver to ventilation fan. You have used the screwdriver to open the fan and found a key inside.",
+    "progress": 75.0
+  },
+  {
+    "step": 78,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "click(locker key)",
+    "response": "Action executed successfully. You have just collected a locker key. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 77.5
+  },
+  {
+    "step": 79,
+    "role": "A",
+    "at": "toolbox close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 77.5
+  },
+  {
+    "step": 80,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "give(locker key)",
+    "response": "Action executed successfully. You have given the locker key to your partner. It is no longer in your bag.",
+    "progress": 77.5
+  },
+  {
+    "step": 81,
+    "role": "A",
+    "at": "toolbox close-up",
+    "action": "move(Back to the bedroom)",
+    "response": "Action executed successfully. Change to another scene: bedroom.",
+    "progress": 77.5
+  },
+  {
+    "step": 82,
+    "role": "A",
+    "at": "bedroom",
+    "action": "move(To the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 77.5
+  },
+  {
+    "step": 83,
+    "role": "A",
+    "at": "living room",
+    "action": "move(To the study after unlocking)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 77.5
+  },
+  {
+    "step": 84,
+    "role": "A",
+    "at": "study",
+    "action": "move(To the locker close-up)",
+    "response": "Action executed successfully. Change to another scene: locker close-up.",
+    "progress": 77.5
+  },
+  {
+    "step": 85,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 77.5
+  },
+  {
+    "step": 86,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "apply(locker key, locked locker door)",
+    "response": "Action executed successfully. You have successfully applied locker key to locked locker door. The locker door is now open, revealing a hammerhead inside.",
+    "progress": 80.0
+  },
+  {
+    "step": 87,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "click(hammer)",
+    "response": "Action executed successfully. You have just collected a hammer. It is put into your bag. You may craft something new with it and other things in the bag, or apply it in the future.",
+    "progress": 82.5
+  },
+  {
+    "step": 88,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "craft(hammer, hammer handle)",
+    "response": "Action executed successfully. You have successfully crafted The handle of a hammer lying next to the toolbox, seems part of a tool. and The hammer only have a head, seems need something else to be useful. together.\nYou get a new item: The hammer is now fully assembled, with the metal head sharp to smash things.. It is put into your bag.",
+    "progress": 85.0
+  },
+  {
+    "step": 89,
+    "role": "A",
+    "at": "locker close-up",
+    "action": "move(Back to the study)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 85.0
+  },
+  {
+    "step": 90,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 85.0
+  },
+  {
+    "step": 91,
+    "role": "A",
+    "at": "study",
+    "action": "move(To the wall close-up)",
+    "response": "Action executed successfully. Change to another scene: wall close-up.",
+    "progress": 85.0
+  },
+  {
+    "step": 92,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "apply(hammer, study wall)",
+    "response": "Action executed successfully. You have successfully applied hammer to study wall. The wall is broken, but it's dark inside.",
+    "progress": 87.5
+  },
+  {
+    "step": 93,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 87.5
+  },
+  {
+    "step": 94,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "give(battery)",
+    "response": "Action executed successfully. You have given the battery to your partner. It is no longer in your bag.",
+    "progress": 87.5
+  },
+  {
+    "step": 95,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 87.5
+  },
+  {
+    "step": 96,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "give(flashlight)",
+    "response": "Action executed successfully. You have given the flashlight to your partner. It is no longer in your bag.",
+    "progress": 87.5
+  },
+  {
+    "step": 97,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "craft(battery, flashlight)",
+    "response": "Action executed successfully. You have successfully crafted A single battery is found here, seems still has power and usable. and A flashlight is here, but it currently is out of power. together.\nYou get a new item: The flashlight now has a battery and is ready to light up the dark.. It is put into your bag.",
+    "progress": 90.0
+  },
+  {
+    "step": 98,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "apply(flashlight, study wall)",
+    "response": "Action executed successfully. You have successfully applied flashlight to study wall. The smashed wall is lit by the flashlight, revealing a hidden message, which is \"a=4 d=1 g=3 m=7\"",
+    "progress": 92.5
+  },
+  {
+    "step": 99,
+    "role": "A",
+    "at": "wall close-up",
+    "action": "move(Back to the study)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 92.5
+  },
+  {
+    "step": 100,
+    "role": "A",
+    "at": "study",
+    "action": "move(To the desk close-up)",
+    "response": "Action executed successfully. Change to another scene: desk close-up.",
+    "progress": 92.5
+  },
+  {
+    "step": 101,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 92.5
+  },
+  {
+    "step": 102,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "apply(fuse, desk lamp)",
+    "response": "Action executed successfully. You have successfully applied fuse to desk lamp. The lamp is now working, shedding light on letters \"amdg\" on the desk.",
+    "progress": 95.0
+  },
+  {
+    "step": 103,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "send(The desk lamp has been fixed, and it lights up the desk. You see some letters, which is \"AMDG\", seemingly a code hint.)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 95.0
+  },
+  {
+    "step": 104,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 95.0
+  },
+  {
+    "step": 105,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "send(The smashed wall is lit by the flashlight, revealing a hidden message, which is \"A=4 D=1 G=3 M=7\")",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 95.0
+  },
+  {
+    "step": 106,
+    "role": "B",
+    "at": "ventilation fan close-up",
+    "action": "move(Back to the bathroom)",
+    "response": "Action executed successfully. Change to another scene: bathroom.",
+    "progress": 95.0
+  },
+  {
+    "step": 107,
+    "role": "B",
+    "at": "bathroom",
+    "action": "move(To the dining room and kitchen)",
+    "response": "Action executed successfully. Change to another scene: dining room and kitchen.",
+    "progress": 95.0
+  },
+  {
+    "step": 108,
+    "role": "B",
+    "at": "dining room and kitchen",
+    "action": "move(To the left cabinet close-up)",
+    "response": "Action executed successfully. Change to another scene: left cabinet close-up.",
+    "progress": 95.0
+  },
+  {
+    "step": 109,
+    "role": "B",
+    "at": "left cabinet close-up",
+    "action": "input(4713, safe)",
+    "response": "Action executed successfully. You have given an input 4713 to safe. You have opened the safe and found a note with the code \"655324223.\"",
+    "progress": 97.5
+  },
+  {
+    "step": 110,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "yield()",
+    "response": "Action executed successfully. Control yielded temporarily; you will receive another opportunity.",
+    "progress": 97.5
+  },
+  {
+    "step": 111,
+    "role": "B",
+    "at": "left cabinet close-up",
+    "action": "send(The safe is now open, and inside you find a piece of paper that writes 655324223, seems a long code for something.)",
+    "response": "Action executed successfully. Your message has been delivered to your partner.",
+    "progress": 97.5
+  },
+  {
+    "step": 112,
+    "role": "A",
+    "at": "desk close-up",
+    "action": "move(Back to the study)",
+    "response": "Action executed successfully. Change to another scene: study.",
+    "progress": 97.5
+  },
+  {
+    "step": 113,
+    "role": "A",
+    "at": "study",
+    "action": "move(Back to the living room)",
+    "response": "Action executed successfully. Change to another scene: living room.",
+    "progress": 97.5
+  },
+  {
+    "step": 114,
+    "role": "A",
+    "at": "living room",
+    "action": "input(655324223, right door to the exit)",
+    "response": "Action executed successfully. You have given an input 655324223 to right door to the exit. The exit door unlocks, and you can now leave. game end!",
+    "progress": 100.0
+  }
+]

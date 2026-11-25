@@ -1,0 +1,126 @@
+{
+  "version": "cohort-policy-v4",
+  "basis": "Complete easy dataset; explicit exclusions and spatial exceptions in verification.json",
+  "games": {
+    "game1-1-easy": {
+      "tier": "core",
+      "cooperation_type": "양방향 정보·도구 연쇄",
+      "reason": "교차 암호 3개 (cs546: mirror → toolbox(A); 4713: desk lamp/study wall → safe(B); 655324223: safe → right door to the exit(A)). 정답 경로 물건 건네기 7번 (door handle A→B; study key B→A; shard_3 A→B; shard_4 A→B; screwdriver A→B; locker key B→A; flashlight B→A). 건네기 필요 단계 23/40.",
+      "reference_total": 40,
+      "alone": {
+        "A": 11,
+        "B": 6
+      }
+    },
+    "game1-2-easy": {
+      "tier": "extended",
+      "cooperation_type": "도구 조립·부분 정보 결합",
+      "reason": "교차 암호 1개 (2333: paper with code → safe(A)). 정답 경로 물건 건네기 9번 (keycard B→A; paper1 A→B; paper3 A→B; paper4 A→B; lubricant B→A; ladder A→B; battery B→A; drill bit B→A; electric drill A→B). 건네기 필요 단계 26/41.",
+      "reference_total": 41,
+      "alone": {
+        "A": 3,
+        "B": 12
+      }
+    },
+    "game1-3-easy": {
+      "tier": "negative_control",
+      "cooperation_type": "협력이 거의 필요 없는 단일 최종 전달",
+      "reason": "교차 암호 0개 (없음). 정답 경로 물건 건네기 1번 (key card 2 B→A). 건네기 필요 단계 1/27.",
+      "reference_total": 27,
+      "alone": {
+        "A": 0,
+        "B": 26
+      }
+    },
+    "game2-1-easy": {
+      "tier": "core",
+      "cooperation_type": "간단한 코드 전달·물건 교환",
+      "reason": "교차 암호 3개 (424389: scrip 2 → safe 2(B); 47515: credential → phone(A); 870472: paper 2 → locked box 2(A)). 정답 경로 물건 건네기 4번 (shoelaces A→B; cylindrical key B→A; fragment 3 B→A; fragment 4 B→A). 건네기 필요 단계 18/45.",
+      "reference_total": 45,
+      "alone": {
+        "A": 11,
+        "B": 16
+      }
+    },
+    "game2-2-easy": {
+      "tier": "core",
+      "cooperation_type": "분산 자료 결합·상호 도구 처리",
+      "reason": "교차 암호 3개 (1040: drawer → wall safe(A); 3816: code note → bookshelf safe(B); 10011001: printed note → left bookshelf safe(B)). 정답 경로 물건 건네기 7번 (bronze key A→B; photographic film A→B; crowbar B→A; package item + scissors both→either; abrasive paper + package item both→either; cartridge B→A; package item A→B). 건네기 필요 단계 32/52.",
+      "reference_total": 52,
+      "alone": {
+        "A": 6,
+        "B": 14
+      }
+    },
+    "game1-4-easy": {
+      "tier": "excluded",
+      "cooperation_type": "원본 단서 순환 의존",
+      "reason": "교차 암호 1개 (690716: birthday chart → front door(A)). 정답 경로 물건 건네기 6번 (piece 1 A→B; piece 2 A→B; chisel A→B; flexible tube + garden shears both→either; flexible tube A→B; swipe card B→A). 건네기 필요 단계 22/64.",
+      "reference_total": 64,
+      "alone": {
+        "A": 29,
+        "B": 13
+      }
+    },
+    "game1-5-easy": {
+      "tier": "extended",
+      "cooperation_type": "자료 처리 후 결과 반환",
+      "reason": "교차 암호 1개 (1991281: imprinted photo paper → strange lock(B)). 정답 경로 물건 건네기 6번 (lever B→A; photo paper B→A; film B→A; ultra-voilet light B→A; blue liquid B→A; dynamite B→A). 건네기 필요 단계 29/62.",
+      "reference_total": 62,
+      "alone": {
+        "A": 16,
+        "B": 17
+      }
+    },
+    "game2-3-easy": {
+      "tier": "extended",
+      "cooperation_type": "공간 표현·다중 단서·조합 협력",
+      "reason": "교차 암호 4개 (330: adhesive tape remaining → first drawer on the right(A); diamond-square-triangle-circle: colored car photo/red pyramid/green cylinder placed on shelf/blue hemisphere/yellow cube → lock of living room drawer(B); | 1 | 4 |   | 8 |\\n|   |   | 6 |   |\\n| 2 | 7 | 5 |   |\\n|   |   | 3 |   |: table sheet/cup of hot water → inner fireplace wall(B); 0368: note sheet/@handbook close-up → password lock(A)). 정답 경로 물건 건네기 11번 (battery A→B; wrench B→A; badge with hill pattern B→A; handle B→A; chain + weight both→either; big brush + chain both→either; firewood A→B; glycerin A→B; cup of cold water A→B; plier A→B; mug B→A). 건네기 필요 단계 32/95.",
+      "reference_total": 95,
+      "alone": {
+        "A": 47,
+        "B": 16
+      }
+    },
+    "game2-4-easy": {
+      "tier": "core",
+      "cooperation_type": "정보 전달 후 결과 반환",
+      "reason": "교차 암호 3개 (crow: sound list → waveform detector(A); 130: frequency list → waveform detector(A); 2463: waveform detector → iron door(B)). 정답 경로 물건 건네기 4번 (key card A→B; key card A→B; safe key A→B; cable B→A). 건네기 필요 단계 21/57.",
+      "reference_total": 57,
+      "alone": {
+        "A": 20,
+        "B": 16
+      }
+    },
+    "game2-5-easy": {
+      "tier": "core",
+      "cooperation_type": "양방향 물건·부분 정보 결합",
+      "reason": "교차 암호 4개 (2610: old thesis paper → top drawer(B); 3149: spotlight → safe box(B); 05062011: license plate/magazine → bottom drawer(B); 1927: paper with names → computer(A)). 정답 경로 물건 건네기 10번 (cup + water bottle both→either; wrench A→B; screwdriver B→A; torch light with power B→A; light bulb B→A; cup with hot water B→A; shelf key A→B; mental card A→B; scraper B→A; USB flash disk B→A). 건네기 필요 단계 22/58.",
+      "reference_total": 58,
+      "alone": {
+        "A": 21,
+        "B": 15
+      }
+    },
+    "game3-1-easy": {
+      "tier": "extended",
+      "cooperation_type": "물류·상호 해금·암호 전달",
+      "reason": "교차 암호 3개 (16: wet shipping list → brown box with missing number(B); 84459731: piece of paper code → old-fashioned phone(A); 100: exit code paper → exit door(A)). 정답 경로 물건 건네기 10번 (paper piece 'k' B→A; gold key with bolt sign B→A; blue tape A→B; toilet plunger B→A; tennis ball B→A; paper piece 'c' B→A; keycard with lanyard A→B; dagger A→B; alarm clock battery B→A; telescopic hook A→B). 건네기 필요 단계 45/72.",
+      "reference_total": 72,
+      "alone": {
+        "A": 16,
+        "B": 11
+      }
+    },
+    "game3-2-easy": {
+      "tier": "core",
+      "cooperation_type": "정보/물건의 명확한 왕복",
+      "reason": "교차 암호 4개 (5974: game machine → information board(A); 5891: left half paper/right half paper → office door password pad(B); 1998: graffiti → red mail box(B); 1232: code paper → tool box(B)). 정답 경로 물건 건네기 5번 (game ticket A→B; dollar coins A→B; besom + clothes both→either; besom B→A; gold key A→B). 건네기 필요 단계 22/48.",
+      "reference_total": 48,
+      "alone": {
+        "A": 18,
+        "B": 8
+      }
+    }
+  }
+}

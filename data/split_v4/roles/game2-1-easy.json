@@ -1,0 +1,103 @@
+{
+  "version": "v4",
+  "game": "game2-1-easy",
+  "eligible": true,
+  "spatial_exception": null,
+  "A": [
+    "letter",
+    "apartment entrance",
+    "apartment hallway",
+    "cloakroom",
+    "hallway cabinet",
+    "utility room",
+    "sanctum"
+  ],
+  "B": [
+    "corridor",
+    "world map",
+    "study room",
+    "utility room 2",
+    "bathroom"
+  ],
+  "starts": {
+    "B": "corridor"
+  },
+  "low_interdependence": false,
+  "game_file": "data/split_v4/games/game2-1-easy.yaml",
+  "reference_file": "data/split_v4/reference/key_log_2-1.txt",
+  "change": {
+    "split": "Same scenes as v3; A's utility room now opens off A's hallway (game file edited).",
+    "game_file": "In v3 A's utility room and sanctum lay beyond B's corridor and study, so A walked through them three times. The utility room (with the sanctum behind it) now opens off A's apartment hallway. No text states where it was."
+  },
+  "metrics": {
+    "total": 45,
+    "alone_A": 11,
+    "alone_B": 16,
+    "together_no_give": 27,
+    "with_give": 45,
+    "b_share": 0.41,
+    "handoffs": 4,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "424389",
+      "target": "safe 2",
+      "target_role": "B",
+      "partner_sources": [
+        "scrip 2"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "47515",
+      "target": "phone",
+      "target_role": "A",
+      "partner_sources": [
+        "credential"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "870472",
+      "target": "locked box 2",
+      "target_role": "A",
+      "partner_sources": [
+        "paper 2"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "shoelaces",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shoelaces, sewer)"
+    },
+    {
+      "tool": "cylindrical key",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(cylindrical key, locked box)"
+    },
+    {
+      "tool": "fragment 3",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(fragment 3, safe)"
+    },
+    {
+      "tool": "fragment 4",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(fragment 4, safe)"
+    }
+  ],
+  "method": "scripts/split_v4.py; metrics from scripts.split_metrics on the v4 game file",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}
