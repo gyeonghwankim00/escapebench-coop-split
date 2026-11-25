@@ -4,11 +4,11 @@
 
 **현재 전체 설계와 최종 문제 분류:** [CURRENT_DESIGN_AND_DATASET_REVIEW.md](../../CURRENT_DESIGN_AND_DATASET_REVIEW.md) — 분할 근거, Solo/Peer, 프롬프트·기억·스케줄·비용, 12문제 적합성 및 미완료 항목.
 
-**현재 실행 (nightly-v6 / 프로토콜 v7):** Solo는 공용 가방과 양쪽 관측을 보고 매번 A/B를 선택합니다. Peer는 최대 4판단 연속 실행하고 yield/send/give로 넘깁니다. 관측 기억을 보존하고, 기본 실험은 힌트 없이 팀 500환경 행동·최대 1000판단을 사용합니다. 버전 분류 파일의 핵심 6개·확장 4개를 별도 집계하고 원본 결함 1-4는 실행에서 제외합니다. 역할별 기억 예산과 출력 형식도 통일했습니다. [설계](../../MATRIX_PROTOCOL.md) · [실행](../../../server/README.md).
+**현재 실행 (nightly-v6 / 프로토콜 v7):** Solo는 공용 가방과 양쪽 관측을 보고 매번 A/B를 선택합니다. Peer는 최대 4판단 연속 실행하고 yield/send/give로 넘깁니다. 관측 기억을 보존하고, 기본 실험은 힌트 없이 팀 500환경 행동·최대 1000판단을 사용합니다. 버전 분류 파일의 핵심 6개·확장 4개를 별도 집계하고 원본 결함 1-4는 실행에서 제외합니다. 역할별 기억 예산과 출력 형식도 통일했습니다. [설계](MATRIX_PROTOCOL.md) · [실행](../../../server/README.md).
 
 **기존 파일럿·형식 진단은 탐색 분석으로 보관합니다.** 현재 주 실험에는 추가 안내를 사용하지 않으며, 해당 결과를 주 실험의 결측값 대신 넣지 않습니다.
 
-**Solo vs 2-agent 본 실험은 [MATRIX_PROTOCOL.md](../../MATRIX_PROTOCOL.md)를 따릅니다.**
+**Solo vs 2-agent 본 실험은 [MATRIX_PROTOCOL.md](MATRIX_PROTOCOL.md)를 따릅니다.**
 두 조건 모두 같은 분할 장면과 원본 퍼즐 엔진·기본 프롬프트·greedy 생성을 사용합니다. Solo에는 중앙 관측·공용 가방 규칙을, Peer에는 지역 관측·분리 가방·`send`·`give` 규칙을 추가합니다. 원본 기본 게임 12개 전체(easy)를 v3 분할(`data/roles/`)과 단서 주석(`data/clues.json`)으로 씁니다. 현재는 **`bash server/submit-nightly.sh`로 Qwen/Phi 500행동 파일럿을 실행**합니다. 실제 greedy 설정을 검사하는 generation 2이며, 이전 generation 1 결과는 새 비교에서 제외됩니다. [업로드·제출·결과 받기](../../../server/README.md)를 참고하세요. 전체 12문제 확장용 `submit-matrix.sh`도 유지합니다.
 
 원본 비교용 `original_solo`는 [원본 BaseAgent 프로토콜](../../ORIGINAL_PROTOCOL.md)을 사용합니다.

@@ -1,5 +1,8 @@
 # 원본 EscapeBench BaseAgent 기준선
 
+> `server/original.sbatch`와 `run-original.sh`는 2026-11-25에 삭제했습니다. 아래 서버 명령은 커밋 `653db7f`에서
+> 해당 파일을 복구해야 실행할 수 있습니다.
+
 이 실행 경로는 원본 `BaseAgent`의 코드·프롬프트·환경을 그대로 사용한다.
 이전 `solo-v1`과 다른 실험이며 기존 결과를 이어받지 않는다. 협업용 JSON을 Solo로
 합쳐 실행하지 않고, 분할 전 원본 YAML을 원본 Graph 엔진에 넣는다.

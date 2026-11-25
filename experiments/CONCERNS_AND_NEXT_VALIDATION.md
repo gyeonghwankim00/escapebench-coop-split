@@ -176,8 +176,7 @@ Codex/Claude Code 같은 도구가 있는 실행 환경을 사용할 경우, 역
 
 - [현재 설계와 데이터셋 검토](CURRENT_DESIGN_AND_DATASET_REVIEW.md): 분할, 전달, 기억, 스케줄, 문제별 분류.
 - [최신 결과 분석](../outputs/gsds/nightly-v6/analysis-2026-11-20.md): 완료 결과와 실제 오류 빈도. 설계 문서의 11월 19일 ‘실행 중’ 기록보다 최신이다.
-- [회의용 비교와 실제 영어 입력 출력](MEETING_COMPARISON.html): 원문 7개 사례와 엔진 피드백.
-- [문제 분할 지도와 경로](figures/room-atlas.html): 거울·당구장·연구실. 알려진 정답 재생 경로와 실제 모델 실험을 구분한다.
+- [협력 방탈출 플레이룸](https://claude.ai/artifact/7P1za2Db48uZGcE1BNQCXr): 분할의 2D 시각화와 직접 플레이.
 - [제안서](../proposal.md): 최초 목표와 Solo/Peer/Oracle 가설.
 - [원본 실행 조건](ORIGINAL_PROTOCOL.md), [과거 설계 문서](archive/README.md).
 

@@ -12,5 +12,5 @@ ssh -p "$ESCAPE_PORT" "$ESCAPE_REMOTE" 'mkdir -p ~/escape-lab'
 # Explicit allowlist: no credentials, local environments, outputs, or IDE settings.
 rsync -av --exclude='__pycache__' --exclude='*.pyc' --exclude='installed-packages.txt' \
   -e "ssh -p $ESCAPE_PORT" \
-  scripts data tests server experiments vendor web app.py README.md requirements-build.txt requirements-model.txt requirements-original.txt \
+  scripts data tests server experiments vendor README.md requirements-model.txt requirements-original.txt \
   "$ESCAPE_REMOTE:escape-lab/"

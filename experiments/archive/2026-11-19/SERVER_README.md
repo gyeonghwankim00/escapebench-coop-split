@@ -67,7 +67,7 @@ game2-4, game3-1은 control_or_review로 분리합니다. 암호를 미리 아�
 Solo는 A/B 양쪽 현재 관측과 기록을 받고 **실제 가방 하나**를 공유합니다.
 `send`/`give`는 금지하며, 도구 전달 없이 다른 쪽에서 바로 사용합니다.
 A/B 위치·교대·장면 분할·팀 예산은 Peer와 동일합니다.
-[설계 및 비교 시 해석](../../MATRIX_PROTOCOL.md)을 확인하세요.
+[설계 및 비교 시 해석](MATRIX_PROTOCOL.md)을 확인하세요.
 
 로컬에서 업로드:
 
@@ -293,7 +293,7 @@ squeue -u "$USER"
 32B 모델은 shared의 기존 다운로드를 사용하고, 결과는 두 모델 모두
 `/shared/s2/lab04/본인계정/escape-lab/outputs/cohort-v1/`에 저장합니다.
 로그는 프로젝트 폴더의 `cohort-배열JOBID_인덱스.out/.err`입니다.
-현재 주 실험 설정·분석 기준·중단된 인덱스 재개는 [실험 프로토콜](../../MATRIX_PROTOCOL.md)을 봅니다.
+현재 주 실험 설정·분석 기준·중단된 인덱스 재개는 [실험 프로토콜](MATRIX_PROTOCOL.md)을 봅니다.
 이전 상태 진단은 전체 게임 성능 자료와 합치지 않습니다.
 
 ---
@@ -489,7 +489,7 @@ python -m scripts.analyze_collaboration outputs/matrix/pilot-v3-g2-14B-main
 생성 버전 1의 기존 Solo/Peer는 `old_generation`으로 표시되고 새 비교에서 제외됩니다.
 분석의 실패 단계는 검토 후보이며, 자유로운 메시지의 의미나 퍼즐 선행 조건을 자동 확정하지 않습니다.
 전체 12게임 × 2모델 확장은 파일럿 확인 후 `server/submit-matrix.sh`로 할 수 있습니다.
-세부 규칙은 [MATRIX_PROTOCOL.md](../../MATRIX_PROTOCOL.md)를 보세요.
+세부 규칙은 [MATRIX_PROTOCOL.md](MATRIX_PROTOCOL.md)를 보세요.
 
 아래 내용은 이전 실행 방식의 기록입니다.
 

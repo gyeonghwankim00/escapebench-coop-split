@@ -31,13 +31,12 @@
 
 | 묶음 | 위치 / 의미 |
 |---|---|
-| 초기 JSON 8문제·브라우저 | `data/pilot/`, `data/source/`, `app.py`, `web/`, `build_pilot.py`, `coop_escape.py`, `validate_pilot.py` |
-| 초기 모델·Solo 파일럿 | `run_experiment.py`, `solo_experiment.py`, `run_solo_suite.py`, `experiments/solo_pilot.json`, `server/solo*.sbatch`, `server/experiment*.sbatch`, `run.sh`, `smoke.sbatch` |
-| 원본 단일 플레이 비교 | [ORIGINAL_PROTOCOL.md](ORIGINAL_PROTOCOL.md), `run_original.py`, `server/original.sbatch`, `run-original.sh`, `original_examples/` |
-| 예전 matrix/14B·32B/상태 진단 | `server/submit-matrix.sh`, `submit-pilot.sh`, `submit-interface-diagnostic.sh`, `cohort.sbatch`, `state-probes.sbatch`, `submit-state-probes.sh`, `run_state_probes.py`, `build_state_probes.py` |
+| 초기 JSON 8문제 | `data/pilot/`, `data/source/`, `build_pilot.py`, `coop_escape.py`, `validate_pilot.py` |
+| 초기 모델·Solo 파일럿 | `run_experiment.py`, `solo_experiment.py`, `run_solo_suite.py`, `experiments/solo_pilot.json` |
+| 원본 단일 플레이 비교 | [ORIGINAL_PROTOCOL.md](ORIGINAL_PROTOCOL.md), `run_original.py`, `original_examples/` |
 | 구 분할 감사 | `data/split_audit*.json` — 현재 집계 분류의 근거 파일은 아님 |
 | 과거 결과·서버 로그 | `outputs/matrix/`, `outputs/gsds/` — 원본 경로·내용 보존, 새 결과에 혼합하지 않음 |
 | 과거 문서 원문 | [archive](archive/README.md) |
 
-이 정리는 결과를 삭제하거나 실행 파일을 이동하지 않습니다. 사용하지 않는 진입점은
-현재 안내에서 제외했고, 흩어진 과거 설명은 아카이브로 보관했습니다.
+2026-11-25에 옛 서버 제출 스크립트, 상태 진단 실험, 정적 평면도를 삭제했습니다. 필요하면 커밋 `653db7f`에서
+복구합니다. 흩어진 과거 설명은 아카이브로 보관했으며, 그 안의 명령에는 삭제한 파일이 포함될 수 있습니다.
