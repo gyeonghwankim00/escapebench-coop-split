@@ -1,0 +1,82 @@
+{
+  "version": "v3",
+  "game": "game1-4-easy",
+  "A": [
+    "hallway",
+    "washroom",
+    "hidden room"
+  ],
+  "B": [
+    "kitchen",
+    "storage room"
+  ],
+  "starts": {
+    "B": "kitchen"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 64,
+    "alone_A": 29,
+    "alone_B": 13,
+    "together_no_give": 42,
+    "with_give": 64,
+    "b_share": 0.4,
+    "handoffs": 6,
+    "components": {
+      "A": 2,
+      "B": 1
+    },
+    "clue_inputs_cross": 1
+  },
+  "cross_clues": [
+    {
+      "answer": "690716",
+      "target": "front door",
+      "target_role": "A",
+      "partner_sources": [
+        "birthday chart"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "piece 1",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(piece 1, circuit board)"
+    },
+    {
+      "tool": "piece 2",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(piece 2, circuit board)"
+    },
+    {
+      "tool": "chisel",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(chisel, block of ice)"
+    },
+    {
+      "tool": "flexible tube + garden shears",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(garden shears, flexible tube)"
+    },
+    {
+      "tool": "flexible tube",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(flexible tube, hearth)"
+    },
+    {
+      "tool": "swipe card",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(swipe card, front door)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

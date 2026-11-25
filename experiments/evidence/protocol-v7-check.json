@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "scope": "Known-answer Solo reference replay; not an exhaustive prompt bound or model performance test",
+  "classification": {
+    "version": "cohort-policy-v1",
+    "sha256": "ba65ec7ea11ed7171229c9760c41dc6977741831da4bf656b0e90fcfaa2f50bf",
+    "path": "/Users/hwan/Library/Mobile Documents/com~apple~CloudDocs/SNU/수업/2026-2/LLM/hw3/data/cohort_policy_v1.json"
+  },
+  "context_tokens": 8192,
+  "reserved_output_tokens": 256,
+  "tokenizer_checked": false,
+  "games": [
+    {
+      "game": "game1-1-easy",
+      "max_prompt_chars": 19957,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 84,
+      "environment_actions": 84,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game1-2-easy",
+      "max_prompt_chars": 19007,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 86,
+      "environment_actions": 86,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game1-3-easy",
+      "max_prompt_chars": 17052,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 51,
+      "environment_actions": 51,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game1-5-easy",
+      "max_prompt_chars": 20642,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 1,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 102,
+      "environment_actions": 102,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game2-1-easy",
+      "max_prompt_chars": 16742,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 68,
+      "environment_actions": 68,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game2-2-easy",
+      "max_prompt_chars": 19906,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 60,
+      "escaped": true,
+      "decisions": 88,
+      "environment_actions": 88,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game2-3-easy",
+      "max_prompt_chars": 28135,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 3,
+        "B": 14
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 186,
+      "environment_actions": 186,
+      "skipped_reference_actions": [
+        {
+          "scene": "shelf above food preparation area close-up",
+          "action": "click(left door of the shelf above food preparation area)",
+          "reason": "no legal route at this state"
+        }
+      ],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game2-4-easy",
+      "max_prompt_chars": 21729,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 74,
+      "environment_actions": 74,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game2-5-easy",
+      "max_prompt_chars": 20574,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 103,
+      "environment_actions": 103,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game3-1-easy",
+      "max_prompt_chars": 26677,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 149,
+      "environment_actions": 149,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    },
+    {
+      "game": "game3-2-easy",
+      "max_prompt_chars": 20131,
+      "max_input_tokens": null,
+      "peak_discoveries_omitted": {
+        "A": 0,
+        "B": 0
+      },
+      "reveal_prompts": 0,
+      "escaped": true,
+      "decisions": 78,
+      "environment_actions": 78,
+      "skipped_reference_actions": [],
+      "invalid_actions": 0,
+      "expected_skips_only": true,
+      "context_ok": null
+    }
+  ],
+  "code_hashes": {
+    "scripts/adaptive_escape.py": "779e72a36749d407762c4dc3d81024ad61cec1333bc4aa20ceb4f1736e7e69d4",
+    "scripts/check_protocol.py": "bc44a225d3413257008e874c2e54ed8672bd0b71d3b156e4bb1b106b4d95eff4"
+  },
+  "tokenizer_path": null,
+  "tokenizer_hashes": {}
+}

@@ -1,0 +1,2589 @@
+{
+  "schema_version": "0.2",
+  "id": "05_shop_offices",
+  "title": "상점과 사무실",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game2-2-easy.yaml",
+      "sha256": "4b076014cd4688cf3d35d548d7a1cb9581461adeaed88a5ce67934461cd4b0dd"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_2-2.txt",
+      "sha256": "031a2bd26f656c1501f624b41b273b898022233246035d2440b6edab0284feaa"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "entrace of a shop",
+    "scenes": [
+      {
+        "name": "entrace of a shop",
+        "desc": "You are standing in front of the entrance of a shop. The iron door is locked, with a huge window wall next to it.",
+        "scene_relations": {
+          "Enter": "reception room"
+        }
+      },
+      {
+        "name": "reception room",
+        "desc": "You are in a reception room. There is a sofa at the right, with some antique decorations.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the entrance": "entrace of a shop",
+          "Go the the administration office": "administration office"
+        }
+      },
+      {
+        "name": "administration office",
+        "desc": "You are in an administration office. There is a desk in the middle, with some bookshelves near the wall.",
+        "scene_relations": {
+          "Back to the reception room": "reception room",
+          "Go to the corner": "administration office corner",
+          "Go to the inner office": "inner office"
+        }
+      },
+      {
+        "name": "administration office corner",
+        "desc": "You are in the corner of the administration office. There is a small window on the left, and the light shining from the window is quite bright.",
+        "scene_relations": {
+          "Back to the administration office": "administration office"
+        }
+      },
+      {
+        "name": "inner office",
+        "desc": "You are in an inner office. There is a desk in the middle, and this room is darker than the outer office room, as the curtain is closed.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the administration office": "administration office",
+          "Turn left": "left side of inner office",
+          "Turn right": "right side of inner office"
+        }
+      },
+      {
+        "name": "right side of inner office",
+        "desc": "You are at the right side of the inner office. There is a bookshelf and a safe.",
+        "scene_relations": {
+          "Back to the inner office": "inner office"
+        }
+      },
+      {
+        "name": "left side of inner office",
+        "desc": "You are at the left side of the inner office. There is a desk and some shelves.",
+        "scene_relations": {
+          "Back to the inner office": "inner office",
+          "Go to the store room": "store room"
+        }
+      },
+      {
+        "name": "store room",
+        "desc": "You are in a store room. There are some shelves with various items.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the left side of inner office": "left side of inner office"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "entrace of a shop",
+      "room": "A",
+      "desc": "You are standing in front of the entrance of a shop. The iron door is locked, with a huge window wall next to it.",
+      "visible": true,
+      "source_scene": "entrace of a shop"
+    },
+    {
+      "name": "reception room",
+      "room": "A",
+      "desc": "You are in a reception room. There is a sofa at the right, with some antique decorations.",
+      "visible": false,
+      "source_scene": "reception room"
+    },
+    {
+      "name": "administration office",
+      "room": "A",
+      "desc": "You are in an administration office. There is a desk in the middle, with some bookshelves near the wall.",
+      "visible": true,
+      "source_scene": "administration office"
+    },
+    {
+      "name": "administration office corner",
+      "room": "B",
+      "desc": "You are in the corner of the administration office. There is a small window on the left, and the light shining from the window is quite bright.",
+      "visible": true,
+      "source_scene": "administration office corner"
+    },
+    {
+      "name": "inner office",
+      "room": "B",
+      "desc": "You are in an inner office. There is a desk in the middle, and this room is darker than the outer office room, as the curtain is closed.",
+      "visible": false,
+      "source_scene": "inner office"
+    },
+    {
+      "name": "right side of inner office",
+      "room": "B",
+      "desc": "You are at the right side of the inner office. There is a bookshelf and a safe.",
+      "visible": true,
+      "source_scene": "right side of inner office"
+    },
+    {
+      "name": "left side of inner office",
+      "room": "A",
+      "desc": "You are at the left side of the inner office. There is a desk and some shelves.",
+      "visible": true,
+      "source_scene": "left side of inner office"
+    },
+    {
+      "name": "store room",
+      "room": "A",
+      "desc": "You are in a store room. There are some shelves with various items.",
+      "visible": false,
+      "source_scene": "store room"
+    }
+  ],
+  "entities": [
+    {
+      "name": "bulletin board",
+      "states": [
+        {
+          "desc": "a bulletin board with a bunch of papers, seems there's something behind the board",
+          "neg_reward": "You may try to see what's behind",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, entrance key, True",
+                "change_interact, False"
+              ],
+              "reward": "You find a key on the bulletin board"
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "entrace of a shop",
+      "position": "on the brick wall",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "entrace of a shop",
+        "kind": "item",
+        "name": "bulletin board",
+        "logic_sha256": "ff61cc3611e7d775e31ac6377a00c4dafa428a6b08c0395807409373bb838abe"
+      }
+    },
+    {
+      "name": "entrance door",
+      "states": [
+        {
+          "desc": "the entrance door is locked, with a keyhole in the middle",
+          "neg_reward": "You may try to unlock this door",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, entrance key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, reception room, True",
+                "change_interact, False"
+              ],
+              "reward": "The entrance door is unlocked"
+            }
+          ]
+        },
+        {
+          "desc": "the entrance door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "entrace of a shop",
+      "position": "at the entrance",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "entrace of a shop",
+        "kind": "item",
+        "name": "entrance door",
+        "logic_sha256": "42ea9e2910128f5a3bbc1e5abb1b8287b5634f31e7c61b42973792bd97977b7f"
+      }
+    },
+    {
+      "name": "mailbox",
+      "states": [
+        {
+          "desc": "a locked mailbox with a small silver keyhole",
+          "neg_reward": "You may try to unlock this mailbox with a matched key in similar color",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, silver key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, package item, True",
+                "change_interact, False"
+              ],
+              "reward": "The mailbox is unlocked, there is a package inside"
+            }
+          ]
+        },
+        {
+          "desc": "an opened mailbox"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "entrace of a shop",
+      "position": "on the left wall",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "entrace of a shop",
+        "kind": "item",
+        "name": "mailbox",
+        "logic_sha256": "bd3e27578fef70d11528064865e4b8db68e6cef824f06d522acb408fa1afd7e3"
+      }
+    },
+    {
+      "name": "package item",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a package made of hard-textured paper, closed tightly with tape, cannot directly open with hands",
+          "wait_for": [
+            "scissors"
+          ]
+        },
+        {
+          "desc": "the item inside is an air cylinder, but a little bit rough in surface",
+          "wait_for": [
+            "abrasive paper"
+          ]
+        },
+        {
+          "desc": "a polished air cylinder, with a round cross-section and polished surface",
+          "apply_to": [
+            "large mouse pad"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "entrace of a shop",
+      "position": "in the mail box",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "entrace of a shop",
+        "kind": "tool",
+        "name": "package item",
+        "logic_sha256": "445a5f0b6a94ff99bdcb61ce92d037a5274e86a0792962e900ae2de41e5a78f2"
+      }
+    },
+    {
+      "name": "entrance key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "an ordinary key with large size",
+          "apply_to": [
+            "entrance door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "entrace of a shop",
+      "position": "behind the bulletin board",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "entrace of a shop",
+        "kind": "tool",
+        "name": "entrance key",
+        "logic_sha256": "83ce34abcc3b0d25eb33625e033ba08b8340866a753c28944b332eb476d68538"
+      }
+    },
+    {
+      "name": "cable",
+      "states": [
+        {
+          "desc": "a cable fixed on the wall, with a thick layer of insulating sheath, one end is a little bit curved",
+          "wait_for": [
+            "pliers"
+          ]
+        },
+        {
+          "desc": "a long and thin cable, with one end curved into a hook",
+          "apply_to": [
+            "air duct"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "entrace of a shop",
+      "position": "on the wall near a mailbox",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "entrace of a shop",
+        "kind": "tool",
+        "name": "cable",
+        "logic_sha256": "64d282fd044fab528430dc70c69a91842527d40f37750bd1286464d857647360"
+      }
+    },
+    {
+      "name": "wall safe",
+      "states": [
+        {
+          "desc": "a wall safe that requires a 4-digit password",
+          "neg_reward": "You may try to unlock this safe with a valid password, all in numbers",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 1040"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, bronze key, True",
+                "change_interact, False"
+              ],
+              "reward": "The wall safe is unlocked, there is a bronze key inside"
+            }
+          ]
+        },
+        {
+          "desc": "an opened wall safe"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "reception room",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "reception room",
+        "kind": "item",
+        "name": "wall safe",
+        "logic_sha256": "2346cd9c35a4300c3adee6a359f393114922b92b85613634598cebda5806f995"
+      }
+    },
+    {
+      "name": "cracked floor",
+      "states": [
+        {
+          "desc": "a cracked floor, a little tilted, but you cannot remove with hands directly",
+          "neg_reward": "You may try to see what's inside by pulling the cracked floor up",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, crowbar"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, silver key, True",
+                "change_visible, tool, code note, True",
+                "change_interact, False"
+              ],
+              "reward": "You find a silver key in the cracked floor, along with a piece of note"
+            }
+          ]
+        },
+        {
+          "desc": "a cracked floor with a hole"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "reception room",
+      "position": "on the floor",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "reception room",
+        "kind": "item",
+        "name": "cracked floor",
+        "logic_sha256": "bfdc1df0d8139b2bd1bdea72850cea8d3de8e3ab6eea68cdafe670d2adea695e"
+      }
+    },
+    {
+      "visible": false,
+      "name": "code note",
+      "states": [
+        {
+          "desc": "a code note with a 4-digit number \"3816\" on it"
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "reception room",
+      "position": "in the cracked floor",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "reception room",
+        "kind": "tool",
+        "name": "code note",
+        "logic_sha256": "079ad482e32a1c83eb7916193ff7a5ee70ec32a5605617ff95eb393901814f50"
+      }
+    },
+    {
+      "name": "pliers",
+      "states": [
+        {
+          "desc": "a pair of pliers, with sharp jaws to cut things",
+          "apply_to": [
+            "cable"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "reception room",
+      "position": "under the sofa",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "reception room",
+        "kind": "tool",
+        "name": "pliers",
+        "logic_sha256": "fb220bdbdbd02b0a726a09fd849bb38f948228e24f68f00a753980ea2b0ea091"
+      }
+    },
+    {
+      "name": "bronze key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a normal bronze key, used to open something",
+          "apply_to": [
+            "left inner office door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "reception room",
+      "position": "in the wall safe",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "reception room",
+        "kind": "tool",
+        "name": "bronze key",
+        "logic_sha256": "722b1375f75864628e328c4d7e12c9b2475347343e1aea4c39b3e2318f2a857c"
+      }
+    },
+    {
+      "name": "silver key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a small silver key, shining silver color brghtly",
+          "apply_to": [
+            "mailbox"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "reception room",
+      "position": "under the cracked floor",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "reception room",
+        "kind": "tool",
+        "name": "silver key",
+        "logic_sha256": "7721faf34d0b17134307868dae80917e51521e66954455ab17bb5de0b4914a42"
+      }
+    },
+    {
+      "name": "air duct",
+      "states": [
+        {
+          "desc": "an air duct, dark and hard to see clearly, may need some light to look into",
+          "neg_reward": "You may try to look into air duct more clearly with light",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, flashlight"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "You light up the air duct, there seems to be a turn of direction inside, you cannnot see further what's after the turn"
+            }
+          ]
+        },
+        {
+          "desc": "an air duct, lighted up with a flashlight, there seems to be a turn of direction inside, you cannnot see further what's after the turn",
+          "neg_reward": "You may want to see what's further inside the air duct creatively",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, mirror"
+              ],
+              "trigger": [
+                "change_state, 2"
+              ],
+              "reward": "You put a mirror inside the air duct, and you find a golden key, but you cannot reach it"
+            }
+          ]
+        },
+        {
+          "desc": "an air duct, lighted up and with complex turn inside, there's a key inside but out of reach",
+          "neg_reward": "You may try to hook the key out of the air duct using some long and thin objects",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, cable"
+              ],
+              "trigger": [
+                "change_state, 3",
+                "change_visible, tool, golden key, True",
+                "change_interact, False"
+              ],
+              "reward": "You can now get the golden key out of the air duct"
+            }
+          ]
+        },
+        {
+          "desc": "an air duct, lighted up and with complex turn inside"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "administration office",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office",
+        "kind": "item",
+        "name": "air duct",
+        "logic_sha256": "51b723955855516b173ace30b312ab948a4a3245b64c88e5182b52c303bdb82a"
+      }
+    },
+    {
+      "name": "administration office door",
+      "states": [
+        {
+          "desc": "the administration office door is locked, with a gold color keyhole",
+          "neg_reward": "You may try to unlock this door with a matched key in similar color",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, golden key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, inner office, True",
+                "change_interact, False"
+              ],
+              "reward": "The administration office door is unlocked"
+            }
+          ]
+        },
+        {
+          "desc": "the administration office door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "administration office",
+      "position": "at the left side of the administration office",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office",
+        "kind": "item",
+        "name": "administration office door",
+        "logic_sha256": "111eee9ddb1b00d696834d71abe01a95578b84a97b944421fef1af62226394ef"
+      }
+    },
+    {
+      "name": "printer",
+      "states": [
+        {
+          "desc": "a printer showing no ink, not working now",
+          "neg_reward": "You may try to make the printer work again by putting in ink",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, cartridge"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, printed note, True"
+              ],
+              "reward": "The printer is working, printed out a note"
+            }
+          ]
+        },
+        {
+          "desc": "a printer with cartridge, working now"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "administration office",
+      "position": "on the desk",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office",
+        "kind": "item",
+        "name": "printer",
+        "logic_sha256": "25a40334d6fe6d62dd869c198fa34f72548af342efdb70f7c35cbdd9eab8623b"
+      }
+    },
+    {
+      "name": "printed note",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a printed note with a string of number \"11000011\" on it, strange binary code"
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "administration office",
+      "position": "out of the printer",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office",
+        "kind": "tool",
+        "name": "printed note",
+        "logic_sha256": "09dc3f78ee7c1526a3c6b43e1da1e46c7079589b43cf0b6d7b0365bd4f383bbd"
+      }
+    },
+    {
+      "name": "flashlight",
+      "states": [
+        {
+          "desc": "a flashlight with battery, can be turned on ang give strong light",
+          "apply_to": [
+            "air duct"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "administration office",
+      "position": "on the white bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office",
+        "kind": "tool",
+        "name": "flashlight",
+        "logic_sha256": "1cdfe43d9361f8f0f379da9cdc2ec0bc3b91f9dd5d2005d6cef9d890ab8cac1d"
+      }
+    },
+    {
+      "name": "golden key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a golden key shining brightly",
+          "apply_to": [
+            "administration office door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "administration office",
+      "position": "in the air duct",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office",
+        "kind": "tool",
+        "name": "golden key",
+        "logic_sha256": "7d4bb624b6785e096dce234774d457b4e298fd672104d0226c5f8f702c27ca71"
+      }
+    },
+    {
+      "name": "draft",
+      "states": [
+        {
+          "desc": "a draft with some notes, seems some writings are unfinished",
+          "neg_reward": "The draft seems to have some hidden information unfinished, you may continue write and interact to find out",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, pencil"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "You find a note on the draft, with two letters \"GB\""
+            }
+          ]
+        },
+        {
+          "desc": "a draft with some notes and a hidden note \"GB\""
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "administration office corner",
+      "position": "on the desk",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office corner",
+        "kind": "item",
+        "name": "draft",
+        "logic_sha256": "4ba5761efd97556931531ea90764e984f8f9f06050a5baaa0fc266c57067264f"
+      }
+    },
+    {
+      "name": "desk safe",
+      "states": [
+        {
+          "desc": "a desk safe that needs a 4-digit password, two alphabets combined with two numbers",
+          "neg_reward": "You may try to unlock this safe with a valid password, using the hint and tools you have got",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, GB24"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, mirror, True",
+                "change_interact, False"
+              ],
+              "reward": "The desk safe is unlocked, there is a mirror inside"
+            }
+          ]
+        },
+        {
+          "desc": "an opened desk safe"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "administration office corner",
+      "position": "on the desk",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office corner",
+        "kind": "item",
+        "name": "desk safe",
+        "logic_sha256": "a292173ae5a2c6ae3efca4eb0aff72206f20490667f8074f65ade221b37a203f"
+      }
+    },
+    {
+      "name": "photographic film",
+      "states": [
+        {
+          "desc": "a photographic film that seems clearer with a white background",
+          "apply_to": [
+            "white board"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "administration office corner",
+      "position": "on the clapboard",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office corner",
+        "kind": "tool",
+        "name": "photographic film",
+        "logic_sha256": "868627c28ace9b81ea9a34203504c29442ea01768b64e2de4b25ed061ffeced4"
+      }
+    },
+    {
+      "name": "pencil",
+      "states": [
+        {
+          "desc": "a normal pencil with a lead inside, able to write and draw",
+          "apply_to": [
+            "draft"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "administration office corner",
+      "position": "on the desk",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office corner",
+        "kind": "tool",
+        "name": "pencil",
+        "logic_sha256": "13d30e758021f850d45f0bd2b35a0997630fd4b5d082babec1b50ad1b15b71d5"
+      }
+    },
+    {
+      "name": "waste paper",
+      "states": [
+        {
+          "desc": "a waste paper with two numbers \"24\", maybe hint for something"
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "administration office corner",
+      "position": "at the corner on the floor",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office corner",
+        "kind": "tool",
+        "name": "waste paper",
+        "logic_sha256": "f23b029f0507f952d741b6c68b555bc3eee22d249a4c6643f71cb195bb684634"
+      }
+    },
+    {
+      "name": "mirror",
+      "visible": false,
+      "states": [
+        {
+          "desc": "an intact small mirror that is clear and reflect well with light",
+          "apply_to": [
+            "air duct"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "administration office corner",
+      "position": "in the desk safe",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "administration office corner",
+        "kind": "tool",
+        "name": "mirror",
+        "logic_sha256": "9034b303f48adc01090dc68545c8b7ee8fef8c0a964210ec28a579d887870c39"
+      }
+    },
+    {
+      "name": "large mouse pad",
+      "states": [
+        {
+          "desc": "a large mouse pad with a a strange sign you cannot understand. There's a round hole in the middle seems to fit something in.",
+          "neg_reward": "You may try to put in something with a round cross-section to further observe this strange sign",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, package item"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "You find the strange sign becomes clear through the cylinder. It's a \"XOR\" sign."
+            }
+          ]
+        },
+        {
+          "desc": "a mouse pad with a \"XOR\" sign on it, seems like a hint on some binary operation"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "inner office",
+      "position": "in the middle of the desk top",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "item",
+        "name": "large mouse pad",
+        "logic_sha256": "e6ee832eeb13c6f9bf997cbe2949e9fb6f60410ba5006eedc5a306ffb3fcd899"
+      }
+    },
+    {
+      "name": "calendary",
+      "states": [
+        {
+          "desc": "a calendary with multi pages, seems something embedded inside",
+          "neg_reward": "You may try to simply interact with the calendary to find out",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, entrance guard card, True",
+                "change_interact, False"
+              ],
+              "reward": "You find an entrance guard card on the calendary"
+            }
+          ]
+        },
+        {
+          "desc": "a calendary, turned to second page"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "inner office",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "item",
+        "name": "calendary",
+        "logic_sha256": "fb1f8b80f2c4aa7ba6e46d8ef287d55fc2051a2bbdc1c7209f2b493a3d402301"
+      }
+    },
+    {
+      "name": "groove",
+      "states": [
+        {
+          "desc": "grooves on the floor, with square shape, seems used to anchor something to be stable",
+          "neg_reward": "You may try to put something into the groove",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, ladder"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, camera, True"
+              ],
+              "reward": "You find a camera on the ceiling"
+            }
+          ]
+        },
+        {
+          "desc": "a groove with a ladder on it, now you could reach the camera"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "inner office",
+      "position": "on the floor",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "item",
+        "name": "groove",
+        "logic_sha256": "9e0960898e2ef7ebb06279f24e180200d43184b85cae04c4ec2acbe39f3fe61e"
+      }
+    },
+    {
+      "name": "camera",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "a camera high on the ceiling, you cannot reach with hands. It's currently turned off",
+          "neg_reward": "You may try to power on the camera by connecting it to some power source",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, electrical cable"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The camera is working, and you find a word \"Genshin\" on the screen"
+            }
+          ]
+        },
+        {
+          "desc": "a camera working now, with a word \"Genshin\" on the screen, seeems like a hint"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "inner office",
+      "position": "on the wall near the ceiling",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "item",
+        "name": "camera",
+        "logic_sha256": "21cfbc0acb43c0c2d2788b46f5991cb8f12258a809a2bae2c496fb4b4e70678f"
+      }
+    },
+    {
+      "name": "photo frame",
+      "states": [
+        {
+          "desc": "a photo frame with a photo inside. There is a screw on the back",
+          "neg_reward": "You may try to look close up to the photo inside by removing the screw",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, screwdriver"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, old photo in frame, True"
+              ],
+              "reward": "You can now get the photo out of the frame"
+            }
+          ]
+        },
+        {
+          "desc": "The photo frame is open on the back now"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "inner office",
+      "position": "on the desk",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "item",
+        "name": "photo frame",
+        "logic_sha256": "af2c9a8419e2b78f07cdba041c2b634cda79b35460d10ded8ad33f5175fcb651"
+      }
+    },
+    {
+      "name": "drawer",
+      "states": [
+        {
+          "desc": "a drawer that seems locked by a digital lock, need authorization to open",
+          "neg_reward": "You may try to open this locked drawer with some specific identification card",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, entrance guard card"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, drawer, False"
+              ],
+              "reward": "The drawer is opened, and there is a paper with a number \"1040\""
+            }
+          ]
+        },
+        {
+          "desc": "an opened drawer"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "inner office",
+      "position": "below the desk",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "item",
+        "name": "drawer",
+        "logic_sha256": "a5b97864881bce60a95048221c82d4e326233a2a1bfdbd4bfbc1290d96ecb847"
+      }
+    },
+    {
+      "name": "old photo in frame",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a photo with \"1986\" written on the back, seems like a numerical hint"
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "inner office",
+      "position": "in the photo frame",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "tool",
+        "name": "old photo in frame",
+        "logic_sha256": "0a6e963621f909ca99eb766ecaff1b2ce51b32ee1d6551ca134a1f506c3fd1f1"
+      }
+    },
+    {
+      "name": "sprayer",
+      "states": [
+        {
+          "desc": "a sprayer, with some strange signs on it, currently empty, maybe could fill in some liquid",
+          "wait_for": [
+            "chemical agent"
+          ]
+        },
+        {
+          "desc": "a sprayer with chemical agent, could be used for cleaning or revealing hidden things",
+          "apply_to": [
+            "wooden door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "inner office",
+      "position": "on the bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "tool",
+        "name": "sprayer",
+        "logic_sha256": "e48fa392edefcd20393292d647e67e684a49a858dcf10da433d83d254c0029f3"
+      }
+    },
+    {
+      "name": "entrance guard card",
+      "visible": false,
+      "states": [
+        {
+          "desc": "an digital entrance guard card that shows identification information",
+          "apply_to": [
+            "drawer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "inner office",
+      "position": "behind the calendary",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "inner office",
+        "kind": "tool",
+        "name": "entrance guard card",
+        "logic_sha256": "375e18b9ee65331677d40dd3c2536d785b31a4b8bd62bcaea1c493a2b935e313"
+      }
+    },
+    {
+      "name": "bookshelf safe 2",
+      "states": [
+        {
+          "desc": "a bookshelf safe, with a 4-digit password",
+          "neg_reward": "You may try to unlock this safe using some 4-digit numerical hint you have got before",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 1986"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, photographic film 4, True",
+                "change_interact, False"
+              ],
+              "reward": "The bookshelf safe is unlocked, there is a photographic film 4 inside"
+            }
+          ]
+        },
+        {
+          "desc": "an opened bookshelf safe"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "right side of inner office",
+      "position": "on the bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "right side of inner office",
+        "kind": "item",
+        "name": "bookshelf safe 2",
+        "logic_sha256": "c07516671881d2ed1da7dc011279a289a840b86642677f9d1b182688f7899345"
+      }
+    },
+    {
+      "name": "photographic film 4",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a photographic film 4, seems to be the last one",
+          "apply_to": [
+            "white board"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "right side of inner office",
+      "position": "in the bookshelf safe 2",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "right side of inner office",
+        "kind": "tool",
+        "name": "photographic film 4",
+        "logic_sha256": "3729ac059eb769314df689b066c1dbf1bcff556d2bd94a0afcd5cd4595297944"
+      }
+    },
+    {
+      "name": "left inner office door",
+      "states": [
+        {
+          "desc": "the left inner office door is locked, with a bronze keyhole",
+          "neg_reward": "You may try to unlock this door with an effective key",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, bronze key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, store room, True",
+                "change_interact, item, left inner office door, False"
+              ],
+              "reward": "The left inner office door is unlocked"
+            }
+          ]
+        },
+        {
+          "desc": "the left inner office door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "near the shelf, on your right side",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "item",
+        "name": "left inner office door",
+        "logic_sha256": "f1752bc44b9af742fe03edc6cfd7a8d73141e87317b6ed5e33e8b80a521ff4da"
+      }
+    },
+    {
+      "name": "bookshelf safe",
+      "states": [
+        {
+          "desc": "a bookshelf safe, with a 4-digit password",
+          "neg_reward": "You may try to unlock this safe with a valid 4-digit numerical password hint you got before",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 3816"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, fragment, True",
+                "change_interact, item, bookshelf safe, False"
+              ],
+              "reward": "The bookshelf safe is unlocked, there is a fragment in it"
+            }
+          ]
+        },
+        {
+          "desc": "an opened bookshelf safe"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "on the bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "item",
+        "name": "bookshelf safe",
+        "logic_sha256": "80a95d328645e8a24344c6f2188f35d78361cd17047e1bac0db7b02dcc08c0b7"
+      }
+    },
+    {
+      "name": "cart safe",
+      "states": [
+        {
+          "desc": "a cart safe, there's an empty slot on the top, waiting for something to fit in",
+          "neg_reward": "You may try to unlock this safe by fitting the right thing in the slot",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, fragment"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, screwdriver, True",
+                "change_visible, tool, abrasive paper, True",
+                "change_interact, item, cart safe, False"
+              ],
+              "reward": "The cart safe is unlocked, there is a screwdriver and an abrasive paper inside"
+            }
+          ]
+        },
+        {
+          "desc": "an opened cart safe"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "near the bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "item",
+        "name": "cart safe",
+        "logic_sha256": "13753caa0b3ac32ce5a516175ee5657848048ff3a4eb49b1a832c68390b3a6f3"
+      }
+    },
+    {
+      "name": "wooden door",
+      "states": [
+        {
+          "desc": "a wooden door that has some unclear traces of writing on it, you cannot see clearly",
+          "neg_reward": "You may try to use some specific solution to make the writing clear",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, sprayer"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The writing on the wooden door is now clear, you see a 8-digit number"
+            }
+          ]
+        },
+        {
+          "desc": "a wooden door with some clear writing on it, showing \"01011010\""
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "on the left of the view",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "item",
+        "name": "wooden door",
+        "logic_sha256": "88e25b7e1076ce4345065bd1b35b56643cdfd43c3500ce5f25d679b8370dd7d7"
+      }
+    },
+    {
+      "name": "scissors",
+      "states": [
+        {
+          "desc": "a pair of scissors, very sharp",
+          "apply_to": [
+            "package item"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "in the top drawer of the shelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "tool",
+        "name": "scissors",
+        "logic_sha256": "c1cb6e7a5128757b7e049185cd7ee7c101d6e81c6b8194cd47ca5e9d405fb8be"
+      }
+    },
+    {
+      "name": "fragment",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a fragment made of metal, seems could be part of something",
+          "apply_to": [
+            "cart safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "in the bookshelf safe",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "tool",
+        "name": "fragment",
+        "logic_sha256": "fbcb409ae54eccffe602c2d7d03abb0ed85805f3d1a8e20bc819c460e89f40ea"
+      }
+    },
+    {
+      "name": "screwdriver",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a screwdriver with a flat head, in good condition to use",
+          "apply_to": [
+            "photo frame"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "in the cart safe",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "tool",
+        "name": "screwdriver",
+        "logic_sha256": "29fcfede72724a4b75119059cdce308c833ffce1d95475227ca5777a460cea4f"
+      }
+    },
+    {
+      "name": "abrasive paper",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a piece of abrasive paper that could polish something with rough surface",
+          "apply_to": [
+            "package item"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "left side of inner office",
+      "position": "in the cart safe",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "left side of inner office",
+        "kind": "tool",
+        "name": "abrasive paper",
+        "logic_sha256": "78c70733042d17fe0353a58ee4b58bdded63a12285f345fb63c923580889ddbd"
+      }
+    },
+    {
+      "name": "white board",
+      "states": [
+        {
+          "desc": "a white board with some notes, there's a space vacant to put multiple things on it",
+          "neg_reward": "You may try to put multiple things on the white board and trigger some hidden things",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, photographic film",
+                "apply, photographic film 2",
+                "apply, photographic film 3",
+                "apply, photographic film 4"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, cartridge, True",
+                "change_visible, tool, control panel, True",
+                "change_interact, False"
+              ],
+              "reward": "You find a cartridge and a control panel behind the white board"
+            }
+          ]
+        },
+        {
+          "desc": "a white board with the space behind it revealed"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "store room",
+      "position": "on the wall at the right corner",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "item",
+        "name": "white board",
+        "logic_sha256": "b87e394dd67a63e4a13b229099cecb3d3e3d3e5be53cd84b6a4dd39972d4cbd8"
+      }
+    },
+    {
+      "name": "store room safe",
+      "states": [
+        {
+          "desc": "a store room safe, the lock is very old and rusty",
+          "neg_reward": "You may try to break the lock in some brute-force way",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, art knife"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, crowbar, True",
+                "change_interact, False"
+              ],
+              "reward": "The store room safe is unlocked, there is a crowbar inside"
+            }
+          ]
+        },
+        {
+          "desc": "an opened store room safe"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "store room",
+      "position": "near the right bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "item",
+        "name": "store room safe",
+        "logic_sha256": "0640637975e5a0d4beb5ca6c354bc93870a2ed61d3c22156e8692b5872329c67"
+      }
+    },
+    {
+      "name": "left bookshelf safe",
+      "states": [
+        {
+          "desc": "a left bookshelf safe, currently without a control screen",
+          "neg_reward": "You may first try to make the safe system works by giving a screen to it",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, control panel"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The left bookshelf safe is now with a control screen"
+            }
+          ]
+        },
+        {
+          "desc": "a left bookshelf safe, with a screen showing \"GAME\", requires a password input",
+          "neg_reward": "You may try to unlock this safe through hint on the screen, the password should be a word about game you met before",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, Genshin"
+              ],
+              "trigger": [
+                "change_state, 2"
+              ],
+              "reward": "The screen gives a correct signal, you may try to input the next password"
+            }
+          ]
+        },
+        {
+          "desc": "a left bookshelf safe, with a screen now showing \"MATH\", requires a eight-digit password input",
+          "neg_reward": "You may try to unlock this safe through the final password, notice it's 8-digit, and use all the hints and a bit math knowledge you have got",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 10011001"
+              ],
+              "trigger": [
+                "change_state, 3",
+                "change_interact, False",
+                "finish_team"
+              ],
+              "reward": "The left bookshelf safe is unlocked, GAME END!"
+            }
+          ]
+        },
+        {
+          "desc": "an opened left bookshelf safe"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "store room",
+      "position": "on the left bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "item",
+        "name": "left bookshelf safe",
+        "logic_sha256": "d580802e5a818cb02c64d1aac3a719e350824e85ad412c6bee9e7124ec420687"
+      }
+    },
+    {
+      "name": "electrical cable",
+      "states": [
+        {
+          "desc": "an electrical cable that is able to power on some devices",
+          "apply_to": [
+            "camera"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "on the second layer of the boolshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "electrical cable",
+        "logic_sha256": "38f532c007f41876cd412ea89cd7b3cc9c23ecc9bd3108b7c3c9d8ac796b52b9"
+      }
+    },
+    {
+      "name": "art knife",
+      "states": [
+        {
+          "desc": "an art knife, with a sharp blade to cut through even hard materials",
+          "apply_to": [
+            "store room safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "on the top of the shelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "art knife",
+        "logic_sha256": "7a0304b5bc75b21c5c5aa8e5ce2fed21bb39c56b024f95fdc95796e31e50cd46"
+      }
+    },
+    {
+      "name": "photographic film 2",
+      "states": [
+        {
+          "desc": "another photographic film",
+          "apply_to": [
+            "white board"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "on the top of the shelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "photographic film 2",
+        "logic_sha256": "24d0d2d49b8998727427fa6e01602a5e350355bf66013742929078fa5a54319f"
+      }
+    },
+    {
+      "name": "ladder",
+      "states": [
+        {
+          "desc": "a ladder about 2 meters high, with its foot in square shape",
+          "apply_to": [
+            "groove"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "in the middle of the room",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "ladder",
+        "logic_sha256": "fba19b761443264f4adc9376754059dcf77f0c33bb69c29675ccfed26f035fcd"
+      }
+    },
+    {
+      "name": "chemical agent",
+      "states": [
+        {
+          "desc": "a chemical agent, kind of liquid, you do not know what it is",
+          "apply_to": [
+            "sprayer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "on the middle bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "chemical agent",
+        "logic_sha256": "74fe0b4358990a6229e3542bb46809f7ab449073052cb19a248f2396f30715dd"
+      }
+    },
+    {
+      "name": "photographic film 3",
+      "states": [
+        {
+          "desc": "a third photographic film",
+          "apply_to": [
+            "white board"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "in the book on the middle layer of the bookshelf",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "photographic film 3",
+        "logic_sha256": "e378f840c087e29ab926944c4dbf2f8511a32b5709c1ef31086a22df987dbc79"
+      }
+    },
+    {
+      "name": "crowbar",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a crowbar with a curved end and hard texture that may pry things open",
+          "apply_to": [
+            "cracked floor"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "in the store room safe",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "crowbar",
+        "logic_sha256": "ad29484acb92dcd4362f67607d1ab4b2d934ba7c870b15f5d31bd60b85425a1d"
+      }
+    },
+    {
+      "name": "cartridge",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a normal cartridge that could be used for printer",
+          "apply_to": [
+            "printer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "behind the white board",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "cartridge",
+        "logic_sha256": "2cbb7d6f12f202ff42d5ce292e3bc3c1f0c9f2d9a392ce67ea9db5bf18cc9d11"
+      }
+    },
+    {
+      "name": "control panel",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a control panel with LED screen, currently not working",
+          "apply_to": [
+            "left bookshelf safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "store room",
+      "position": "behind the white board",
+      "source": {
+        "file": "game2-2-easy.yaml",
+        "scene": "store room",
+        "kind": "tool",
+        "name": "control panel",
+        "logic_sha256": "f15c73ed7c32f4ed99b28df32fbdd151e1b627856312f15a66d3958073f00bd5"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I03",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "drawer",
+        "target_entity": "wall safe",
+        "accepted_input": "1040",
+        "evidence_text": [
+          "1040"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I06",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "camera",
+        "target_entity": "left bookshelf safe",
+        "accepted_input": "Genshin",
+        "evidence_text": [
+          "Genshin"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I09",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "large mouse pad",
+        "target_entity": "left bookshelf safe",
+        "accepted_input": "10011001",
+        "evidence_text": [
+          "XOR"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I01",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "draft",
+        "target_entity": "desk safe",
+        "accepted_input": "GB24",
+        "evidence_text": [
+          "GB"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I02",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "waste paper",
+        "target_entity": "desk safe",
+        "accepted_input": "GB24",
+        "evidence_text": [
+          "24"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "code note",
+        "target_entity": "bookshelf safe",
+        "accepted_input": "3816",
+        "evidence_text": [
+          "3816"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I05",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "old photo in frame",
+        "target_entity": "bookshelf safe 2",
+        "accepted_input": "1986",
+        "evidence_text": [
+          "1986"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I07",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "printed note",
+        "target_entity": "left bookshelf safe",
+        "accepted_input": "10011001",
+        "evidence_text": [
+          "11000011"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I08",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "wooden door",
+        "target_entity": "left bookshelf safe",
+        "accepted_input": "10011001",
+        "evidence_text": [
+          "01011010"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "mirror",
+        "sender": "B",
+        "receiver": "A",
+        "target": "air duct"
+      },
+      {
+        "id": "O02",
+        "object": "sprayer",
+        "sender": "B",
+        "receiver": "A",
+        "target": "chemical agent"
+      },
+      {
+        "id": "O03",
+        "object": "photographic film",
+        "sender": "B",
+        "receiver": "A",
+        "target": "white board"
+      },
+      {
+        "id": "O04",
+        "object": "screwdriver",
+        "sender": "A",
+        "receiver": "B",
+        "target": "photo frame"
+      },
+      {
+        "id": "O05",
+        "object": "photographic film 4",
+        "sender": "B",
+        "receiver": "A",
+        "target": "white board"
+      },
+      {
+        "id": "O06",
+        "object": "ladder",
+        "sender": "A",
+        "receiver": "B",
+        "target": "groove"
+      },
+      {
+        "id": "O07",
+        "object": "electrical cable",
+        "sender": "A",
+        "receiver": "B",
+        "target": "camera"
+      },
+      {
+        "id": "O08",
+        "object": "package item",
+        "sender": "A",
+        "receiver": "B",
+        "target": "large mouse pad"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "left bookshelf safe",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [
+    {
+      "entity": "administration office door",
+      "state": 0,
+      "transition": 0,
+      "trigger": "change_visible, scene, inner office, True",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    }
+  ],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 55,
+    "retained_entities": 55,
+    "source_scenes": 8,
+    "retained_scenes": 8,
+    "source_key_actions": 66,
+    "replayed_source_key_actions": 66,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "bulletin board"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 3,
+        "action": {
+          "type": "click",
+          "target": "entrance key"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 4,
+        "action": {
+          "type": "click",
+          "target": "cable"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 5,
+        "action": {
+          "type": "apply",
+          "tool": "entrance key",
+          "target": "entrance door"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 7,
+        "action": {
+          "type": "click",
+          "target": "pliers"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 8,
+        "action": {
+          "type": "craft",
+          "first": "cable",
+          "second": "pliers"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 10,
+        "action": {
+          "type": "click",
+          "target": "flashlight"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 12,
+        "action": {
+          "type": "click",
+          "target": "photographic film"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 13,
+        "action": {
+          "type": "click",
+          "target": "pencil"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 14,
+        "action": {
+          "type": "click",
+          "target": "waste paper"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 15,
+        "action": {
+          "type": "apply",
+          "tool": "pencil",
+          "target": "draft"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 16,
+        "action": {
+          "type": "input",
+          "value": "GB24",
+          "target": "desk safe"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 17,
+        "action": {
+          "type": "click",
+          "target": "mirror"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 18,
+        "action": {
+          "type": "apply",
+          "tool": "flashlight",
+          "target": "air duct"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 20,
+        "action": {
+          "type": "apply",
+          "tool": "mirror",
+          "target": "air duct"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 21,
+        "action": {
+          "type": "apply",
+          "tool": "cable",
+          "target": "air duct"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 22,
+        "action": {
+          "type": "click",
+          "target": "golden key"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 23,
+        "action": {
+          "type": "apply",
+          "tool": "golden key",
+          "target": "administration office door"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 25,
+        "action": {
+          "type": "click",
+          "target": "sprayer"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 26,
+        "action": {
+          "type": "click",
+          "target": "calendary"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 27,
+        "action": {
+          "type": "click",
+          "target": "entrance guard card"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 28,
+        "action": {
+          "type": "apply",
+          "tool": "entrance guard card",
+          "target": "drawer"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 31,
+        "action": {
+          "type": "input",
+          "value": "1040",
+          "target": "wall safe"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 32,
+        "action": {
+          "type": "click",
+          "target": "bronze key"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 34,
+        "action": {
+          "type": "click",
+          "target": "scissors"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 35,
+        "action": {
+          "type": "apply",
+          "tool": "bronze key",
+          "target": "left inner office door"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 37,
+        "action": {
+          "type": "click",
+          "target": "photographic film 2"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 38,
+        "action": {
+          "type": "click",
+          "target": "photographic film 3"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 39,
+        "action": {
+          "type": "click",
+          "target": "ladder"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 40,
+        "action": {
+          "type": "click",
+          "target": "chemical agent"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 42,
+        "action": {
+          "type": "craft",
+          "first": "sprayer",
+          "second": "chemical agent"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 43,
+        "action": {
+          "type": "click",
+          "target": "art knife"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 44,
+        "action": {
+          "type": "click",
+          "target": "electrical cable"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 46,
+        "action": {
+          "type": "apply",
+          "tool": "photographic film",
+          "target": "white board"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 47,
+        "action": {
+          "type": "apply",
+          "tool": "photographic film 2",
+          "target": "white board"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 48,
+        "action": {
+          "type": "apply",
+          "tool": "photographic film 3",
+          "target": "white board"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 49,
+        "action": {
+          "type": "apply",
+          "tool": "art knife",
+          "target": "store room safe"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 50,
+        "action": {
+          "type": "click",
+          "target": "crowbar"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 52,
+        "action": {
+          "type": "apply",
+          "tool": "crowbar",
+          "target": "cracked floor"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 53,
+        "action": {
+          "type": "click",
+          "target": "silver key"
+        }
+      },
+      {
+        "source_step": 41,
+        "cooperative_step": 54,
+        "action": {
+          "type": "click",
+          "target": "code note"
+        }
+      },
+      {
+        "source_step": 42,
+        "cooperative_step": 56,
+        "action": {
+          "type": "input",
+          "value": "3816",
+          "target": "bookshelf safe"
+        }
+      },
+      {
+        "source_step": 43,
+        "cooperative_step": 57,
+        "action": {
+          "type": "click",
+          "target": "fragment"
+        }
+      },
+      {
+        "source_step": 44,
+        "cooperative_step": 58,
+        "action": {
+          "type": "apply",
+          "tool": "fragment",
+          "target": "cart safe"
+        }
+      },
+      {
+        "source_step": 45,
+        "cooperative_step": 59,
+        "action": {
+          "type": "click",
+          "target": "screwdriver"
+        }
+      },
+      {
+        "source_step": 46,
+        "cooperative_step": 60,
+        "action": {
+          "type": "click",
+          "target": "abrasive paper"
+        }
+      },
+      {
+        "source_step": 47,
+        "cooperative_step": 61,
+        "action": {
+          "type": "apply",
+          "tool": "sprayer",
+          "target": "wooden door"
+        }
+      },
+      {
+        "source_step": 48,
+        "cooperative_step": 63,
+        "action": {
+          "type": "apply",
+          "tool": "screwdriver",
+          "target": "photo frame"
+        }
+      },
+      {
+        "source_step": 49,
+        "cooperative_step": 64,
+        "action": {
+          "type": "click",
+          "target": "old photo in frame"
+        }
+      },
+      {
+        "source_step": 50,
+        "cooperative_step": 66,
+        "action": {
+          "type": "input",
+          "value": "1986",
+          "target": "bookshelf safe 2"
+        }
+      },
+      {
+        "source_step": 51,
+        "cooperative_step": 67,
+        "action": {
+          "type": "click",
+          "target": "photographic film 4"
+        }
+      },
+      {
+        "source_step": 52,
+        "cooperative_step": 70,
+        "action": {
+          "type": "apply",
+          "tool": "photographic film 4",
+          "target": "white board"
+        }
+      },
+      {
+        "source_step": 53,
+        "cooperative_step": 71,
+        "action": {
+          "type": "click",
+          "target": "cartridge"
+        }
+      },
+      {
+        "source_step": 54,
+        "cooperative_step": 72,
+        "action": {
+          "type": "click",
+          "target": "control panel"
+        }
+      },
+      {
+        "source_step": 55,
+        "cooperative_step": 74,
+        "action": {
+          "type": "apply",
+          "tool": "silver key",
+          "target": "mailbox"
+        }
+      },
+      {
+        "source_step": 56,
+        "cooperative_step": 75,
+        "action": {
+          "type": "click",
+          "target": "package item"
+        }
+      },
+      {
+        "source_step": 57,
+        "cooperative_step": 76,
+        "action": {
+          "type": "craft",
+          "first": "scissors",
+          "second": "package item"
+        }
+      },
+      {
+        "source_step": 58,
+        "cooperative_step": 77,
+        "action": {
+          "type": "craft",
+          "first": "abrasive paper",
+          "second": "package item"
+        }
+      },
+      {
+        "source_step": 59,
+        "cooperative_step": 79,
+        "action": {
+          "type": "apply",
+          "tool": "cartridge",
+          "target": "printer"
+        }
+      },
+      {
+        "source_step": 60,
+        "cooperative_step": 80,
+        "action": {
+          "type": "click",
+          "target": "printed note"
+        }
+      },
+      {
+        "source_step": 61,
+        "cooperative_step": 82,
+        "action": {
+          "type": "apply",
+          "tool": "control panel",
+          "target": "left bookshelf safe"
+        }
+      },
+      {
+        "source_step": 62,
+        "cooperative_step": 85,
+        "action": {
+          "type": "apply",
+          "tool": "ladder",
+          "target": "groove"
+        }
+      },
+      {
+        "source_step": 63,
+        "cooperative_step": 87,
+        "action": {
+          "type": "apply",
+          "tool": "electrical cable",
+          "target": "camera"
+        }
+      },
+      {
+        "source_step": 64,
+        "cooperative_step": 89,
+        "action": {
+          "type": "apply",
+          "tool": "package item",
+          "target": "large mouse pad"
+        }
+      },
+      {
+        "source_step": 65,
+        "cooperative_step": 91,
+        "action": {
+          "type": "input",
+          "value": "Genshin",
+          "target": "left bookshelf safe"
+        }
+      },
+      {
+        "source_step": 66,
+        "cooperative_step": 95,
+        "action": {
+          "type": "input",
+          "value": "10011001",
+          "target": "left bookshelf safe"
+        }
+      }
+    ]
+  }
+}

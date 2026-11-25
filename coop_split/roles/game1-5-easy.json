@@ -1,0 +1,131 @@
+{
+  "version": "v3",
+  "game": "game1-5-easy",
+  "A": [
+    "initial room",
+    "iron fence close-up",
+    "room on the right",
+    "distribution box close-up",
+    "stair",
+    "the boiler room",
+    "secret office",
+    "the bathroom",
+    "room on the left",
+    "the control room",
+    "the emergency exit",
+    "second floor passage"
+  ],
+  "B": [
+    "the dormitory",
+    "bed close-up",
+    "cabinet close-up"
+  ],
+  "starts": {
+    "B": "the dormitory"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 62,
+    "alone_A": 16,
+    "alone_B": 17,
+    "together_no_give": 33,
+    "with_give": 62,
+    "b_share": 0.32,
+    "handoffs": 11,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 2
+  },
+  "cross_clues": [
+    {
+      "answer": "2451",
+      "target": "combination lock",
+      "target_role": "B",
+      "partner_sources": [
+        "paper 3"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "1991281",
+      "target": "strange lock",
+      "target_role": "B",
+      "partner_sources": [
+        "imprinted photo paper"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "lever",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(lever, power distribution box)"
+    },
+    {
+      "tool": "duct tape",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(duct tape, computer)"
+    },
+    {
+      "tool": "pickable plug",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(pickable plug, computer)"
+    },
+    {
+      "tool": "disk 1",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(disk 1, computer)"
+    },
+    {
+      "tool": "disk 3",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(disk 3, computer)"
+    },
+    {
+      "tool": "wire cutter",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(wire cutter, vent pipe)"
+    },
+    {
+      "tool": "disk 2",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(disk 2, computer)"
+    },
+    {
+      "tool": "film",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(film, film processing toolset)"
+    },
+    {
+      "tool": "blue liquid",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(blue liquid, film processing toolset)"
+    },
+    {
+      "tool": "dynamite + remote detonator",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(remote detonator, dynamite)"
+    },
+    {
+      "tool": "dynamite",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(dynamite, safety door 5)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

@@ -1,0 +1,21 @@
+{
+  "room": "B",
+  "area": "room B",
+  "description": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape.",
+  "areas": [
+    "room B",
+    "toolbox close-up",
+    "dining room and kitchen",
+    "dining table close-up",
+    "cabinet above stove close-up",
+    "left cabinet close-up",
+    "right cabinet close-up",
+    "cabinet above sink close-up",
+    "sink close-up"
+  ],
+  "objects": [],
+  "inventory": [],
+  "messages": [],
+  "own_exit_open": false,
+  "team_success": false
+}

@@ -1,0 +1,2086 @@
+{
+  "schema_version": "0.2",
+  "id": "04_hospital_elevator",
+  "title": "병실과 엘리베이터",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game1-2-easy.yaml",
+      "sha256": "f1bd9224166d0df510d80a4688806246fa5195492191c55618ac3b6d58f10c55"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_1-2.txt",
+      "sha256": "f72622dec0ff3145be0f92ab8358701ed10c100d576a9e7ce9569213904f8c3b"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "hallway",
+    "scenes": [
+      {
+        "name": "hallway",
+        "desc": "You are in a hallway with a blocked path straight ahead, a locked cabinet on the left, and a corridor to the right.",
+        "scene_relations": {
+          "To the blocked path close-up": "blocked path close-up",
+          "To the cabinet close-up": "cabinet close-up",
+          "To the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "blocked path close-up",
+        "desc": "A closer look at the pile of debris blocking the hallway.",
+        "scene_relations": {
+          "Back to the hallway": "hallway"
+        }
+      },
+      {
+        "name": "cabinet close-up",
+        "desc": "A closer look at the locked cabinet on the left wall.",
+        "scene_relations": {
+          "Back to the hallway": "hallway"
+        }
+      },
+      {
+        "name": "hallway right",
+        "desc": "A hallway with doors leading to Room 805, a small locked cabinet on the left, and a large open cabinet on the right. There's also a door leading to another room at the end of the hallway.",
+        "scene_relations": {
+          "To the small cabinet close-up": "small cabinet close-up",
+          "To the large cabinet close-up": "large cabinet close-up",
+          "To the ventilation fan close-up": "ventilation fan close-up",
+          "To the operating room door overview": "operating room door overview",
+          "To the operating room": "operating room",
+          "To room 805 door view": "room 805 door view",
+          "To room 805": "room 805",
+          "To the hallway": "hallway"
+        }
+      },
+      {
+        "name": "small cabinet close-up",
+        "desc": "A closer look at the small cabinet on the left.",
+        "scene_relations": {
+          "Back to the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "large cabinet close-up",
+        "desc": "A closer look at the large cabinet on the right wall. The door is slightly ajar, and it can be opened easily.",
+        "scene_relations": {
+          "Back to the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "room 805 door view",
+        "desc": "There's a door to Room 805.",
+        "scene_relations": {
+          "Back to the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "ventilation fan close-up",
+        "desc": "A closer look at the ventilation fan at the end of the hallway.",
+        "scene_relations": {
+          "Back to the hallway right": "hallway right",
+          "To the elevator room": "elevator room"
+        }
+      },
+      {
+        "name": "elevator room",
+        "desc": "You are now inside the elevator room. There's an elevator and a piece of paper with a code on it.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the ventilation fan close-up": "ventilation fan close-up",
+          "To the elevator interior": "elevator interior"
+        }
+      },
+      {
+        "name": "elevator interior",
+        "desc": "You are inside the elevator. There's a control panel with an exposed circuit board.",
+        "scene_relations": {
+          "Back to the elevator room": "elevator room"
+        }
+      },
+      {
+        "name": "operating room door overview",
+        "desc": "A door at the end of the hallway.",
+        "scene_relations": {
+          "Back to the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "room 805",
+        "desc": "You are inside room 805. There is a desk, a left bookshelf, a right bookshelf, a bed, and a bedside table.",
+        "visible": false,
+        "scene_relations": {
+          "To the desk close-up": "desk close-up",
+          "To the left bookshelf close-up": "left bookshelf close-up",
+          "To the right bookshelf close-up": "right bookshelf close-up",
+          "To the bedside table close-up": "bedside table close-up",
+          "To the right part of the room": "805 right room",
+          "To the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "desk close-up",
+        "desc": "A close-up view of the desk.",
+        "scene_relations": {
+          "Back to the room 805": "room 805"
+        }
+      },
+      {
+        "name": "left bookshelf close-up",
+        "desc": "A closer look at the left bookshelf.",
+        "scene_relations": {
+          "Back to room 805": "room 805"
+        }
+      },
+      {
+        "name": "bedside table close-up",
+        "desc": "A close-up view of the bedside table.",
+        "scene_relations": {
+          "Back to room 805": "room 805"
+        }
+      },
+      {
+        "name": "right bookshelf close-up",
+        "desc": "A closer look at the right bookshelf.",
+        "scene_relations": {
+          "Back to room 805": "room 805"
+        }
+      },
+      {
+        "name": "805 right room",
+        "desc": "You are in the right part of room 805. There is a TV cabinet, a globe, and two paintings on the wall.",
+        "scene_relations": {
+          "Back to the room 805": "room 805"
+        }
+      },
+      {
+        "name": "operating room",
+        "desc": "You are inside the operating room. There is a surgical table, a cabinet on the left, and a human anatomy poster on the wall.",
+        "visible": false,
+        "scene_relations": {
+          "To the surgical table close-up": "surgical table close-up",
+          "To the cabinet close-up": "operating room cabinet close-up",
+          "To the anatomy poster close-up": "anatomy poster close-up",
+          "To the hallway right": "hallway right"
+        }
+      },
+      {
+        "name": "surgical table close-up",
+        "desc": "A close-up view of the surgical table. There is a key hidden somewhere on the table.",
+        "scene_relations": {
+          "Back to the operating room": "operating room"
+        }
+      },
+      {
+        "name": "operating room cabinet close-up",
+        "desc": "A closer look at the cabinet. There are two sections, the upper and lower parts, containing various medical items.",
+        "scene_relations": {
+          "Back to the operating room": "operating room",
+          "To the upper cabinet": "upper cabinet close-up",
+          "To the lower cabinet": "lower cabinet close-up"
+        }
+      },
+      {
+        "name": "upper cabinet close-up",
+        "desc": "A closer look at the upper section of the cabinet. There are medical items and a piece of paper.",
+        "scene_relations": {
+          "Back to the operating room cabinet close-up": "operating room cabinet close-up"
+        }
+      },
+      {
+        "name": "lower cabinet close-up",
+        "desc": "A closer look at the lower section of the cabinet.",
+        "scene_relations": {
+          "Back to the operating room cabinet close-up": "operating room cabinet close-up"
+        }
+      },
+      {
+        "name": "anatomy poster close-up",
+        "desc": "A closer look at the anatomy poster.",
+        "scene_relations": {
+          "Back to the operating room": "operating room"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "hallway",
+      "room": "A",
+      "desc": "You are in a hallway with a blocked path straight ahead, a locked cabinet on the left, and a corridor to the right.",
+      "visible": true,
+      "source_scene": "hallway"
+    },
+    {
+      "name": "blocked path close-up",
+      "room": "B",
+      "desc": "A closer look at the pile of debris blocking the hallway.",
+      "visible": true,
+      "source_scene": "blocked path close-up"
+    },
+    {
+      "name": "cabinet close-up",
+      "room": "A",
+      "desc": "A closer look at the locked cabinet on the left wall.",
+      "visible": true,
+      "source_scene": "cabinet close-up"
+    },
+    {
+      "name": "hallway right",
+      "room": "A",
+      "desc": "A hallway with doors leading to Room 805, a small locked cabinet on the left, and a large open cabinet on the right. There's also a door leading to another room at the end of the hallway.",
+      "visible": true,
+      "source_scene": "hallway right"
+    },
+    {
+      "name": "small cabinet close-up",
+      "room": "B",
+      "desc": "A closer look at the small cabinet on the left.",
+      "visible": true,
+      "source_scene": "small cabinet close-up"
+    },
+    {
+      "name": "large cabinet close-up",
+      "room": "B",
+      "desc": "A closer look at the large cabinet on the right wall. The door is slightly ajar, and it can be opened easily.",
+      "visible": true,
+      "source_scene": "large cabinet close-up"
+    },
+    {
+      "name": "room 805 door view",
+      "room": "A",
+      "desc": "There's a door to Room 805.",
+      "visible": true,
+      "source_scene": "room 805 door view"
+    },
+    {
+      "name": "ventilation fan close-up",
+      "room": "A",
+      "desc": "A closer look at the ventilation fan at the end of the hallway.",
+      "visible": true,
+      "source_scene": "ventilation fan close-up"
+    },
+    {
+      "name": "elevator room",
+      "room": "B",
+      "desc": "You are now inside the elevator room. There's an elevator and a piece of paper with a code on it.",
+      "visible": false,
+      "source_scene": "elevator room"
+    },
+    {
+      "name": "elevator interior",
+      "room": "B",
+      "desc": "You are inside the elevator. There's a control panel with an exposed circuit board.",
+      "visible": true,
+      "source_scene": "elevator interior"
+    },
+    {
+      "name": "operating room door overview",
+      "room": "A",
+      "desc": "A door at the end of the hallway.",
+      "visible": true,
+      "source_scene": "operating room door overview"
+    },
+    {
+      "name": "room 805",
+      "room": "A",
+      "desc": "You are inside room 805. There is a desk, a left bookshelf, a right bookshelf, a bed, and a bedside table.",
+      "visible": false,
+      "source_scene": "room 805"
+    },
+    {
+      "name": "desk close-up",
+      "room": "B",
+      "desc": "A close-up view of the desk.",
+      "visible": true,
+      "source_scene": "desk close-up"
+    },
+    {
+      "name": "left bookshelf close-up",
+      "room": "A",
+      "desc": "A closer look at the left bookshelf.",
+      "visible": true,
+      "source_scene": "left bookshelf close-up"
+    },
+    {
+      "name": "bedside table close-up",
+      "room": "A",
+      "desc": "A close-up view of the bedside table.",
+      "visible": true,
+      "source_scene": "bedside table close-up"
+    },
+    {
+      "name": "right bookshelf close-up",
+      "room": "A",
+      "desc": "A closer look at the right bookshelf.",
+      "visible": true,
+      "source_scene": "right bookshelf close-up"
+    },
+    {
+      "name": "805 right room",
+      "room": "B",
+      "desc": "You are in the right part of room 805. There is a TV cabinet, a globe, and two paintings on the wall.",
+      "visible": true,
+      "source_scene": "805 right room"
+    },
+    {
+      "name": "operating room",
+      "room": "A",
+      "desc": "You are inside the operating room. There is a surgical table, a cabinet on the left, and a human anatomy poster on the wall.",
+      "visible": false,
+      "source_scene": "operating room"
+    },
+    {
+      "name": "surgical table close-up",
+      "room": "B",
+      "desc": "A close-up view of the surgical table. There is a key hidden somewhere on the table.",
+      "visible": true,
+      "source_scene": "surgical table close-up"
+    },
+    {
+      "name": "operating room cabinet close-up",
+      "room": "A",
+      "desc": "A closer look at the cabinet. There are two sections, the upper and lower parts, containing various medical items.",
+      "visible": true,
+      "source_scene": "operating room cabinet close-up"
+    },
+    {
+      "name": "upper cabinet close-up",
+      "room": "B",
+      "desc": "A closer look at the upper section of the cabinet. There are medical items and a piece of paper.",
+      "visible": true,
+      "source_scene": "upper cabinet close-up"
+    },
+    {
+      "name": "lower cabinet close-up",
+      "room": "A",
+      "desc": "A closer look at the lower section of the cabinet.",
+      "visible": true,
+      "source_scene": "lower cabinet close-up"
+    },
+    {
+      "name": "anatomy poster close-up",
+      "room": "A",
+      "desc": "A closer look at the anatomy poster.",
+      "visible": true,
+      "source_scene": "anatomy poster close-up"
+    }
+  ],
+  "entities": [
+    {
+      "name": "drawer without lock",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The drawer is closed but not locked. You need simply interact with it to open it.",
+          "neg_reward": "It might be worth opening the drawer to find something useful.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now open, the book inside seems have a piece of paper hidden in it. You should click to interact with it to pick it up.",
+          "neg_reward": "You need to further interact by click the paper to pick it up.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, paper1, True",
+                "change_interact, False",
+                "change_state, 2"
+              ],
+              "reward": "You've found a piece of paper with a code on it."
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "blocked path close-up",
+      "position": "Bottom left corner of the debris",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "blocked path close-up",
+        "kind": "item",
+        "name": "drawer without lock",
+        "logic_sha256": "e759758e2c924dfb35cd8f34bdc5941810bd6d5da6b28356962e018c8cca6783"
+      }
+    },
+    {
+      "name": "paper1",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A piece of paper with the a code written on it.",
+          "apply_to": [
+            "drawer with code lock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "blocked path close-up",
+      "position": "Inside the drawer",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "blocked path close-up",
+        "kind": "tool",
+        "name": "paper1",
+        "logic_sha256": "40d2d854a58c035cb70f0f9b84eb235a0b2bff1b1da0ea6f081529c601eac663"
+      }
+    },
+    {
+      "name": "padlock",
+      "states": [
+        {
+          "desc": "A sturdy padlock secures the cabinet. But seems jamed and rusty inside, shuold be lubricated in order to use.",
+          "neg_reward": "The padlock is jammed. You need to apply something to loosen it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, lubricant"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The padlock is lubricated and now can be unlocked with a key.",
+          "neg_reward": "The padlock is lubricated. You could normally unlocked it with a matched key.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, small key"
+              ],
+              "trigger": [
+                "change_state, 2"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The padlock is now unlocked, but the cabinet is still closed. You need to further interact by click the cabinet door to open it.",
+          "neg_reward": "Simply interact with the cabinet door to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 3"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The cabinet is now open, revealing a tons of clothes inside, but seems something is hidden in the clothes.",
+          "neg_reward": "You need to further interact by click the clothes to find something useful.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, ladder, True",
+                "change_interact, False",
+                "change_state, 4"
+              ],
+              "reward": "You've found a ladder hidden in the clothes."
+            }
+          ]
+        },
+        {
+          "desc": "The cabinet is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cabinet close-up",
+      "position": "On the cabinet door",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "cabinet close-up",
+        "kind": "item",
+        "name": "padlock",
+        "logic_sha256": "f4145ecdf1ddbc34b04d181286c81c76a11a9f2f46d57ced0697a7a0a9fe6c51"
+      }
+    },
+    {
+      "name": "ladder",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A sturdy ladder that can be used to reach high places.",
+          "apply_to": [
+            "ventilation fan"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cabinet close-up",
+      "position": "Inside the cabinet",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "cabinet close-up",
+        "kind": "tool",
+        "name": "ladder",
+        "logic_sha256": "75ca4e85ad2443f16637b8234182a27f90fd420e814d394f994b7203e5228dfe"
+      }
+    },
+    {
+      "name": "small cabinet door",
+      "states": [
+        {
+          "desc": "The small cabinet is missing a handle and cannot be opened.",
+          "neg_reward": "It looks like you have to first ensemble a handle to open the cabinet.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, door handle"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The small cabinet is now unlocked and can be opened. You need to further interact by click the cabinet door to open it.",
+          "neg_reward": "Simply interact with the cabinet door to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_visible, tool, paper4, True",
+                "change_interact, False"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The small cabinet is open. There is a piece of paper inside."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "small cabinet close-up",
+      "position": "On the cabinet door",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "small cabinet close-up",
+        "kind": "item",
+        "name": "small cabinet door",
+        "logic_sha256": "0da7a99d6652e5c2c3a676efea9068fb0ac6311f84f4da4aef793026b4956e08"
+      }
+    },
+    {
+      "name": "paper4",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A piece of paper with a code on it (paper4).",
+          "apply_to": [
+            "drawer with code lock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "small cabinet close-up",
+      "position": "Inside the small cabinet",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "small cabinet close-up",
+        "kind": "tool",
+        "name": "paper4",
+        "logic_sha256": "29f14a2ce4543fb09abd897316b26bdb254ad0e68d17acc5a7a5f29dbc3af413"
+      }
+    },
+    {
+      "name": "large cabinet door",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The large cabinet door is slightly ajar. You can open it by simply interacting with it.",
+          "neg_reward": "The cabinet looks like it can be opened easily by simply interacting with it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, key for room 805, True"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The large cabinet is now fully open, revealing something inside."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "large cabinet close-up",
+      "position": "On the cabinet door",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "large cabinet close-up",
+        "kind": "item",
+        "name": "large cabinet door",
+        "logic_sha256": "0ebcb6a60346ebf8504ed8810bbc5b3cc3e68ddd6366a37dba029d48b0f91730"
+      }
+    },
+    {
+      "name": "key for room 805",
+      "visible": false,
+      "states": [
+        {
+          "desc": "There's a key inside the cabinet, labeled \"Room 805\"",
+          "apply_to": [
+            "room 805 door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "large cabinet close-up",
+      "position": "Inside the large cabinet",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "large cabinet close-up",
+        "kind": "tool",
+        "name": "key for room 805",
+        "logic_sha256": "0e20ed160fe41a93fc04c447829bc752da76cc4981f3d39c2a8d85f71ba6c3e4"
+      }
+    },
+    {
+      "name": "room 805 door",
+      "states": [
+        {
+          "desc": "The door to Room 805 is locked, with a keyhole.",
+          "neg_reward": "The door won't open. It seems to be locked.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key for room 805"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The door to Room 805 is now unlocked and can be opened. You need to further interact by click the door to open it.",
+          "neg_reward": "Simply interact with the door to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, scene, room 805, True",
+                "change_interact, False",
+                "change_state, 2"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The door to Room 805 is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "room 805 door view",
+      "position": "On the door",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "room 805 door view",
+        "kind": "item",
+        "name": "room 805 door",
+        "logic_sha256": "2f1997f46b5f74add759d07599f0ad23528c886bd42a0aeb1e8c970bb5acb79f"
+      }
+    },
+    {
+      "name": "ventilation fan",
+      "states": [
+        {
+          "desc": "A ventilation fan is mounted on the wall, it's too high to reach directly.",
+          "neg_reward": "The fan is mounted too high. You need something to reach it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, ladder"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "You can now reach the ventilation fan using the ladder.",
+          "neg_reward": "You can simply interact with the ventilation fan now to get something.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, scene, elevator room, True",
+                "change_interact, False",
+                "change_state, 2"
+              ]
+            }
+          ],
+          "reward": "You've used the ladder and discovered a new area, the elevator room."
+        },
+        {
+          "desc": "The ventilation fan is now accessible."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "ventilation fan close-up",
+      "position": "On the wall",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "ventilation fan close-up",
+        "kind": "item",
+        "name": "ventilation fan",
+        "logic_sha256": "ae3d466e7c668fb161ab39c52e4d0a2922ef85dc96eb6069866218de20c89281"
+      }
+    },
+    {
+      "name": "paper with code",
+      "states": [
+        {
+          "desc": "A piece of paper with the code \"1121 = \" written on it, seems like part of a code for math solving.",
+          "neg_reward": "You cannot bring it with you, but could use it as a hint later."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "elevator room",
+      "position": "On the floor",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "elevator room",
+        "kind": "item",
+        "name": "paper with code",
+        "logic_sha256": "03048781f534c2f37a5b99c3eee3629d0f35069319297372d3adcdecb96bde22"
+      }
+    },
+    {
+      "name": "circuit board",
+      "states": [
+        {
+          "desc": "An exposed circuit board that is broken. It seems like you might need a electrical tool to fix it.",
+          "neg_reward": "The circuit board is exposed and need a tool to fix it before you can use the elevator.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, electric drill"
+              ],
+              "trigger": [
+                "change_interact, False",
+                "finish_team"
+              ],
+              "reward": "Congratulations! You've fixed the elevator and completed the game. GAME END!"
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "elevator interior",
+      "position": "On the control panel",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "elevator interior",
+        "kind": "item",
+        "name": "circuit board",
+        "logic_sha256": "f915ba98d8a8ca3691980e7382cb2e432e64a56e5cd3a51627cd1b1211d82b48"
+      }
+    },
+    {
+      "name": "operating room door",
+      "states": [
+        {
+          "desc": "The door is locked and won't open. There's a card reader next to it.",
+          "neg_reward": "The door is tightly locked, and might need a card to slide in the card reader for authorization.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, keycard"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, operating room, True",
+                "change_interact, False"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The door is now unlocked. You can enter."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "operating room door overview",
+      "position": "At end of the hallway",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "operating room door overview",
+        "kind": "item",
+        "name": "operating room door",
+        "logic_sha256": "fca40ffeb84fb155100f448d9af54101d8294c38c98ee6aa051bb74bcf070007"
+      }
+    },
+    {
+      "name": "drawer with code lock",
+      "states": [
+        {
+          "desc": "The drawer is locked with a 12-character code lock. It can only be opened after filling in multiple paper codes.",
+          "neg_reward": "You need to apply all four paper codes to open the drawer.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, paper1",
+                "apply, paper2",
+                "apply, paper3",
+                "apply, paper4"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now unlocked.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, lubricant, True",
+                "change_interact, False",
+                "change_state, 2"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now open, revealing a lubricant bottle inside."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "desk close-up",
+      "position": "Under the desk",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "desk close-up",
+        "kind": "item",
+        "name": "drawer with code lock",
+        "logic_sha256": "d82d847bb53167e84ae06d837419a49a1ad1257a337f751bb21ee6a2d7df053a"
+      }
+    },
+    {
+      "name": "lubricant",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A bottle of lubricant, useful to lubricate and loose rusty things.",
+          "apply_to": [
+            "padlock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "desk close-up",
+      "position": "Inside the drawer",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "desk close-up",
+        "kind": "tool",
+        "name": "lubricant",
+        "logic_sha256": "7588af68cc98fa00327739f7ad5f0684fd3c95430ac0b50786c7cc91191be71a"
+      }
+    },
+    {
+      "name": "book1",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "Book1 is in the default state (placed in).",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, book4, True"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "Book1 is pulled out."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left bookshelf close-up",
+      "position": "On the bookshelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "left bookshelf close-up",
+        "kind": "item",
+        "name": "book1",
+        "logic_sha256": "13330983f7e83d6206b607841f4757b0fe92c8c21ec69d44925fc7907be18be6"
+      }
+    },
+    {
+      "name": "book2",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "Book2 is in the default state (placed in).",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, book3, True"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "Book2 is pulled out."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left bookshelf close-up",
+      "position": "On the bookshelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "left bookshelf close-up",
+        "kind": "item",
+        "name": "book2",
+        "logic_sha256": "a1d28a8e79c744f19b2396dc7fc227d6f0ad152e56e6e156be53dfb34b72ddfc"
+      }
+    },
+    {
+      "name": "book3",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "Book3 is in the default state (placed in).",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, book5, True"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "Book3 is pulled out."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left bookshelf close-up",
+      "position": "On the bookshelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "left bookshelf close-up",
+        "kind": "item",
+        "name": "book3",
+        "logic_sha256": "d0915b0fb9c51ee7486ba809e5bd448b2244b3f16a5d4b856eed35d7468612b9"
+      }
+    },
+    {
+      "name": "book4",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "Book4 is in the default state (placed in).",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, book2, True"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "Book4 is pulled out."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left bookshelf close-up",
+      "position": "On the bookshelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "left bookshelf close-up",
+        "kind": "item",
+        "name": "book4",
+        "logic_sha256": "e170ddfa7fe7a7b5dcb067fec180c92b6de04dff8cc8e7ae2417f2e2d8fd43f3"
+      }
+    },
+    {
+      "name": "book5",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "Book5 is in the default state (placed in).",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, keycard, True",
+                "change_interact, False",
+                "change_interact, item, book4, False",
+                "change_interact, item, book3, False",
+                "change_interact, item, book2, False",
+                "change_interact, item, book1, False"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "Book5 is pulled out. Something hidden is revealed on the shelf"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "left bookshelf close-up",
+      "position": "On the bookshelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "left bookshelf close-up",
+        "kind": "item",
+        "name": "book5",
+        "logic_sha256": "f9a958e895ae58806103ba2d7d284ee76f40f689de6e1d69b18b9a94500796ac"
+      }
+    },
+    {
+      "name": "keycard",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A keycard with name \"Dr. Smith\" on it, might be used for authorization.",
+          "apply_to": [
+            "operating room door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "left bookshelf close-up",
+      "position": "On the bookshelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "left bookshelf close-up",
+        "kind": "tool",
+        "name": "keycard",
+        "logic_sha256": "618ade897cb24bf0bfb429ee592ccbf914106e3bad9117058dc6002452fc9baa"
+      }
+    },
+    {
+      "name": "bedside drawer",
+      "states": [
+        {
+          "desc": "The drawer is locked with a 3-digit code lock.",
+          "neg_reward": "You need to input the correct 3-digit code to open it. Try to use 3-digit hint you got.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 150"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now unlocked, some books covered a piece of paper.",
+          "neg_reward": "You need to simply interact to retrieve the paper.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, paper2, True",
+                "change_interact, False",
+                "change_state, 2"
+              ],
+              "reward": "You've found a piece of paper with part of the code on it."
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bedside table close-up",
+      "position": "Beside the bed",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "bedside table close-up",
+        "kind": "item",
+        "name": "bedside drawer",
+        "logic_sha256": "bb7e3046b9e32055a977a3986fa57bf39e33af8eaad29126d7a528f68677d90c"
+      }
+    },
+    {
+      "name": "paper2",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A piece of paper with part of the code on it.",
+          "apply_to": [
+            "drawer with code lock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bedside table close-up",
+      "position": "Inside the drawer",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "bedside table close-up",
+        "kind": "tool",
+        "name": "paper2",
+        "logic_sha256": "4fe0f476426de86e2596fca3e1f263a8838b4b62152964a2f282a27face6b6b8"
+      }
+    },
+    {
+      "name": "battery",
+      "states": [
+        {
+          "desc": "A battery with power and still usable.",
+          "apply_to": [
+            "unfunctional drill"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "right bookshelf close-up",
+      "position": "On the shelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "right bookshelf close-up",
+        "kind": "tool",
+        "name": "battery",
+        "logic_sha256": "7ba181a2a6c3bf753be0080a88e09267e3bb284e80b3975a816c0bd26f57356c"
+      }
+    },
+    {
+      "name": "painting2",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A painting showing the number \"150\" in bold.",
+          "neg_reward": "It could be a hint for something."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "805 right room",
+      "position": "Left wall",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "805 right room",
+        "kind": "item",
+        "name": "painting2",
+        "logic_sha256": "5fd2d57e5d6ec7c56ba4956024cecfddb565c40a3f4bf10995058929140298b5"
+      }
+    },
+    {
+      "name": "drill bit",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A drill bit that seems could be ensemble with something else.",
+          "apply_to": [
+            "unfunctional drill"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "805 right room",
+      "position": "On top of the TV cabinet",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "805 right room",
+        "kind": "tool",
+        "name": "drill bit",
+        "logic_sha256": "2bc0fd43234c2c10bb0000447cee0c957d940a3e116b198beb4d4e51ca7b9eb1"
+      }
+    },
+    {
+      "name": "small key",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A small key with a tag writes \"lock\" on it.",
+          "apply_to": [
+            "padlock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "surgical table close-up",
+      "position": "On the surgical table",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "surgical table close-up",
+        "kind": "tool",
+        "name": "small key",
+        "logic_sha256": "2b34b23b57a7960667e37ad49512657f91cdde95f45f580740cc5f751276e9d7"
+      }
+    },
+    {
+      "name": "paper3",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A piece of paper with some code on it.",
+          "apply_to": [
+            "drawer with code lock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "upper cabinet close-up",
+      "position": "On the shelf",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "upper cabinet close-up",
+        "kind": "tool",
+        "name": "paper3",
+        "logic_sha256": "0df9a48474b8f71c9e9e1d1a9fe9f29d08edfdbd686c40c568553175c98b9db9"
+      }
+    },
+    {
+      "name": "locked drawer",
+      "states": [
+        {
+          "desc": "The drawer is locked and requires a math code to open. The equation is 8 4 6 = 6 7 4. You need to solve it by filling in 3 basic operations (+, -, *) in the space. For example, format should be like 8-4*6=6+7*4, but this is wrong as both sides are not equal.",
+          "neg_reward": "The drawer won't open until you enter the correct operation (hint - only +, -, * are used).",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 8*4+6=6*7-4"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now unlocked, revealing something inside. You have to click to interact with it.",
+          "neg_reward": "You need to further interact by click the item to pick it up.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, item, drawer contents, True",
+                "change_interact, False",
+                "change_state, 2"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "lower cabinet close-up",
+      "position": "Bottom drawer",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "lower cabinet close-up",
+        "kind": "item",
+        "name": "locked drawer",
+        "logic_sha256": "15b5e30e8f1cc78aaba165267ddd7e3a3634f5d33d9354fad6eeef265f143cbf"
+      }
+    },
+    {
+      "name": "drawer contents",
+      "visible": false,
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A paper piece that writes '1212 +', seems like part of a hint"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "lower cabinet close-up",
+      "position": "Inside the bottom drawer",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "lower cabinet close-up",
+        "kind": "item",
+        "name": "drawer contents",
+        "logic_sha256": "87c21718fc27ba9b437044abe0f1d4a8a1bcf92da66ddd7b8f4fae2f3278a7e5"
+      }
+    },
+    {
+      "name": "door handle",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A handle that could be used to open some kind of door.",
+          "apply_to": [
+            "small cabinet door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "lower cabinet close-up",
+      "position": "Upper drawer",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "lower cabinet close-up",
+        "kind": "tool",
+        "name": "door handle",
+        "logic_sha256": "7d0a988a6cf3c53b24ca2814765f6d941767ee9eebb4bdc410b33e487bc98c83"
+      }
+    },
+    {
+      "name": "safe",
+      "states": [
+        {
+          "desc": "A locked safe is hidden behind the poster. It requires a 4-digit code to open.",
+          "neg_reward": "The safe is locked. You shuold find two parts of the hints about a math equation, and solve it to get the code.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 2333"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The safe is now unlocked, revealing something inside. You need to click to interact with it.",
+          "neg_reward": "You need to further interact by click the item to pick it up.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, item, unfunctional drill, True",
+                "change_interact, False",
+                "change_state, 2"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The safe is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "anatomy poster close-up",
+      "position": "Behind the poster",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "anatomy poster close-up",
+        "kind": "item",
+        "name": "safe",
+        "logic_sha256": "4b146952f9e9becbd33c1480f3b64d4266390b30c5a35d76d63b772863e0407f"
+      }
+    },
+    {
+      "name": "unfunctional drill",
+      "visible": false,
+      "interactable": true,
+      "states": [
+        {
+          "desc": "An electric drill is inside the safe. It's currently out of power.",
+          "neg_reward": "You need to first power it on.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, battery"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "The electric drill is now powered on but still lacks a head to function properly.",
+          "neg_reward": "You need to ensemble the head of this drill to make it functional.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, drill bit"
+              ],
+              "trigger": [
+                "become_tool, electric drill",
+                "change_visible, False"
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "anatomy poster close-up",
+      "position": "Inside the safe",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "anatomy poster close-up",
+        "kind": "item",
+        "name": "unfunctional drill",
+        "logic_sha256": "470355400ac71423fc2aabe49a7232a9d3d6a42d0a73b9e976f7597005afc860"
+      }
+    },
+    {
+      "name": "electric drill",
+      "visible": false,
+      "states": [
+        {
+          "desc": "The electric drill is now fully assembled and ready to fix things.",
+          "apply_to": [
+            "circuit board"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "anatomy poster close-up",
+      "position": "Inside the safe",
+      "source": {
+        "file": "game1-2-easy.yaml",
+        "scene": "anatomy poster close-up",
+        "kind": "tool",
+        "name": "electric drill",
+        "logic_sha256": "24a7fd0d9e9b532a989e54aa8dd20077a0be97cc6f2fb599c4e4d1878ef915a6"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "painting2",
+        "target_entity": "bedside drawer",
+        "accepted_input": "150",
+        "evidence_text": [
+          "150"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I03",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "paper with code",
+        "target_entity": "safe",
+        "accepted_input": "2333",
+        "evidence_text": [
+          "1121 ="
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I02",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "locked drawer",
+        "target_entity": "locked drawer",
+        "accepted_input": "8*4+6=6*7-4",
+        "evidence_text": [
+          "8 4 6 = 6 7 4"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "drawer contents",
+        "target_entity": "safe",
+        "accepted_input": "2333",
+        "evidence_text": [
+          "1212 +"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "key for room 805",
+        "sender": "B",
+        "receiver": "A",
+        "target": "room 805 door"
+      },
+      {
+        "id": "O02",
+        "object": "door handle",
+        "sender": "A",
+        "receiver": "B",
+        "target": "small cabinet door"
+      },
+      {
+        "id": "O03",
+        "object": "paper2",
+        "sender": "A",
+        "receiver": "B",
+        "target": "drawer with code lock"
+      },
+      {
+        "id": "O04",
+        "object": "lubricant",
+        "sender": "B",
+        "receiver": "A",
+        "target": "padlock"
+      },
+      {
+        "id": "O05",
+        "object": "small key",
+        "sender": "B",
+        "receiver": "A",
+        "target": "padlock"
+      },
+      {
+        "id": "O06",
+        "object": "drill bit",
+        "sender": "B",
+        "receiver": "A",
+        "target": "unfunctional drill"
+      },
+      {
+        "id": "O07",
+        "object": "electric drill",
+        "sender": "A",
+        "receiver": "B",
+        "target": "circuit board"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "circuit board",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [
+    {
+      "entity": "ventilation fan",
+      "state": 1,
+      "transition": 0,
+      "trigger": "change_visible, scene, elevator room, True",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    }
+  ],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 34,
+    "retained_entities": 34,
+    "source_scenes": 23,
+    "retained_scenes": 23,
+    "source_key_actions": 45,
+    "replayed_source_key_actions": 45,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "drawer without lock"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 3,
+        "action": {
+          "type": "click",
+          "target": "drawer without lock"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 4,
+        "action": {
+          "type": "click",
+          "target": "paper1"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 6,
+        "action": {
+          "type": "click",
+          "target": "large cabinet door"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 7,
+        "action": {
+          "type": "click",
+          "target": "key for room 805"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 10,
+        "action": {
+          "type": "apply",
+          "tool": "key for room 805",
+          "target": "room 805 door"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 11,
+        "action": {
+          "type": "click",
+          "target": "room 805 door"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 13,
+        "action": {
+          "type": "click",
+          "target": "drill bit"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 15,
+        "action": {
+          "type": "click",
+          "target": "book1"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 16,
+        "action": {
+          "type": "click",
+          "target": "book4"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 17,
+        "action": {
+          "type": "click",
+          "target": "book2"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 18,
+        "action": {
+          "type": "click",
+          "target": "book3"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 19,
+        "action": {
+          "type": "click",
+          "target": "book5"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 20,
+        "action": {
+          "type": "click",
+          "target": "keycard"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 22,
+        "action": {
+          "type": "click",
+          "target": "battery"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 25,
+        "action": {
+          "type": "input",
+          "value": "150",
+          "target": "bedside drawer"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 26,
+        "action": {
+          "type": "click",
+          "target": "bedside drawer"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 27,
+        "action": {
+          "type": "click",
+          "target": "paper2"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 29,
+        "action": {
+          "type": "apply",
+          "tool": "keycard",
+          "target": "operating room door"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 31,
+        "action": {
+          "type": "click",
+          "target": "small key"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 33,
+        "action": {
+          "type": "click",
+          "target": "paper3"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 35,
+        "action": {
+          "type": "click",
+          "target": "door handle"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 36,
+        "action": {
+          "type": "input",
+          "value": "8*4+6=6*7-4",
+          "target": "locked drawer"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 37,
+        "action": {
+          "type": "click",
+          "target": "locked drawer"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 40,
+        "action": {
+          "type": "apply",
+          "tool": "door handle",
+          "target": "small cabinet door"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 41,
+        "action": {
+          "type": "click",
+          "target": "small cabinet door"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 42,
+        "action": {
+          "type": "click",
+          "target": "paper4"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 44,
+        "action": {
+          "type": "apply",
+          "tool": "paper1",
+          "target": "drawer with code lock"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 46,
+        "action": {
+          "type": "apply",
+          "tool": "paper2",
+          "target": "drawer with code lock"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 47,
+        "action": {
+          "type": "apply",
+          "tool": "paper3",
+          "target": "drawer with code lock"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 48,
+        "action": {
+          "type": "apply",
+          "tool": "paper4",
+          "target": "drawer with code lock"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 49,
+        "action": {
+          "type": "click",
+          "target": "drawer with code lock"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 50,
+        "action": {
+          "type": "click",
+          "target": "lubricant"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 53,
+        "action": {
+          "type": "apply",
+          "tool": "lubricant",
+          "target": "padlock"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 55,
+        "action": {
+          "type": "apply",
+          "tool": "small key",
+          "target": "padlock"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 56,
+        "action": {
+          "type": "click",
+          "target": "padlock"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 57,
+        "action": {
+          "type": "click",
+          "target": "padlock"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 58,
+        "action": {
+          "type": "click",
+          "target": "ladder"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 60,
+        "action": {
+          "type": "apply",
+          "tool": "ladder",
+          "target": "ventilation fan"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 61,
+        "action": {
+          "type": "click",
+          "target": "ventilation fan"
+        }
+      },
+      {
+        "source_step": 41,
+        "cooperative_step": 66,
+        "action": {
+          "type": "input",
+          "value": "2333",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 42,
+        "cooperative_step": 67,
+        "action": {
+          "type": "click",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 43,
+        "cooperative_step": 68,
+        "action": {
+          "type": "apply",
+          "tool": "battery",
+          "target": "unfunctional drill"
+        }
+      },
+      {
+        "source_step": 44,
+        "cooperative_step": 70,
+        "action": {
+          "type": "apply",
+          "tool": "drill bit",
+          "target": "unfunctional drill"
+        }
+      },
+      {
+        "source_step": 45,
+        "cooperative_step": 73,
+        "action": {
+          "type": "apply",
+          "tool": "electric drill",
+          "target": "circuit board"
+        }
+      }
+    ]
+  }
+}

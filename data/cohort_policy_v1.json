@@ -1,0 +1,115 @@
+{
+  "version": "cohort-policy-v1",
+  "basis": "Observed-clue structural review, 2026-11-19. Candidate classification, not model performance. Frozen role split v3.",
+  "primary_tier": "core",
+  "games": {
+    "game1-1-easy": {
+      "tier": "core",
+      "cooperation_type": "양방향 정보·도구 연쇄",
+      "reason": "A의 거울 조각을 B가 사용해 코드 획득 → A 도구상자; A의 램프/벽 단서 → B 금고 → A 출구. 정답을 아는 우회 검사의 경고만으로 제외하면 안 됨.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 5,
+      "reference_total": 40,
+      "blocked_without_messages": 13
+    },
+    "game1-2-easy": {
+      "tier": "extended",
+      "cooperation_type": "도구 조립·부분 정보 결합",
+      "reason": "B 출입증 → A 수술실; A 종이 조각 → B 서랍; B 부품 → A 드릴 → B 엘리베이터. 금고 계산 단서도 양쪽에 분산. 23장면과 B의 두 구역 때문에 탐색 부담 큼.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 12,
+      "reference_total": 45,
+      "blocked_without_messages": 5
+    },
+    "game1-3-easy": {
+      "tier": "negative_control",
+      "cooperation_type": "협업이 거의 없는 단일 최종 전달",
+      "reason": "교차 암호 없음. B가 당구장 경로를 풀고 마지막 카드만 A에 전달 가능. 현재 분할의 B 시작이 A의 진입 준비 경로를 무력화함.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 26,
+      "reference_total": 38,
+      "blocked_without_messages": 0
+    },
+    "game1-4-easy": {
+      "tier": "excluded",
+      "cooperation_type": "원본 단서 순환 의존",
+      "reason": "7049 금고 → buttons → cabinet → chisel → ice → swipe card → front door의 7049. 원본/분할 모두 관측 단서 검사 실패. 원본 자체의 수정과 별도 버전이 필요함.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 13,
+      "reference_total": 64,
+      "blocked_without_messages": 0
+    },
+    "game1-5-easy": {
+      "tier": "extended",
+      "cooperation_type": "자료 처리 후 결과 반환",
+      "reason": "B 필름/약품 → A 현상 → B 암호; B 도구·디스크 → A 장치. 역할 면적 12 대 3장면, B 원본 행동 몫 약32%. 긴 A 탐색과 다량 전달이 병목일 수 있음.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 12,
+      "reference_total": 62,
+      "blocked_without_messages": 31
+    },
+    "game2-1-easy": {
+      "tier": "core",
+      "cooperation_type": "간단한 코드 전달·물건 교환",
+      "reason": "A 쪽 scrip2 → B 금고; B credential/paper2 → A 전화/상자. 문자 코드를 거의 그대로 옮기는 유형이라 복합 추론 대표로는 부족하나 협력 기본 동작 진단에 적합.",
+      "low_initial_B": true,
+      "solo_B_reference_steps": 2,
+      "reference_total": 45,
+      "blocked_without_messages": 32
+    },
+    "game2-2-easy": {
+      "tier": "core",
+      "cooperation_type": "분산 자료 결합·상호 도구 처리",
+      "reason": "B 1040 → A 금고, A 3816 → B 책장. A printed note와 B wooden door/mouse pad의 XOR를 결합해야 최종 단계. 양방향 도구·필름·프린터 의존.",
+      "low_initial_B": true,
+      "solo_B_reference_steps": 5,
+      "reference_total": 66,
+      "blocked_without_messages": 43
+    },
+    "game2-3-easy": {
+      "tier": "extended",
+      "cooperation_type": "공간 표현·다중 단서·조합 협력",
+      "reason": "색/도형·표·ROT13/라틴어 단서와 교차 조합이 풍부하나 35장면, 95참조행동,13물건링크. 장문 기억·출력 형식 부담 큼. 94/95는 원본 검사도 동일하며 참조의 점수 없는 click 하나가 제외됨.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 24,
+      "reference_total": 95,
+      "blocked_without_messages": 40
+    },
+    "game2-4-easy": {
+      "tier": "core",
+      "cooperation_type": "정보 전달 후 결과 반환",
+      "reason": "B 소리/주파수 목록 → A crow/130 입력 → A 검출기 2463 → B 출구. 세 입력이 하나의 왕복 의존 사슬임. 정답 사전지식 우회 경고는 통신 부적합 근거가 아님.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 13,
+      "reference_total": 57,
+      "blocked_without_messages": 3
+    },
+    "game2-5-easy": {
+      "tier": "core",
+      "cooperation_type": "양방향 물건·부분 정보 결합",
+      "reason": "A 렌치 → B 발전기; B 전구/뜨거운 물/도구 → A 외부 단서; A 단서 → B 서랍; B USB → A 컴퓨터. 현재 A는 차량 외부뿐 아니라 앞쪽 실내도 소유함.",
+      "low_initial_B": false,
+      "solo_B_reference_steps": 11,
+      "reference_total": 58,
+      "blocked_without_messages": 11
+    },
+    "game3-1-easy": {
+      "tier": "extended",
+      "cooperation_type": "물류·상호 해금·암호 전달",
+      "reason": "A 배송목록 → B 상자; A 테이프·도구 ↔ B 열쇠·재료; B PUK → A 전화. 21장면72참조행동10물건링크로 긴 탐색 부담. 최종100을 미리 안다는 우회는 협력 불필요 증거가 아님.",
+      "low_initial_B": true,
+      "solo_B_reference_steps": 6,
+      "reference_total": 72,
+      "blocked_without_messages": 16
+    },
+    "game3-2-easy": {
+      "tier": "core",
+      "cooperation_type": "정보/물건의 명확한 왕복",
+      "reason": "A ticket → B game 5974 → A board 종이 → B office. B 빗자루 → A graffiti → B 식 해석. 관측 기반 검사에서 B 단독 점수행동0이므로 초기 A 공급 의존; B 탐색이 불가능하다는 뜻은 아님.",
+      "low_initial_B": true,
+      "solo_B_reference_steps": 0,
+      "reference_total": 48,
+      "blocked_without_messages": 29
+    }
+  }
+}

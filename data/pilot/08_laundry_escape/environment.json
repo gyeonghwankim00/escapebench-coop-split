@@ -1,0 +1,2110 @@
+{
+  "schema_version": "0.2",
+  "id": "08_laundry_escape",
+  "title": "세탁실과 관리실",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game3-2-easy.yaml",
+      "sha256": "f216145ba9d8cb602eb70cd869287a31183130c56b9fe4f7ef709022b1a807e7"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_3-2.txt",
+      "sha256": "57d801f7ba5a38360e125342835467f415b451a8d5c3b4e9c74ca7cd957693fe"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "laundry room overview",
+    "scenes": [
+      {
+        "name": "laundry room overview",
+        "desc": "The entrance of the laundry room, there's an office room on the left side, and two rows of washing and drying machines in the front. Each side of the room has a corridor. There's also a vending machine right in front of you.",
+        "scene_relations": {
+          "Turn left side": "laundry room left corner",
+          "Turn right side": "laundry room right corner",
+          "Go to the left corridor": "left corridor overview",
+          "Go to the right corridor": "right corridor overview"
+        }
+      },
+      {
+        "name": "left corridor overview",
+        "desc": "The left corridor of the laundry room. A row of drying machine is now on your right. There's an office door on the left. The corridor leads to a game booth.",
+        "scene_relations": {
+          "Go to end of the corridor": "end of left corridor",
+          "Go into office room": "office room overview",
+          "Back to the laundry room overview": "laundry room overview"
+        }
+      },
+      {
+        "name": "end of left corridor",
+        "desc": "There's a game booth on the left, and drying machine still on your right. In the front is a vacant space with air vent hanging high above and green plant below.",
+        "scene_relations": {
+          "Back to the left corridor overview": "left corridor overview"
+        }
+      },
+      {
+        "name": "laundry room left corner",
+        "desc": "The left corner of the laundry room. There's a coffee table in the corner, some newspaper on the coffee table, and a drink vending machine beside.",
+        "scene_relations": {
+          "Back to the laundry room overview": "laundry room overview"
+        }
+      },
+      {
+        "name": "laundry room right corner",
+        "desc": "The right corner of the laundry room. There's a row of seats beside the wall, a green plant at the corner. The floor is clean.",
+        "scene_relations": {
+          "Back to the laundry room overview": "laundry room overview"
+        }
+      },
+      {
+        "name": "right corridor overview",
+        "desc": "The right corridor of the laundry room. There's a row of drying machine on your left now, and a row of washing machine on your right. The corridor leads to a table in the front.",
+        "scene_relations": {
+          "Go to end of the corridor": "end of right corridor",
+          "Back to the laundry room overview": "laundry room overview"
+        }
+      },
+      {
+        "name": "end of right corridor",
+        "desc": "There's a table right in fron of you. A door is on the left but locked. A TV is hanging high above the wall in the corner.",
+        "scene_relations": {
+          "Back to the right corridor overview": "right corridor overview"
+        }
+      },
+      {
+        "name": "office room overview",
+        "visible": false,
+        "desc": "A messy office room with paper over grounds. An iron gate is in the front, and some cabinates on the right side.",
+        "scene_relations": {
+          "Turn right": "office room right side",
+          "Back to the left corridor overview": "left corridor overview"
+        }
+      },
+      {
+        "name": "office room right side",
+        "desc": "The right side of the office room. There's a desk in the front, drawers below the desk, and some cabinates of the left side. An electric control box is on the wall, with a chair beside.",
+        "scene_relations": {
+          "Back to the office room overview": "office room overview",
+          "Back to the left corridor overview": "left corridor overview"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "laundry room overview",
+      "room": "A",
+      "desc": "The entrance of the laundry room, there's an office room on the left side, and two rows of washing and drying machines in the front. Each side of the room has a corridor. There's also a vending machine right in front of you.",
+      "visible": true,
+      "source_scene": "laundry room overview"
+    },
+    {
+      "name": "left corridor overview",
+      "room": "B",
+      "desc": "The left corridor of the laundry room. A row of drying machine is now on your right. There's an office door on the left. The corridor leads to a game booth.",
+      "visible": true,
+      "source_scene": "left corridor overview"
+    },
+    {
+      "name": "end of left corridor",
+      "room": "B",
+      "desc": "There's a game booth on the left, and drying machine still on your right. In the front is a vacant space with air vent hanging high above and green plant below.",
+      "visible": true,
+      "source_scene": "end of left corridor"
+    },
+    {
+      "name": "laundry room left corner",
+      "room": "B",
+      "desc": "The left corner of the laundry room. There's a coffee table in the corner, some newspaper on the coffee table, and a drink vending machine beside.",
+      "visible": true,
+      "source_scene": "laundry room left corner"
+    },
+    {
+      "name": "laundry room right corner",
+      "room": "A",
+      "desc": "The right corner of the laundry room. There's a row of seats beside the wall, a green plant at the corner. The floor is clean.",
+      "visible": true,
+      "source_scene": "laundry room right corner"
+    },
+    {
+      "name": "right corridor overview",
+      "room": "A",
+      "desc": "The right corridor of the laundry room. There's a row of drying machine on your left now, and a row of washing machine on your right. The corridor leads to a table in the front.",
+      "visible": true,
+      "source_scene": "right corridor overview"
+    },
+    {
+      "name": "end of right corridor",
+      "room": "B",
+      "desc": "There's a table right in fron of you. A door is on the left but locked. A TV is hanging high above the wall in the corner.",
+      "visible": true,
+      "source_scene": "end of right corridor"
+    },
+    {
+      "name": "office room overview",
+      "room": "A",
+      "desc": "A messy office room with paper over grounds. An iron gate is in the front, and some cabinates on the right side.",
+      "visible": false,
+      "source_scene": "office room overview"
+    },
+    {
+      "name": "office room right side",
+      "room": "B",
+      "desc": "The right side of the office room. There's a desk in the front, drawers below the desk, and some cabinates of the left side. An electric control box is on the wall, with a chair beside.",
+      "visible": true,
+      "source_scene": "office room right side"
+    }
+  ],
+  "entities": [
+    {
+      "name": "vending machine",
+      "states": [
+        {
+          "desc": "An old vending machine with three items on the list, each worth 0.5 dollar, The machine only receives coins.",
+          "neg_reward": "You may put your coins at hand to see what will come out. Make sure you have already exchanged the money to coins.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, dollar coins"
+              ],
+              "trigger": [
+                "change_visible, tool, soap, True",
+                "change_interact, False",
+                "change_visible, False",
+                "change_state, tool, dollar coins, 1"
+              ],
+              "reward": "A soap drop out from the machine, and returns you some coins. You have 1.5 dollars remaining."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "laundry room overview",
+      "position": "Hanging on the wall in the front",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room overview",
+        "kind": "item",
+        "name": "vending machine",
+        "logic_sha256": "c0c780df46b8ecadf82ac01f6af399b79ec2e925ad59c10a89ddf59d17343562"
+      }
+    },
+    {
+      "name": "soap",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a brand new soap, white and very slippery, might be used to lubricate things",
+          "apply_to": [
+            "handbag"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room overview",
+      "position": "In the output box of vending machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room overview",
+        "kind": "tool",
+        "name": "soap",
+        "logic_sha256": "9dfda8783c5c6332ed9a9a9276ed3059a4d75688de53af0fe3e5bcf37f23a8f5"
+      }
+    },
+    {
+      "name": "drying machine",
+      "states": [
+        {
+          "desc": "The drying machine with lid closed now. There's a money receiver (coin only) on the right, and a control panel now showing 1.5 dollar.",
+          "neg_reward": "It only receives coins of exact amount, you should put in the coin if you have exactly total amount 1.5 dollars at hand.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, dollar coins"
+              ],
+              "trigger": [
+                "change_visible, tool, key card, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The lid of the machine opens, and there's a yellow key card inside."
+            }
+          ]
+        },
+        {
+          "desc": "The drying machine, now with the lid open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "left corridor overview",
+      "position": "On the right of the corridor",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "left corridor overview",
+        "kind": "item",
+        "name": "drying machine",
+        "logic_sha256": "ec7f5c516c20a9d6892defc543cb1996d00e2ddf1c9a5f719c70728ff012add0"
+      }
+    },
+    {
+      "name": "red mail box",
+      "states": [
+        {
+          "desc": "The mail box is locked with a 4-digit password. The hint beside the lock writes 'II I I/II I-II', corresponding to the 4 digits.",
+          "neg_reward": "You should try to figure the code out by first knowing what I and II represents, find hints about it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 1998"
+              ],
+              "trigger": [
+                "change_visible, tool, safe handle 1, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The mail box opens, and there drops a safe handle."
+            }
+          ]
+        },
+        {
+          "desc": "The mail box is open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "left corridor overview",
+      "position": "Hanging on the wall left of office door",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "left corridor overview",
+        "kind": "item",
+        "name": "red mail box",
+        "logic_sha256": "a1493ca1fa6344b84bc8c4cbca5d0e5c9fa13a36be3bc6d1bc7aaa2d20816693"
+      }
+    },
+    {
+      "name": "piece of paper hint",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "The paper writes \"1 4 2 3 +\", seems left part of an equation hint. Find its right part to form the whole hint.",
+          "neg_reward": "You cannot take it with you, but you may remember it and combine it with another hint to complete it."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "left corridor overview",
+      "position": "sticking on the door",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "left corridor overview",
+        "kind": "item",
+        "name": "piece of paper hint",
+        "logic_sha256": "5cfa6f9d440a1bd79e781f0d28e47e640e54ddad5de7a182df00c7def643b4e1"
+      }
+    },
+    {
+      "name": "office door password pad",
+      "states": [
+        {
+          "desc": "The pad requires to input a 4-digit number to open the office door.",
+          "neg_reward": "Try to get the paper pieces that hint on this 4-digit code, you may need to combine two hints in your bag together.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 5891"
+              ],
+              "trigger": [
+                "change_visible, scene, office room overview, True",
+                "change_visible, False",
+                "change_interact, False"
+              ],
+              "reward": "The office door opens, you could get in now."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "left corridor overview",
+      "position": "Hanging on the wall right of office door",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "left corridor overview",
+        "kind": "item",
+        "name": "office door password pad",
+        "logic_sha256": "65a4a99f969f68e961bd8442e29a933e2a6a6744309d42d70b0c0bbba7e3355c"
+      }
+    },
+    {
+      "name": "key card",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a yellow key card with a small round metal disk on its head, seems used to open something",
+          "apply_to": [
+            "drawer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "left corridor overview",
+      "position": "In the drying machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "left corridor overview",
+        "kind": "tool",
+        "name": "key card",
+        "logic_sha256": "f343f79cc27a9de14e55493f893350508d4c19ac6f76aedc8309730bbd00718d"
+      }
+    },
+    {
+      "name": "safe handle 1",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a silver safe handle made of metal",
+          "apply_to": [
+            "safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "left corridor overview",
+      "position": "In the mail box",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "left corridor overview",
+        "kind": "tool",
+        "name": "safe handle 1",
+        "logic_sha256": "9bead47badd78ed61859a0ddbdd6b5cb6fc213ef9d27b294d2b806c4b77f421a"
+      }
+    },
+    {
+      "name": "game machine",
+      "states": [
+        {
+          "desc": "A fancy game machine currently turned on, with 'insert ticket' written on the screen.",
+          "neg_reward": "You may find a ticket to run the game and play it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, game ticket"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "You start playing the game. You achieve top 1 and the screen shows your score is 5974."
+            }
+          ]
+        },
+        {
+          "desc": "The screen shows you achieve top 1 with a score of 5974."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "end of left corridor",
+      "position": "On the left side",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of left corridor",
+        "kind": "item",
+        "name": "game machine",
+        "logic_sha256": "2c0553f846db545d831b8194b7625cc6e2462f9692284af8e4bcab3938509d41"
+      }
+    },
+    {
+      "name": "tool box",
+      "states": [
+        {
+          "desc": "A red tool box with a 4-digit password lock. There's only 4 choices 1, 2, 3 or 4 for each digit, e.g. 2343 (just example input, not correct).",
+          "neg_reward": "You should only use 1, 2, 3, 4 in your password input. Use the equation hint to solve this.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 1232"
+              ],
+              "trigger": [
+                "change_visible, tool, nozzle, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The tool box is open, there's a nozzle inside"
+            }
+          ]
+        },
+        {
+          "desc": "The tool box is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "end of left corridor",
+      "position": "On the ground beside drying machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of left corridor",
+        "kind": "item",
+        "name": "tool box",
+        "logic_sha256": "a9caa7f3f451e9c2f5f24f39b2a96827f1d378601d48c7e34308053cc026f706"
+      }
+    },
+    {
+      "name": "pipe on machine",
+      "states": [
+        {
+          "desc": "A silver metal pipe tightened on the drying machine, originally used to deliver water.",
+          "neg_reward": "You may want to use the pipe later, try to get it off with tool in your bag.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, wrench"
+              ],
+              "trigger": [
+                "change_visible, tool, pipe, True",
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, False"
+              ],
+              "reward": "The pipe is unscrewed from the machine, you can collect it now."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "end of left corridor",
+      "position": "Beside the tool box",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of left corridor",
+        "kind": "item",
+        "name": "pipe on machine",
+        "logic_sha256": "f27b7322edef663f47a0e62eb01ac8ac2e022603ef69d61138b80a319cc5197c"
+      }
+    },
+    {
+      "name": "air vent",
+      "states": [
+        {
+          "desc": "A white air vent, it's too high to be reached now.",
+          "neg_reward": "You should put something on the ground to try to reach the vent.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, ladder"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "You could now reach the vent."
+            }
+          ]
+        },
+        {
+          "desc": "A white air vent, now you could reach it. There's a port beside, with fresh air coming out, seems used for filling.",
+          "neg_reward": "The air vent could help fill in gas, but something used to deliver gas should be installed to the container first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, gas tank"
+              ],
+              "trigger": [
+                "change_state, tool, gas tank, 2",
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The gas tank is now filled with gas, the air pressure is enough now."
+            }
+          ]
+        },
+        {
+          "desc": "A white air vent, now continuously giving fresh air."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "end of left corridor",
+      "position": "High on the wall in the front",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of left corridor",
+        "kind": "item",
+        "name": "air vent",
+        "logic_sha256": "86caf769bdb52638c55f8d6ddd349dc41b3e664242ec45b5447ec1c8fda29442"
+      }
+    },
+    {
+      "name": "nozzle",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a nozzle with a silver mouth, seems should connect with something else to control and work.",
+          "apply_to": [
+            "gas tank"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "end of left corridor",
+      "position": "In the red tool box",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of left corridor",
+        "kind": "tool",
+        "name": "nozzle",
+        "logic_sha256": "6f7674cbcdecf8880821afb2b9899a39219933816ba766130f9deb4b4397f54c"
+      }
+    },
+    {
+      "name": "pipe",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a silver metal pipe with that could connect ends together",
+          "apply_to": [
+            "gas tank"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "end of left corridor",
+      "position": "Beside the drying machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of left corridor",
+        "kind": "tool",
+        "name": "pipe",
+        "logic_sha256": "8ca079fbff1794ac8a1ec482ffaa028aa9c33b614108fbac7c592abfdcbee08c"
+      }
+    },
+    {
+      "name": "game ticket",
+      "states": [
+        {
+          "desc": "a game ticket that writes 'car racing', made of normal paper",
+          "apply_to": [
+            "game machine"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "laundry room left corner",
+      "position": "On the coffee table",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room left corner",
+        "kind": "tool",
+        "name": "game ticket",
+        "logic_sha256": "048053511bb75497f5c05dfd266cf9debe6ef50245c437d4f91acaadc6f2fc9b"
+      }
+    },
+    {
+      "name": "handbag",
+      "states": [
+        {
+          "desc": "The zip of the handbag is rusty, hard to open directly.",
+          "neg_reward": "You may find a way to lubricate the zip before opening it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, soap"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The zip is now lubricated with soap foam all over it."
+            }
+          ]
+        },
+        {
+          "desc": "The zip of the handbag is all over soap foam, easy to open now.",
+          "neg_reward": "You may simply interact with the bag to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, piler, True",
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "You open the handbag, and there's a piler inside."
+            }
+          ]
+        },
+        {
+          "desc": "The hand bag is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "On the seat",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "item",
+        "name": "handbag",
+        "logic_sha256": "7d1d8d70e47e05a2c714ca4a310dd46be2e283f9b1261335cf30fbd4358dde1a"
+      }
+    },
+    {
+      "name": "information board",
+      "states": [
+        {
+          "desc": "An information board has a lock on outer glass door. There's a lock at the bottom requiring 4-digit password. On the wall writes 'top 1'.",
+          "neg_reward": "You should think about what 4-digit hint is related to top 1 and hints related to it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 5974"
+              ],
+              "trigger": [
+                "change_visible, tool, left half paper, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The window of the information board is now open. There's lots of notice inside."
+            }
+          ]
+        },
+        {
+          "desc": "The information board is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "Hanging on the right side wall",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "item",
+        "name": "information board",
+        "logic_sha256": "07f0fb4f64c81f7471ef50be71acf4c0b1f06cdf1230c1fe9839c17b6ab57d08"
+      }
+    },
+    {
+      "name": "pot culture",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "A pot culture, green plant growing in the soil. The soil seems a bit loose.",
+          "neg_reward": "You may find out what's inside the soil by simply interacting with it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, gold key, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "You dig into the soil and find a gold key hidden beneath."
+            }
+          ]
+        },
+        {
+          "desc": "A pot culture with soild being digged."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "In the corner",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "item",
+        "name": "pot culture",
+        "logic_sha256": "91980313232aec32588f0e8a228a8a00272919a2c27ee0a5d1878da803e4a776"
+      }
+    },
+    {
+      "name": "hanger",
+      "states": [
+        {
+          "desc": "A hanger made of wood, a rag haning on it. The bolts seems a bit loose.",
+          "neg_reward": "There may be something behind, you may further pull the hanger down (loose the screw) with a tool.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, piler"
+              ],
+              "trigger": [
+                "change_visible, tool, code paper, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The hanger is pulled down, and there's a piece of paper inside the wall behind."
+            }
+          ]
+        },
+        {
+          "desc": "A hanger currently pulled down, showing a hidden space behind."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "On the wall in the front",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "item",
+        "name": "hanger",
+        "logic_sha256": "8e1474d731beef852bbd3ff02829f4c50cb11c730486975dc825fa56287a0e92"
+      }
+    },
+    {
+      "name": "money exchanger",
+      "states": [
+        {
+          "desc": "A money exchange machine that gives coins according to input bill amount.",
+          "neg_reward": "You may input money and get coins from here. You should do it after the bill is dry.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, dollar bill"
+              ],
+              "trigger": [
+                "change_visible, tool, dollar coins, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "Two coins come out the machine, each worth 1 dollar."
+            }
+          ]
+        },
+        {
+          "desc": "A money exchanger that works normally."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "On the wall beside hanger",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "item",
+        "name": "money exchanger",
+        "logic_sha256": "895bf158a47c16e2448ae09a50faa92f2a347f77d178508299db1d4e59a0ac3b"
+      }
+    },
+    {
+      "name": "piler",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a piler with red handle and metal head",
+          "apply_to": [
+            "hanger"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "Inside the handbag",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "tool",
+        "name": "piler",
+        "logic_sha256": "3d229061a76c8a5d9a640f84b58ed774eae84b95e0219e78dcc90490a922ff4d"
+      }
+    },
+    {
+      "name": "left half paper",
+      "visible": false,
+      "states": [
+        {
+          "desc": "Left side intact, right side seems torned, with '58' written on it."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "On the information board",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "tool",
+        "name": "left half paper",
+        "logic_sha256": "28bb85195624084caa34f9ade75df4bb1a4dd0c572f142224d11477e5e861cc9"
+      }
+    },
+    {
+      "name": "right half paper",
+      "states": [
+        {
+          "desc": "Right side intact, left side seems torned, with '91' written on it."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "Under the handbag",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "tool",
+        "name": "right half paper",
+        "logic_sha256": "43cdf6beb62ce3fe6ebb8dfb51382d31abddc6069aee92b1e83d72b9e2d38a31"
+      }
+    },
+    {
+      "name": "gold key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a normal key made of metal, shining golden light.",
+          "apply_to": [
+            "iron gate"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "Inside the soil of pot culture",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "tool",
+        "name": "gold key",
+        "logic_sha256": "251bc702d2eafe5ffb922f36e3020e83fcc6b7943bf3d8536ca61c618dd2fdba"
+      }
+    },
+    {
+      "name": "code paper",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A code paper writes '4 2 1 3 (mod 4)', seems part of a about an equation."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "Behind the hanger in the wall",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "tool",
+        "name": "code paper",
+        "logic_sha256": "f311c700c28a20afdba71ddcfe0ff14c4bcd81026cdaeaccfcc05683df6f7f40"
+      }
+    },
+    {
+      "name": "dollar coins",
+      "visible": false,
+      "states": [
+        {
+          "desc": "Two coins, each worth 1 dollar. In total 2 dollars.",
+          "apply_to": [
+            "vending machine"
+          ]
+        },
+        {
+          "desc": "Two coins, with one worth 1 dollar, another one worth 0.5 dollar, in total 1.5 dollar left.",
+          "apply_to": [
+            "drying machine"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "laundry room right corner",
+      "position": "In the output box of money exchanger",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "laundry room right corner",
+        "kind": "tool",
+        "name": "dollar coins",
+        "logic_sha256": "02f9c81b192e68483656e5cf78799d35aa8284ed6380b74c4e40706377b055c3"
+      }
+    },
+    {
+      "name": "blue basin",
+      "states": [
+        {
+          "desc": "A blue basin with water inside.",
+          "neg_reward": "You could soak things inside this basin.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, clothes"
+              ],
+              "trigger": [
+                "change_state, tool, clothes, 1",
+                "change_interact, False"
+              ],
+              "reward": "The clothes is now wet after soaking in the water."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "right corridor overview",
+      "position": "On the drying machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "right corridor overview",
+        "kind": "item",
+        "name": "blue basin",
+        "logic_sha256": "5c024cef3d9e7bd65da047e367d5b6daa5c1ecfd5ea3b1b6607823fda6cd57e7"
+      }
+    },
+    {
+      "name": "graffiti",
+      "states": [
+        {
+          "desc": "There seems grafitti on the wall but now something dirty is over it, you cannot see clearly. You cannot directly reach the graffiti as it's too high.",
+          "neg_reward": "Try wipe out the dirty things using something long and wet to reach it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, besom"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The dirty things over graffiti is wiped out, you see some characters on the wall."
+            }
+          ]
+        },
+        {
+          "desc": "The graffiti writes 'I - 9, II - 1, III - 4, IV - 2, ...' It seems like code hint to something."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "right corridor overview",
+      "position": "High on the wall over washing machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "right corridor overview",
+        "kind": "item",
+        "name": "graffiti",
+        "logic_sha256": "5e923507e09eae4e46085bc1d2d2197778124cca0a1b04840e7791476ed61ff2"
+      }
+    },
+    {
+      "name": "dollar bill",
+      "states": [
+        {
+          "desc": "a wet 2 dollar bill, still intact, but cannot be used if not dry",
+          "apply_to": [
+            "iron"
+          ]
+        },
+        {
+          "desc": "a dry 2 dollar bill, now usable",
+          "apply_to": [
+            "money exchanger"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "right corridor overview",
+      "position": "Inside the blue basin on drying machine",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "right corridor overview",
+        "kind": "tool",
+        "name": "dollar bill",
+        "logic_sha256": "3ab76684479aa9ae20844d574ea576967ae59fd3317819c28d63a927c481c29d"
+      }
+    },
+    {
+      "name": "clothes",
+      "states": [
+        {
+          "desc": "a white shirt currenly clean and dry",
+          "apply_to": [
+            "blue basin"
+          ]
+        },
+        {
+          "desc": "a white shirt currenly wet, soaked with water",
+          "apply_to": [
+            "besom"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "right corridor overview",
+      "position": "Inside a basket beside",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "right corridor overview",
+        "kind": "tool",
+        "name": "clothes",
+        "logic_sha256": "200ddd5883a84997383c9a2582ff00b82ac804d08d8830e559ff156d9b811f02"
+      }
+    },
+    {
+      "name": "plug",
+      "states": [
+        {
+          "desc": "The plug with a electric cable, not in the socket beside now.",
+          "neg_reward": "You may simply interact to get the plug into the socket to power on things above the table.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, item, iron, 1",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "You plug it into the socket, now electricity is on."
+            }
+          ]
+        },
+        {
+          "desc": "The plug is now in the socket."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "end of right corridor",
+      "position": "Below the desk",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of right corridor",
+        "kind": "item",
+        "name": "plug",
+        "logic_sha256": "0f7a7a6688f8719a1be0ed97517f824798e5c2117352cfa89d76ec6e8be990c6"
+      }
+    },
+    {
+      "name": "iron",
+      "states": [
+        {
+          "desc": "An electric cable is linked to it. The iron is currently out of power.",
+          "neg_reward": "You may first give it power by plugging in the cable and plug first under the desk."
+        },
+        {
+          "desc": "The iron is turned on with power, usable now.",
+          "neg_reward": "You may use the iron to dry things.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, dollar bill"
+              ],
+              "trigger": [
+                "change_state, tool, dollar bill, 1",
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The dollar bill is dry and flat to use now."
+            }
+          ]
+        },
+        {
+          "desc": "A normal iron, used to dry dollar before."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "end of right corridor",
+      "position": "On the table",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "end of right corridor",
+        "kind": "item",
+        "name": "iron",
+        "logic_sha256": "e85bfc397a4b1b786135e70afaf05e365c2975b8774d9f9e71c02c1c00d089aa"
+      }
+    },
+    {
+      "name": "iron gate",
+      "states": [
+        {
+          "desc": "An iron gate with a golden key hole in the right middle, closed currently. You can see there's a ladder inside.",
+          "neg_reward": "You may try to open this iron gate with a matched key (pay attention to color).",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, gold key"
+              ],
+              "trigger": [
+                "change_visible, tool, ladder, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The iron gate is open, you could get inside now and retrieve the ladder."
+            }
+          ]
+        },
+        {
+          "desc": "The iron gate is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "office room overview",
+      "position": "In the front",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room overview",
+        "kind": "item",
+        "name": "iron gate",
+        "logic_sha256": "a870d681b34a5fdaa531d5c46e0bf12b8091e7f1cf8b73ed194a56660609138a"
+      }
+    },
+    {
+      "name": "safe",
+      "states": [
+        {
+          "desc": "An safe made of metal, but missing handles currently. You cannot open it directly. It in total needs two handles.",
+          "neg_reward": "You should first find the two handles and assemble them both first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, safe handle 1",
+                "apply, safe handle 2"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "Two handles are assembled, the safe could be opened now."
+            }
+          ]
+        },
+        {
+          "desc": "The safe with two handles assembled, it could be opened now through simple interaction.",
+          "neg_reward": "You should simply interact to open the safe.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, wrench, True",
+                "change_visible, tool, drawing, True",
+                "change_interact, item, pot culture, True",
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "You open the safe, there's a drawing and a wrench inside."
+            }
+          ]
+        },
+        {
+          "desc": "The safe is open now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "office room overview",
+      "position": "Beside the iron gate",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room overview",
+        "kind": "item",
+        "name": "safe",
+        "logic_sha256": "86778854be7c6f7825de0d41f54b6d69613afe3c1e06f65e391db1f9533a106e"
+      }
+    },
+    {
+      "name": "ventilation pipe fence",
+      "states": [
+        {
+          "desc": "A metal fence gate is welded to the ventilation pipe on the wall near ground. There's no air coming from inside.",
+          "neg_reward": "The pipe's width could even fit the body. You may try to break open this mental fence through gas burning its edge.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, gas tank"
+              ],
+              "trigger": [
+                "change_interact, False",
+                "finish_team"
+              ],
+              "reward": "The mental fence is off, you could escape from here now. GAME END!"
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "office room overview",
+      "position": "Beside the safe",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room overview",
+        "kind": "item",
+        "name": "ventilation pipe fence",
+        "logic_sha256": "cc091a6627e4002792d99db63ba280043f8c7dbd4599177d91324c30a7f7d734"
+      }
+    },
+    {
+      "name": "ladder",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a normal ladder about 1.5 meters high, could be used to reach high places.",
+          "apply_to": [
+            "air vent"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "office room overview",
+      "position": "Inside the iron gate",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room overview",
+        "kind": "tool",
+        "name": "ladder",
+        "logic_sha256": "f110db36716692d66070103e16f192520fe31f9e7377d874d9b06a01b6926114"
+      }
+    },
+    {
+      "name": "wrench",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a wrench that could tighten or loosen screws",
+          "apply_to": [
+            "pipe on machine"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "office room overview",
+      "position": "Inside the safe",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room overview",
+        "kind": "tool",
+        "name": "wrench",
+        "logic_sha256": "3d0e5ef44761a20a73695af84d46e852903e5d5638abd333a5984a5005e1342a"
+      }
+    },
+    {
+      "name": "drawing",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a drawing featuring a green plant above, soil under it, and under the soil there's a key. Seems a hint to where to find the key."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "office room overview",
+      "position": "Inside the safe",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room overview",
+        "kind": "tool",
+        "name": "drawing",
+        "logic_sha256": "1f303b90b4a340fd45e0987d78b70153476f438a9024391e38f87bd24a949664"
+      }
+    },
+    {
+      "name": "drawer",
+      "states": [
+        {
+          "desc": "A wooden drawer with a digital lock. There's a metal round shape thing beside the handle, like a card reader.",
+          "neg_reward": "You should try to open this drawer with a matched tool in bag for authorization.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key card"
+              ],
+              "trigger": [
+                "change_visible, tool, safe handle 2, True",
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The drawer is open, there's a handle inside."
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now open"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "office room right side",
+      "position": "In the front",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room right side",
+        "kind": "item",
+        "name": "drawer",
+        "logic_sha256": "e31bead30eb73f5ae11656f47405b8a9745d3a2892ba410ff79b61d103b781b6"
+      }
+    },
+    {
+      "name": "safe handle 2",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a silver safe handle made of metal",
+          "apply_to": [
+            "safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "office room right side",
+      "position": "Inside the drawer",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room right side",
+        "kind": "tool",
+        "name": "safe handle 2",
+        "logic_sha256": "740007eb26878a05c7a65f99cb60ad69ae1e2832fdcf18c2af2306be150e4961"
+      }
+    },
+    {
+      "name": "besom",
+      "states": [
+        {
+          "desc": "a wood besom with long handle, its head already broken and needs to be wrapped by some cloth",
+          "wait_for": [
+            "clothes"
+          ]
+        },
+        {
+          "desc": "a wood besom with long handle, its head now wrapped with wet clothes for mopping",
+          "apply_to": [
+            "graffiti"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "office room right side",
+      "position": "Beside the desk",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room right side",
+        "kind": "tool",
+        "name": "besom",
+        "logic_sha256": "db85a25d9c67b8d5e177c59083d9eab2e54560e7234db3a04e71c3ea9ab64a4b"
+      }
+    },
+    {
+      "name": "gas tank",
+      "states": [
+        {
+          "desc": "an empty metal gas tank with a connection port on the top, needs to be connected with something",
+          "wait_for": [
+            "pipe"
+          ]
+        },
+        {
+          "desc": "an empty metal gas tank, currently connected with a pipe on the top, needs gas filling",
+          "apply_to": [
+            "air vent"
+          ]
+        },
+        {
+          "desc": "a gas tank full of flammable air inside, currently connected with a pipe on the top, but missing a mouth for control",
+          "wait_for": [
+            "nozzle"
+          ]
+        },
+        {
+          "desc": "a gas tank full of flammable air, connected to the nozzle through a pipe, ready to produce heat to burn things now.",
+          "apply_to": [
+            "ventilation pipe fence"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "office room right side",
+      "position": "Under the desk",
+      "source": {
+        "file": "game3-2-easy.yaml",
+        "scene": "office room right side",
+        "kind": "tool",
+        "name": "gas tank",
+        "logic_sha256": "669c9088003eb3fb1555a198b029cee841c6ef0ea960d964c6d92d9395f02e57"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "game machine",
+        "target_entity": "information board",
+        "accepted_input": "5974",
+        "evidence_text": [
+          "5974"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I02",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "left half paper",
+        "target_entity": "office door password pad",
+        "accepted_input": "5891",
+        "evidence_text": [
+          "58"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I03",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "right half paper",
+        "target_entity": "office door password pad",
+        "accepted_input": "5891",
+        "evidence_text": [
+          "91"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "graffiti",
+        "target_entity": "red mail box",
+        "accepted_input": "1998",
+        "evidence_text": [
+          "I - 9, II - 1, III - 4, IV - 2"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I07",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "code paper",
+        "target_entity": "tool box",
+        "accepted_input": "1232",
+        "evidence_text": [
+          "4 2 1 3 (mod 4)"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I05",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "red mail box",
+        "target_entity": "red mail box",
+        "accepted_input": "1998",
+        "evidence_text": [
+          "II I I/II I-II"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I06",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "piece of paper hint",
+        "target_entity": "tool box",
+        "accepted_input": "1232",
+        "evidence_text": [
+          "1 4 2 3 +"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "dollar bill",
+        "sender": "A",
+        "receiver": "B",
+        "target": "iron"
+      },
+      {
+        "id": "O02",
+        "object": "dollar bill",
+        "sender": "B",
+        "receiver": "A",
+        "target": "money exchanger"
+      },
+      {
+        "id": "O03",
+        "object": "dollar coins",
+        "sender": "A",
+        "receiver": "B",
+        "target": "drying machine"
+      },
+      {
+        "id": "O04",
+        "object": "safe handle 2",
+        "sender": "B",
+        "receiver": "A",
+        "target": "safe"
+      },
+      {
+        "id": "O05",
+        "object": "clothes",
+        "sender": "A",
+        "receiver": "B",
+        "target": "besom"
+      },
+      {
+        "id": "O06",
+        "object": "besom",
+        "sender": "B",
+        "receiver": "A",
+        "target": "graffiti"
+      },
+      {
+        "id": "O07",
+        "object": "safe handle 1",
+        "sender": "B",
+        "receiver": "A",
+        "target": "safe"
+      },
+      {
+        "id": "O08",
+        "object": "wrench",
+        "sender": "A",
+        "receiver": "B",
+        "target": "pipe on machine"
+      },
+      {
+        "id": "O09",
+        "object": "ladder",
+        "sender": "A",
+        "receiver": "B",
+        "target": "air vent"
+      },
+      {
+        "id": "O10",
+        "object": "gas tank",
+        "sender": "B",
+        "receiver": "A",
+        "target": "ventilation pipe fence"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "ventilation pipe fence",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [
+    {
+      "entity": "office door password pad",
+      "state": 0,
+      "transition": 0,
+      "trigger": "change_visible, scene, office room overview, True",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    },
+    {
+      "entity": "iron",
+      "state": 1,
+      "transition": 0,
+      "trigger": "change_state, tool, dollar bill, 1",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    }
+  ],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 42,
+    "retained_entities": 42,
+    "source_scenes": 9,
+    "retained_scenes": 9,
+    "source_key_actions": 48,
+    "replayed_source_key_actions": 48,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "dollar bill"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 3,
+        "action": {
+          "type": "click",
+          "target": "clothes"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 5,
+        "action": {
+          "type": "click",
+          "target": "plug"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 7,
+        "action": {
+          "type": "apply",
+          "tool": "dollar bill",
+          "target": "iron"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 10,
+        "action": {
+          "type": "apply",
+          "tool": "dollar bill",
+          "target": "money exchanger"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 11,
+        "action": {
+          "type": "click",
+          "target": "dollar coins"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 12,
+        "action": {
+          "type": "click",
+          "target": "right half paper"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 14,
+        "action": {
+          "type": "apply",
+          "tool": "dollar coins",
+          "target": "vending machine"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 15,
+        "action": {
+          "type": "click",
+          "target": "soap"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 17,
+        "action": {
+          "type": "apply",
+          "tool": "soap",
+          "target": "handbag"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 18,
+        "action": {
+          "type": "click",
+          "target": "handbag"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 19,
+        "action": {
+          "type": "click",
+          "target": "piler"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 21,
+        "action": {
+          "type": "click",
+          "target": "game ticket"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 23,
+        "action": {
+          "type": "apply",
+          "tool": "game ticket",
+          "target": "game machine"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 25,
+        "action": {
+          "type": "input",
+          "value": "5974",
+          "target": "information board"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 26,
+        "action": {
+          "type": "click",
+          "target": "left half paper"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 29,
+        "action": {
+          "type": "apply",
+          "tool": "dollar coins",
+          "target": "drying machine"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 30,
+        "action": {
+          "type": "click",
+          "target": "key card"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 33,
+        "action": {
+          "type": "input",
+          "value": "5891",
+          "target": "office door password pad"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 35,
+        "action": {
+          "type": "click",
+          "target": "besom"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 36,
+        "action": {
+          "type": "click",
+          "target": "gas tank"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 37,
+        "action": {
+          "type": "apply",
+          "tool": "key card",
+          "target": "drawer"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 38,
+        "action": {
+          "type": "click",
+          "target": "safe handle 2"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 41,
+        "action": {
+          "type": "apply",
+          "tool": "safe handle 2",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 43,
+        "action": {
+          "type": "apply",
+          "tool": "clothes",
+          "target": "blue basin"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 45,
+        "action": {
+          "type": "craft",
+          "first": "clothes",
+          "second": "besom"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 47,
+        "action": {
+          "type": "apply",
+          "tool": "besom",
+          "target": "graffiti"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 50,
+        "action": {
+          "type": "input",
+          "value": "1998",
+          "target": "red mail box"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 51,
+        "action": {
+          "type": "click",
+          "target": "safe handle 1"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 54,
+        "action": {
+          "type": "apply",
+          "tool": "safe handle 1",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 55,
+        "action": {
+          "type": "click",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 56,
+        "action": {
+          "type": "click",
+          "target": "wrench"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 57,
+        "action": {
+          "type": "click",
+          "target": "drawing"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 60,
+        "action": {
+          "type": "apply",
+          "tool": "wrench",
+          "target": "pipe on machine"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 61,
+        "action": {
+          "type": "click",
+          "target": "pipe"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 63,
+        "action": {
+          "type": "click",
+          "target": "pot culture"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 64,
+        "action": {
+          "type": "click",
+          "target": "gold key"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 65,
+        "action": {
+          "type": "apply",
+          "tool": "piler",
+          "target": "hanger"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 66,
+        "action": {
+          "type": "click",
+          "target": "code paper"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 70,
+        "action": {
+          "type": "input",
+          "value": "1232",
+          "target": "tool box"
+        }
+      },
+      {
+        "source_step": 41,
+        "cooperative_step": 71,
+        "action": {
+          "type": "click",
+          "target": "nozzle"
+        }
+      },
+      {
+        "source_step": 42,
+        "cooperative_step": 73,
+        "action": {
+          "type": "apply",
+          "tool": "gold key",
+          "target": "iron gate"
+        }
+      },
+      {
+        "source_step": 43,
+        "cooperative_step": 74,
+        "action": {
+          "type": "click",
+          "target": "ladder"
+        }
+      },
+      {
+        "source_step": 44,
+        "cooperative_step": 75,
+        "action": {
+          "type": "craft",
+          "first": "pipe",
+          "second": "gas tank"
+        }
+      },
+      {
+        "source_step": 45,
+        "cooperative_step": 77,
+        "action": {
+          "type": "apply",
+          "tool": "ladder",
+          "target": "air vent"
+        }
+      },
+      {
+        "source_step": 46,
+        "cooperative_step": 78,
+        "action": {
+          "type": "apply",
+          "tool": "gas tank",
+          "target": "air vent"
+        }
+      },
+      {
+        "source_step": 47,
+        "cooperative_step": 79,
+        "action": {
+          "type": "craft",
+          "first": "nozzle",
+          "second": "gas tank"
+        }
+      },
+      {
+        "source_step": 48,
+        "cooperative_step": 81,
+        "action": {
+          "type": "apply",
+          "tool": "gas tank",
+          "target": "ventilation pipe fence"
+        }
+      }
+    ]
+  }
+}

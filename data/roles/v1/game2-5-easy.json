@@ -1,0 +1,88 @@
+{
+  "game": "game2-5-easy",
+  "pilot_id": "07_van_escape",
+  "title": "밴 외부와 내부",
+  "A": [
+    "van indoor front overview",
+    "front desk",
+    "book shelf",
+    "computer on the desk",
+    "passage way in van",
+    "bed overview",
+    "right side of bed",
+    "bed shelf inside"
+  ],
+  "B": [
+    "van in dessert",
+    "back of the van",
+    "underneath part of the van",
+    "top of the van",
+    "trunk of the van",
+    "repair kit in the trunk",
+    "door of the van",
+    "drawers"
+  ],
+  "clues": [
+    {
+      "holder_source": "old thesis paper",
+      "target": "top drawer",
+      "answer": "2610",
+      "tokens": [
+        "[26]",
+        "[10]"
+      ]
+    },
+    {
+      "holder_source": "spotlight",
+      "target": "safe box",
+      "answer": "3149",
+      "tokens": [
+        "3149"
+      ]
+    },
+    {
+      "holder_source": "license plate",
+      "target": "bottom drawer",
+      "answer": "05062011",
+      "tokens": [
+        "May California 2011"
+      ]
+    },
+    {
+      "holder_source": "magazine",
+      "target": "bottom drawer",
+      "answer": "05062011",
+      "tokens": [
+        "California 06"
+      ]
+    },
+    {
+      "holder_source": "mud",
+      "target": "computer",
+      "answer": "Jacob Korakon",
+      "tokens": [
+        "Jacob Korakon"
+      ]
+    },
+    {
+      "holder_source": "paper with names",
+      "target": "computer",
+      "answer": "1927",
+      "tokens": [
+        "Ally Liam Michael Violet"
+      ]
+    },
+    {
+      "holder_source": "@book shelf",
+      "target": "computer",
+      "answer": "1927",
+      "tokens": [
+        "Ally 1",
+        "Violet 7",
+        "Michael 2",
+        "Liam 9"
+      ]
+    }
+  ],
+  "note": "Evaluator-only. Clue answers must never be shown to agents."
+}

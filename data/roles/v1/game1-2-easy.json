@@ -1,0 +1,67 @@
+{
+  "game": "game1-2-easy",
+  "pilot_id": "04_hospital_elevator",
+  "title": "병실과 엘리베이터",
+  "A": [
+    "hallway",
+    "cabinet close-up",
+    "hallway right",
+    "room 805 door view",
+    "ventilation fan close-up",
+    "operating room door overview",
+    "room 805",
+    "left bookshelf close-up",
+    "bedside table close-up",
+    "right bookshelf close-up",
+    "operating room",
+    "operating room cabinet close-up",
+    "lower cabinet close-up",
+    "anatomy poster close-up"
+  ],
+  "B": [
+    "blocked path close-up",
+    "small cabinet close-up",
+    "large cabinet close-up",
+    "elevator room",
+    "elevator interior",
+    "desk close-up",
+    "805 right room",
+    "surgical table close-up",
+    "upper cabinet close-up"
+  ],
+  "clues": [
+    {
+      "holder_source": "painting2",
+      "target": "bedside drawer",
+      "answer": "150",
+      "tokens": [
+        "150"
+      ]
+    },
+    {
+      "holder_source": "locked drawer",
+      "target": "locked drawer",
+      "answer": "8*4+6=6*7-4",
+      "tokens": [
+        "8 4 6 = 6 7 4"
+      ]
+    },
+    {
+      "holder_source": "paper with code",
+      "target": "safe",
+      "answer": "2333",
+      "tokens": [
+        "1121 ="
+      ]
+    },
+    {
+      "holder_source": "drawer contents",
+      "target": "safe",
+      "answer": "2333",
+      "tokens": [
+        "1212 +"
+      ]
+    }
+  ],
+  "note": "Evaluator-only. Clue answers must never be shown to agents."
+}

@@ -1,0 +1,2 @@
+# Only rebuilding the JSON datasets needs this. Runtime/validation use stdlib.
+PyYAML==6.0.2

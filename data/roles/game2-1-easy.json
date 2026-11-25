@@ -1,0 +1,95 @@
+{
+  "version": "v3",
+  "game": "game2-1-easy",
+  "A": [
+    "letter",
+    "apartment entrance",
+    "apartment hallway",
+    "cloakroom",
+    "hallway cabinet",
+    "utility room",
+    "sanctum"
+  ],
+  "B": [
+    "corridor",
+    "world map",
+    "study room",
+    "utility room 2",
+    "bathroom"
+  ],
+  "starts": {
+    "B": "corridor"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 45,
+    "alone_A": 11,
+    "alone_B": 16,
+    "together_no_give": 27,
+    "with_give": 45,
+    "b_share": 0.41,
+    "handoffs": 4,
+    "components": {
+      "A": 2,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "424389",
+      "target": "safe 2",
+      "target_role": "B",
+      "partner_sources": [
+        "scrip 2"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "47515",
+      "target": "phone",
+      "target_role": "A",
+      "partner_sources": [
+        "credential"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "870472",
+      "target": "locked box 2",
+      "target_role": "A",
+      "partner_sources": [
+        "paper 2"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "shoelaces",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shoelaces, sewer)"
+    },
+    {
+      "tool": "cylindrical key",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(cylindrical key, locked box)"
+    },
+    {
+      "tool": "fragment 3",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(fragment 3, safe)"
+    },
+    {
+      "tool": "fragment 4",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(fragment 4, safe)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

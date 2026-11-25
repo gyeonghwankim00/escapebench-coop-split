@@ -1,0 +1,200 @@
+{
+  "validated_instances": [
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": true,
+          "failed_actions": 26
+        }
+      },
+      "id": "01_mirror_workshop",
+      "reference_actions": 74,
+      "both_exits_open": true,
+      "source_entities_preserved": 38,
+      "source_scenes_preserved": 20,
+      "source_key_actions_preserved": 40,
+      "source_logic_fingerprints_match": true,
+      "information_links": 4,
+      "object_transfers": 7,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 0,
+      "upstream_hidden_terminal_state_anomalies": []
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 38
+        }
+      },
+      "id": "02_records_billiards",
+      "reference_actions": 61,
+      "both_exits_open": true,
+      "source_entities_preserved": 34,
+      "source_scenes_preserved": 6,
+      "source_key_actions_preserved": 38,
+      "source_logic_fingerprints_match": true,
+      "information_links": 2,
+      "object_transfers": 10,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 0,
+      "upstream_hidden_terminal_state_anomalies": []
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 35
+        }
+      },
+      "id": "03_cabinet_mechanism",
+      "reference_actions": 67,
+      "both_exits_open": true,
+      "source_entities_preserved": 40,
+      "source_scenes_preserved": 12,
+      "source_key_actions_preserved": 45,
+      "source_logic_fingerprints_match": true,
+      "information_links": 2,
+      "object_transfers": 6,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 0,
+      "upstream_hidden_terminal_state_anomalies": []
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 52
+        }
+      },
+      "id": "04_hospital_elevator",
+      "reference_actions": 73,
+      "both_exits_open": true,
+      "source_entities_preserved": 34,
+      "source_scenes_preserved": 23,
+      "source_key_actions_preserved": 45,
+      "source_logic_fingerprints_match": true,
+      "information_links": 2,
+      "object_transfers": 7,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 1,
+      "upstream_hidden_terminal_state_anomalies": []
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 60
+        }
+      },
+      "id": "05_shop_offices",
+      "reference_actions": 95,
+      "both_exits_open": true,
+      "source_entities_preserved": 55,
+      "source_scenes_preserved": 8,
+      "source_key_actions_preserved": 66,
+      "source_logic_fingerprints_match": true,
+      "information_links": 3,
+      "object_transfers": 8,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 1,
+      "upstream_hidden_terminal_state_anomalies": []
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 59
+        }
+      },
+      "id": "06_basement_laboratory",
+      "reference_actions": 83,
+      "both_exits_open": true,
+      "source_entities_preserved": 47,
+      "source_scenes_preserved": 9,
+      "source_key_actions_preserved": 57,
+      "source_logic_fingerprints_match": true,
+      "information_links": 3,
+      "object_transfers": 11,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 2,
+      "upstream_hidden_terminal_state_anomalies": [
+        "blender machine"
+      ]
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 19
+        }
+      },
+      "id": "07_van_escape",
+      "reference_actions": 97,
+      "both_exits_open": true,
+      "source_entities_preserved": 49,
+      "source_scenes_preserved": 16,
+      "source_key_actions_preserved": 58,
+      "source_logic_fingerprints_match": true,
+      "information_links": 5,
+      "object_transfers": 9,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 2,
+      "upstream_hidden_terminal_state_anomalies": []
+    },
+    {
+      "scripted_ablation_controls": {
+        "without_send": {
+          "team_success": true,
+          "failed_actions": 0
+        },
+        "without_pass": {
+          "team_success": false,
+          "failed_actions": 32
+        }
+      },
+      "id": "08_laundry_escape",
+      "reference_actions": 81,
+      "both_exits_open": true,
+      "source_entities_preserved": 42,
+      "source_scenes_preserved": 9,
+      "source_key_actions_preserved": 48,
+      "source_logic_fingerprints_match": true,
+      "information_links": 5,
+      "object_transfers": 10,
+      "source_hashes_match": true,
+      "remote_mechanical_links": 2,
+      "upstream_hidden_terminal_state_anomalies": [
+        "pipe on machine"
+      ]
+    }
+  ]
+}

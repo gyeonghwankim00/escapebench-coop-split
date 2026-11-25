@@ -1,0 +1,619 @@
+[
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "living room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "telephone cabinet"
+    },
+    "source_step": 1,
+    "source_action": "click(telephone cabinet)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "telephone cabinet close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "hairpin"
+    },
+    "source_step": 2,
+    "source_action": "click(hairpin)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "hairpin",
+      "target": "drawer"
+    },
+    "source_step": 3,
+    "source_action": "apply(hairpin, drawer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "carving knife"
+    },
+    "source_step": 4,
+    "source_action": "click(carving knife)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bedroom"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "hammer handle"
+    },
+    "source_step": 5,
+    "source_action": "click(hammer handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "cardboard box close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "carving knife",
+      "target": "cardboard box"
+    },
+    "source_step": 6,
+    "source_action": "apply(carving knife, cardboard box)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "door handle"
+    },
+    "source_step": 7,
+    "source_action": "click(door handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bedroom"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "door handle",
+      "target": "bathroom door"
+    },
+    "source_step": 8,
+    "source_action": "apply(door handle, bathroom door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "bathroom door"
+    },
+    "source_step": 9,
+    "source_action": "click(bathroom door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bathroom"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "plunger"
+    },
+    "source_step": 10,
+    "source_action": "click(plunger)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "dining table close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "shard_1"
+    },
+    "source_step": 11,
+    "source_action": "click(shard_1)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "cabinet above stove close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "flashlight"
+    },
+    "source_step": 12,
+    "source_action": "click(flashlight)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "right cabinet close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "battery"
+    },
+    "source_step": 13,
+    "source_action": "click(battery)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "sink close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "plunger"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "plunger",
+      "target": "garbage"
+    },
+    "source_step": 14,
+    "source_action": "apply(plunger, garbage)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "garbage"
+    },
+    "source_step": 15,
+    "source_action": "click(garbage)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "study key"
+    },
+    "source_step": 16,
+    "source_action": "click(study key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "living room"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "study key"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "study key",
+      "target": "left door to the study"
+    },
+    "source_step": 17,
+    "source_action": "apply(study key, left door to the study)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "left door to the study"
+    },
+    "source_step": 18,
+    "source_action": "click(left door to the study)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "photo close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "photo_3"
+    },
+    "source_step": 19,
+    "source_action": "click(photo_3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "shard_3"
+    },
+    "source_step": 20,
+    "source_action": "click(shard_3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "locker close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "shard_4"
+    },
+    "source_step": 21,
+    "source_action": "click(shard_4)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "cabinet above sink close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "shard_2"
+    },
+    "source_step": 22,
+    "source_action": "click(shard_2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "mirror close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "shard_3",
+      "target": "mirror"
+    },
+    "source_step": 23,
+    "source_action": "apply(shard_3, mirror)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "shard_4",
+      "target": "mirror"
+    },
+    "source_step": 24,
+    "source_action": "apply(shard_4, mirror)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "shard_2"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "shard_2",
+      "target": "mirror"
+    },
+    "source_step": 25,
+    "source_action": "apply(shard_2, mirror)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "shard_1"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "shard_1",
+      "target": "mirror"
+    },
+    "source_step": 26,
+    "source_action": "apply(shard_1, mirror)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "mirror: All mirror shards have been placed, and the mirror now reflects a message 'cs546'."
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "toolbox close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "cs546",
+      "target": "toolbox"
+    },
+    "source_step": 27,
+    "source_action": "input(cs546, toolbox)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "screwdriver"
+    },
+    "source_step": 28,
+    "source_action": "click(screwdriver)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "fuse"
+    },
+    "source_step": 29,
+    "source_action": "click(fuse)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "ventilation fan close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "screwdriver"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "screwdriver",
+      "target": "ventilation fan"
+    },
+    "source_step": 30,
+    "source_action": "apply(screwdriver, ventilation fan)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "locker key"
+    },
+    "source_step": 31,
+    "source_action": "click(locker key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "locker close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "locker key",
+      "target": "locked locker door"
+    },
+    "source_step": 32,
+    "source_action": "apply(locker key, locked locker door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "hammer"
+    },
+    "source_step": 33,
+    "source_action": "click(hammer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "craft",
+      "first": "hammer",
+      "second": "hammer handle"
+    },
+    "source_step": 34,
+    "source_action": "craft(hammer, hammer handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "wall close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "hammer",
+      "target": "study wall"
+    },
+    "source_step": 35,
+    "source_action": "apply(hammer, study wall)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "craft",
+      "first": "battery",
+      "second": "flashlight"
+    },
+    "source_step": 36,
+    "source_action": "craft(battery, flashlight)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "flashlight"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "flashlight",
+      "target": "study wall"
+    },
+    "source_step": 37,
+    "source_action": "apply(flashlight, study wall)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "desk close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "fuse"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "fuse",
+      "target": "desk lamp"
+    },
+    "source_step": 38,
+    "source_action": "apply(fuse, desk lamp)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "desk lamp: The desk lamp has been fixed, and it lights up the desk. You see some letters, which is \"AMDG\", seemingly a code hint."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "wall close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "study wall: The smashed wall is lit by the flashlight, revealing a hidden message, which is \"A=4 D=1 G=3 M=7\""
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "left cabinet close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "4713",
+      "target": "safe"
+    },
+    "source_step": 39,
+    "source_action": "input(4713, safe)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "safe: The safe is now open, and inside you find a piece of paper that writes 655324223, seems a long code for something."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "living room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "655324223",
+      "target": "right door to the exit"
+    },
+    "source_step": 40,
+    "source_action": "input(655324223, right door to the exit)"
+  }
+]

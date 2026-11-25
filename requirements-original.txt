@@ -1,0 +1,2 @@
+# The pinned upstream environment uses yaml.safe_load. No API credentials needed.
+PyYAML==6.0.2

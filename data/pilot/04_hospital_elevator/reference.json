@@ -1,0 +1,619 @@
+[
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "blocked path close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "drawer without lock"
+    },
+    "source_step": 1,
+    "source_action": "click(drawer without lock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "drawer without lock"
+    },
+    "source_step": 2,
+    "source_action": "click(drawer without lock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "paper1"
+    },
+    "source_step": 3,
+    "source_action": "click(paper1)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "large cabinet close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "large cabinet door"
+    },
+    "source_step": 4,
+    "source_action": "click(large cabinet door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "key for room 805"
+    },
+    "source_step": 5,
+    "source_action": "click(key for room 805)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "room 805 door view"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "key for room 805"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "key for room 805",
+      "target": "room 805 door"
+    },
+    "source_step": 6,
+    "source_action": "apply(key for room 805, room 805 door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "room 805 door"
+    },
+    "source_step": 7,
+    "source_action": "click(room 805 door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "805 right room"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "drill bit"
+    },
+    "source_step": 8,
+    "source_action": "click(drill bit)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "left bookshelf close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "book1"
+    },
+    "source_step": 9,
+    "source_action": "click(book1)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "book4"
+    },
+    "source_step": 10,
+    "source_action": "click(book4)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "book2"
+    },
+    "source_step": 11,
+    "source_action": "click(book2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "book3"
+    },
+    "source_step": 12,
+    "source_action": "click(book3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "book5"
+    },
+    "source_step": 13,
+    "source_action": "click(book5)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "keycard"
+    },
+    "source_step": 14,
+    "source_action": "click(keycard)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "right bookshelf close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "battery"
+    },
+    "source_step": 15,
+    "source_action": "click(battery)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "painting2: A painting showing the number \"150\" in bold."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bedside table close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "150",
+      "target": "bedside drawer"
+    },
+    "source_step": 16,
+    "source_action": "input(150, bedside drawer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "bedside drawer"
+    },
+    "source_step": 17,
+    "source_action": "click(bedside drawer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "paper2"
+    },
+    "source_step": 18,
+    "source_action": "click(paper2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "operating room door overview"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "keycard",
+      "target": "operating room door"
+    },
+    "source_step": 19,
+    "source_action": "apply(keycard, operating room door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "surgical table close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "small key"
+    },
+    "source_step": 20,
+    "source_action": "click(small key)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "upper cabinet close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "paper3"
+    },
+    "source_step": 21,
+    "source_action": "click(paper3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "lower cabinet close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "door handle"
+    },
+    "source_step": 22,
+    "source_action": "click(door handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "8*4+6=6*7-4",
+      "target": "locked drawer"
+    },
+    "source_step": 23,
+    "source_action": "input(8*4+6=6*7-4, locked drawer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "locked drawer"
+    },
+    "source_step": 24,
+    "source_action": "click(locked drawer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "small cabinet close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "door handle"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "door handle",
+      "target": "small cabinet door"
+    },
+    "source_step": 25,
+    "source_action": "apply(door handle, small cabinet door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "small cabinet door"
+    },
+    "source_step": 26,
+    "source_action": "click(small cabinet door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "paper4"
+    },
+    "source_step": 27,
+    "source_action": "click(paper4)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "desk close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "paper1",
+      "target": "drawer with code lock"
+    },
+    "source_step": 28,
+    "source_action": "apply(paper1, drawer with code lock)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "paper2"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "paper2",
+      "target": "drawer with code lock"
+    },
+    "source_step": 29,
+    "source_action": "apply(paper2, drawer with code lock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "paper3",
+      "target": "drawer with code lock"
+    },
+    "source_step": 30,
+    "source_action": "apply(paper3, drawer with code lock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "paper4",
+      "target": "drawer with code lock"
+    },
+    "source_step": 31,
+    "source_action": "apply(paper4, drawer with code lock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "drawer with code lock"
+    },
+    "source_step": 32,
+    "source_action": "click(drawer with code lock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "lubricant"
+    },
+    "source_step": 33,
+    "source_action": "click(lubricant)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "cabinet close-up"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "lubricant"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "lubricant",
+      "target": "padlock"
+    },
+    "source_step": 34,
+    "source_action": "apply(lubricant, padlock)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "small key"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "small key",
+      "target": "padlock"
+    },
+    "source_step": 35,
+    "source_action": "apply(small key, padlock)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "padlock"
+    },
+    "source_step": 36,
+    "source_action": "click(padlock)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "padlock"
+    },
+    "source_step": 37,
+    "source_action": "click(padlock)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "ladder"
+    },
+    "source_step": 38,
+    "source_action": "click(ladder)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "ventilation fan close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "ladder",
+      "target": "ventilation fan"
+    },
+    "source_step": 39,
+    "source_action": "apply(ladder, ventilation fan)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "ventilation fan"
+    },
+    "source_step": 40,
+    "source_action": "click(ventilation fan)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "elevator room"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "paper with code: A piece of paper with the code \"1121 = \" written on it, seems like part of a code for math solving."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "lower cabinet close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "anatomy poster close-up"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "2333",
+      "target": "safe"
+    },
+    "source_step": 41,
+    "source_action": "input(2333, safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "safe"
+    },
+    "source_step": 42,
+    "source_action": "click(safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "battery",
+      "target": "unfunctional drill"
+    },
+    "source_step": 43,
+    "source_action": "apply(battery, unfunctional drill)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "drill bit"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "drill bit",
+      "target": "unfunctional drill"
+    },
+    "source_step": 44,
+    "source_action": "apply(drill bit, unfunctional drill)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "elevator interior"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "electric drill"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "electric drill",
+      "target": "circuit board"
+    },
+    "source_step": 45,
+    "source_action": "apply(electric drill, circuit board)"
+  }
+]

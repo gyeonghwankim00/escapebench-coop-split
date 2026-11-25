@@ -1,0 +1,92 @@
+{
+  "game": "game2-2-easy",
+  "pilot_id": "05_shop_offices",
+  "title": "상점과 사무실",
+  "A": [
+    "entrace of a shop",
+    "reception room",
+    "administration office",
+    "left side of inner office",
+    "store room"
+  ],
+  "B": [
+    "administration office corner",
+    "inner office",
+    "right side of inner office"
+  ],
+  "clues": [
+    {
+      "holder_source": "draft",
+      "target": "desk safe",
+      "answer": "GB24",
+      "tokens": [
+        "GB"
+      ]
+    },
+    {
+      "holder_source": "waste paper",
+      "target": "desk safe",
+      "answer": "GB24",
+      "tokens": [
+        "24"
+      ]
+    },
+    {
+      "holder_source": "drawer",
+      "target": "wall safe",
+      "answer": "1040",
+      "tokens": [
+        "1040"
+      ]
+    },
+    {
+      "holder_source": "code note",
+      "target": "bookshelf safe",
+      "answer": "3816",
+      "tokens": [
+        "3816"
+      ]
+    },
+    {
+      "holder_source": "old photo in frame",
+      "target": "bookshelf safe 2",
+      "answer": "1986",
+      "tokens": [
+        "1986"
+      ]
+    },
+    {
+      "holder_source": "camera",
+      "target": "left bookshelf safe",
+      "answer": "Genshin",
+      "tokens": [
+        "Genshin"
+      ]
+    },
+    {
+      "holder_source": "printed note",
+      "target": "left bookshelf safe",
+      "answer": "10011001",
+      "tokens": [
+        "11000011"
+      ]
+    },
+    {
+      "holder_source": "wooden door",
+      "target": "left bookshelf safe",
+      "answer": "10011001",
+      "tokens": [
+        "01011010"
+      ]
+    },
+    {
+      "holder_source": "large mouse pad",
+      "target": "left bookshelf safe",
+      "answer": "10011001",
+      "tokens": [
+        "XOR"
+      ]
+    }
+  ],
+  "note": "Evaluator-only. Clue answers must never be shown to agents."
+}

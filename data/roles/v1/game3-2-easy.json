@@ -1,0 +1,77 @@
+{
+  "game": "game3-2-easy",
+  "pilot_id": "08_laundry_escape",
+  "title": "세탁실과 관리실",
+  "A": [
+    "laundry room overview",
+    "laundry room right corner",
+    "right corridor overview",
+    "office room overview"
+  ],
+  "B": [
+    "left corridor overview",
+    "end of left corridor",
+    "laundry room left corner",
+    "end of right corridor",
+    "office room right side"
+  ],
+  "clues": [
+    {
+      "holder_source": "game machine",
+      "target": "information board",
+      "answer": "5974",
+      "tokens": [
+        "5974"
+      ]
+    },
+    {
+      "holder_source": "left half paper",
+      "target": "office door password pad",
+      "answer": "5891",
+      "tokens": [
+        "58"
+      ]
+    },
+    {
+      "holder_source": "right half paper",
+      "target": "office door password pad",
+      "answer": "5891",
+      "tokens": [
+        "91"
+      ]
+    },
+    {
+      "holder_source": "graffiti",
+      "target": "red mail box",
+      "answer": "1998",
+      "tokens": [
+        "I - 9, II - 1, III - 4, IV - 2"
+      ]
+    },
+    {
+      "holder_source": "red mail box",
+      "target": "red mail box",
+      "answer": "1998",
+      "tokens": [
+        "II I I/II I-II"
+      ]
+    },
+    {
+      "holder_source": "piece of paper hint",
+      "target": "tool box",
+      "answer": "1232",
+      "tokens": [
+        "1 4 2 3 +"
+      ]
+    },
+    {
+      "holder_source": "code paper",
+      "target": "tool box",
+      "answer": "1232",
+      "tokens": [
+        "4 2 1 3 (mod 4)"
+      ]
+    }
+  ],
+  "note": "Evaluator-only. Clue answers must never be shown to agents."
+}

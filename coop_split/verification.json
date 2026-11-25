@@ -1,0 +1,195 @@
+{
+  "split_version": "v3",
+  "checked_on": "2026-11-25",
+  "upstream": {
+    "repository": "https://github.com/qiancheng0/EscapeBench",
+    "commit": "2d42347446a8e9ed4f058fa415d40afa194166a5"
+  },
+  "method": "Greedy replay of the upstream reference key steps under the two-role rules (scripts/split_metrics.py in the origin project). Input codes count as known, so alone_* is an upper bound. Thresholds: completable = with give() the split completes as many steps as the unsplit game; no_idle_role = each role alone >= 10% of steps; interdependent = >= 15% of steps need an object handoff.",
+  "notes": {
+    "game1-3-easy": "interdependent=false is expected: no split of this game into whole rooms reaches 15%; flagged low_interdependence and used as negative control.",
+    "game2-3-easy": "94/95 is the same for the unsplit game: one reference click with no score is never reached by the greedy check."
+  },
+  "games": {
+    "game1-1-easy": {
+      "upstream_yaml_sha256": "f4fc2fe67a0ea29a951203507ceb5d0c047305aedbc0393f6fcf8c7dc5b99c1b",
+      "reference_steps": 40,
+      "unsplit_greedy_completes": 40,
+      "split_with_give_completes": 40,
+      "alone_A": 13,
+      "alone_B": 6,
+      "steps_needing_give": 15,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game1-2-easy": {
+      "upstream_yaml_sha256": "f1bd9224166d0df510d80a4688806246fa5195492191c55618ac3b6d58f10c55",
+      "reference_steps": 45,
+      "unsplit_greedy_completes": 45,
+      "split_with_give_completes": 45,
+      "alone_A": 7,
+      "alone_B": 12,
+      "steps_needing_give": 26,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game1-3-easy": {
+      "upstream_yaml_sha256": "a1ca0dda3f632a3be56a3a39fc2c4155e13236556f3272ded99d3a274973ff69",
+      "reference_steps": 38,
+      "unsplit_greedy_completes": 38,
+      "split_with_give_completes": 38,
+      "alone_A": 11,
+      "alone_B": 26,
+      "steps_needing_give": 1,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": false
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game1-4-easy": {
+      "upstream_yaml_sha256": "280daa2968884c933f539ce902e4986d430bc477e4b4d77d3338fded97d58f31",
+      "reference_steps": 64,
+      "unsplit_greedy_completes": 64,
+      "split_with_give_completes": 64,
+      "alone_A": 29,
+      "alone_B": 13,
+      "steps_needing_give": 22,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game1-5-easy": {
+      "upstream_yaml_sha256": "49701ae073b13e77ea16dbdaeb9e48df74ccf74a581b5c5279bf619a36456e27",
+      "reference_steps": 62,
+      "unsplit_greedy_completes": 62,
+      "split_with_give_completes": 62,
+      "alone_A": 16,
+      "alone_B": 17,
+      "steps_needing_give": 29,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game2-1-easy": {
+      "upstream_yaml_sha256": "c24f05470b6f7268491abbc24fe3a089c9cc1a23d4bddc1c31fd48326ec8a475",
+      "reference_steps": 45,
+      "unsplit_greedy_completes": 45,
+      "split_with_give_completes": 45,
+      "alone_A": 11,
+      "alone_B": 16,
+      "steps_needing_give": 18,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game2-2-easy": {
+      "upstream_yaml_sha256": "4b076014cd4688cf3d35d548d7a1cb9581461adeaed88a5ce67934461cd4b0dd",
+      "reference_steps": 66,
+      "unsplit_greedy_completes": 66,
+      "split_with_give_completes": 66,
+      "alone_A": 20,
+      "alone_B": 14,
+      "steps_needing_give": 32,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game2-3-easy": {
+      "upstream_yaml_sha256": "1ec162bfe8e3f2bf64e37b3405da9da32b99314c8a5ae00c7df53410369f7f46",
+      "reference_steps": 95,
+      "unsplit_greedy_completes": 94,
+      "split_with_give_completes": 94,
+      "alone_A": 19,
+      "alone_B": 34,
+      "steps_needing_give": 42,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game2-4-easy": {
+      "upstream_yaml_sha256": "7cc28c51167e3f1e07b4e18eefdc8ab03dd91aa17ee249b07cf6542c4e989899",
+      "reference_steps": 57,
+      "unsplit_greedy_completes": 57,
+      "split_with_give_completes": 57,
+      "alone_A": 20,
+      "alone_B": 16,
+      "steps_needing_give": 21,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game2-5-easy": {
+      "upstream_yaml_sha256": "5def45c9b7ce1e430adcea7432e58c82d3f676a69f6698b2b918c0f59faf4239",
+      "reference_steps": 58,
+      "unsplit_greedy_completes": 58,
+      "split_with_give_completes": 58,
+      "alone_A": 21,
+      "alone_B": 15,
+      "steps_needing_give": 22,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game3-1-easy": {
+      "upstream_yaml_sha256": "6b86c14dc7ae239b90598154f4f01738e82907f004bbdb804759bf6ceffb5ffb",
+      "reference_steps": 72,
+      "unsplit_greedy_completes": 72,
+      "split_with_give_completes": 72,
+      "alone_A": 16,
+      "alone_B": 11,
+      "steps_needing_give": 45,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    },
+    "game3-2-easy": {
+      "upstream_yaml_sha256": "f216145ba9d8cb602eb70cd869287a31183130c56b9fe4f7ef709022b1a807e7",
+      "reference_steps": 48,
+      "unsplit_greedy_completes": 48,
+      "split_with_give_completes": 48,
+      "alone_A": 18,
+      "alone_B": 8,
+      "steps_needing_give": 22,
+      "checks": {
+        "completable": true,
+        "no_idle_role": true,
+        "interdependent": true
+      },
+      "stored_file_matches_recompute": true
+    }
+  }
+}

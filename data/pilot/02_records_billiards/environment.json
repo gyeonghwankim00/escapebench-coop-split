@@ -1,0 +1,1632 @@
+{
+  "schema_version": "0.2",
+  "id": "02_records_billiards",
+  "title": "명부와 당구실",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game1-3-easy.yaml",
+      "sha256": "a1ca0dda3f632a3be56a3a39fc2c4155e13236556f3272ded99d3a274973ff69"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_1-3.txt",
+      "sha256": "695dfa400052f7ba68e5950506bd704cc39cc91bb5e00f0d768b73ad770f71f4"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "the hallway",
+    "scenes": [
+      {
+        "name": "the hallway",
+        "desc": "You got out of an elevator and you are in a hallway.",
+        "visible": true,
+        "scene_relations": {
+          "Go to left corner close-up": "left corner of the hallway",
+          "Go to the elevator room": "the elevator room",
+          "Go to the billiard room": "the billiard room"
+        }
+      },
+      {
+        "name": "left corner of the hallway",
+        "desc": "You are looking at the left corner of the hallway.",
+        "visible": true,
+        "scene_relations": {
+          "Back to the hallway": "the hallway"
+        }
+      },
+      {
+        "name": "the elevator room",
+        "desc": "the elevator room. There's no elevator and the room is empty.",
+        "visible": true,
+        "scene_relations": {
+          "Back to the hallway": "the hallway"
+        }
+      },
+      {
+        "name": "the billiard room",
+        "desc": "the billiard room, a room with a pool table, a bar, and a front desk.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the hallway": "the hallway",
+          "Go to front desk close-up": "front desk",
+          "Go the the pool table close-up": "pool table"
+        }
+      },
+      {
+        "name": "front desk",
+        "desc": "the front desk in the billiard room.",
+        "scene_relations": {
+          "Back to the billiard room": "the billiard room"
+        }
+      },
+      {
+        "name": "pool table",
+        "desc": "A pool table.",
+        "scene_relations": {
+          "Back to the billiard room": "the billiard room"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "the hallway",
+      "room": "A",
+      "desc": "You got out of an elevator and you are in a hallway.",
+      "visible": true,
+      "source_scene": "the hallway"
+    },
+    {
+      "name": "left corner of the hallway",
+      "room": "B",
+      "desc": "You are looking at the left corner of the hallway.",
+      "visible": true,
+      "source_scene": "left corner of the hallway"
+    },
+    {
+      "name": "the elevator room",
+      "room": "B",
+      "desc": "the elevator room. There's no elevator and the room is empty.",
+      "visible": true,
+      "source_scene": "the elevator room"
+    },
+    {
+      "name": "the billiard room",
+      "room": "A",
+      "desc": "the billiard room, a room with a pool table, a bar, and a front desk.",
+      "visible": false,
+      "source_scene": "the billiard room"
+    },
+    {
+      "name": "front desk",
+      "room": "A",
+      "desc": "the front desk in the billiard room.",
+      "visible": true,
+      "source_scene": "front desk"
+    },
+    {
+      "name": "pool table",
+      "room": "B",
+      "desc": "A pool table.",
+      "visible": true,
+      "source_scene": "pool table"
+    }
+  ],
+  "entities": [
+    {
+      "name": "black door",
+      "states": [
+        {
+          "desc": "A black wooden door, there's a gold color keyhole.",
+          "neg_reward": "You may need a gold colored key to open this door.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, gold key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, scene, the billiard room, True"
+              ],
+              "reward": "You Opened the door. Now you can go to the billiard room."
+            }
+          ]
+        },
+        {
+          "desc": "A brick wall. You already pocked the brick with the different color inside with the pipe"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the hallway",
+      "position": "At the right side",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the hallway",
+        "kind": "item",
+        "name": "black door",
+        "logic_sha256": "577a78eeced7a67722d667156abc91a487d7d89b81a67307ba641932577ec8f5"
+      }
+    },
+    {
+      "name": "brick wall",
+      "states": [
+        {
+          "desc": "A brick wall. One brick has a different color and shakes when you touch it.",
+          "neg_reward": "You might need something with hard texture to poke the brick.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, pipe"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, strange key, True",
+                "change_interact, False"
+              ],
+              "reward": "You pocked the brick with the different color inside with the pipe, reavling a strange key."
+            }
+          ]
+        },
+        {
+          "desc": "A brick wall. You already pocked the brick with the different color inside with the pipe."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the hallway",
+      "position": "At the left side",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the hallway",
+        "kind": "item",
+        "name": "brick wall",
+        "logic_sha256": "0b906de49e1a93fb168fe6e8f0c5d900fd2a1c51da910e58587aff8b165619f7"
+      }
+    },
+    {
+      "name": "exit door",
+      "states": [
+        {
+          "desc": "A door marked as exit. It has a card slot.",
+          "neg_reward": "You need to authorize your identity with a card before exit.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key card 2"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "finish_team"
+              ],
+              "reward": "You opened the door and exited. GAME END!"
+            }
+          ]
+        },
+        {
+          "desc": "N/A"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the hallway",
+      "position": "On the end of the hallway",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the hallway",
+        "kind": "item",
+        "name": "exit door",
+        "logic_sha256": "f51ef68d1e22b71da5422dfeba21baf485cf72ce7e38583d5c8ff77e83717688"
+      }
+    },
+    {
+      "name": "photo",
+      "states": [
+        {
+          "desc": "A photo of a graveyard. There's nothing special about it."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the hallway",
+      "position": "On the wall at the right side",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the hallway",
+        "kind": "item",
+        "name": "photo",
+        "logic_sha256": "307b9f52efeba7b9f00fc4261c79a465e1f44c68fc178960dbc6e3e3d3f9fcac"
+      }
+    },
+    {
+      "name": "paper 1",
+      "states": [
+        {
+          "desc": "A piece of paper titled experiment participants. It says -- Patient 2 John, Patient 3 Eric, Patient 4 Steven, Patient 7 Patrick, Patient 8 Andera..."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the hallway",
+      "position": "On the wall at the right side",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the hallway",
+        "kind": "tool",
+        "name": "paper 1",
+        "logic_sha256": "324c4fca5a3d8aac6389a1fd12a3a3f8f3a7f420b7f596aeb1dd44af3787bcf1"
+      }
+    },
+    {
+      "name": "strange key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A strange key with the shape of heart, seems made of wood.",
+          "apply_to": [
+            "wooden groove"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the hallway",
+      "position": "In the brick wall",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the hallway",
+        "kind": "tool",
+        "name": "strange key",
+        "logic_sha256": "e80b84161157500cc43f9ddd23e6131b054d69c5c63a890e0b5bd8c77e429925"
+      }
+    },
+    {
+      "name": "book",
+      "states": [
+        {
+          "desc": "A book.",
+          "neg_reward": "The book is closed, click to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "You opened the book. It's a history book about middle ages and renaissance. The book has more pages."
+            }
+          ]
+        },
+        {
+          "desc": "An opened history book about middle ages and renaissance. The book has more pages.",
+          "neg_reward": "The book is opened, click to continue reading.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 2"
+              ],
+              "reward": "You turned a page in the book. On the second page there's a picture about pool playing. The book has more pages."
+            }
+          ]
+        },
+        {
+          "desc": "An opened history book about middle ages and renaissance. On the second page there's a picture about pool playing. The book has more pages.",
+          "neg_reward": "The book is opened, click to continue reading.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 3",
+                "change_interact, False"
+              ],
+              "reward": "You turned a page in the book. On the last page, it says \"Nov 17th, Patrick, Steven, John, Andera\"."
+            }
+          ]
+        },
+        {
+          "desc": "An opened history book about middle ages and renaissance. On the second page there's a picture about pool playing. On the last page, it says \"Nov 17th, Patrick, Steven, John, Andera\"."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "left corner of the hallway",
+      "position": "On the floor",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "left corner of the hallway",
+        "kind": "item",
+        "name": "book",
+        "logic_sha256": "cc701c73495c60a00ec78d1f6e419c24575c6ad768f2052ec33e1e0d11fbfa9b"
+      }
+    },
+    {
+      "name": "pipe",
+      "states": [
+        {
+          "desc": "A section of water pipe. It's made of steel, hard texture and a little heavy.",
+          "apply_to": [
+            "brick wall"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "left corner of the hallway",
+      "position": "near the wall",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "left corner of the hallway",
+        "kind": "tool",
+        "name": "pipe",
+        "logic_sha256": "9b3975ad17de54587d135aa207a3c05f98125aeb75d0d461b29f3987a6834969"
+      }
+    },
+    {
+      "name": "control panel",
+      "states": [
+        {
+          "desc": "The control panel of the elevator.",
+          "neg_reward": "The panel is broken. There's nothing you could further do with it."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "the elevator room",
+      "position": "On the wall",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the elevator room",
+        "kind": "item",
+        "name": "control panel",
+        "logic_sha256": "3dfaa5ec76fe7cfbbb14e87069b9285564d5d89cb5461bb895280b77e1b9af8b"
+      }
+    },
+    {
+      "name": "wooden groove",
+      "states": [
+        {
+          "desc": "A piece of wood with a heart-shaped groove.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, strange key"
+              ],
+              "trigger": [
+                "change_visible, item, lockbox, True",
+                "change_state, 1",
+                "change_visible, False"
+              ],
+              "reward": "You inserted the key into the groove. A secret door opened and you saw a locked box."
+            }
+          ]
+        },
+        {
+          "desc": "N/A"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "the elevator room",
+      "position": "Under the elevator door",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the elevator room",
+        "kind": "item",
+        "name": "wooden groove",
+        "logic_sha256": "fb59ed1d0bd89e09f23931e617567a10ffa231e324d89b5b0a4a44bf02f4f67b"
+      }
+    },
+    {
+      "name": "lockbox",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A lockbox with a 4-digit password on it.",
+          "neg_reward": "You need to input the correct password. You may refer to those names appear in the book.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 7428"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, gold key, True"
+              ],
+              "reward": "You opened the lockbox and found a key inside."
+            }
+          ]
+        },
+        {
+          "desc": "A opened lockbox."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "the elevator room",
+      "position": "Under the elevator door",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the elevator room",
+        "kind": "item",
+        "name": "lockbox",
+        "logic_sha256": "622b973a55fb56abecf31443dd0ff42a9028c10c97fd437959a7c13a2797774d"
+      }
+    },
+    {
+      "name": "gold key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A gold key.",
+          "apply_to": [
+            "black door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "the elevator room",
+      "position": "in the lockbox",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the elevator room",
+        "kind": "tool",
+        "name": "gold key",
+        "logic_sha256": "5f6cabb69299d292ac450ed0eb4da549bb4f6a9474c53b1f1baf51b19d331ae2"
+      }
+    },
+    {
+      "name": "bar stool",
+      "states": [
+        {
+          "desc": "A black bar stool. Seems very normal to be here."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "Near the bar",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "item",
+        "name": "bar stool",
+        "logic_sha256": "1b61ab46c3772966df936a92425ba7eea08a53112492a927a4425f1203d95c75"
+      }
+    },
+    {
+      "name": "nails and board",
+      "states": [
+        {
+          "desc": "A wooden board fixed with nails. The nails seem loose.",
+          "neg_rewards": "you need tools at hand hard enough to knock off the nails.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, hammer"
+              ],
+              "trigger": [
+                "change_interact, False",
+                "change_visible, tool, pool ball 2, True"
+              ],
+              "reward": "You knocked off the nails with the hammer. Behind the wooden board was another pool ball."
+            }
+          ]
+        },
+        {
+          "desc": "A beick wall behind the wooden door. Someone wrote on the wall -- 'you don't want to get there'."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "On the right wall",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "item",
+        "name": "nails and board",
+        "logic_sha256": "1020dd892c1d12c0e12ff92796837d172ecbd10dad1c5b0b0d79b389320d39ba"
+      }
+    },
+    {
+      "name": "wooden door",
+      "states": [
+        {
+          "desc": "A wooden door. It seems to be the staff channel.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, bronze key"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "You opened the door. Behind it was a brick wall. Someone wrote on the wall -- you don't want to get there."
+            }
+          ]
+        },
+        {
+          "desc": "A brick wall behind the wooden door. Someone wrote on the wall -- 'you don't want to get there'."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "Near the front desk",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "item",
+        "name": "wooden door",
+        "logic_sha256": "a5d83fd93c09470227821d0ecf7c2a1c4961b4743645147ee8a91ee3c5cdfb71"
+      }
+    },
+    {
+      "name": "suitcase",
+      "states": [
+        {
+          "desc": "A leather suitcase. There's a key hole on it. It's closed now.",
+          "neg_reward": "You need a matching key to open this leather suitcase.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key in the wall"
+              ],
+              "trigger": [
+                "change_visible, tool, pool ball 4, True",
+                "change_visible, tool, hammer, True",
+                "change_interact, False"
+              ],
+              "reward": "You opened the suitcase."
+            }
+          ]
+        },
+        {
+          "desc": "A suitcase. It's opened."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "On the floor",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "item",
+        "name": "suitcase",
+        "logic_sha256": "df441b70e4de2b6d352a4d3ff012942b2d047ab66dcf56ae4ff48748abf1cc8e"
+      }
+    },
+    {
+      "name": "bottle of wine",
+      "states": [
+        {
+          "desc": "A bottle of wine. On the back there's a barcode used for scanning.",
+          "apply_to": [
+            "cashier"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "on the pool table",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "tool",
+        "name": "bottle of wine",
+        "logic_sha256": "7045af78a587be9cce7ef8f43c46613a40bfcf782079d155113501901e069fcf"
+      }
+    },
+    {
+      "name": "pool ball 1",
+      "states": [
+        {
+          "desc": "A pool ball with number 1.",
+          "apply_to": [
+            "pockets"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "on a bookshelf",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "tool",
+        "name": "pool ball 1",
+        "logic_sha256": "5a33b6b497162c3b6aa51762b3a514a3824862c30b4a8091b86837a5aaa5b712"
+      }
+    },
+    {
+      "name": "pool ball 4",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A pool ball with number 4.",
+          "apply_to": [
+            "pockets"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "in the suitcase",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "tool",
+        "name": "pool ball 4",
+        "logic_sha256": "0bbaeef31ef89457fdc9213f32c9abefa56f69fb73bdabe36211f376ce02f138"
+      }
+    },
+    {
+      "name": "pool ball 2",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A pool ball with number 2.",
+          "apply_to": [
+            "pockets"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "behind the wooden board",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "tool",
+        "name": "pool ball 2",
+        "logic_sha256": "f416fe0f7b65f6bc19503bbaf5be6579a3dfc448bb99ff2f72684e1453bc3c57"
+      }
+    },
+    {
+      "name": "hammer",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A hammer, with a wooden handle and a metal head, hard enough to knock off or break things.",
+          "apply_to": [
+            "nails and board"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "in the suitcase",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "tool",
+        "name": "hammer",
+        "logic_sha256": "afcf603ecb916ac1540312dee0ac0c642f166b70300bfc73b316ce492d18e141"
+      }
+    },
+    {
+      "name": "key in the wall",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A key that you found in the wall. There's a leather chain attached to it.",
+          "apply_to": [
+            "suitcase"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "the billiard room",
+      "position": "in a hidden space on the wall",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "the billiard room",
+        "kind": "tool",
+        "name": "key in the wall",
+        "logic_sha256": "c04e1a5f5122ea5324f64b204eabcf347d8978e519c9b3c4500c13f35df41f66"
+      }
+    },
+    {
+      "name": "posters",
+      "states": [
+        {
+          "desc": "Some posters. One of them says -- you can escape! Nothing else is useful here."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "front desk",
+      "position": "On the wall",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "item",
+        "name": "posters",
+        "logic_sha256": "3fcaa212d436edc61f6a81ab112b186b87ff01e8d6c9ef95982f295e235b215d"
+      }
+    },
+    {
+      "name": "button",
+      "states": [
+        {
+          "desc": "A red button, you do not know what it does.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, key in the wall, True",
+                "change_interact, False"
+              ],
+              "reward": "Something happened. A key appears somewhere in the wall, you should find it."
+            }
+          ]
+        },
+        {
+          "desc": "A red button. It has already been pressed."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "front desk",
+      "position": "On the desk",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "item",
+        "name": "button",
+        "logic_sha256": "e2d52d58186d9d8a7ad2145b877f060091e3c919a3d5617f59095c1e17b456b6"
+      }
+    },
+    {
+      "name": "cashier",
+      "states": [
+        {
+          "desc": "A cashier. There's a card slot, a numeric keypad, a infrared scanner, and a screen that says please authorize.",
+          "neg_reward": "The cachier isn't working now. You need to authorize first with a key card.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key card 1"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "Using the key card, you authorized the identity. The cashier is now working."
+            }
+          ]
+        },
+        {
+          "desc": "A cashier. There's a card slot, a numeric keypad, a infrared scanner. It's authorized and can work now.",
+          "neg_reward": "You may use the cashier now.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, bottle of wine"
+              ],
+              "trigger": [
+                "change_visible, tool, key card 2, True",
+                "change_interact, False"
+              ],
+              "reward": "After scanning the bottle of wine, the locker for change opens. You found another key card inside the cashier."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "front desk",
+      "position": "On the desk",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "item",
+        "name": "cashier",
+        "logic_sha256": "9376e3d0d6a9b3282a56b62f003f4731945ca3ddc0b08677f3f13892fc969338"
+      }
+    },
+    {
+      "name": "safe",
+      "states": [
+        {
+          "desc": "A safe with a 4-digit password, with a strange math shape beside. It's closed now.",
+          "neg_reward": "You need to input the correct password. Find some clues in the paper you get.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 4305"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, pool ball 3, True"
+              ],
+              "reward": "You opened the safe and found a pool ball inside."
+            }
+          ]
+        },
+        {
+          "desc": "A safe with a 4-digit password. It's opened now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "front desk",
+      "position": "On the desk",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "item",
+        "name": "safe",
+        "logic_sha256": "7fa7445c9c1ab8f6bbe8d71586e2483b80fb4932549710070fc603c8e3347d2c"
+      }
+    },
+    {
+      "name": "knife",
+      "states": [
+        {
+          "desc": "A knife, still very sharp, can be used to cut open anything.",
+          "apply_to": [
+            "chair"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "front desk",
+      "position": "on the wine cabinet",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "tool",
+        "name": "knife",
+        "logic_sha256": "55d1712e388bad41c0b26d4a7bf1e140799ec74b47655c33798f5943e168cfc7"
+      }
+    },
+    {
+      "name": "pool ball 3",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A pool ball with number 3.",
+          "apply_to": [
+            "pockets"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "front desk",
+      "position": "in the safe",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "tool",
+        "name": "pool ball 3",
+        "logic_sha256": "721f750db7a6caa3da3ac9bace84d0484d85993d8523aacccefe9dcc4cd6fb34"
+      }
+    },
+    {
+      "name": "key card 2",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A key card.",
+          "apply_to": [
+            "exit door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "front desk",
+      "position": "in the cashier's change locker",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "front desk",
+        "kind": "tool",
+        "name": "key card 2",
+        "logic_sha256": "93c35a0dd2c9ed2ae005a912f4fce1266873267ceb9697ada69447a9267b9650"
+      }
+    },
+    {
+      "name": "pockets",
+      "states": [
+        {
+          "desc": "Strange chararters are carved on its four pockets -- XI-IX, XV-XIV, X-VII, IX-V. Looks like roman numerals.",
+          "neg_reward": "You need to put all four balls inside first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, pool ball 1",
+                "apply, pool ball 2",
+                "apply, pool ball 3",
+                "apply, pool ball 4"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "You put balls inside but they're in the wrong direction. Please input a 4-digit permutation of balls numbered 1 to 4."
+            }
+          ]
+        },
+        {
+          "desc": "Strange chararters are carved on its four pockets -- XI-IX, XV-XIV, X-VII, IX-V. Looks like roman numerals. You put balls into the pockets but they're in the wrond direction. Please input a 4-digit permutation of balls numbered 1 to 4.",
+          "neg_reward": "Please input a 4-digit permutation of balls numbered 1 to 4.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 2134"
+              ],
+              "trigger": [
+                "change_visible, tool, key card 1, True",
+                "change_interact, False",
+                "change_state, 2"
+              ],
+              "reward": "You permutated the balls correctly and found a key card."
+            }
+          ]
+        },
+        {
+          "desc": "The pockets are all with balls inside. A secret slot is revealed."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "pool table",
+      "position": "on the corners of the pool table",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "pool table",
+        "kind": "item",
+        "name": "pockets",
+        "logic_sha256": "3ea5553fdd2375d76df680089d8d948c701090c5a7b065927b0c3a4d03bdca84"
+      }
+    },
+    {
+      "name": "chair",
+      "states": [
+        {
+          "desc": "A luxurious chair. There is something metal embedded in the backrest. The seat cushion is leather, and surface is bumping, seems to be something inside.",
+          "neg_reward": "You may click to collect what's embedded in chair, and use tool to see what's inside the cushion.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, bronze key, True",
+                "change_state, 1"
+              ],
+              "reward": "You saw a key embedded in the chair."
+            }
+          ]
+        },
+        {
+          "desc": "A luxurious chair. The seat cushion is leather, and surface is bumping, seems to be something inside.",
+          "neg_reward": "You may use tool to see what's inside the cushion.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, knife"
+              ],
+              "trigger": [
+                "change_visible, tool, paper 2, True"
+              ],
+              "reward": "You cut the cushion of the chair and found a paper inside."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "pool table",
+      "position": "on the side of the table",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "pool table",
+        "kind": "item",
+        "name": "chair",
+        "logic_sha256": "d2e3f8c885a0bc3ff25c7bb583124c2aa17fd2256eeea387684989bc841a32e0"
+      }
+    },
+    {
+      "name": "bronze key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A bronze key.",
+          "apply_to": [
+            "wooden door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "pool table",
+      "position": "in the chair",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "pool table",
+        "kind": "tool",
+        "name": "bronze key",
+        "logic_sha256": "1a684bdc57fbdbe1673eb802637da5ea90f3a454a45ac0bc2beb5a8c997088ff"
+      }
+    },
+    {
+      "name": "paper 2",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A piece of paper with mathematic calculations. Four graphics are in the middle -- square, triangle, circle and pentagon."
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "pool table",
+      "position": "in the chair's cushion",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "pool table",
+        "kind": "tool",
+        "name": "paper 2",
+        "logic_sha256": "8c3f9f7a0a1558707fe85ec9b77bcf19c5a9bf24cc03ebddf61f9ce0749a87ff"
+      }
+    },
+    {
+      "name": "key card 1",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A key card. Maybe used for authorization.",
+          "apply_to": [
+            "cashier"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "pool table",
+      "position": "in a secret slot of the pool table",
+      "source": {
+        "file": "game1-3-easy.yaml",
+        "scene": "pool table",
+        "kind": "tool",
+        "name": "key card 1",
+        "logic_sha256": "27a6e1bcfedc8d626c20ec676f5fe661227b0b74b47bdda8266dd8536246645a"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "paper 1",
+        "target_entity": "lockbox",
+        "accepted_input": "7428",
+        "evidence_text": [
+          "Patient 2 John",
+          "Patient 3 Eric",
+          "Patient 4 Steven",
+          "Patient 7 Patrick",
+          "Patient 8 Andera"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I03",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "paper 2",
+        "target_entity": "safe",
+        "accepted_input": "4305",
+        "evidence_text": [
+          "square, triangle, circle and pentagon"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I02",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "book",
+        "target_entity": "lockbox",
+        "accepted_input": "7428",
+        "evidence_text": [
+          "Patrick, Steven, John, Andera"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "pockets",
+        "target_entity": "pockets",
+        "accepted_input": "2134",
+        "evidence_text": [
+          "XI-IX, XV-XIV, X-VII, IX-V"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "pipe",
+        "sender": "B",
+        "receiver": "A",
+        "target": "brick wall"
+      },
+      {
+        "id": "O02",
+        "object": "strange key",
+        "sender": "A",
+        "receiver": "B",
+        "target": "wooden groove"
+      },
+      {
+        "id": "O03",
+        "object": "gold key",
+        "sender": "B",
+        "receiver": "A",
+        "target": "black door"
+      },
+      {
+        "id": "O04",
+        "object": "knife",
+        "sender": "A",
+        "receiver": "B",
+        "target": "chair"
+      },
+      {
+        "id": "O05",
+        "object": "bronze key",
+        "sender": "B",
+        "receiver": "A",
+        "target": "wooden door"
+      },
+      {
+        "id": "O06",
+        "object": "pool ball 1",
+        "sender": "A",
+        "receiver": "B",
+        "target": "pockets"
+      },
+      {
+        "id": "O07",
+        "object": "pool ball 3",
+        "sender": "A",
+        "receiver": "B",
+        "target": "pockets"
+      },
+      {
+        "id": "O08",
+        "object": "pool ball 4",
+        "sender": "A",
+        "receiver": "B",
+        "target": "pockets"
+      },
+      {
+        "id": "O09",
+        "object": "pool ball 2",
+        "sender": "A",
+        "receiver": "B",
+        "target": "pockets"
+      },
+      {
+        "id": "O10",
+        "object": "key card 1",
+        "sender": "B",
+        "receiver": "A",
+        "target": "cashier"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "exit door",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 34,
+    "retained_entities": 34,
+    "source_scenes": 6,
+    "retained_scenes": 6,
+    "source_key_actions": 38,
+    "replayed_source_key_actions": 38,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "paper 1"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 4,
+        "action": {
+          "type": "click",
+          "target": "book"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 5,
+        "action": {
+          "type": "click",
+          "target": "book"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 6,
+        "action": {
+          "type": "click",
+          "target": "book"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 7,
+        "action": {
+          "type": "click",
+          "target": "pipe"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 9,
+        "action": {
+          "type": "apply",
+          "tool": "pipe",
+          "target": "brick wall"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 10,
+        "action": {
+          "type": "click",
+          "target": "strange key"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 13,
+        "action": {
+          "type": "apply",
+          "tool": "strange key",
+          "target": "wooden groove"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 17,
+        "action": {
+          "type": "input",
+          "value": "7428",
+          "target": "lockbox"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 18,
+        "action": {
+          "type": "click",
+          "target": "gold key"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 20,
+        "action": {
+          "type": "apply",
+          "tool": "gold key",
+          "target": "black door"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 22,
+        "action": {
+          "type": "click",
+          "target": "bottle of wine"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 23,
+        "action": {
+          "type": "click",
+          "target": "pool ball 1"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 25,
+        "action": {
+          "type": "click",
+          "target": "button"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 26,
+        "action": {
+          "type": "click",
+          "target": "knife"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 28,
+        "action": {
+          "type": "click",
+          "target": "chair"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 29,
+        "action": {
+          "type": "click",
+          "target": "bronze key"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 31,
+        "action": {
+          "type": "apply",
+          "tool": "knife",
+          "target": "chair"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 32,
+        "action": {
+          "type": "click",
+          "target": "paper 2"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 34,
+        "action": {
+          "type": "input",
+          "value": "4305",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 35,
+        "action": {
+          "type": "click",
+          "target": "pool ball 3"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 38,
+        "action": {
+          "type": "apply",
+          "tool": "bronze key",
+          "target": "wooden door"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 39,
+        "action": {
+          "type": "click",
+          "target": "key in the wall"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 40,
+        "action": {
+          "type": "apply",
+          "tool": "key in the wall",
+          "target": "suitcase"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 41,
+        "action": {
+          "type": "click",
+          "target": "pool ball 4"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 42,
+        "action": {
+          "type": "click",
+          "target": "hammer"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 43,
+        "action": {
+          "type": "apply",
+          "tool": "hammer",
+          "target": "nails and board"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 44,
+        "action": {
+          "type": "click",
+          "target": "pool ball 2"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 46,
+        "action": {
+          "type": "apply",
+          "tool": "pool ball 1",
+          "target": "pockets"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 48,
+        "action": {
+          "type": "apply",
+          "tool": "pool ball 3",
+          "target": "pockets"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 50,
+        "action": {
+          "type": "apply",
+          "tool": "pool ball 4",
+          "target": "pockets"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 52,
+        "action": {
+          "type": "apply",
+          "tool": "pool ball 2",
+          "target": "pockets"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 53,
+        "action": {
+          "type": "input",
+          "value": "2134",
+          "target": "pockets"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 54,
+        "action": {
+          "type": "click",
+          "target": "key card 1"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 57,
+        "action": {
+          "type": "apply",
+          "tool": "key card 1",
+          "target": "cashier"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 58,
+        "action": {
+          "type": "apply",
+          "tool": "bottle of wine",
+          "target": "cashier"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 59,
+        "action": {
+          "type": "click",
+          "target": "key card 2"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 61,
+        "action": {
+          "type": "apply",
+          "tool": "key card 2",
+          "target": "exit door"
+        }
+      }
+    ]
+  }
+}

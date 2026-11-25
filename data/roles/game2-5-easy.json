@@ -1,0 +1,145 @@
+{
+  "version": "v3",
+  "game": "game2-5-easy",
+  "A": [
+    "van in dessert",
+    "back of the van",
+    "underneath part of the van",
+    "top of the van",
+    "trunk of the van",
+    "repair kit in the trunk",
+    "door of the van",
+    "van indoor front overview",
+    "front desk",
+    "book shelf",
+    "computer on the desk"
+  ],
+  "B": [
+    "passage way in van",
+    "drawers",
+    "bed overview",
+    "right side of bed",
+    "bed shelf inside"
+  ],
+  "starts": {
+    "B": "passage way in van"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 58,
+    "alone_A": 21,
+    "alone_B": 15,
+    "together_no_give": 36,
+    "with_give": 58,
+    "b_share": 0.44,
+    "handoffs": 10,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 4
+  },
+  "cross_clues": [
+    {
+      "answer": "2610",
+      "target": "top drawer",
+      "target_role": "B",
+      "partner_sources": [
+        "old thesis paper"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "3149",
+      "target": "safe box",
+      "target_role": "B",
+      "partner_sources": [
+        "spotlight"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "05062011",
+      "target": "bottom drawer",
+      "target_role": "B",
+      "partner_sources": [
+        "license plate",
+        "magazine"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "1927",
+      "target": "computer",
+      "target_role": "A",
+      "partner_sources": [
+        "paper with names"
+      ],
+      "all_sources_with_partner": false
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "cup + water bottle",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(water bottle, cup)"
+    },
+    {
+      "tool": "wrench",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(wrench, generator)"
+    },
+    {
+      "tool": "screwdriver",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(screwdriver, license plate space)"
+    },
+    {
+      "tool": "torch light with power",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(torch light with power, license plate space)"
+    },
+    {
+      "tool": "light bulb",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(light bulb, spotlight)"
+    },
+    {
+      "tool": "cup with hot water",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(cup with hot water, mud)"
+    },
+    {
+      "tool": "shelf key",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shelf key, bed shelf 2)"
+    },
+    {
+      "tool": "mental card",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(mental card, safe box)"
+    },
+    {
+      "tool": "scraper",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(scraper, mud)"
+    },
+    {
+      "tool": "USB flash disk",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(USB flash disk, computer)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

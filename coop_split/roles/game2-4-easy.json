@@ -1,0 +1,92 @@
+{
+  "version": "v3",
+  "game": "game2-4-easy",
+  "A": [
+    "basement entrance",
+    "basement leftside",
+    "control machine set",
+    "cabin room"
+  ],
+  "B": [
+    "hallway behind door",
+    "lab room overview",
+    "computer desk",
+    "wall of safes",
+    "experiment table area"
+  ],
+  "starts": {
+    "B": "hallway behind door"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 57,
+    "alone_A": 20,
+    "alone_B": 16,
+    "together_no_give": 36,
+    "with_give": 57,
+    "b_share": 0.48,
+    "handoffs": 4,
+    "components": {
+      "A": 2,
+      "B": 1
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "crow",
+      "target": "waveform detector",
+      "target_role": "A",
+      "partner_sources": [
+        "sound list"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "130",
+      "target": "waveform detector",
+      "target_role": "A",
+      "partner_sources": [
+        "frequency list"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "2463",
+      "target": "iron door",
+      "target_role": "B",
+      "partner_sources": [
+        "waveform detector"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "key card",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(key card, card reader)"
+    },
+    {
+      "tool": "key card",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(key card, safe 2)"
+    },
+    {
+      "tool": "safe key",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(safe key, safe 1)"
+    },
+    {
+      "tool": "cable",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(cable, recorder)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

@@ -1,0 +1,2540 @@
+{
+  "schema_version": "0.2",
+  "id": "07_van_escape",
+  "title": "밴 외부와 내부",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game2-5-easy.yaml",
+      "sha256": "5def45c9b7ce1e430adcea7432e58c82d3f676a69f6698b2b918c0f59faf4239"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_2-5.txt",
+      "sha256": "19abc97e4d1c6ad30799a146ab64a267ea89c9872f9eb8495ce71fb4e300a5a1"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "van in dessert",
+    "scenes": [
+      {
+        "name": "van in dessert",
+        "desc": "There is a van in the middle of the dessert, the scenario around it is very dry and wild.",
+        "scene_relations": {
+          "Go to back of the van": "back of the van",
+          "Go to trunk of the van": "trunk of the van",
+          "Go to door of the van": "door of the van"
+        }
+      },
+      {
+        "name": "back of the van",
+        "desc": "There is a stepladder on the back but is currently folded underneath. There seems to be something on the top but you couldn't reach it.",
+        "scene_relations": {
+          "Back to the van in dessert": "van in dessert",
+          "Go to the top of the van": "top of the van",
+          "Explore the underneath part of the van": "underneath part of the van"
+        }
+      },
+      {
+        "name": "underneath part of the van",
+        "desc": "There is a stepladder on the right side. There is a license plate on the left side.",
+        "scene_relations": {
+          "Back to the back of the van": "back of the van"
+        }
+      },
+      {
+        "name": "top of the van",
+        "desc": "There is a spotlight on the top, with a cable connected to it. The other end of the cable goes into the car. Beside the spotlight, there's a skylight in the near front.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the back of the van": "back of the van"
+        }
+      },
+      {
+        "name": "trunk of the van",
+        "desc": "The trunk has a white door. The door seems not locked. There are some decorations beside the door.",
+        "scene_relations": {
+          "Back to the van in dessert": "van in dessert",
+          "Explore a repair toolkit in the trunk": "repair kit in the trunk"
+        }
+      },
+      {
+        "name": "repair kit in the trunk",
+        "desc": "There is a blue repair kit box in the middle.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the trunk of the van": "trunk of the van"
+        }
+      },
+      {
+        "name": "door of the van",
+        "desc": "The door is locked. There is a window on the left side, and some mud below the window.",
+        "scene_relations": {
+          "Back to the van in dessert": "van in dessert",
+          "Go into inside of the door": "van indoor front overview"
+        }
+      },
+      {
+        "name": "van indoor front overview",
+        "desc": "The front of the van is spacious. There is a seat on the left side, and a comfortable passenger seat on the right side. There's a front desk before the left seat.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the door of the van": "door of the van",
+          "Left to the passage way in van": "passage way in van",
+          "Explore the front desk in the van": "front desk"
+        }
+      },
+      {
+        "name": "front desk",
+        "desc": "There's a seat behind the desk on the left, a book shelf on the top, and a computer screen in the middle of desk.",
+        "scene_relations": {
+          "Back to the front of the van overview": "van indoor front overview",
+          "Explore the computer on the desk": "computer on the desk",
+          "Explore the book shelf on the top": "book shelf"
+        }
+      },
+      {
+        "name": "book shelf",
+        "desc": "The book shelf is full of books, with names \"Ally 1\", \"Hunter 6\", \"Harper 3\", \"Violet 7\", \"Samuel 5\", \"Michael 2\", \"Victoria 4\", \"Brayden 8\", \"Liam 9\", might have some special connection between the name and the number digits.",
+        "scene_relations": {
+          "Back to the front desk": "front desk"
+        }
+      },
+      {
+        "name": "computer on the desk",
+        "desc": "There's a seat behind the desk on the left, a book shelf on the top, and a computer screen in the middle of desk.",
+        "scene_relations": {
+          "Back to the front desk": "front desk"
+        }
+      },
+      {
+        "name": "passage way in van",
+        "desc": "There are some shelfs on the left top, currently closed. There's a microwave on the left on the table. There are some drawers below, and the bed is in front of you.",
+        "scene_relations": {
+          "Back to the front of the van overview": "van indoor front overview",
+          "Back to the door of the van": "door of the van",
+          "Explore the drawers": "drawers",
+          "Go to the bed": "bed overview"
+        }
+      },
+      {
+        "name": "drawers",
+        "desc": "Two drawer are under the table in passage way, each has a lock on it.",
+        "scene_relations": {
+          "Back to the passage way": "passage way in van"
+        }
+      },
+      {
+        "name": "bed overview",
+        "desc": "The bed is very messy, with a torch and a hat on it. There are shelves on the top, right and left side.",
+        "scene_relations": {
+          "Back to the passage way": "passage way in van",
+          "Go to see the right side of bed": "right side of bed",
+          "Explore what's inside the bed shelf": "bed shelf inside"
+        }
+      },
+      {
+        "name": "right side of bed",
+        "desc": "A wall is on the right side of bed, a board on the wall.",
+        "scene_relations": {
+          "Back to the bed overview": "bed overview"
+        }
+      },
+      {
+        "name": "bed shelf inside",
+        "desc": "There's a bunch of things inside the shelf",
+        "visible": false,
+        "scene_relations": {
+          "Back to the bed overview": "bed overview"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "van in dessert",
+      "room": "B",
+      "desc": "There is a van in the middle of the dessert, the scenario around it is very dry and wild.",
+      "visible": true,
+      "source_scene": "van in dessert"
+    },
+    {
+      "name": "back of the van",
+      "room": "B",
+      "desc": "There is a stepladder on the back but is currently folded underneath. There seems to be something on the top but you couldn't reach it.",
+      "visible": true,
+      "source_scene": "back of the van"
+    },
+    {
+      "name": "underneath part of the van",
+      "room": "B",
+      "desc": "There is a stepladder on the right side. There is a license plate on the left side.",
+      "visible": true,
+      "source_scene": "underneath part of the van"
+    },
+    {
+      "name": "top of the van",
+      "room": "B",
+      "desc": "There is a spotlight on the top, with a cable connected to it. The other end of the cable goes into the car. Beside the spotlight, there's a skylight in the near front.",
+      "visible": false,
+      "source_scene": "top of the van"
+    },
+    {
+      "name": "trunk of the van",
+      "room": "B",
+      "desc": "The trunk has a white door. The door seems not locked. There are some decorations beside the door.",
+      "visible": true,
+      "source_scene": "trunk of the van"
+    },
+    {
+      "name": "repair kit in the trunk",
+      "room": "B",
+      "desc": "There is a blue repair kit box in the middle.",
+      "visible": false,
+      "source_scene": "repair kit in the trunk"
+    },
+    {
+      "name": "door of the van",
+      "room": "B",
+      "desc": "The door is locked. There is a window on the left side, and some mud below the window.",
+      "visible": true,
+      "source_scene": "door of the van"
+    },
+    {
+      "name": "van indoor front overview",
+      "room": "A",
+      "desc": "The front of the van is spacious. There is a seat on the left side, and a comfortable passenger seat on the right side. There's a front desk before the left seat.",
+      "visible": false,
+      "source_scene": "van indoor front overview"
+    },
+    {
+      "name": "front desk",
+      "room": "A",
+      "desc": "There's a seat behind the desk on the left, a book shelf on the top, and a computer screen in the middle of desk.",
+      "visible": true,
+      "source_scene": "front desk"
+    },
+    {
+      "name": "book shelf",
+      "room": "A",
+      "desc": "The book shelf is full of books, with names \"Ally 1\", \"Hunter 6\", \"Harper 3\", \"Violet 7\", \"Samuel 5\", \"Michael 2\", \"Victoria 4\", \"Brayden 8\", \"Liam 9\", might have some special connection between the name and the number digits.",
+      "visible": true,
+      "source_scene": "book shelf"
+    },
+    {
+      "name": "computer on the desk",
+      "room": "A",
+      "desc": "There's a seat behind the desk on the left, a book shelf on the top, and a computer screen in the middle of desk.",
+      "visible": true,
+      "source_scene": "computer on the desk"
+    },
+    {
+      "name": "passage way in van",
+      "room": "A",
+      "desc": "There are some shelfs on the left top, currently closed. There's a microwave on the left on the table. There are some drawers below, and the bed is in front of you.",
+      "visible": true,
+      "source_scene": "passage way in van"
+    },
+    {
+      "name": "drawers",
+      "room": "B",
+      "desc": "Two drawer are under the table in passage way, each has a lock on it.",
+      "visible": true,
+      "source_scene": "drawers"
+    },
+    {
+      "name": "bed overview",
+      "room": "A",
+      "desc": "The bed is very messy, with a torch and a hat on it. There are shelves on the top, right and left side.",
+      "visible": true,
+      "source_scene": "bed overview"
+    },
+    {
+      "name": "right side of bed",
+      "room": "A",
+      "desc": "A wall is on the right side of bed, a board on the wall.",
+      "visible": true,
+      "source_scene": "right side of bed"
+    },
+    {
+      "name": "bed shelf inside",
+      "room": "A",
+      "desc": "There's a bunch of things inside the shelf",
+      "visible": false,
+      "source_scene": "bed shelf inside"
+    }
+  ],
+  "entities": [
+    {
+      "name": "wild cactus",
+      "states": [
+        {
+          "desc": "The wild cactus is dry and withered"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "van in dessert",
+      "position": "On the ground",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "van in dessert",
+        "kind": "item",
+        "name": "wild cactus",
+        "logic_sha256": "3957b2f699b4c3bcaae84941f7a3aa2b99a007a790e35c810cea4ca248d7835b"
+      }
+    },
+    {
+      "name": "wood stick",
+      "states": [
+        {
+          "desc": "a long, thin, and straight piece of wood with hard texture",
+          "apply_to": [
+            "skylight"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "van in dessert",
+      "position": "Beside the van on the ground",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "van in dessert",
+        "kind": "tool",
+        "name": "wood stick",
+        "logic_sha256": "c7de1ee920ae74eedc94f0ae2b5d77ec0fc8e78c3c179215380d62c9c565e93a"
+      }
+    },
+    {
+      "name": "license plate space",
+      "states": [
+        {
+          "desc": "The license plate is currently fixed to the van, with four screws on each corner",
+          "neg_reward": "There may be another space inside the plate, you may try to take it off",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, screwdriver"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, license plate, True"
+              ],
+              "reward": "The license plate dropped to the ground"
+            }
+          ]
+        },
+        {
+          "desc": "There is a dark space inside the license plate, you cannot see clearly",
+          "neg_reward": "You may try to see what's inside with light",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, torch light with power"
+              ],
+              "trigger": [
+                "change_visible, tool, shelf key, True",
+                "change_visible, tool, mental card, True",
+                "change_interact, False"
+              ],
+              "reward": "The license plate dropped to the ground"
+            }
+          ]
+        },
+        {
+          "desc": "There is a dark space inside the license plate, things have alredy been taken out"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "On the left side",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "item",
+        "name": "license plate space",
+        "logic_sha256": "a063c10c164d90ef61a8b58327b615550fab9b471bf79a1470dc2e6f5dbcff13"
+      }
+    },
+    {
+      "name": "iron wire",
+      "states": [
+        {
+          "desc": "The iron wire is rusty and old, tied the stepladder underneath the van",
+          "neg_reward": "You should try to untie this iron wire to free the stepladder",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, wire cutter"
+              ],
+              "trigger": [
+                "change_visible, item, iron wire, False",
+                "change_interact, item, stepladder, True"
+              ],
+              "reward": "The iron wire is untied, now the stepladder is free"
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "At the bottom of the stepladder",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "item",
+        "name": "iron wire",
+        "logic_sha256": "e24690f23074a11ca998ccb3213cc635a1e5ee63c9e1e2a5c5b8c0115e4dd9f2"
+      }
+    },
+    {
+      "name": "stepladder",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "The stepladder is folded underneath the van",
+          "neg_reward": "You should simply interact with the stepladder to unfold it",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, stepladder, False",
+                "change_visible, scene, top of the van, True"
+              ],
+              "reward": "The stepladder is unfolded, now you can reach the top of the van"
+            }
+          ]
+        },
+        {
+          "desc": "The stepladder is unfolded, now you can reach the top of the van"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "On the right side",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "item",
+        "name": "stepladder",
+        "logic_sha256": "9a0226f543554c65a2faae442f4fec547a99c0c55db8afd727e6d147934371dc"
+      }
+    },
+    {
+      "name": "bunch of keys",
+      "states": [
+        {
+          "desc": "a bunch of keys with a chain, there's dust and rust on the chain waiting to be cleaned",
+          "wait_for": [
+            "rag"
+          ]
+        },
+        {
+          "desc": "a bunch of keys with a chain, the chain is cleaned now with a silver color",
+          "apply_to": [
+            "van door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "On the ground underneath the van",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "tool",
+        "name": "bunch of keys",
+        "logic_sha256": "bcaca4aa1c96c9bbd55026a5305f66a91c6f1fecf851e17b009d1b8fffee4d6c"
+      }
+    },
+    {
+      "visible": false,
+      "name": "license plate",
+      "states": [
+        {
+          "desc": "a license plate with written \"May California 2011\", seems like hinting on a digital password"
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "On the ground under the space",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "tool",
+        "name": "license plate",
+        "logic_sha256": "38361cf8de92c99f33740f12ce15603df4149e26c25c7dc70492f353cf50f0a5"
+      }
+    },
+    {
+      "visible": false,
+      "name": "shelf key",
+      "states": [
+        {
+          "desc": "a black key that maybe used to open a shelf",
+          "apply_to": [
+            "bed shelf 2"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "Inside the space behind the license plate",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "tool",
+        "name": "shelf key",
+        "logic_sha256": "928fcb31e055704551ea0b3d4690a1e8921dea56609b5eddd4aadffa06f4ad21"
+      }
+    },
+    {
+      "visible": false,
+      "name": "mental card",
+      "states": [
+        {
+          "desc": "a normal mental card with dark color, seems fit into a slot",
+          "apply_to": [
+            "safe box"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "underneath part of the van",
+      "position": "Inside the space behind the license plate",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "underneath part of the van",
+        "kind": "tool",
+        "name": "mental card",
+        "logic_sha256": "6be792292a1fefb136f1e13251a88f928b43902f0e966a3b8b57ead1e6c4036b"
+      }
+    },
+    {
+      "name": "spotlight",
+      "states": [
+        {
+          "desc": "the spotlight has 9 slots, but there's only 8 light bulbs on it.",
+          "neg_reward": "You may think about how to find the last missing one and put it on",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, light bulb"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, item, solar panel slot, True"
+              ],
+              "reward": "The spotlight is intact now, but still there's no power."
+            }
+          ]
+        },
+        {
+          "desc": "the spotlight is intact, but no power",
+          "neg_reward": "You should try to give power by making use of the solar panel"
+        },
+        {
+          "desc": "the spotlight is on, showing the 4 digits \"3149\", seems like a 4-digit password hint"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "top of the van",
+      "position": "At the further end of the van's top",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "top of the van",
+        "kind": "item",
+        "name": "spotlight",
+        "logic_sha256": "45b1a795817698758c2ea963028da933783b8c3749104034b969eeec946853d2"
+      }
+    },
+    {
+      "name": "solar panel slot",
+      "visible": false,
+      "interactable": false,
+      "states": [
+        {
+          "desc": "You should try to put the solar panel here",
+          "neg_reward": "Please first turn the power on in the car before putting the solar panel",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, solar panel"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_state, item, spotlight, 2",
+                "change_interact, False",
+                "change_interact, item, spotlight, False"
+              ],
+              "reward": "The solar panel is put on the top of the van, spotlight is on now"
+            }
+          ]
+        },
+        {
+          "desc": "slot with a solar panel on it"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "top of the van",
+      "position": "In the middle of the van's top",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "top of the van",
+        "kind": "item",
+        "name": "solar panel slot",
+        "logic_sha256": "aae3cb95965cae77dccd1ab4077c184882390c5abd07c00c80ecea9f69ff4b0c"
+      }
+    },
+    {
+      "name": "skylight",
+      "states": [
+        {
+          "desc": "the skylight is tightly closed, may have to try pry it open",
+          "neg_reward": "You may try to open this skylight by applying tool at hands",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, wood stick"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, silver key, True",
+                "change_interact, item, skylight, False"
+              ],
+              "reward": "The skylight is opened, there is a key on the top of the shelf inside the skylight"
+            }
+          ]
+        },
+        {
+          "desc": "the skylight is open"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "top of the van",
+      "position": "Before the spotlight",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "top of the van",
+        "kind": "item",
+        "name": "skylight",
+        "logic_sha256": "67ddf586b82e02856780dfe1e1e01875abdc3726fbd4df713609567f6506dc58"
+      }
+    },
+    {
+      "name": "silver key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a single silver, size of a suitcase key",
+          "apply_to": [
+            "repair kit box"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "top of the van",
+      "position": "Inside the skylight, on the shelf top",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "top of the van",
+        "kind": "tool",
+        "name": "silver key",
+        "logic_sha256": "d8e6400e49c0633d7f4b3a3f9f0177ba2d024f43f0b83fcbd32abc194de4aaee"
+      }
+    },
+    {
+      "name": "trunk door",
+      "states": [
+        {
+          "desc": "the trunk door is closed",
+          "neg_reward": "You try to simply interact with the door to open it",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, wire cutter, True",
+                "change_visible, tool, rag, True",
+                "change_visible, scene, repair kit in the trunk, True",
+                "change_interact, item, trunk door, False"
+              ],
+              "reward": "The trunk door is opened"
+            }
+          ]
+        },
+        {
+          "desc": "the trunk door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "trunk of the van",
+      "position": "On the left side",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "trunk of the van",
+        "kind": "item",
+        "name": "trunk door",
+        "logic_sha256": "2e38712b2e91fcdcb341d6b229b1e46a1713beb5e190c6031010bb01b4bec39f"
+      }
+    },
+    {
+      "name": "rag",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a white and clean rag, seems easily soak in some chemical",
+          "wait_for": [
+            "engine oil"
+          ]
+        },
+        {
+          "desc": "a rag soaked with engine oil, seems more useful now to clean something",
+          "apply_to": [
+            "bunch of keys"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "trunk of the van",
+      "position": "In the trunk",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "trunk of the van",
+        "kind": "tool",
+        "name": "rag",
+        "logic_sha256": "58c42a72a0477b198dc659de75d8c68b152a1fe59e690968eebb1c9f133b1c7c"
+      }
+    },
+    {
+      "name": "wire cutter",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a wire cutter with red handle, sharp and easy to cut things",
+          "apply_to": [
+            "iron wire"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "trunk of the van",
+      "position": "In the trunk",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "trunk of the van",
+        "kind": "tool",
+        "name": "wire cutter",
+        "logic_sha256": "055db9db77915382ff735e44f367573a59aedf9f07940bf262fbf4528ec0301b"
+      }
+    },
+    {
+      "name": "repair kit box",
+      "states": [
+        {
+          "desc": "a blue repair kit box",
+          "neg_reward": "You should try to open this box with a key",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, silver key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, engine oil, True",
+                "change_interact, item, repair kit box, False"
+              ],
+              "reward": "The repair kit box is opened, there is an engine oil inside"
+            }
+          ]
+        },
+        {
+          "desc": "the repair kit box is open"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "repair kit in the trunk",
+      "position": "In the middle",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "repair kit in the trunk",
+        "kind": "item",
+        "name": "repair kit box",
+        "logic_sha256": "e325aa05144932f99896a11f1bab38db1608551b867b17248c4fff92939a0e74"
+      }
+    },
+    {
+      "name": "engine oil",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a bottle of engine oil, good for lubricating things",
+          "apply_to": [
+            "rag"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "repair kit in the trunk",
+      "position": "In the repair kit box",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "repair kit in the trunk",
+        "kind": "tool",
+        "name": "engine oil",
+        "logic_sha256": "b51d40baea5fd3229b8f4721cbeca0a786e4e5d083d457c8e720b21392941de4"
+      }
+    },
+    {
+      "name": "van door",
+      "states": [
+        {
+          "desc": "the van door is locked",
+          "neg_reward": "You may try to unlock this door with an cleaned and effective key",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, bunch of keys"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, van indoor front overview, True",
+                "change_interact, item, van door, False"
+              ],
+              "reward": "The van door is unlocked, now you can get in."
+            }
+          ]
+        },
+        {
+          "desc": "the van door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "door of the van",
+      "position": "In the middle",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "door of the van",
+        "kind": "item",
+        "name": "van door",
+        "logic_sha256": "cf19da8f8e69c74de3ac158298be240ed69161b731e85f331f7ee2309866beb9"
+      }
+    },
+    {
+      "name": "mud",
+      "states": [
+        {
+          "desc": "there's some mud beside the door, the mud seems dry and solid now, hard to scrape off",
+          "neg_reward": "You may try to warm and humidify the mud to make it easier to scrape off",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, cup with hot water"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The mud is warmed now, it's easier to scrape it"
+            }
+          ]
+        },
+        {
+          "desc": "there's some mud washed by hot water beside the door, the mud is soft and easy to clean now",
+          "neg_reward": "You may try to see what's behind by taking the mud off",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, scraper"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The mud is off now, there writes Jacob Korakon beside the door"
+            }
+          ]
+        },
+        {
+          "desc": "the mud is off, there writes Jacob Korakon, seems like the owner of this van"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "door of the van",
+      "position": "On the left side",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "door of the van",
+        "kind": "item",
+        "name": "mud",
+        "logic_sha256": "e75fea69b26ddf98005f75dd21d91816df573df40e306808e9f20d2310f65d7e"
+      }
+    },
+    {
+      "name": "seat switch",
+      "states": [
+        {
+          "desc": "a mental switch behind the left seat, the switch is off. Seems the switch could be used to pull down the seat",
+          "neg_reward": "You may try to turn on this switch to see what happens",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, left seat, True",
+                "change_interact, False"
+              ],
+              "reward": "The switch is on, something happens"
+            }
+          ]
+        },
+        {
+          "desc": "a mental switch behind the left seat, the switch is on"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "van indoor front overview",
+      "position": "Behind the seat on the left",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "van indoor front overview",
+        "kind": "item",
+        "name": "seat switch",
+        "logic_sha256": "bc50da314324d0aa6da9ce4b0c8d7759fdc5ed3eb14b30fd17f42ab46052c667"
+      }
+    },
+    {
+      "name": "water bottle",
+      "states": [
+        {
+          "desc": "a water bottle with some water inside, may need a container to hold the water",
+          "apply_to": [
+            "cup"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "van indoor front overview",
+      "position": "under the front desk",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "van indoor front overview",
+        "kind": "tool",
+        "name": "water bottle",
+        "logic_sha256": "e4709b6b98b929cadf7c89882d7a92a31a83508cbdbcf349c64d441720cc56a8"
+      }
+    },
+    {
+      "name": "left seat",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "a comfortable seat, could be pulled down through a switch behind",
+          "neg_reward": "You may want to see what's behind the seat by simply pulling it down through interaction if possible",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, solar panel, True",
+                "change_interact, False"
+              ],
+              "reward": "The seat is down, there's something behind"
+            }
+          ]
+        },
+        {
+          "desc": "the seat is pulled down"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "front desk",
+      "position": "On the left behind the desk",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "front desk",
+        "kind": "item",
+        "name": "left seat",
+        "logic_sha256": "c1b21d266027fa30b715472eacda40bf19f0956227c446411b3a838665891153"
+      }
+    },
+    {
+      "name": "solar panel",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a solar panel with blue logo on it",
+          "apply_to": [
+            "solar panel slot"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "front desk",
+      "position": "behind the seat",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "front desk",
+        "kind": "tool",
+        "name": "solar panel",
+        "logic_sha256": "48b4f617931d02d06986d66fa8ba9f12b0e05822323e95ad3e60251c37cc7879"
+      }
+    },
+    {
+      "name": "magazine",
+      "states": [
+        {
+          "desc": "a magazine with title \"California 06\", seems like a hint for a password"
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "front desk",
+      "position": "on the top of the seat",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "front desk",
+        "kind": "tool",
+        "name": "magazine",
+        "logic_sha256": "421ed4928d0ed45179166ef8b6616ea6dd43efd101e92933117211456ec506f4"
+      }
+    },
+    {
+      "name": "wrench",
+      "states": [
+        {
+          "desc": "a silver wrench used to loosen or tighten things",
+          "apply_to": [
+            "generator"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "book shelf",
+      "position": "Besides the books",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "book shelf",
+        "kind": "tool",
+        "name": "wrench",
+        "logic_sha256": "cc83d01d41d6671a28a3c5413fee7cbcc9cfb8638403c9c0671831238d114b60"
+      }
+    },
+    {
+      "name": "computer",
+      "states": [
+        {
+          "desc": "a computer, currently screen is blue with nothing on it",
+          "neg_reward": "You may want to see what's inside this computer by first find and apply the storage device",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, USB flash disk"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The computer is on now, on the screen it shows you have to input the owner's name"
+            }
+          ]
+        },
+        {
+          "desc": "a computer, currently screen is on with a panel asking for owner's name",
+          "neg_reward": "Wrong input name, You may need to find who's the owner of this computer (also this van)",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, Jacob Korakon"
+              ],
+              "trigger": [
+                "change_state, 2"
+              ],
+              "reward": "The name is correct, now you have to enter a 4 digit password"
+            }
+          ]
+        },
+        {
+          "desc": "a computer, currently screen is on with a panel asking for a 4 digit password",
+          "neg_reward": "Wrong password, you need to find some hint about the password, maybe from the book shelf as hints",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 1927"
+              ],
+              "trigger": [
+                "change_state, 3",
+                "finish_team"
+              ],
+              "reward": "The password is correct, GAME END!"
+            }
+          ]
+        },
+        {
+          "desc": "a computer, currently screen is on with a panel showing \"GAME END!\""
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "computer on the desk",
+      "position": "In the middle",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "computer on the desk",
+        "kind": "item",
+        "name": "computer",
+        "logic_sha256": "b48d33a4d2b9b9053a08e71f518f5fcb482a52dcc438f934f33c14c7e80dd082"
+      }
+    },
+    {
+      "name": "old thesis paper",
+      "states": [
+        {
+          "desc": "a paper with title \"[26] impact of solar panel to [10] years of energy consumption\", seems like a hint for a digital password"
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "computer on the desk",
+      "position": "on the desk behind the computer",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "computer on the desk",
+        "kind": "tool",
+        "name": "old thesis paper",
+        "logic_sha256": "39f30ec05519693bb0036c23eb45921e2b11630d24963d5e970544fd5455ae15"
+      }
+    },
+    {
+      "name": "microwave",
+      "states": [
+        {
+          "desc": "a microwave set with temperature 500, currently closed",
+          "neg_reward": "You may first simply interact with the microwave to open it",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The microwave is opened"
+            }
+          ]
+        },
+        {
+          "desc": "a microwave set with temperature 500, currently opened",
+          "neg_reward": "You may use the microwave to heat up something",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, cup"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_visible, tool, cup with hot water, True",
+                "change_interact, False"
+              ],
+              "reward": "The water in the cup is heated up"
+            }
+          ]
+        },
+        {
+          "desc": "a normal microwave, once heated the wter"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "On the top left",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "item",
+        "name": "microwave",
+        "logic_sha256": "bb2f689bb7b46991b4771571c2fb3fa6f522869bb1c965d742d40fde2688fbaf"
+      }
+    },
+    {
+      "name": "shelf door 1",
+      "states": [
+        {
+          "desc": "a closed shelf door",
+          "neg_reward": "You could simply interact with the door to open it and see what's inside",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, cup, True",
+                "change_interact, False"
+              ],
+              "reward": "The shelf's door opens"
+            }
+          ]
+        },
+        {
+          "desc": "an opened shelf door"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "On the top left",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "item",
+        "name": "shelf door 1",
+        "logic_sha256": "6d88462b5c015bff86527b019f9cd460e8054d281e7eb8092ee55d3cc8bd647f"
+      }
+    },
+    {
+      "name": "shelf door 2",
+      "states": [
+        {
+          "desc": "a closed shelf door",
+          "neg_reward": "You could simply interact with the door to open it and see what's inside",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, tin foil, True",
+                "change_interact, False"
+              ],
+              "reward": "The shelf's door opens"
+            }
+          ]
+        },
+        {
+          "desc": "an opened shelf door"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "On the top right",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "item",
+        "name": "shelf door 2",
+        "logic_sha256": "22e967b298a8747a05f34c2b4ffbb4a0e00b8573f1790e34cf34f98a19df89f2"
+      }
+    },
+    {
+      "name": "cup",
+      "visible": false,
+      "states": [
+        {
+          "desc": "an empty cup",
+          "wait_for": [
+            "water bottle"
+          ]
+        },
+        {
+          "desc": "a cup with water inside, currently not heated",
+          "apply_to": [
+            "microwave"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "In the top left shelf",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "tool",
+        "name": "cup",
+        "logic_sha256": "53b3b26e7709883c7da249430019fcc0a8041fcd1344991b2591c7c66477642c"
+      }
+    },
+    {
+      "name": "tin foil",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a thin layer of tin foil, good for passing electricity",
+          "apply_to": [
+            "torch light"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "In the top right shelf",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "tool",
+        "name": "tin foil",
+        "logic_sha256": "21a08a00be73668662b9f8d014fb278a02221e02ac2cf569453bbf18466e70cd"
+      }
+    },
+    {
+      "name": "screwdriver",
+      "states": [
+        {
+          "desc": "a screwdriver with black handle, used to screw or unscrew things",
+          "apply_to": [
+            "license plate space"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "Beside the microwave",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "tool",
+        "name": "screwdriver",
+        "logic_sha256": "15a609ee13e9c8213150c83f5d069d6a3f1c57d9d022f93e6d4ec919e2975ae1"
+      }
+    },
+    {
+      "name": "cup with hot water",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a cup of hot water inside",
+          "apply_to": [
+            "mud"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "passage way in van",
+      "position": "In the microwave",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "passage way in van",
+        "kind": "tool",
+        "name": "cup with hot water",
+        "logic_sha256": "63197299fdfdd61aa3e055518e2f9560b77830493832491b2f3a82c9e787fd83"
+      }
+    },
+    {
+      "name": "top drawer",
+      "states": [
+        {
+          "desc": "a wood drawer on the top, currently locked. There's word \"thesis\" on top of it. In needs a four digit password to unlock.",
+          "neg_reward": "You may try to find some clue about the password to unlock this drawer.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 2610"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, battery clip, True",
+                "change_interact, False"
+              ],
+              "reward": "The drawer is unlocked, there is a battery clip inside"
+            }
+          ]
+        },
+        {
+          "desc": "a wooden drawer on the top, currently unlocked"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "drawers",
+      "position": "On the top",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "drawers",
+        "kind": "item",
+        "name": "top drawer",
+        "logic_sha256": "feada8cf7fbcf38af0961b38f6acf76a4c8b9322ef633f8bcf0d2d0bf1e759a3"
+      }
+    },
+    {
+      "name": "bottom drawer",
+      "states": [
+        {
+          "desc": "a wood drawer at the bottom, currently locked. In needs a eight digit password to unlock.",
+          "neg_reward": "You may try to find some clue about this 8-digit long password, maybe a combination of different hints you have.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 05062011"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, paper with names, True",
+                "change_interact, False"
+              ],
+              "reward": "The drawer is unlocked, there is a paper with names inside"
+            }
+          ]
+        },
+        {
+          "desc": "a wooden drawer at the bottom, currently unlocked"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "drawers",
+      "position": "At the bottom",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "drawers",
+        "kind": "item",
+        "name": "bottom drawer",
+        "logic_sha256": "44949a4f9aed1a6fca89458d893537d68b4d817f05b6130af7743f3acdfd2a02"
+      }
+    },
+    {
+      "name": "battery clip",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a battery clip with two ends and black and red wires",
+          "apply_to": [
+            "generator"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "drawers",
+      "position": "In the top drawer",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "drawers",
+        "kind": "tool",
+        "name": "battery clip",
+        "logic_sha256": "232d2312f355fd4df1dabb5fa573ec97bf4613a4ba33ec70c8415ba78065a431"
+      }
+    },
+    {
+      "name": "paper with names",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a paper with different names on it, showing \"Ally Liam Michael Violet\", seems familiar as previously seen on the book shelf"
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "drawers",
+      "position": "In the bottom drawer",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "drawers",
+        "kind": "tool",
+        "name": "paper with names",
+        "logic_sha256": "4fd5d66e4e1cf6ae3e41a2e6498c332ad7634e407a3bf7347ef0d187fbbb22a2"
+      }
+    },
+    {
+      "name": "torch light",
+      "states": [
+        {
+          "desc": "a torch light currently out of power, the spring at the tail is missing, making it unable to pass the electricity",
+          "neg_reward": "Directly put in the battery may not work, you may need to find a way to pass the electricity",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, tin foil"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The tin foil is wrapped to the tail of the torch light, now it can pass the electricity"
+            }
+          ]
+        },
+        {
+          "desc": "a torch light currently out of power, tin foil is wrapped to the tail",
+          "neg_reward": "You may try to give it power",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, battery"
+              ],
+              "trigger": [
+                "become_tool, torch light with power",
+                "change_visible, False"
+              ],
+              "reward": "You have a torch light with power now"
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bed overview",
+      "position": "In the middle of bed",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed overview",
+        "kind": "item",
+        "name": "torch light",
+        "logic_sha256": "1406937a8f5a61a10d6532af9b6e2f11bf9bc6465c8e6c3669db5133b90ceeba"
+      }
+    },
+    {
+      "name": "bed shelf 2",
+      "states": [
+        {
+          "desc": "a shelf with a lock, currently locked",
+          "neg_reward": "You may try to use something to unlock this shelf through a matched special key",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, shelf key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, bed shelf inside, True",
+                "change_interact, False"
+              ],
+              "reward": "The shelf is unlocked, there is a something inside"
+            }
+          ]
+        },
+        {
+          "desc": "a shelf with a lock, currently unlocked"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bed overview",
+      "position": "On the top right",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed overview",
+        "kind": "item",
+        "name": "bed shelf 2",
+        "logic_sha256": "d0e2ee08a97e0cdce53b8ae84978980b29727dfd617c6364af7e196bb802ff49"
+      }
+    },
+    {
+      "name": "bed shelf 1",
+      "states": [
+        {
+          "desc": "a shelf that seems not locked",
+          "neg_reward": "You may try to open this shelf by simply interacting with it",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, light bulb, True",
+                "change_interact, False"
+              ],
+              "reward": "The shelf is open, there is a light bulb inside"
+            }
+          ]
+        },
+        {
+          "desc": "an open shelf"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bed overview",
+      "position": "On the top left",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed overview",
+        "kind": "item",
+        "name": "bed shelf 1",
+        "logic_sha256": "ec796ae0f0326cf69e75cef91c08c639e7d5d6009279ec5d5f50825ced90950c"
+      }
+    },
+    {
+      "name": "battery",
+      "states": [
+        {
+          "desc": "a battery with two ends, seems could be used normally",
+          "apply_to": [
+            "torch light"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bed overview",
+      "position": "on the bed beside the torch light",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed overview",
+        "kind": "tool",
+        "name": "battery",
+        "logic_sha256": "67583ade8a71aa26952cc00a4347b709f7eefb7305bfeb1af55438df2b5ea090"
+      }
+    },
+    {
+      "name": "torch light with power",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a black torch light with power now",
+          "apply_to": [
+            "license plate space"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bed overview",
+      "position": "on the bed",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed overview",
+        "kind": "tool",
+        "name": "torch light with power",
+        "logic_sha256": "dfcadc87e5a97814c5d32aba37f8457f1c2bd99abc78580a6f6b3fe81f91734f"
+      }
+    },
+    {
+      "name": "light bulb",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a small light bulb, currently without power, could fit into some slot",
+          "apply_to": [
+            "spotlight"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bed overview",
+      "position": "inside the shelf on the top left",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed overview",
+        "kind": "tool",
+        "name": "light bulb",
+        "logic_sha256": "a832b1fa408c4f4a4b44a154e9fcbd314f2acd915d54c5f2b0db8d661f7e0685"
+      }
+    },
+    {
+      "name": "generator",
+      "states": [
+        {
+          "desc": "a wooden board currently closed the generator, with nails at 4 corners.",
+          "neg_reward": "You may try to open this board by removing the nails first",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, wrench"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The board is pulled off, the generator is exposed"
+            }
+          ]
+        },
+        {
+          "desc": "a generator with a red plug on the left, there's also a black plug at the bottom, currently out of power",
+          "neg_reward": "You may try to power on this generator by connecting the power source",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, battery clip"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_interact, False",
+                "change_interact, item, solar panel slot, True"
+              ],
+              "reward": "The generator is powered on, the solar panel slot opens now"
+            }
+          ]
+        },
+        {
+          "desc": "A generator currently powered on"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "right side of bed",
+      "position": "On the wall",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "right side of bed",
+        "kind": "item",
+        "name": "generator",
+        "logic_sha256": "6f09e712d68975065f0e57cc414d9167f8421095d815e51c22f8f7ef47887001"
+      }
+    },
+    {
+      "name": "safe box",
+      "states": [
+        {
+          "desc": "a safe box with 16 card slots, but only 15 cards are on it, a slot is currently left empty",
+          "neg_reward": "You may try to find other cards to fill the slots",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, mental card"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The safe box is filled with 16 cards, a panel in need of password is shown"
+            }
+          ]
+        },
+        {
+          "desc": "a safe box in needs of a 4 digit password",
+          "neg_reward": "You may try to find some clue about the password to unlock this safe box",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 3149"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_visible, tool, USB flash disk, True",
+                "change_interact, False"
+              ],
+              "reward": "The safe box openes, there is a USB flash disk inside"
+            }
+          ]
+        },
+        {
+          "desc": "a safe box that is open now"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bed shelf inside",
+      "position": "Inside the shelf",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed shelf inside",
+        "kind": "item",
+        "name": "safe box",
+        "logic_sha256": "c8a02bc6aa948829e8f83505278a4f6f3c8d763fb91a787d5a5654307e3c5814"
+      }
+    },
+    {
+      "name": "scraper",
+      "states": [
+        {
+          "desc": "a scraper with a sharp edge, easy to scrape things off",
+          "apply_to": [
+            "mud"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bed shelf inside",
+      "position": "On the left in shelf",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed shelf inside",
+        "kind": "tool",
+        "name": "scraper",
+        "logic_sha256": "d4e8e361d08d51a9c7fb079df0dbb7a15629e6b01514b7e943ff605a94a9f183"
+      }
+    },
+    {
+      "name": "USB flash disk",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A normal USB flash disk, 32GB storage, maybe have some important files in it",
+          "apply_to": [
+            "computer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bed shelf inside",
+      "position": "Inside the safe box",
+      "source": {
+        "file": "game2-5-easy.yaml",
+        "scene": "bed shelf inside",
+        "kind": "tool",
+        "name": "USB flash disk",
+        "logic_sha256": "b446794fe69b958a3c50f622b2a32852d951c65a2bc1456798cbc108f4e91660"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "old thesis paper",
+        "target_entity": "top drawer",
+        "accepted_input": "2610",
+        "evidence_text": [
+          "[26]",
+          "[10]"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I02",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "spotlight",
+        "target_entity": "safe box",
+        "accepted_input": "3149",
+        "evidence_text": [
+          "3149"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "magazine",
+        "target_entity": "bottom drawer",
+        "accepted_input": "05062011",
+        "evidence_text": [
+          "California 06"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I05",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "mud",
+        "target_entity": "computer",
+        "accepted_input": "Jacob Korakon",
+        "evidence_text": [
+          "Jacob Korakon"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I06",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "paper with names",
+        "target_entity": "computer",
+        "accepted_input": "1927",
+        "evidence_text": [
+          "Ally Liam Michael Violet"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I03",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "license plate",
+        "target_entity": "bottom drawer",
+        "accepted_input": "05062011",
+        "evidence_text": [
+          "May California 2011"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I07",
+        "holder": "A",
+        "receiver": "A",
+        "source_scene": "book shelf",
+        "target_entity": "computer",
+        "accepted_input": "1927",
+        "evidence_text": [
+          "Ally 1",
+          "Violet 7",
+          "Michael 2",
+          "Liam 9"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "battery clip",
+        "sender": "B",
+        "receiver": "A",
+        "target": "generator"
+      },
+      {
+        "id": "O02",
+        "object": "screwdriver",
+        "sender": "A",
+        "receiver": "B",
+        "target": "license plate space"
+      },
+      {
+        "id": "O03",
+        "object": "torch light with power",
+        "sender": "A",
+        "receiver": "B",
+        "target": "license plate space"
+      },
+      {
+        "id": "O04",
+        "object": "light bulb",
+        "sender": "A",
+        "receiver": "B",
+        "target": "spotlight"
+      },
+      {
+        "id": "O05",
+        "object": "solar panel",
+        "sender": "A",
+        "receiver": "B",
+        "target": "solar panel slot"
+      },
+      {
+        "id": "O06",
+        "object": "cup with hot water",
+        "sender": "A",
+        "receiver": "B",
+        "target": "mud"
+      },
+      {
+        "id": "O07",
+        "object": "shelf key",
+        "sender": "B",
+        "receiver": "A",
+        "target": "bed shelf 2"
+      },
+      {
+        "id": "O08",
+        "object": "mental card",
+        "sender": "B",
+        "receiver": "A",
+        "target": "safe box"
+      },
+      {
+        "id": "O09",
+        "object": "scraper",
+        "sender": "A",
+        "receiver": "B",
+        "target": "mud"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "computer",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [
+    {
+      "entity": "van door",
+      "state": 0,
+      "transition": 0,
+      "trigger": "change_visible, scene, van indoor front overview, True",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    },
+    {
+      "entity": "generator",
+      "state": 1,
+      "transition": 0,
+      "trigger": "change_interact, item, solar panel slot, True",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    }
+  ],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 49,
+    "retained_entities": 49,
+    "source_scenes": 16,
+    "retained_scenes": 16,
+    "source_key_actions": 58,
+    "replayed_source_key_actions": 58,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "wood stick"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 4,
+        "action": {
+          "type": "click",
+          "target": "trunk door"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 5,
+        "action": {
+          "type": "click",
+          "target": "rag"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 6,
+        "action": {
+          "type": "click",
+          "target": "wire cutter"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 8,
+        "action": {
+          "type": "click",
+          "target": "bunch of keys"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 9,
+        "action": {
+          "type": "apply",
+          "tool": "wire cutter",
+          "target": "iron wire"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 10,
+        "action": {
+          "type": "click",
+          "target": "stepladder"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 12,
+        "action": {
+          "type": "apply",
+          "tool": "wood stick",
+          "target": "skylight"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 13,
+        "action": {
+          "type": "click",
+          "target": "silver key"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 15,
+        "action": {
+          "type": "apply",
+          "tool": "silver key",
+          "target": "repair kit box"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 16,
+        "action": {
+          "type": "click",
+          "target": "engine oil"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 17,
+        "action": {
+          "type": "craft",
+          "first": "engine oil",
+          "second": "rag"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 18,
+        "action": {
+          "type": "craft",
+          "first": "rag",
+          "second": "bunch of keys"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 20,
+        "action": {
+          "type": "apply",
+          "tool": "bunch of keys",
+          "target": "van door"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 22,
+        "action": {
+          "type": "click",
+          "target": "seat switch"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 23,
+        "action": {
+          "type": "click",
+          "target": "water bottle"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 25,
+        "action": {
+          "type": "click",
+          "target": "left seat"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 26,
+        "action": {
+          "type": "click",
+          "target": "solar panel"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 27,
+        "action": {
+          "type": "click",
+          "target": "magazine"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 29,
+        "action": {
+          "type": "click",
+          "target": "wrench"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 31,
+        "action": {
+          "type": "click",
+          "target": "old thesis paper"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 33,
+        "action": {
+          "type": "click",
+          "target": "screwdriver"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 34,
+        "action": {
+          "type": "click",
+          "target": "shelf door 1"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 35,
+        "action": {
+          "type": "click",
+          "target": "cup"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 36,
+        "action": {
+          "type": "craft",
+          "first": "water bottle",
+          "second": "cup"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 37,
+        "action": {
+          "type": "click",
+          "target": "microwave"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 38,
+        "action": {
+          "type": "apply",
+          "tool": "cup",
+          "target": "microwave"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 39,
+        "action": {
+          "type": "click",
+          "target": "cup with hot water"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 40,
+        "action": {
+          "type": "click",
+          "target": "shelf door 2"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 41,
+        "action": {
+          "type": "click",
+          "target": "tin foil"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 43,
+        "action": {
+          "type": "click",
+          "target": "battery"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 44,
+        "action": {
+          "type": "apply",
+          "tool": "tin foil",
+          "target": "torch light"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 45,
+        "action": {
+          "type": "apply",
+          "tool": "battery",
+          "target": "torch light"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 46,
+        "action": {
+          "type": "click",
+          "target": "bed shelf 1"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 47,
+        "action": {
+          "type": "click",
+          "target": "light bulb"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 49,
+        "action": {
+          "type": "apply",
+          "tool": "wrench",
+          "target": "generator"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 52,
+        "action": {
+          "type": "input",
+          "value": "2610",
+          "target": "top drawer"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 53,
+        "action": {
+          "type": "click",
+          "target": "battery clip"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 55,
+        "action": {
+          "type": "apply",
+          "tool": "battery clip",
+          "target": "generator"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 58,
+        "action": {
+          "type": "apply",
+          "tool": "screwdriver",
+          "target": "license plate space"
+        }
+      },
+      {
+        "source_step": 41,
+        "cooperative_step": 59,
+        "action": {
+          "type": "click",
+          "target": "license plate"
+        }
+      },
+      {
+        "source_step": 42,
+        "cooperative_step": 61,
+        "action": {
+          "type": "apply",
+          "tool": "torch light with power",
+          "target": "license plate space"
+        }
+      },
+      {
+        "source_step": 43,
+        "cooperative_step": 62,
+        "action": {
+          "type": "click",
+          "target": "shelf key"
+        }
+      },
+      {
+        "source_step": 44,
+        "cooperative_step": 63,
+        "action": {
+          "type": "click",
+          "target": "mental card"
+        }
+      },
+      {
+        "source_step": 45,
+        "cooperative_step": 66,
+        "action": {
+          "type": "apply",
+          "tool": "light bulb",
+          "target": "spotlight"
+        }
+      },
+      {
+        "source_step": 46,
+        "cooperative_step": 68,
+        "action": {
+          "type": "apply",
+          "tool": "solar panel",
+          "target": "solar panel slot"
+        }
+      },
+      {
+        "source_step": 47,
+        "cooperative_step": 71,
+        "action": {
+          "type": "apply",
+          "tool": "cup with hot water",
+          "target": "mud"
+        }
+      },
+      {
+        "source_step": 48,
+        "cooperative_step": 74,
+        "action": {
+          "type": "apply",
+          "tool": "shelf key",
+          "target": "bed shelf 2"
+        }
+      },
+      {
+        "source_step": 49,
+        "cooperative_step": 76,
+        "action": {
+          "type": "click",
+          "target": "scraper"
+        }
+      },
+      {
+        "source_step": 50,
+        "cooperative_step": 78,
+        "action": {
+          "type": "apply",
+          "tool": "mental card",
+          "target": "safe box"
+        }
+      },
+      {
+        "source_step": 51,
+        "cooperative_step": 81,
+        "action": {
+          "type": "input",
+          "value": "3149",
+          "target": "safe box"
+        }
+      },
+      {
+        "source_step": 52,
+        "cooperative_step": 82,
+        "action": {
+          "type": "click",
+          "target": "USB flash disk"
+        }
+      },
+      {
+        "source_step": 53,
+        "cooperative_step": 85,
+        "action": {
+          "type": "input",
+          "value": "05062011",
+          "target": "bottom drawer"
+        }
+      },
+      {
+        "source_step": 54,
+        "cooperative_step": 86,
+        "action": {
+          "type": "click",
+          "target": "paper with names"
+        }
+      },
+      {
+        "source_step": 55,
+        "cooperative_step": 89,
+        "action": {
+          "type": "apply",
+          "tool": "scraper",
+          "target": "mud"
+        }
+      },
+      {
+        "source_step": 56,
+        "cooperative_step": 91,
+        "action": {
+          "type": "apply",
+          "tool": "USB flash disk",
+          "target": "computer"
+        }
+      },
+      {
+        "source_step": 57,
+        "cooperative_step": 93,
+        "action": {
+          "type": "input",
+          "value": "Jacob Korakon",
+          "target": "computer"
+        }
+      },
+      {
+        "source_step": 58,
+        "cooperative_step": 97,
+        "action": {
+          "type": "input",
+          "value": "1927",
+          "target": "computer"
+        }
+      }
+    ]
+  }
+}

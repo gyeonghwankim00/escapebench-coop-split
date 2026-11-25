@@ -1,0 +1,1955 @@
+{
+  "schema_version": "0.2",
+  "id": "01_mirror_workshop",
+  "title": "거울과 작업실",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game1-1-easy.yaml",
+      "sha256": "f4fc2fe67a0ea29a951203507ceb5d0c047305aedbc0393f6fcf8c7dc5b99c1b"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_1-1.txt",
+      "sha256": "8df817bbc8572bdf0dd5fa3883a738d3b6f128693b6cd4e9d327028e61664c92"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "living room",
+    "scenes": [
+      {
+        "name": "living room",
+        "desc": "There are two doors, a refrigerator, a telephone cabinet, and a painting with a clock on it. The left door leads to the study, and the right door leads to the exit.",
+        "scene_relations": {
+          "To the dining room and kitchen": "dining room and kitchen",
+          "To the bedroom": "bedroom",
+          "To the telephone cabinet close-up": "telephone cabinet close-up",
+          "To the study after unlocking": "study"
+        }
+      },
+      {
+        "name": "telephone cabinet close-up",
+        "desc": "A closer look at the telephone cabinet, with a hairpin on top and a drawer below.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the living room": "living room"
+        }
+      },
+      {
+        "name": "bedroom",
+        "desc": "There is a bed, a visible hammer handle, a toolbox, a cardboard box, and a door leading to the bathroom.",
+        "scene_relations": {
+          "To the living room": "living room",
+          "To the toolbox close-up": "toolbox close-up",
+          "To the cardboard box close-up": "cardboard box close-up",
+          "To the bathroom": "bathroom"
+        }
+      },
+      {
+        "name": "toolbox close-up",
+        "desc": "A closer look at the toolbox.",
+        "scene_relations": {
+          "Back to the bedroom": "bedroom"
+        }
+      },
+      {
+        "name": "cardboard box close-up",
+        "desc": "A closer look at the cardboard box.",
+        "scene_relations": {
+          "Back to the bedroom": "bedroom"
+        }
+      },
+      {
+        "name": "bathroom",
+        "desc": "The bathroom contains a mirror, a ventilation fan, and a plunger that can be collected. The mirror and the ventilation fan have close-up views.",
+        "visible": false,
+        "scene_relations": {
+          "To the bedroom": "bedroom",
+          "To the mirror close-up": "mirror close-up",
+          "To the ventilation fan close-up": "ventilation fan close-up"
+        }
+      },
+      {
+        "name": "mirror close-up",
+        "desc": "A close-up view of the broken mirror.",
+        "scene_relations": {
+          "Back to the bathroom": "bathroom"
+        }
+      },
+      {
+        "name": "ventilation fan close-up",
+        "desc": "A close-up view of the ventilation fan in the bathroom.",
+        "scene_relations": {
+          "Back to the bathroom": "bathroom"
+        }
+      },
+      {
+        "name": "dining room and kitchen",
+        "desc": "A kitchen with several interactable areas. the dining table, the cabinet above the stove, the left and right cabinets, the sink, and the cabinet above the sink.",
+        "scene_relations": {
+          "To the living room": "living room",
+          "To the dining table close-up": "dining table close-up",
+          "To the cabinet above stove close-up": "cabinet above stove close-up",
+          "To the left cabinet close-up": "left cabinet close-up",
+          "To the right cabinet close-up": "right cabinet close-up",
+          "To the sink close-up": "sink close-up",
+          "To the cabinet above sink close-up": "cabinet above sink close-up"
+        }
+      },
+      {
+        "name": "dining table close-up",
+        "desc": "A close-up view of the dining table with various items on it.",
+        "scene_relations": {
+          "Back to the dining room and kitchen": "dining room and kitchen"
+        }
+      },
+      {
+        "name": "cabinet above stove close-up",
+        "desc": "A close-up view of the cabinet above the stove. The left side holds food and spices, and the right side holds a flashlight and a pot.",
+        "scene_relations": {
+          "Back to the dining room and kitchen": "dining room and kitchen"
+        }
+      },
+      {
+        "name": "left cabinet close-up",
+        "desc": "A close-up view of the left cabinet below the stove.",
+        "scene_relations": {
+          "Back to the dining room and kitchen": "dining room and kitchen"
+        }
+      },
+      {
+        "name": "right cabinet close-up",
+        "desc": "A close-up view of the right cabinet below the stove.",
+        "scene_relations": {
+          "Back to the dining room and kitchen": "dining room and kitchen"
+        }
+      },
+      {
+        "name": "cabinet above sink close-up",
+        "desc": "A close-up view of the cabinet above the sink.",
+        "scene_relations": {
+          "Back to the dining room and kitchen": "dining room and kitchen"
+        }
+      },
+      {
+        "name": "sink close-up",
+        "desc": "A close-up view of the sink. The sink is full of garbage, and there is a trash bin and a cabinet underneath that are not interactable.",
+        "scene_relations": {
+          "Back to the dining room and kitchen": "dining room and kitchen"
+        }
+      },
+      {
+        "name": "study",
+        "desc": "A room filled with books and puzzles. There's a safe, a desk, photos on the wall.",
+        "visible": false,
+        "scene_relations": {
+          "Back to the living room": "living room",
+          "To the photo close-up": "photo close-up",
+          "To the desk close-up": "desk close-up",
+          "To the locker close-up": "locker close-up",
+          "To the wall close-up": "wall close-up"
+        }
+      },
+      {
+        "name": "wall close-up",
+        "desc": "A closer look at the wall, showing a set of framed photos.",
+        "scene_relations": {
+          "Back to the study": "study",
+          "To the photo close-up": "photo close-up"
+        }
+      },
+      {
+        "name": "photo close-up",
+        "desc": "A close-up view of the three framed photos on the wall. One of them seems slightly off.",
+        "scene_relations": {
+          "Back to the wall close-up": "wall close-up"
+        }
+      },
+      {
+        "name": "desk close-up",
+        "desc": "A close-up view of the desk. It's covered with papers and books.",
+        "scene_relations": {
+          "Back to the study": "study"
+        }
+      },
+      {
+        "name": "locker close-up",
+        "desc": "A close-up view of the locker. The right two doors are open, but the left one is locked.",
+        "scene_relations": {
+          "Back to the study": "study"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "living room",
+      "room": "A",
+      "desc": "There are two doors, a refrigerator, a telephone cabinet, and a painting with a clock on it. The left door leads to the study, and the right door leads to the exit.",
+      "visible": true,
+      "source_scene": "living room"
+    },
+    {
+      "name": "telephone cabinet close-up",
+      "room": "A",
+      "desc": "A closer look at the telephone cabinet, with a hairpin on top and a drawer below.",
+      "visible": false,
+      "source_scene": "telephone cabinet close-up"
+    },
+    {
+      "name": "bedroom",
+      "room": "A",
+      "desc": "There is a bed, a visible hammer handle, a toolbox, a cardboard box, and a door leading to the bathroom.",
+      "visible": true,
+      "source_scene": "bedroom"
+    },
+    {
+      "name": "toolbox close-up",
+      "room": "B",
+      "desc": "A closer look at the toolbox.",
+      "visible": true,
+      "source_scene": "toolbox close-up"
+    },
+    {
+      "name": "cardboard box close-up",
+      "room": "A",
+      "desc": "A closer look at the cardboard box.",
+      "visible": true,
+      "source_scene": "cardboard box close-up"
+    },
+    {
+      "name": "bathroom",
+      "room": "A",
+      "desc": "The bathroom contains a mirror, a ventilation fan, and a plunger that can be collected. The mirror and the ventilation fan have close-up views.",
+      "visible": false,
+      "source_scene": "bathroom"
+    },
+    {
+      "name": "mirror close-up",
+      "room": "A",
+      "desc": "A close-up view of the broken mirror.",
+      "visible": true,
+      "source_scene": "mirror close-up"
+    },
+    {
+      "name": "ventilation fan close-up",
+      "room": "A",
+      "desc": "A close-up view of the ventilation fan in the bathroom.",
+      "visible": true,
+      "source_scene": "ventilation fan close-up"
+    },
+    {
+      "name": "dining room and kitchen",
+      "room": "B",
+      "desc": "A kitchen with several interactable areas. the dining table, the cabinet above the stove, the left and right cabinets, the sink, and the cabinet above the sink.",
+      "visible": true,
+      "source_scene": "dining room and kitchen"
+    },
+    {
+      "name": "dining table close-up",
+      "room": "B",
+      "desc": "A close-up view of the dining table with various items on it.",
+      "visible": true,
+      "source_scene": "dining table close-up"
+    },
+    {
+      "name": "cabinet above stove close-up",
+      "room": "B",
+      "desc": "A close-up view of the cabinet above the stove. The left side holds food and spices, and the right side holds a flashlight and a pot.",
+      "visible": true,
+      "source_scene": "cabinet above stove close-up"
+    },
+    {
+      "name": "left cabinet close-up",
+      "room": "B",
+      "desc": "A close-up view of the left cabinet below the stove.",
+      "visible": true,
+      "source_scene": "left cabinet close-up"
+    },
+    {
+      "name": "right cabinet close-up",
+      "room": "B",
+      "desc": "A close-up view of the right cabinet below the stove.",
+      "visible": true,
+      "source_scene": "right cabinet close-up"
+    },
+    {
+      "name": "cabinet above sink close-up",
+      "room": "B",
+      "desc": "A close-up view of the cabinet above the sink.",
+      "visible": true,
+      "source_scene": "cabinet above sink close-up"
+    },
+    {
+      "name": "sink close-up",
+      "room": "B",
+      "desc": "A close-up view of the sink. The sink is full of garbage, and there is a trash bin and a cabinet underneath that are not interactable.",
+      "visible": true,
+      "source_scene": "sink close-up"
+    },
+    {
+      "name": "study",
+      "room": "A",
+      "desc": "A room filled with books and puzzles. There's a safe, a desk, photos on the wall.",
+      "visible": false,
+      "source_scene": "study"
+    },
+    {
+      "name": "wall close-up",
+      "room": "A",
+      "desc": "A closer look at the wall, showing a set of framed photos.",
+      "visible": true,
+      "source_scene": "wall close-up"
+    },
+    {
+      "name": "photo close-up",
+      "room": "A",
+      "desc": "A close-up view of the three framed photos on the wall. One of them seems slightly off.",
+      "visible": true,
+      "source_scene": "photo close-up"
+    },
+    {
+      "name": "desk close-up",
+      "room": "A",
+      "desc": "A close-up view of the desk. It's covered with papers and books.",
+      "visible": true,
+      "source_scene": "desk close-up"
+    },
+    {
+      "name": "locker close-up",
+      "room": "A",
+      "desc": "A close-up view of the locker. The right two doors are open, but the left one is locked.",
+      "visible": true,
+      "source_scene": "locker close-up"
+    }
+  ],
+  "entities": [
+    {
+      "name": "telephone cabinet",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "An old-fashioned telephone cabinet stands here.",
+          "neg_reward": "Perhaps you should see it up close by simply interacting with it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, scene, telephone cabinet close-up, True",
+                "change_interact, False"
+              ],
+              "reward": "you can see telephone cabinet now."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "living room",
+      "position": "Beside the wall",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "living room",
+        "kind": "item",
+        "name": "telephone cabinet",
+        "logic_sha256": "306273801e1aa741e38499a679912cc83349e806610e38b943437c218290a7fd"
+      }
+    },
+    {
+      "name": "left door to the study",
+      "states": [
+        {
+          "desc": "A locked door that leads to the study. There's a keyhole on the door.",
+          "neg_reward": "The door is locked. You need something to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, study key"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "the door is now unlocked now."
+            }
+          ]
+        },
+        {
+          "desc": "The door to the study is now unlocked. You need to further interact with it to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, scene, study, True",
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The door to the study is open, and you can enter the study."
+            }
+          ]
+        },
+        {
+          "desc": "The door to the study is open, and you can enter the study."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "living room",
+      "position": "Left side of the room",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "living room",
+        "kind": "item",
+        "name": "left door to the study",
+        "logic_sha256": "34b80dc570250dd8f840c04c58c2b94710a9d40e883e949d54a991d34aaf12b5"
+      }
+    },
+    {
+      "name": "right door to the exit",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A locked door that leads to the exit, the lock needs a 9-digit code all in numbers",
+          "neg_reward": "The door is locked. You need something to open it. Find some hint with 9-digit code.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 655324223"
+              ],
+              "trigger": [
+                "change_interact, False",
+                "finish_team"
+              ],
+              "reward": "The exit door unlocks, and you can now leave. GAME END!"
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "living room",
+      "position": "Right side of the room",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "living room",
+        "kind": "item",
+        "name": "right door to the exit",
+        "logic_sha256": "dbdee5186f0e37986d14f7f30e56783967a56568d606f3d68be6ddd1eb77fa97"
+      }
+    },
+    {
+      "name": "drawer",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The drawer is locked, you might need something to pry it open.",
+          "neg_reward": "The drawer is locked tightly. You need a tool to pry it open.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, hairpin"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, carving knife, True",
+                "change_interact, False"
+              ],
+              "reward": "The drawer unlocks, revealing the carving knife."
+            }
+          ]
+        },
+        {
+          "desc": "The drawer is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "telephone cabinet close-up",
+      "position": "On top of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "telephone cabinet close-up",
+        "kind": "item",
+        "name": "drawer",
+        "logic_sha256": "4d262948263f832960c46fead9305d8faa8d467c6408973579148bd911314a93"
+      }
+    },
+    {
+      "name": "telephone",
+      "states": [
+        {
+          "desc": "An old-fashioned rotary telephone, but there's a busy signal when you pick it up.",
+          "neg_reward": "The line is busy. There's nothing useful to hear."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "telephone cabinet close-up",
+      "position": "On top of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "telephone cabinet close-up",
+        "kind": "item",
+        "name": "telephone",
+        "logic_sha256": "76974ffaa25fe5e8ce66038f44d9b2e1ad4b0b0e9358e729ec3d2b9f580b7105"
+      }
+    },
+    {
+      "name": "hairpin",
+      "states": [
+        {
+          "desc": "A small hairpin with long ends, made of hard metal, shining gold in color.",
+          "apply_to": [
+            "drawer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "telephone cabinet close-up",
+      "position": "On top of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "telephone cabinet close-up",
+        "kind": "tool",
+        "name": "hairpin",
+        "logic_sha256": "a30033ce781d6d2adac953e78249eb454be235468e29d3cf6f3a82e9d0fd0efe"
+      }
+    },
+    {
+      "name": "carving knife",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A sharp carving knife, with silver blade and wooden handle.",
+          "apply_to": [
+            "cardboard box"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "telephone cabinet close-up",
+      "position": "Inside the drawer",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "telephone cabinet close-up",
+        "kind": "tool",
+        "name": "carving knife",
+        "logic_sha256": "bda79e8227ab20a2ac011d79bdf98d33ea5dfdd3dd9143f8cdd91372588ff511"
+      }
+    },
+    {
+      "name": "bathroom door",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A door leading to the bathroom, but it's missing a door handle.",
+          "neg_reward": "The door is locked and missing a handle, you cannot open without it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, door handle"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The door now has a handle and can be opened."
+            }
+          ]
+        },
+        {
+          "desc": "The door now has a handle and can be opened. You need to further interact with it to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, scene, bathroom, True",
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The door is now open. You could enter the bathroom."
+            }
+          ]
+        },
+        {
+          "desc": "The door is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bedroom",
+      "position": "Left side of the room",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "bedroom",
+        "kind": "item",
+        "name": "bathroom door",
+        "logic_sha256": "4d309a3636b8a09aeda7327f42755cee0782e8aab640597d583f38bf2c26e967"
+      }
+    },
+    {
+      "name": "hammer handle",
+      "visible": true,
+      "states": [
+        {
+          "desc": "The handle of a hammer lying next to the toolbox, seems part of a tool.",
+          "apply_to": [
+            "hammer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bedroom",
+      "position": "On the floor next to the toolbox",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "bedroom",
+        "kind": "tool",
+        "name": "hammer handle",
+        "logic_sha256": "b0d05def5e9dbb39c44a77b5ca11e2c8d9291d16f42d792240efb84555b1cfd1"
+      }
+    },
+    {
+      "name": "toolbox",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The toolbox is locked and requires a password to open.",
+          "neg_reward": "You need to enter the correct password to open it, it is 5-digit code combined with 2 letters and 3 numbers.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, cs546"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, screwdriver, True",
+                "change_visible, tool, fuse, True"
+              ],
+              "reward": "The toolbox is now open."
+            }
+          ]
+        },
+        {
+          "desc": "The toolbox is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "toolbox close-up",
+      "position": "besides the bed",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "toolbox close-up",
+        "kind": "item",
+        "name": "toolbox",
+        "logic_sha256": "03fc9b26dc8da928f7bed9c6230af2dc6f3c424158ecfccbee49923e1ab4f174"
+      }
+    },
+    {
+      "name": "screwdriver",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A screwdriver that can be used to remove screws.",
+          "apply_to": [
+            "ventilation fan"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "toolbox close-up",
+      "position": "Inside the toolbox",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "toolbox close-up",
+        "kind": "tool",
+        "name": "screwdriver",
+        "logic_sha256": "87998aabb1fb551e8c86c66ff549d037f89e95d5b49c5e44dcfbba01d537788c"
+      }
+    },
+    {
+      "name": "fuse",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A fuse that can be used to connect broken things.",
+          "apply_to": [
+            "desk lamp"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "toolbox close-up",
+      "position": "Inside the toolbox",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "toolbox close-up",
+        "kind": "tool",
+        "name": "fuse",
+        "logic_sha256": "51096b58afb5443d1ead443c7616e6115f0d5a6a1c36ab370bc2a84ce38e6adc"
+      }
+    },
+    {
+      "name": "cardboard box",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The cardboard box is sealed shut. You need something sharp to open it.",
+          "neg_reward": "You need a sharp tool to open this box.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, carving knife"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, door handle, True"
+              ],
+              "reward": "The cardboard box is now open."
+            }
+          ]
+        },
+        {
+          "desc": "The cardboard box is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cardboard box close-up",
+      "position": "Beside the bed",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "cardboard box close-up",
+        "kind": "item",
+        "name": "cardboard box",
+        "logic_sha256": "8ec1ec72ab5d9cac8749bf84bf68117154f010f82bef608c08410d5856afe827"
+      }
+    },
+    {
+      "name": "door handle",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A door handle, might be useful to ensemble to a door.",
+          "apply_to": [
+            "bathroom door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cardboard box close-up",
+      "position": "Inside the cardboard box",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "cardboard box close-up",
+        "kind": "tool",
+        "name": "door handle",
+        "logic_sha256": "d57e34f7d84211b6478f5384e64ae22f4ed54f8cbb2b2f9bdb6a570ddd02a413"
+      }
+    },
+    {
+      "name": "plunger",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A dirty plunger that could clear clogged drains.",
+          "apply_to": [
+            "garbage"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "Near the bathtub",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "tool",
+        "name": "plunger",
+        "logic_sha256": "cfe72bccf849a0d488715708ffb4e770f0da1d0d34d815210813739623367dbd"
+      }
+    },
+    {
+      "name": "mirror",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The mirror is broken, and several pieces of it are missing.",
+          "neg_reward": "The mirror is incomplete, you need to find all four missing shards to complete it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, shard_1",
+                "apply, shard_2",
+                "apply, shard_3",
+                "apply, shard_4"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The mirror is now complete. It reflects a vague message saying 'cs546'"
+            }
+          ]
+        },
+        {
+          "desc": "All mirror shards have been placed, and the mirror now reflects a message 'cs546'."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "mirror close-up",
+      "position": "On the mirror",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "mirror close-up",
+        "kind": "item",
+        "name": "mirror",
+        "logic_sha256": "b907d69ca46140b7355f327a2288d6e5a72c8e316179a3fddce7dc4d6a68139a"
+      }
+    },
+    {
+      "name": "ventilation fan",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A ventilation fan is attached to the ceiling, screwed tight with four screws.",
+          "neg_reward": "There's something inside the fan, but you need a tool to remove the screws.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, screwdriver"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, locker key, True"
+              ],
+              "reward": "You have used the screwdriver to open the fan and found a key inside."
+            }
+          ]
+        },
+        {
+          "desc": "The ventilation fan is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "ventilation fan close-up",
+      "position": "On the ceiling",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "ventilation fan close-up",
+        "kind": "item",
+        "name": "ventilation fan",
+        "logic_sha256": "7d2cb6c545e1675b20d5fe31c51ad5117a590ef6f0caa76765076321baee1c4c"
+      }
+    },
+    {
+      "name": "locker key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A small key with a tag that reads \"locker\"",
+          "apply_to": [
+            "locked locker door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "ventilation fan close-up",
+      "position": "Inside the ventilation fan",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "ventilation fan close-up",
+        "kind": "tool",
+        "name": "locker key",
+        "logic_sha256": "f1545907406be7f6bc0f2135958706ff623a14aebe975c22eb617e2c35c9779a"
+      }
+    },
+    {
+      "name": "shard_1",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A piece of flat broken piece reflecting light",
+          "apply_to": [
+            "mirror"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "dining table close-up",
+      "position": "On the table",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "dining table close-up",
+        "kind": "tool",
+        "name": "shard_1",
+        "logic_sha256": "33f4b6a12dde2443f624d45be7596e6e64b697f8c5b8b4838aa4f5597f7b3a03"
+      }
+    },
+    {
+      "name": "food and spices",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "Various food items and spices are stored here. They don't seem useful."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "cabinet above stove close-up",
+      "position": "Left side of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "cabinet above stove close-up",
+        "kind": "item",
+        "name": "food and spices",
+        "logic_sha256": "21e6f140f60dd3d498c6437cf85dfe2ee7744ab1d7abd2ab86398c7984ea1fae"
+      }
+    },
+    {
+      "name": "pot",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "A pot is stored here, but you can't take it with you."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "cabinet above stove close-up",
+      "position": "Right side of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "cabinet above stove close-up",
+        "kind": "item",
+        "name": "pot",
+        "logic_sha256": "0d3e2f2c5e6c1d16ddf4ba96ec9d5ba4e14e847b6031a132f567ab3ee2184582"
+      }
+    },
+    {
+      "name": "flashlight",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A flashlight is here, but it currently is out of power.",
+          "wait_for": [
+            "battery"
+          ]
+        },
+        {
+          "desc": "The flashlight now has a battery and is ready to light up the dark.",
+          "apply_to": [
+            "study wall"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "cabinet above stove close-up",
+      "position": "Right side of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "cabinet above stove close-up",
+        "kind": "tool",
+        "name": "flashlight",
+        "logic_sha256": "3db8a50f68620799a73f4530156761220a0ebabe5dad27d60f8aaf39d9289474"
+      }
+    },
+    {
+      "name": "safe",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A locked safe that requires a four-digit password, all in number.",
+          "neg_reward": "The safe is locked. You need to enter a four-digit code to open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 4713"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "You have opened the safe and found a note with the code \"655324223.\""
+            }
+          ]
+        },
+        {
+          "desc": "The safe is now open, and inside you find a piece of paper that writes 655324223, seems a long code for something."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "left cabinet close-up",
+      "position": "In the bottom cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "left cabinet close-up",
+        "kind": "item",
+        "name": "safe",
+        "logic_sha256": "8b2a26e2a62b0afe240afd9c0ca831402aa0ea1808ee51af3d6c63ba9ac7f31f"
+      }
+    },
+    {
+      "name": "battery",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A single battery is found here, seems still has power and usable.",
+          "apply_to": [
+            "flashlight"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "right cabinet close-up",
+      "position": "In the top drawer",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "right cabinet close-up",
+        "kind": "tool",
+        "name": "battery",
+        "logic_sha256": "9c01a24b4fdb06fa5a3af60e5b401cba3897a3eccb9f3edff7028e8ff92af6a4"
+      }
+    },
+    {
+      "name": "shard_2",
+      "visible": true,
+      "states": [
+        {
+          "desc": "A piece of flat broken piece reflecting light",
+          "apply_to": [
+            "mirror"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "cabinet above sink close-up",
+      "position": "Right side of the cabinet",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "cabinet above sink close-up",
+        "kind": "tool",
+        "name": "shard_2",
+        "logic_sha256": "1c2cab754ae73683ede87ecac5161622ed084d0319e40098dd8eb441815df980"
+      }
+    },
+    {
+      "name": "trash bin",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "A trash bin is placed under the sink, but there's nothing useful here."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "sink close-up",
+      "position": "Under the sink",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "sink close-up",
+        "kind": "item",
+        "name": "trash bin",
+        "logic_sha256": "6683af024426fbbaf4951ee0919abe4186b5e047700eb497b61015e89c84b5f5"
+      }
+    },
+    {
+      "name": "cabinet_under_sink",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "The cabinet under the sink is not accessible right now."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "sink close-up",
+      "position": "Under the sink",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "sink close-up",
+        "kind": "item",
+        "name": "cabinet_under_sink",
+        "logic_sha256": "4513643af805fd046c8846dff568094625b1c6f082258556f26bac056ba277e1"
+      }
+    },
+    {
+      "name": "garbage",
+      "states": [
+        {
+          "desc": "The sink is full of garbage, preventing you from seeing the bottom. You might want to clear it.",
+          "neg_reward": "The sink is clogged with garbage, you might need something to clear it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, plunger"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The garbage has been cleared, revealing something shiny at the bottom."
+            }
+          ]
+        },
+        {
+          "desc": "The garbage has been cleared, revealing something shiny at the bottom.",
+          "neg_reward": "You should simply interact with it to pick it up.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, study key, True",
+                "change_interact, False",
+                "change_state, 2"
+              ],
+              "reward": "You've cleared the garbage and found a key at the bottom of the sink."
+            }
+          ]
+        },
+        {
+          "desc": "The sink is now clear."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "sink close-up",
+      "position": "In the sink",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "sink close-up",
+        "kind": "item",
+        "name": "garbage",
+        "logic_sha256": "e089eeb99b61f17bf8aa01ea861b26ea2f4e419b0398ffab48d986bf884d5f55"
+      }
+    },
+    {
+      "name": "study key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A gold key with a tag that reads \"study\"",
+          "apply_to": [
+            "left door to the study"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "sink close-up",
+      "position": "In the sink",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "sink close-up",
+        "kind": "tool",
+        "name": "study key",
+        "logic_sha256": "79dc6cf2006c220d815134a8a9c34932aec75d3678985fae6dfa58a58091eb2b"
+      }
+    },
+    {
+      "name": "study wall",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "A wall that seems not solid behind, like an artificial wall.",
+          "neg_reward": "Maybe there's something hidden behind this wall, you have to break it with a tool and force.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, hammer"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The wall is broken, but it's dark inside."
+            }
+          ]
+        },
+        {
+          "desc": "The wall has been smashed open, but it's too dark to see inside.",
+          "neg_reward": "The wall is broken, but you need some light to see inside.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, flashlight"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The smashed wall is lit by the flashlight, revealing a hidden message, which is \"A=4 D=1 G=3 M=7\""
+            }
+          ]
+        },
+        {
+          "desc": "The smashed wall is lit by the flashlight, revealing a hidden message, which is \"A=4 D=1 G=3 M=7\""
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "wall close-up",
+      "position": "Middle of the wall",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "wall close-up",
+        "kind": "item",
+        "name": "study wall",
+        "logic_sha256": "7ad1254835f4bdd53892d29ce41bcc99e4af37f4a52657ca2d557e104c5b9f98"
+      }
+    },
+    {
+      "name": "photo_1",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "An old photo. Nothing seems out of place here."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "photo close-up",
+      "position": "Left side of the photo set",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "photo close-up",
+        "kind": "item",
+        "name": "photo_1",
+        "logic_sha256": "b0c2a2a3b9b149fd9297e19579e268a42914ff05e01a59ba65008d48ca4d0565"
+      }
+    },
+    {
+      "name": "photo_2",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "A slightly faded photo, but there's nothing strange about it."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "photo close-up",
+      "position": "Center of the photo set",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "photo close-up",
+        "kind": "item",
+        "name": "photo_2",
+        "logic_sha256": "3323056b97eba2d84f7f1dbb4d07c1174a358438611477d30bef32b0b5bf048f"
+      }
+    },
+    {
+      "name": "photo_3",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "This photo looks a little off, as if something is hidden behind it.",
+          "neg_reward": "There's something hidden behind this photo. You need to simply interact with it to reveal it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_visible, tool, shard_3, True",
+                "change_interact, False",
+                "change_state, 1"
+              ],
+              "reward": "You found a piece of broken mirror hidden behind this photo."
+            }
+          ]
+        },
+        {
+          "desc": "The photo has been moved."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "photo close-up",
+      "position": "Right side of the photo set",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "photo close-up",
+        "kind": "item",
+        "name": "photo_3",
+        "logic_sha256": "fb81a1eaf5c596e51adcfbbd4c0f4d4a48463afeb8c4528f7d12664ab0e068ff"
+      }
+    },
+    {
+      "name": "shard_3",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A piece of flat broken piece reflecting light",
+          "apply_to": [
+            "mirror"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "photo close-up",
+      "position": "Behind photo_3",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "photo close-up",
+        "kind": "tool",
+        "name": "shard_3",
+        "logic_sha256": "f8296066ff6162b042b607820a850f2f3958f62a7361039d0113ba11e9f52183"
+      }
+    },
+    {
+      "name": "desk lamp",
+      "interactable": true,
+      "states": [
+        {
+          "desc": "The desk lamp's wire is broken apart, and the power is out.",
+          "neg_reward": "The wire seems is cut broken, you have to fix it with a tool.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, fuse"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False"
+              ],
+              "reward": "The lamp is now working, shedding light on letters \"AMDG\" on the desk."
+            }
+          ]
+        },
+        {
+          "desc": "The desk lamp has been fixed, and it lights up the desk. You see some letters, which is \"AMDG\", seemingly a code hint."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "desk close-up",
+      "position": "On the desk",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "desk close-up",
+        "kind": "item",
+        "name": "desk lamp",
+        "logic_sha256": "9e913be6c8ba720dcf21f62e12946c67c3b4bfa916f2914616338df4f198c3c4"
+      }
+    },
+    {
+      "name": "locked locker door",
+      "states": [
+        {
+          "desc": "The left locker door is locked. It may require a key to open.",
+          "neg_reward": "You need a key to unlock this door.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, locker key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, hammer, True"
+              ],
+              "reward": "The locker door is now open, revealing a hammerhead inside."
+            }
+          ]
+        },
+        {
+          "desc": "The locker door is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "locker close-up",
+      "position": "Left side of the locker",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "locker close-up",
+        "kind": "item",
+        "name": "locked locker door",
+        "logic_sha256": "edbc8607105650d4ad1845964610b6cba026109d7003574d7f6150af9b30b9d3"
+      }
+    },
+    {
+      "name": "hammer",
+      "visible": false,
+      "states": [
+        {
+          "desc": "The hammer only have a head, seems need something else to be useful.",
+          "wait_for": [
+            "hammer handle"
+          ]
+        },
+        {
+          "desc": "The hammer is now fully assembled, with the metal head sharp to smash things.",
+          "apply_to": [
+            "study wall"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "locker close-up",
+      "position": "Inside the locked locker",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "locker close-up",
+        "kind": "tool",
+        "name": "hammer",
+        "logic_sha256": "a377b2c3d18872edab5cfdf033d82b188e7ca360f7b0e1b6e923109ae10f7672"
+      }
+    },
+    {
+      "name": "shard_4",
+      "states": [
+        {
+          "desc": "A piece of flat broken piece reflecting light",
+          "apply_to": [
+            "mirror"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "locker close-up",
+      "position": "Beside the cardboard box near the locker",
+      "source": {
+        "file": "game1-1-easy.yaml",
+        "scene": "locker close-up",
+        "kind": "tool",
+        "name": "shard_4",
+        "logic_sha256": "bd55a5ccb5ebf58b1f60e0f2e6df164023ec014b3791db7effc75124fd56caf5"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "mirror",
+        "target_entity": "toolbox",
+        "accepted_input": "cs546",
+        "evidence_text": [
+          "cs546"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I02",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "desk lamp",
+        "target_entity": "safe",
+        "accepted_input": "4713",
+        "evidence_text": [
+          "AMDG"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I03",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "study wall",
+        "target_entity": "safe",
+        "accepted_input": "4713",
+        "evidence_text": [
+          "A=4 D=1 G=3 M=7"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "safe",
+        "target_entity": "right door to the exit",
+        "accepted_input": "655324223",
+        "evidence_text": [
+          "655324223"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "plunger",
+        "sender": "A",
+        "receiver": "B",
+        "target": "garbage"
+      },
+      {
+        "id": "O02",
+        "object": "study key",
+        "sender": "B",
+        "receiver": "A",
+        "target": "left door to the study"
+      },
+      {
+        "id": "O03",
+        "object": "shard_2",
+        "sender": "B",
+        "receiver": "A",
+        "target": "mirror"
+      },
+      {
+        "id": "O04",
+        "object": "shard_1",
+        "sender": "B",
+        "receiver": "A",
+        "target": "mirror"
+      },
+      {
+        "id": "O05",
+        "object": "screwdriver",
+        "sender": "B",
+        "receiver": "A",
+        "target": "ventilation fan"
+      },
+      {
+        "id": "O06",
+        "object": "flashlight",
+        "sender": "B",
+        "receiver": "A",
+        "target": "study wall"
+      },
+      {
+        "id": "O07",
+        "object": "fuse",
+        "sender": "B",
+        "receiver": "A",
+        "target": "desk lamp"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "right door to the exit",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 38,
+    "retained_entities": 38,
+    "source_scenes": 20,
+    "retained_scenes": 20,
+    "source_key_actions": 40,
+    "replayed_source_key_actions": 40,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "telephone cabinet"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 4,
+        "action": {
+          "type": "click",
+          "target": "hairpin"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 5,
+        "action": {
+          "type": "apply",
+          "tool": "hairpin",
+          "target": "drawer"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 6,
+        "action": {
+          "type": "click",
+          "target": "carving knife"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 8,
+        "action": {
+          "type": "click",
+          "target": "hammer handle"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 10,
+        "action": {
+          "type": "apply",
+          "tool": "carving knife",
+          "target": "cardboard box"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 11,
+        "action": {
+          "type": "click",
+          "target": "door handle"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 13,
+        "action": {
+          "type": "apply",
+          "tool": "door handle",
+          "target": "bathroom door"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 14,
+        "action": {
+          "type": "click",
+          "target": "bathroom door"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 16,
+        "action": {
+          "type": "click",
+          "target": "plunger"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 18,
+        "action": {
+          "type": "click",
+          "target": "shard_1"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 20,
+        "action": {
+          "type": "click",
+          "target": "flashlight"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 22,
+        "action": {
+          "type": "click",
+          "target": "battery"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 25,
+        "action": {
+          "type": "apply",
+          "tool": "plunger",
+          "target": "garbage"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 26,
+        "action": {
+          "type": "click",
+          "target": "garbage"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 27,
+        "action": {
+          "type": "click",
+          "target": "study key"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 30,
+        "action": {
+          "type": "apply",
+          "tool": "study key",
+          "target": "left door to the study"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 31,
+        "action": {
+          "type": "click",
+          "target": "left door to the study"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 33,
+        "action": {
+          "type": "click",
+          "target": "photo_3"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 34,
+        "action": {
+          "type": "click",
+          "target": "shard_3"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 36,
+        "action": {
+          "type": "click",
+          "target": "shard_4"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 38,
+        "action": {
+          "type": "click",
+          "target": "shard_2"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 40,
+        "action": {
+          "type": "apply",
+          "tool": "shard_3",
+          "target": "mirror"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 41,
+        "action": {
+          "type": "apply",
+          "tool": "shard_4",
+          "target": "mirror"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 43,
+        "action": {
+          "type": "apply",
+          "tool": "shard_2",
+          "target": "mirror"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 45,
+        "action": {
+          "type": "apply",
+          "tool": "shard_1",
+          "target": "mirror"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 48,
+        "action": {
+          "type": "input",
+          "value": "cs546",
+          "target": "toolbox"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 49,
+        "action": {
+          "type": "click",
+          "target": "screwdriver"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 50,
+        "action": {
+          "type": "click",
+          "target": "fuse"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 53,
+        "action": {
+          "type": "apply",
+          "tool": "screwdriver",
+          "target": "ventilation fan"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 54,
+        "action": {
+          "type": "click",
+          "target": "locker key"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 56,
+        "action": {
+          "type": "apply",
+          "tool": "locker key",
+          "target": "locked locker door"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 57,
+        "action": {
+          "type": "click",
+          "target": "hammer"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 58,
+        "action": {
+          "type": "craft",
+          "first": "hammer",
+          "second": "hammer handle"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 60,
+        "action": {
+          "type": "apply",
+          "tool": "hammer",
+          "target": "study wall"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 61,
+        "action": {
+          "type": "craft",
+          "first": "battery",
+          "second": "flashlight"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 63,
+        "action": {
+          "type": "apply",
+          "tool": "flashlight",
+          "target": "study wall"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 66,
+        "action": {
+          "type": "apply",
+          "tool": "fuse",
+          "target": "desk lamp"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 71,
+        "action": {
+          "type": "input",
+          "value": "4713",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 74,
+        "action": {
+          "type": "input",
+          "value": "655324223",
+          "target": "right door to the exit"
+        }
+      }
+    ]
+  }
+}

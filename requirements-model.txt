@@ -1,0 +1,6 @@
+# Server inference only; the browser/environment needs none of these.
+# Install torch separately with the CUDA wheel chosen in server/setup.sh.
+transformers==4.51.3
+accelerate==1.6.0
+bitsandbytes==0.45.5
+safetensors==0.5.3

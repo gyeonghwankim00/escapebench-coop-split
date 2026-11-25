@@ -1,0 +1,48 @@
+{
+  "game": "game2-1-easy",
+  "pilot_id": "03_cabinet_mechanism",
+  "title": "공구함과 기계 장치",
+  "A": [
+    "letter",
+    "apartment entrance",
+    "apartment hallway",
+    "cloakroom",
+    "corridor",
+    "world map",
+    "utility room",
+    "bathroom",
+    "sanctum"
+  ],
+  "B": [
+    "hallway cabinet",
+    "study room",
+    "utility room 2"
+  ],
+  "clues": [
+    {
+      "holder_source": "scrip 2",
+      "target": "safe 2",
+      "answer": "424389",
+      "tokens": [
+        "424389"
+      ]
+    },
+    {
+      "holder_source": "credential",
+      "target": "phone",
+      "answer": "47515",
+      "tokens": [
+        "47515"
+      ]
+    },
+    {
+      "holder_source": "paper 2",
+      "target": "locked box 2",
+      "answer": "870472",
+      "tokens": [
+        "870472"
+      ]
+    }
+  ],
+  "note": "Evaluator-only. Clue answers must never be shown to agents."
+}

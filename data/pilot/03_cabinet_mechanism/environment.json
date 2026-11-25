@@ -1,0 +1,1862 @@
+{
+  "schema_version": "0.2",
+  "id": "03_cabinet_mechanism",
+  "title": "공구함과 기계 장치",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game2-1-easy.yaml",
+      "sha256": "c24f05470b6f7268491abbc24fe3a089c9cc1a23d4bddc1c31fd48326ec8a475"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_2-1.txt",
+      "sha256": "a491d05bef0e2ef59ba8b44cbb7f2508c7df450c4312aba3cb65f3680108da70"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "letter",
+    "scenes": [
+      {
+        "name": "letter",
+        "desc": "A letter appears at the beginning of the scene, which is from the son of the detective's friend. He begs the detective to look for his missing father, who becomes autistic recently. There is a key to his father's apartment inside the letter.",
+        "scene_relations": {
+          "Start the game": "apartment entrance"
+        }
+      },
+      {
+        "name": "apartment entrance",
+        "desc": "At the apartment entrance, there is a door with a bronze keyhole.",
+        "scene_relations": {
+          "Enter the apartment": "apartment hallway"
+        }
+      },
+      {
+        "name": "apartment hallway",
+        "desc": "The apartment hallway is decorated with wooden floor. There are two windows on the right side wall.",
+        "visible": false,
+        "scene_relations": {
+          "Turn left": "cloakroom",
+          "Turn right": "hallway cabinet",
+          "Go straight": "corridor",
+          "Go to bathroom": "bathroom"
+        }
+      },
+      {
+        "name": "cloakroom",
+        "desc": "The cloakroom is on the left side of the apartment hallway. It is a small room with some coat hangers and a locker.",
+        "scene_relations": {
+          "Turn right": "apartment hallway"
+        }
+      },
+      {
+        "name": "hallway cabinet",
+        "desc": "There is a cabinet in the hallway, with some representative items from some coutries.",
+        "scene_relations": {
+          "Turn left": "apartment hallway"
+        }
+      },
+      {
+        "name": "corridor",
+        "desc": "The corridor is bright with some Cthulhu decorations.",
+        "scene_relations": {
+          "Turn left": "world map",
+          "Go straight": "study room",
+          "Go back": "apartment hallway",
+          "Go to bathroom": "bathroom"
+        }
+      },
+      {
+        "name": "world map",
+        "desc": "A world map is hanging on the wall. There are some pins on the map. Nothing else special here.",
+        "scene_relations": {
+          "Back to the corridor": "corridor"
+        }
+      },
+      {
+        "name": "study room",
+        "desc": "The study room is meessy with some paintings on the wall, and some books on a bookshelf.",
+        "scene_relations": {
+          "Turn left": "utility room",
+          "Turn right": "utility room 2",
+          "Go back": "corridor"
+        }
+      },
+      {
+        "name": "utility room",
+        "desc": "The utility room is a small room with a bookshelf and a cabinet.",
+        "scene_relations": {
+          "Turn right": "study room",
+          "Go to the sanctum": "sanctum"
+        }
+      },
+      {
+        "name": "utility room 2",
+        "desc": "The utility room 2 is a small room with a cabinet and some small ornaments.",
+        "scene_relations": {
+          "Turn left": "study room"
+        }
+      },
+      {
+        "name": "bathroom",
+        "desc": "The bathroom is clean with a bathtub and a mirror, with marble wall.",
+        "visible": false,
+        "scene_relations": {
+          "Go back": "corridor"
+        }
+      },
+      {
+        "name": "sanctum",
+        "desc": "The sanctum is a small room.",
+        "visible": false,
+        "scene_relations": {
+          "Go back": "utility room"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "letter",
+      "room": "A",
+      "desc": "A letter appears at the beginning of the scene, which is from the son of the detective's friend. He begs the detective to look for his missing father, who becomes autistic recently. There is a key to his father's apartment inside the letter.",
+      "visible": true,
+      "source_scene": "letter"
+    },
+    {
+      "name": "apartment entrance",
+      "room": "A",
+      "desc": "At the apartment entrance, there is a door with a bronze keyhole.",
+      "visible": true,
+      "source_scene": "apartment entrance"
+    },
+    {
+      "name": "apartment hallway",
+      "room": "A",
+      "desc": "The apartment hallway is decorated with wooden floor. There are two windows on the right side wall.",
+      "visible": false,
+      "source_scene": "apartment hallway"
+    },
+    {
+      "name": "cloakroom",
+      "room": "A",
+      "desc": "The cloakroom is on the left side of the apartment hallway. It is a small room with some coat hangers and a locker.",
+      "visible": true,
+      "source_scene": "cloakroom"
+    },
+    {
+      "name": "hallway cabinet",
+      "room": "B",
+      "desc": "There is a cabinet in the hallway, with some representative items from some coutries.",
+      "visible": true,
+      "source_scene": "hallway cabinet"
+    },
+    {
+      "name": "corridor",
+      "room": "A",
+      "desc": "The corridor is bright with some Cthulhu decorations.",
+      "visible": true,
+      "source_scene": "corridor"
+    },
+    {
+      "name": "world map",
+      "room": "A",
+      "desc": "A world map is hanging on the wall. There are some pins on the map. Nothing else special here.",
+      "visible": true,
+      "source_scene": "world map"
+    },
+    {
+      "name": "study room",
+      "room": "B",
+      "desc": "The study room is meessy with some paintings on the wall, and some books on a bookshelf.",
+      "visible": true,
+      "source_scene": "study room"
+    },
+    {
+      "name": "utility room",
+      "room": "A",
+      "desc": "The utility room is a small room with a bookshelf and a cabinet.",
+      "visible": true,
+      "source_scene": "utility room"
+    },
+    {
+      "name": "utility room 2",
+      "room": "B",
+      "desc": "The utility room 2 is a small room with a cabinet and some small ornaments.",
+      "visible": true,
+      "source_scene": "utility room 2"
+    },
+    {
+      "name": "bathroom",
+      "room": "A",
+      "desc": "The bathroom is clean with a bathtub and a mirror, with marble wall.",
+      "visible": false,
+      "source_scene": "bathroom"
+    },
+    {
+      "name": "sanctum",
+      "room": "A",
+      "desc": "The sanctum is a small room.",
+      "visible": false,
+      "source_scene": "sanctum"
+    }
+  ],
+  "entities": [
+    {
+      "name": "apartment door",
+      "states": [
+        {
+          "desc": "the apartment door is locked, there's a bronze keyhole",
+          "neg_reward": "You should try to open this door with the key",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, bronze key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, scene, apartment hallway, True"
+              ],
+              "reward": "The apartment door is opened, there is a hallway inside"
+            }
+          ]
+        },
+        {
+          "desc": "the apartment door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "apartment entrance",
+      "position": "On the wall",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "apartment entrance",
+        "kind": "item",
+        "name": "apartment door",
+        "logic_sha256": "6526ffd86f7f8e86bcb9dc4f6d002099b9c18da4f3f14c19e374202d67df765c"
+      }
+    },
+    {
+      "name": "doorbell",
+      "states": [
+        {
+          "desc": "an electric doorbell",
+          "neg_reward": "You try to ring the doorbell, nothing else happens, you should go inside"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "apartment entrance",
+      "position": "On the right of the door",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "apartment entrance",
+        "kind": "item",
+        "name": "doorbell",
+        "logic_sha256": "7efbbe2d3c61dd677d70ed7bad0a578bc06805a190e4fbdef8bfb6ef7c6ff9f0"
+      }
+    },
+    {
+      "name": "bronze key",
+      "states": [
+        {
+          "desc": "a bronze key, seems a personal one with multiple uses",
+          "apply_to": [
+            "apartment door",
+            "locker"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "apartment entrance",
+      "position": "In the letter",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "apartment entrance",
+        "kind": "tool",
+        "name": "bronze key",
+        "logic_sha256": "3ed76479e6d8039b49901b2453bf602a0a15ac1c2116a4f2fc37e64ce002e86c"
+      }
+    },
+    {
+      "name": "locker",
+      "states": [
+        {
+          "desc": "the locker is locked, with a bronze keyhole on the door",
+          "neg_reward": "Seems the owner's personal locker, you should try to open it",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, bronze key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, crowbar, True"
+              ],
+              "reward": "The locker is opened, there is a crowbar inside"
+            }
+          ]
+        },
+        {
+          "desc": "the locker is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cloakroom",
+      "position": "on the right of the cloakroom",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "cloakroom",
+        "kind": "item",
+        "name": "locker",
+        "logic_sha256": "85cd1d0596ce818b6e0fd33509338d2ec6caf0f28e07d50b570e711a39e71a48"
+      }
+    },
+    {
+      "name": "Cthulhu ornament",
+      "states": [
+        {
+          "desc": "a Cthulhu ornament with a tiny slot on the top, seems something could be put on",
+          "neg_reward": "You may try to fit something small into the slot",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, gem"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, scene, sanctum, True"
+              ],
+              "reward": "The gem is put on the Cthulhu ornament"
+            }
+          ]
+        },
+        {
+          "desc": "the Cthulhu ornament with a gem on the top"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cloakroom",
+      "position": "along the way",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "cloakroom",
+        "kind": "item",
+        "name": "Cthulhu ornament",
+        "logic_sha256": "4d0845068d49d741233e8c8f4ee764e297e62ade3dd6eb0945b8eadc88bd7a41"
+      }
+    },
+    {
+      "name": "fragment",
+      "states": [
+        {
+          "desc": "a metal fragment, shape of en elegant curve, fit into a round slot",
+          "apply_to": [
+            "safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cloakroom",
+      "position": "on a coat",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "cloakroom",
+        "kind": "tool",
+        "name": "fragment",
+        "logic_sha256": "30ce355a86a395c6f05acd40cc159bcfd7e4e5089b031139b34c34a775d296aa"
+      }
+    },
+    {
+      "name": "shoelaces",
+      "states": [
+        {
+          "desc": "a bundle of shoelaces, made of cord, very thin, long, and strong",
+          "wait_for": [
+            "hook"
+          ]
+        },
+        {
+          "desc": "a bundle of shoelaces with a hook, like a fishing rod",
+          "apply_to": [
+            "sewer"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cloakroom",
+      "position": "on a pair of shoes",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "cloakroom",
+        "kind": "tool",
+        "name": "shoelaces",
+        "logic_sha256": "7890aa64ba66ca586e9e523a633de310bd604345672662a1cef4d9f82e1cd75e"
+      }
+    },
+    {
+      "name": "crowbar",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a crowbar made of iron, with a flat end and a curved end, strong enough to pull something off",
+          "apply_to": [
+            "a painting"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cloakroom",
+      "position": "inside the locker",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "cloakroom",
+        "kind": "tool",
+        "name": "crowbar",
+        "logic_sha256": "8c4a76316525ab8d8f87246fee69e60220b28c2baad79d1d2fb9f98cddad5dbe"
+      }
+    },
+    {
+      "name": "hook",
+      "states": [
+        {
+          "desc": "a hook made of iron, with a curved open end, could be bound with something",
+          "apply_to": [
+            "shoelaces"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "hallway cabinet",
+      "position": "on the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "hallway cabinet",
+        "kind": "tool",
+        "name": "hook",
+        "logic_sha256": "aaee669d7577f01b566562402dd39ad2f943b8ac961eb30c9d0aff73d6ba68e9"
+      }
+    },
+    {
+      "name": "suitcase",
+      "states": [
+        {
+          "desc": "a locked suitcase, with a golden keyhole",
+          "neg_reward": "You should try to open this suitcase with a matched key",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, golden key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, fragment 4, True",
+                "change_visible, tool, credential, True"
+              ],
+              "reward": "The suitcase is opened, there is a metal fragment and a credential inside"
+            }
+          ]
+        },
+        {
+          "desc": "the suitcase is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "corridor",
+      "position": "on the left bottom of the corridor",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "corridor",
+        "kind": "item",
+        "name": "suitcase",
+        "logic_sha256": "05a0e3ebcc75c0fe3364a9e829cbc154642a6eb2a094acf0f997f8f3409420bf"
+      }
+    },
+    {
+      "name": "bathroom door",
+      "states": [
+        {
+          "desc": "the bathroom door is locked, with a rusty keyhole, seems cannot be opened by a key directly",
+          "neg_reward": "You should try to open this door in some unusual way",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, picklock"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, scene, bathroom, True"
+              ],
+              "reward": "The bathroom door is opened"
+            }
+          ]
+        },
+        {
+          "desc": "the bathroom door is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "corridor",
+      "position": "on the left wall",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "corridor",
+        "kind": "item",
+        "name": "bathroom door",
+        "logic_sha256": "899819896580ab74d032bb24bd08f59bdfe692d10537acf4c81661e357f2b99d"
+      }
+    },
+    {
+      "name": "fragment 4",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a metal fragment, shape of a elegant curve, fit into a round slot",
+          "apply_to": [
+            "safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "corridor",
+      "position": "inside the suitcase",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "corridor",
+        "kind": "tool",
+        "name": "fragment 4",
+        "logic_sha256": "d2138ffaac7322b8d2ba76e87dafdafc88128791f138c82313744059d3b3fb9e"
+      }
+    },
+    {
+      "name": "credential",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a credential, with a phone number \"47515\""
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "corridor",
+      "position": "inside the suitcase",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "corridor",
+        "kind": "tool",
+        "name": "credential",
+        "logic_sha256": "ba7cd7f60437e6f488cecec9956dbebdf1e36b5093f198ae8f1761f8918ae59c"
+      }
+    },
+    {
+      "name": "tool box",
+      "states": [
+        {
+          "desc": "a locked tool box, seems need multiple tools to open",
+          "neg_reward": "You may try to open this tool box through a brute force way",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, connector",
+                "apply, lever"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, paper 2, True"
+              ],
+              "reward": "The tool box is opened, there is a paper inside"
+            }
+          ]
+        },
+        {
+          "desc": "the tool box is open, with a paper inside"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "study room",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "study room",
+        "kind": "item",
+        "name": "tool box",
+        "logic_sha256": "ce439db2c096d062a8f95452a4f496503e66f4dd55fdcd1fdea7256ce224c4ca"
+      }
+    },
+    {
+      "name": "paper 2",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a paper with a 6-digit string \"870472\", seems like a password"
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "study room",
+      "position": "in the tool box",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "study room",
+        "kind": "tool",
+        "name": "paper 2",
+        "logic_sha256": "3f078effa38e3358ddf08cacfcf6551970eaacd3ee79a83fc29a703f9ec1dcc1"
+      }
+    },
+    {
+      "name": "a painting",
+      "states": [
+        {
+          "desc": "a painting hanging on the wall, a little bit loose, seems there's something behind",
+          "neg_reward": "You should try to find a way to take the painting off",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, crowbar"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, False",
+                "change_visible, item, safe, True"
+              ],
+              "reward": "The painting is taken off, there is a safe behind the painting"
+            }
+          ]
+        },
+        {
+          "desc": "the painting is taken off, with a safe behind"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "utility room",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "item",
+        "name": "a painting",
+        "logic_sha256": "911af61d23394ce7f0d6c5a0b11b888f091f91f3f4c906a54e0c914718913705"
+      }
+    },
+    {
+      "name": "safe",
+      "visible": false,
+      "interactable": false,
+      "states": [
+        {
+          "desc": "a safe with a rounud groove on the door, seems will trigger something after filling the groove",
+          "neg_reward": "You should try to open this safe by filling the groove",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, fragment",
+                "apply, fragment 2",
+                "apply, fragment 3",
+                "apply, fragment 4"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, gem, True"
+              ],
+              "reward": "The safe is opened, there is a gem inside"
+            }
+          ]
+        },
+        {
+          "desc": "the safe is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "utility room",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "item",
+        "name": "safe",
+        "logic_sha256": "f64a56a99eca4ba04076bd91eb9d59ddf02596bc9ffd863d54bac5e510d95352"
+      }
+    },
+    {
+      "name": "locked box",
+      "states": [
+        {
+          "desc": "a locked box with a round keyhole, seems complex to open",
+          "neg_reward": "You should try to open this box through a matched key or password",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, cylindrical key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, sim card, True"
+              ],
+              "reward": "The locked box is opened"
+            }
+          ]
+        },
+        {
+          "desc": "the locked box is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "utility room",
+      "position": "on the wall",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "item",
+        "name": "locked box",
+        "logic_sha256": "6951ded3cb5c0a3f5b286a2128f5c0b71d5e578f40ec8b19498c21b071a0ea35"
+      }
+    },
+    {
+      "name": "phone",
+      "states": [
+        {
+          "desc": "The phone is currently not working, showing on the screen \"No signal\"",
+          "neg_reward": "You should try to make the phone work with a valid card inserted",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, sim card"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The sim card is inserted into the phone"
+            }
+          ]
+        },
+        {
+          "desc": "a phone with a sim card inserted, now the phone could be used normally",
+          "neg_reward": "You could now dial with a phone number, supporting 5-digit number",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 47515"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_interact, item, safe, True"
+              ],
+              "reward": "The phone is ringing"
+            }
+          ]
+        },
+        {
+          "desc": "the phone is ringing now, a safe company manager picks up. Then something happens ..."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "utility room",
+      "position": "on the bookshelf",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "item",
+        "name": "phone",
+        "logic_sha256": "af64b75c241009170a8ee3b1206634c0685e5512b0d3c994c41374c6754a9c98"
+      }
+    },
+    {
+      "name": "fragment 2",
+      "states": [
+        {
+          "desc": "another metal fragment, shape of a elegant curve, fit into a round slot",
+          "apply_to": [
+            "safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "utility room",
+      "position": "in the top drawer of the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "tool",
+        "name": "fragment 2",
+        "logic_sha256": "e134e392ffb309ef44c657d05edb236d4afbd98e6f2de6ea7e9c3ad51c1f3e91"
+      }
+    },
+    {
+      "name": "sim card",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a very normal sim card used for a phone",
+          "apply_to": [
+            "phone"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "utility room",
+      "position": "in the locked box",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "tool",
+        "name": "sim card",
+        "logic_sha256": "db7efbed4759fedcf3b82ac8036c0725c235ef454d821926afd863a3b26eca9f"
+      }
+    },
+    {
+      "name": "gem",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a very tiny gem without any stand, shining blue light",
+          "apply_to": [
+            "Cthulhu ornament"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "utility room",
+      "position": "in the safe",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "tool",
+        "name": "gem",
+        "logic_sha256": "0bbf26b89a8eae544521bb4cd0e7e40c6b7ba5e241dbfae9ec69fdbd00cfe4cf"
+      }
+    },
+    {
+      "name": "scrip 2",
+      "states": [
+        {
+          "desc": "a scrip with a string of numbers \"424389\""
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "utility room",
+      "position": "on top of the bookshelf",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room",
+        "kind": "tool",
+        "name": "scrip 2",
+        "logic_sha256": "669db8cc9d062ddf5f8653ce591944b7023d91dfa4ec54c3a9e787f502aec74c"
+      }
+    },
+    {
+      "name": "safe 2",
+      "states": [
+        {
+          "desc": "another safe that is locked, with a digital lock requiring a 6-digit number",
+          "neg_reward": "You should try to open this safe with a matched password you have seen somewhere",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 424389"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, picklock, True"
+              ]
+            }
+          ]
+        },
+        {
+          "desc": "the safe is open"
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "utility room 2",
+      "position": "at bottom of the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room 2",
+        "kind": "item",
+        "name": "safe 2",
+        "logic_sha256": "f03b0fb8d69ae2516ebf14e4beb9cabed64fd39cda031e3aeebc492d174bd3ca"
+      }
+    },
+    {
+      "name": "screwdriver",
+      "states": [
+        {
+          "desc": "a screwdriver, a common one with a flat end and a cross end to screw or unscrew something",
+          "apply_to": [
+            "drawer of the cabinet"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "utility room 2",
+      "position": "inside a vase",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room 2",
+        "kind": "tool",
+        "name": "screwdriver",
+        "logic_sha256": "d153c5e07e231befd4e313307f83c50c94c274bd1e50ad5ab15842939ec0cd83"
+      }
+    },
+    {
+      "name": "scrip",
+      "states": [
+        {
+          "desc": "a scrip with a sentence \"The Persistence of Memory, 1931\", nothing else special"
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "utility room 2",
+      "position": "on the floor",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room 2",
+        "kind": "tool",
+        "name": "scrip",
+        "logic_sha256": "9deb02760f8f0aa822b3f587c174b0409bf940048df8dea6a4f409dc50d7443c"
+      }
+    },
+    {
+      "name": "picklock",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a picklock with a long and thin end",
+          "apply_to": [
+            "bathroom door"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "utility room 2",
+      "position": "in the safe at bottom of the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "utility room 2",
+        "kind": "tool",
+        "name": "picklock",
+        "logic_sha256": "131d20fbeeaf26748ad1683b5fc0b7ae3d3fc092b840a4e50b31f89c4e5b1e56"
+      }
+    },
+    {
+      "name": "sewer",
+      "states": [
+        {
+          "desc": "the sewer is blocked, and it seems there is something in it, you cannot get it up direclty with hands",
+          "neg_reward": "You should try to find a way to get the thing from the blocked sewer",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, shoelaces"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, cylindrical key, True",
+                "change_interact, False"
+              ],
+              "reward": "The sewer is unblocked, there is a cylindrical key inside"
+            }
+          ]
+        },
+        {
+          "desc": "the sewer is unblocked"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "in the bathtub",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "item",
+        "name": "sewer",
+        "logic_sha256": "9660e3756c5f6c2328b6b457c39205623f2d16ff0356ecddb6f84fa2b4170ffe"
+      }
+    },
+    {
+      "name": "drawer of the cabinet",
+      "states": [
+        {
+          "desc": "the drawer is locked, with a screw on the handle",
+          "neg_reward": "You should try to open this drawer by unscrewing that screw",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, screwdriver"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, lever, True"
+              ],
+              "reward": "The drawer is opened, there is a lever inside"
+            }
+          ]
+        },
+        {
+          "desc": "the drawer is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "bathroom",
+      "position": null,
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "item",
+        "name": "drawer of the cabinet",
+        "logic_sha256": "643af9cb3a717c45dd1ec6ce3d20ac17083c3726d6339d65b411d6ef124337e8"
+      }
+    },
+    {
+      "name": "golden key",
+      "states": [
+        {
+          "desc": "a golden key with shining light, a leather strap attached",
+          "apply_to": [
+            "suitcase"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "below the carpet on the floor",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "tool",
+        "name": "golden key",
+        "logic_sha256": "9c62bf946c4fe04ae69b505820d816a0c995ac67934b17fb8f92b201bf558984"
+      }
+    },
+    {
+      "name": "fragment 3",
+      "states": [
+        {
+          "desc": "another metal fragment, shape of a elegant curve, fit into a round slot",
+          "apply_to": [
+            "safe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "next to the bathtub",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "tool",
+        "name": "fragment 3",
+        "logic_sha256": "68797162b49e1e01b251a06590a771329242174026a93c8c62318209f56ada4f"
+      }
+    },
+    {
+      "name": "connector",
+      "states": [
+        {
+          "desc": "a connector that could be used to anchor some long and thin objects",
+          "apply_to": [
+            "tool box"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "in the bathtub",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "tool",
+        "name": "connector",
+        "logic_sha256": "b86a7e963864232908ed233d99556c104e9eaf9389a7797660bebf9538f07705"
+      }
+    },
+    {
+      "name": "cylindrical key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a cylindrical key with a round end",
+          "apply_to": [
+            "locked box"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "in the sewer",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "tool",
+        "name": "cylindrical key",
+        "logic_sha256": "ed6abfe413fd84a708a2626cc395eb5d0c2ad5ff5a2e6def29cd87753e6f51ac"
+      }
+    },
+    {
+      "name": "lever",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a lever, long and thin with a flat end, seems strong enough",
+          "apply_to": [
+            "tool box"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "bathroom",
+      "position": "in the drawer of the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "bathroom",
+        "kind": "tool",
+        "name": "lever",
+        "logic_sha256": "14736944c04ec8acf1eba1a93c56c0b3e417e84a3293ab06f345994a3aba70be"
+      }
+    },
+    {
+      "name": "locked box 2",
+      "states": [
+        {
+          "desc": "a locked box with a digital lock requiring a 6-digit number password",
+          "neg_reward": "You should try to open this box with a matched 6-digit number",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 870472"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "change_visible, tool, round key, True"
+              ],
+              "reward": "The locked box is opened, there is a round key inside"
+            }
+          ]
+        },
+        {
+          "desc": "the locked box is open"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "sanctum",
+      "position": "on the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "sanctum",
+        "kind": "item",
+        "name": "locked box 2",
+        "logic_sha256": "7b5ed0f757ae92f7f89f9630a532cb1eba875de9e562c25ef7187f47d073afb6"
+      }
+    },
+    {
+      "name": "tellurion",
+      "states": [
+        {
+          "desc": "a tellurion that has a block tilted up, with a triangle-shaped hole on the top",
+          "neg_reward": "You should try to find a way to turn the tellurion on",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, round key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, tap, True",
+                "change_interact, False"
+              ],
+              "reward": "The tellurion is turned, there is a tap inside"
+            }
+          ]
+        },
+        {
+          "desc": "the tellurion is turned, with a tap inside"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "sanctum",
+      "position": "at the corner of the room",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "sanctum",
+        "kind": "item",
+        "name": "tellurion",
+        "logic_sha256": "232ab419f127e5a803f4334f3212325e5cd1ee156f69b226e82022c5c7835e87"
+      }
+    },
+    {
+      "name": "pipe",
+      "states": [
+        {
+          "desc": "a pipe on the wall, seems something missing at the bottom",
+          "neg_reward": "You should try to find a way to ensemble the pipe with what you have at hand",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, tap"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "finish_team"
+              ],
+              "reward": "The pipe is tapped. Suddenly, the exit door is opened. GAME END!"
+            }
+          ]
+        },
+        {
+          "desc": "the pipe is tapped"
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "sanctum",
+      "position": "near the cabinet",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "sanctum",
+        "kind": "item",
+        "name": "pipe",
+        "logic_sha256": "4831a6280332a6433378f6ee1fe5801abd6a0e3f70f8cc92884880068b470de5"
+      }
+    },
+    {
+      "name": "paper",
+      "states": [
+        {
+          "desc": "a normal paper with some drawings of blue, red and yellow colors. No clue found here."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "sanctum",
+      "position": "on the table",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "sanctum",
+        "kind": "tool",
+        "name": "paper",
+        "logic_sha256": "34c5b147b254bdc18873a7fe73604997c7399c756a00c6117a3bb18c7cf5647e"
+      }
+    },
+    {
+      "name": "round key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a round shaped key with head like a triangle, a very special head shape",
+          "apply_to": [
+            "tellurion"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "sanctum",
+      "position": "in a locked box",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "sanctum",
+        "kind": "tool",
+        "name": "round key",
+        "logic_sha256": "a7262119477d7ebe4a0af5c30e1a037dc83cb6a58d5ac33f012410e343b0d32e"
+      }
+    },
+    {
+      "name": "tap",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a normal tap made of steel, with an end round shape, can be used to ensemble something",
+          "apply_to": [
+            "pipe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "sanctum",
+      "position": "inside the tellurion",
+      "source": {
+        "file": "game2-1-easy.yaml",
+        "scene": "sanctum",
+        "kind": "tool",
+        "name": "tap",
+        "logic_sha256": "0d1762190c1ba1e4f5ff7417d7349164d56c224c2b9e5890fdf9ccafbd113993"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "scrip 2",
+        "target_entity": "safe 2",
+        "accepted_input": "424389",
+        "evidence_text": [
+          "424389"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I03",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "paper 2",
+        "target_entity": "locked box 2",
+        "accepted_input": "870472",
+        "evidence_text": [
+          "870472"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I02",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "credential",
+        "target_entity": "phone",
+        "accepted_input": "47515",
+        "evidence_text": [
+          "47515"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "shoelaces",
+        "sender": "A",
+        "receiver": "B",
+        "target": "hook"
+      },
+      {
+        "id": "O02",
+        "object": "picklock",
+        "sender": "B",
+        "receiver": "A",
+        "target": "bathroom door"
+      },
+      {
+        "id": "O03",
+        "object": "shoelaces",
+        "sender": "B",
+        "receiver": "A",
+        "target": "sewer"
+      },
+      {
+        "id": "O04",
+        "object": "connector",
+        "sender": "A",
+        "receiver": "B",
+        "target": "tool box"
+      },
+      {
+        "id": "O05",
+        "object": "screwdriver",
+        "sender": "B",
+        "receiver": "A",
+        "target": "drawer of the cabinet"
+      },
+      {
+        "id": "O06",
+        "object": "lever",
+        "sender": "A",
+        "receiver": "B",
+        "target": "tool box"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "pipe",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 40,
+    "retained_entities": 40,
+    "source_scenes": 12,
+    "retained_scenes": 12,
+    "source_key_actions": 45,
+    "replayed_source_key_actions": 45,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "bronze key"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 3,
+        "action": {
+          "type": "apply",
+          "tool": "bronze key",
+          "target": "apartment door"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 5,
+        "action": {
+          "type": "click",
+          "target": "fragment"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 6,
+        "action": {
+          "type": "click",
+          "target": "shoelaces"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 7,
+        "action": {
+          "type": "apply",
+          "tool": "bronze key",
+          "target": "locker"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 8,
+        "action": {
+          "type": "click",
+          "target": "crowbar"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 10,
+        "action": {
+          "type": "click",
+          "target": "hook"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 12,
+        "action": {
+          "type": "craft",
+          "first": "shoelaces",
+          "second": "hook"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 14,
+        "action": {
+          "type": "click",
+          "target": "fragment 2"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 15,
+        "action": {
+          "type": "click",
+          "target": "scrip 2"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 16,
+        "action": {
+          "type": "apply",
+          "tool": "crowbar",
+          "target": "a painting"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 18,
+        "action": {
+          "type": "click",
+          "target": "screwdriver"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 19,
+        "action": {
+          "type": "click",
+          "target": "scrip"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 21,
+        "action": {
+          "type": "input",
+          "value": "424389",
+          "target": "safe 2"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 22,
+        "action": {
+          "type": "click",
+          "target": "picklock"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 25,
+        "action": {
+          "type": "apply",
+          "tool": "picklock",
+          "target": "bathroom door"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 27,
+        "action": {
+          "type": "click",
+          "target": "golden key"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 28,
+        "action": {
+          "type": "click",
+          "target": "fragment 3"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 29,
+        "action": {
+          "type": "click",
+          "target": "connector"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 31,
+        "action": {
+          "type": "apply",
+          "tool": "shoelaces",
+          "target": "sewer"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 32,
+        "action": {
+          "type": "click",
+          "target": "cylindrical key"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 34,
+        "action": {
+          "type": "apply",
+          "tool": "golden key",
+          "target": "suitcase"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 35,
+        "action": {
+          "type": "click",
+          "target": "fragment 4"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 36,
+        "action": {
+          "type": "click",
+          "target": "credential"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 38,
+        "action": {
+          "type": "apply",
+          "tool": "cylindrical key",
+          "target": "locked box"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 39,
+        "action": {
+          "type": "click",
+          "target": "sim card"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 40,
+        "action": {
+          "type": "apply",
+          "tool": "sim card",
+          "target": "phone"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 41,
+        "action": {
+          "type": "input",
+          "value": "47515",
+          "target": "phone"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 42,
+        "action": {
+          "type": "apply",
+          "tool": "fragment",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 43,
+        "action": {
+          "type": "apply",
+          "tool": "fragment 2",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 44,
+        "action": {
+          "type": "apply",
+          "tool": "fragment 3",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 45,
+        "action": {
+          "type": "apply",
+          "tool": "fragment 4",
+          "target": "safe"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 46,
+        "action": {
+          "type": "click",
+          "target": "gem"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 48,
+        "action": {
+          "type": "apply",
+          "tool": "gem",
+          "target": "Cthulhu ornament"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 50,
+        "action": {
+          "type": "click",
+          "target": "paper"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 53,
+        "action": {
+          "type": "apply",
+          "tool": "connector",
+          "target": "tool box"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 56,
+        "action": {
+          "type": "apply",
+          "tool": "screwdriver",
+          "target": "drawer of the cabinet"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 57,
+        "action": {
+          "type": "click",
+          "target": "lever"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 59,
+        "action": {
+          "type": "apply",
+          "tool": "lever",
+          "target": "tool box"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 60,
+        "action": {
+          "type": "click",
+          "target": "paper 2"
+        }
+      },
+      {
+        "source_step": 41,
+        "cooperative_step": 63,
+        "action": {
+          "type": "input",
+          "value": "870472",
+          "target": "locked box 2"
+        }
+      },
+      {
+        "source_step": 42,
+        "cooperative_step": 64,
+        "action": {
+          "type": "click",
+          "target": "round key"
+        }
+      },
+      {
+        "source_step": 43,
+        "cooperative_step": 65,
+        "action": {
+          "type": "apply",
+          "tool": "round key",
+          "target": "tellurion"
+        }
+      },
+      {
+        "source_step": 44,
+        "cooperative_step": 66,
+        "action": {
+          "type": "click",
+          "target": "tap"
+        }
+      },
+      {
+        "source_step": 45,
+        "cooperative_step": 67,
+        "action": {
+          "type": "apply",
+          "tool": "tap",
+          "target": "pipe"
+        }
+      }
+    ]
+  }
+}

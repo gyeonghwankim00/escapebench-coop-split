@@ -1,0 +1,2404 @@
+{
+  "schema_version": "0.2",
+  "id": "06_basement_laboratory",
+  "title": "지하실과 실험실",
+  "purpose": "Full original easy instance partitioned between two actors; no puzzle/entity omission.",
+  "language": "en",
+  "source_repository": "https://github.com/qiancheng0/EscapeBench",
+  "source_files": [
+    {
+      "path": "data/source/escapebench/game2-4-easy.yaml",
+      "sha256": "7cc28c51167e3f1e07b4e18eefdc8ab03dd91aa17ee249b07cf6542c4e989899"
+    },
+    {
+      "path": "data/source/escapebench/reference/key_log_2-4.txt",
+      "sha256": "ff8662626421d29269b6d5c393d9830426d828704a37078bda34332430787c98"
+    }
+  ],
+  "rules": {
+    "actors": [
+      "A",
+      "B"
+    ],
+    "goal": "Complete the original escape mechanism together.",
+    "navigation": "One move to any owned scene reachable in the original visible scene graph from its start. Free traversal is collapsed; original gates remain.",
+    "communication": "Explicit free-text send only; source papers remain transferable tools.",
+    "hatch": "Pass held tools from any area.",
+    "environmental_links": "Original cross-room mechanical unlocks are retained and audited.",
+    "scheduling": "Explicit actor, no model or budget scheduler."
+  },
+  "navigation": {
+    "start": "basement entrance",
+    "scenes": [
+      {
+        "name": "basement entrance",
+        "desc": "The entrance of a basement. There are some boxes on your right, a cabinate on you right, and a huge wall in front of you. There's a large number 7 on the wall. The wall seems have some cracks on it.",
+        "scene_relations": {
+          "Explore left side of the basment": "basement leftside",
+          "Go through the door into hallway": "hallway behind door"
+        }
+      },
+      {
+        "name": "basement leftside",
+        "desc": "The left side of the basement. There's dim light shining on a set of electronic control machine set. It has several large iron cabinates, and many pipes linking them. The floor is scattered with trash.",
+        "scene_relations": {
+          "Explore the machine device set": "control machine set",
+          "Back to the basement entrance": "basement entrance"
+        }
+      },
+      {
+        "name": "control machine set",
+        "desc": "A huge control machine set, with several iron cabinate and boxes connected by pipes.",
+        "scene_relations": {
+          "Back to the left side of basement": "basement leftside"
+        }
+      },
+      {
+        "name": "hallway behind door",
+        "visible": false,
+        "desc": "A dim hallway behind the basement's wall. There's trash and wire every where. It leads to a room on the far end.",
+        "scene_relations": {
+          "Go into the room it leads to": "lab room overview",
+          "Back to the basement entrance": "basement entrance"
+        }
+      },
+      {
+        "name": "lab room overview",
+        "desc": "A lab room with bright light on. There's a bunch of desks, an experiment area, and different yellow color cabinates all around the room. Seems like a secret place for chemical experiments.",
+        "scene_relations": {
+          "Explore the computer desk": "computer desk",
+          "Explore left wall full of safes": "wall of safes",
+          "Explore the experiment table area": "experiment table area",
+          "Go inside the cabin room": "cabin room",
+          "Back to the hallway": "hallway behind door"
+        }
+      },
+      {
+        "name": "computer desk",
+        "desc": "A computer desk with a computer, a key borad and printer on it. There are also some unimportant files scattered on the desk.",
+        "scene_relations": {
+          "Back to the lab room overview": "lab room overview"
+        }
+      },
+      {
+        "name": "wall of safes",
+        "desc": "A wall with 4 safes on it. The upper right one is open but there's nothing in it.",
+        "scene_relations": {
+          "Back to the lab room overview": "lab room overview"
+        }
+      },
+      {
+        "name": "experiment table area",
+        "desc": "The experiment table with a large pad on it. There are some cabinates above and some drawers below, both opened ones and closed ones.",
+        "scene_relations": {
+          "Back to the lab room overview": "lab room overview"
+        }
+      },
+      {
+        "name": "cabin room",
+        "visible": false,
+        "desc": "There's a desk in the cabin room right side. There are some cabinates above the desk, and there's a recorder on the desk, with a waveform detector.",
+        "scene_relations": {
+          "Back to the lab room overview": "lab room overview"
+        }
+      }
+    ]
+  },
+  "zones": [
+    {
+      "name": "room A",
+      "room": "A",
+      "visible": true,
+      "desc": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "room B",
+      "room": "B",
+      "visible": true,
+      "desc": "You are in room B. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape."
+    },
+    {
+      "name": "basement entrance",
+      "room": "A",
+      "desc": "The entrance of a basement. There are some boxes on your right, a cabinate on you right, and a huge wall in front of you. There's a large number 7 on the wall. The wall seems have some cracks on it.",
+      "visible": true,
+      "source_scene": "basement entrance"
+    },
+    {
+      "name": "basement leftside",
+      "room": "B",
+      "desc": "The left side of the basement. There's dim light shining on a set of electronic control machine set. It has several large iron cabinates, and many pipes linking them. The floor is scattered with trash.",
+      "visible": true,
+      "source_scene": "basement leftside"
+    },
+    {
+      "name": "control machine set",
+      "room": "A",
+      "desc": "A huge control machine set, with several iron cabinate and boxes connected by pipes.",
+      "visible": true,
+      "source_scene": "control machine set"
+    },
+    {
+      "name": "hallway behind door",
+      "room": "B",
+      "desc": "A dim hallway behind the basement's wall. There's trash and wire every where. It leads to a room on the far end.",
+      "visible": false,
+      "source_scene": "hallway behind door"
+    },
+    {
+      "name": "lab room overview",
+      "room": "A",
+      "desc": "A lab room with bright light on. There's a bunch of desks, an experiment area, and different yellow color cabinates all around the room. Seems like a secret place for chemical experiments.",
+      "visible": true,
+      "source_scene": "lab room overview"
+    },
+    {
+      "name": "computer desk",
+      "room": "B",
+      "desc": "A computer desk with a computer, a key borad and printer on it. There are also some unimportant files scattered on the desk.",
+      "visible": true,
+      "source_scene": "computer desk"
+    },
+    {
+      "name": "wall of safes",
+      "room": "A",
+      "desc": "A wall with 4 safes on it. The upper right one is open but there's nothing in it.",
+      "visible": true,
+      "source_scene": "wall of safes"
+    },
+    {
+      "name": "experiment table area",
+      "room": "B",
+      "desc": "The experiment table with a large pad on it. There are some cabinates above and some drawers below, both opened ones and closed ones.",
+      "visible": true,
+      "source_scene": "experiment table area"
+    },
+    {
+      "name": "cabin room",
+      "room": "A",
+      "desc": "There's a desk in the cabin room right side. There are some cabinates above the desk, and there's a recorder on the desk, with a waveform detector.",
+      "visible": false,
+      "source_scene": "cabin room"
+    }
+  ],
+  "entities": [
+    {
+      "name": "floor tile area",
+      "states": [
+        {
+          "desc": "A white piece of floor tile, a little loose on edges, seems could be opened.",
+          "neg_reward": "You may simply interact to take the tile away.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "You remove the floor tile from the ground, there's soil below it."
+            }
+          ]
+        },
+        {
+          "desc": "The floor tile is removed and the soil below it appears. Seems there's something hidden in it, you have to dig it out.",
+          "neg_reward": "You may try to use a sharp tool to dig the soil and get the thing beneath out.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, spade"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_visible, tool, control handle, True",
+                "change_interact, False"
+              ],
+              "reward": "The hard soil is digged by the spade, and a control handle appears beneath the soil."
+            }
+          ]
+        },
+        {
+          "desc": "The floor tile is removed, and the soil is digged."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "On the ground",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "item",
+        "name": "floor tile area",
+        "logic_sha256": "4e42d08141d1df9ffbf6f56673c97eaee338167d99fc588643bf8dacacad39f3"
+      }
+    },
+    {
+      "name": "piece of trash paper",
+      "states": [
+        {
+          "desc": "A white piece of paper on the ground, seems covering something. You may pick it up.",
+          "neg_reward": "You should simply interact to see what's hidden beneath it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, silver key, True",
+                "change_interact, False"
+              ],
+              "reward": "You look below the white trash paper, and found there's a key beneath it."
+            }
+          ]
+        },
+        {
+          "desc": "A normal piece of paper on the ground, nothing interesting."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "On the ground",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "item",
+        "name": "piece of trash paper",
+        "logic_sha256": "6f4147154fdbfdaee7c7f12078ac2446deb4f269d63d5c3a8a5f76696544e662"
+      }
+    },
+    {
+      "name": "huge basement wall",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "A huge wall with number 7 on it. There's crack on the wall. You cannot interact with it."
+        },
+        {
+          "desc": "The huge wall disappears now, revealing a hidden space. A hallway appears behind the wall. You cannot interact with the wall."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "In front of you",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "item",
+        "name": "huge basement wall",
+        "logic_sha256": "8f25e6a4f28b5397603f03f8e29f551fb3293ce2c6909ef11fa591d6acf89898"
+      }
+    },
+    {
+      "name": "control handle",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A semisphere shaped handle with a round port at one end, could connect to a fitting slot for full control.",
+          "apply_to": [
+            "machine control panel"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "On the ground beneath the paper",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "tool",
+        "name": "control handle",
+        "logic_sha256": "9c4f5ab87cd4d4b089abc5182a1f11ea1c50d72b15d1b39f76c4750e460226f6"
+      }
+    },
+    {
+      "name": "key card",
+      "states": [
+        {
+          "desc": "A key card, might be used for authorization. May have multiple uses.",
+          "apply_to": [
+            "card reader",
+            "safe 2"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "On the ground",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "tool",
+        "name": "key card",
+        "logic_sha256": "05631f57bc1dae30fd3521c61b2feafcad5c7bbc672f36e2ef4cf4861582c7b1"
+      }
+    },
+    {
+      "name": "silver key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A silver color key with a round head, maybe could open something.",
+          "apply_to": [
+            "rusty cabinate"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "On the ground beneath the paper",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "tool",
+        "name": "silver key",
+        "logic_sha256": "795504d5bf49d84674641e42008ba42de68663243917c11d2299f4162c21a6e4"
+      }
+    },
+    {
+      "name": "belt",
+      "states": [
+        {
+          "desc": "A leather belt that is near 1 meter long, black and has strong tenacity, could serve as good transmission.",
+          "apply_to": [
+            "gear set"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "On a pant hanging on the wall",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "tool",
+        "name": "belt",
+        "logic_sha256": "ce10d5dec49f532f21f198f6233171ae2d949e130b3402bddd750ebc6b25b0b9"
+      }
+    },
+    {
+      "name": "wrench",
+      "states": [
+        {
+          "desc": "A metal wrench with two heads, both ends shaped like a hexagon slot, could be used to screw things off.",
+          "apply_to": [
+            "water pipe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "basement entrance",
+      "position": "In the box beside the wall",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement entrance",
+        "kind": "tool",
+        "name": "wrench",
+        "logic_sha256": "233302a69d531d665a887148a169db174700fb63a6b982437f106dfa986170be"
+      }
+    },
+    {
+      "name": "water pipe",
+      "states": [
+        {
+          "desc": "There's a red valve on the pipe, seems like a switch for control. Its connection port to the pipe is in hexagon shape, but it's now screwed tightly and you cannot turn it.",
+          "neg_reward": "You may want to use the valve handle elsewhere, try to get it off the pipe.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, wrench"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, valve handle, True"
+              ],
+              "reward": "The valve is unscrewed from the pipe, and you get a valve handle."
+            }
+          ]
+        },
+        {
+          "desc": "A pipe beside the wall corner, with the valve taken off. There's an empty hexagon port. You may apply the used valve back to further control it later.",
+          "neg_reward": "You may first use the valve handle elsewhere, and then get back here and re-assemble it back again.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, used valve handle"
+              ],
+              "trigger": [
+                "change_state, 2"
+              ],
+              "reward": "The handle is assembled back to the pipe. You could take control over it again."
+            }
+          ]
+        },
+        {
+          "desc": "A pipe with the valve assembled back to it. You could now take control over the pipe through the handle.",
+          "neg_reward": "Try simply interact to turn on the handle now.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 3",
+                "change_interact, False.",
+                "change_visible, item, machine control panel, True"
+              ],
+              "reward": "The handle is turned on, water can now pass the pipe valve and enter the huge machine in the room."
+            }
+          ]
+        },
+        {
+          "desc": "The handle on the pipe is turned on, water can now pass the pipe valve and enter the huge machine in the room. You could interact with the machine's ultimate control now."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "basement leftside",
+      "position": "Beside the left side wall corner",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement leftside",
+        "kind": "item",
+        "name": "water pipe",
+        "logic_sha256": "50507d8a14bc8c8d311f9cfd899db66c5bf507556b2953d7915922adf9087246"
+      }
+    },
+    {
+      "name": "rusty cabinate",
+      "states": [
+        {
+          "desc": "There's a rusty cabinate door, with a keyhole on it. It's currently locked, in need of a key.",
+          "neg_reward": "You may need a matched key to open the cabinate.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, silver key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, spade, True",
+                "change_interact, False"
+              ],
+              "reward": "The cabinate opens, and there's a spade inside."
+            }
+          ]
+        },
+        {
+          "desc": "A rusty cabinate, now the door already opened."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "basement leftside",
+      "position": "Embedded inside the wall in the front",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement leftside",
+        "kind": "item",
+        "name": "rusty cabinate",
+        "logic_sha256": "c110d671b6683c54d6a6c63a68d399b1f8a9facbb76fb7aa85a24a9360a314a8"
+      }
+    },
+    {
+      "name": "machine control panel",
+      "visible": false,
+      "states": [
+        {
+          "desc": "There's a machine control panel on the wall. There's a round port on it, seemingly missing something to fully control.",
+          "neg_reward": "You may need a tool to connect to the port to turn the machine set on.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, control handle"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The control handle is now asssembled to it. You may finally turn on the machine set now."
+            }
+          ]
+        },
+        {
+          "desc": "The machine control panel now with the handle assembled to it, could turn on the machine now.",
+          "neg_reward": "You may simply interact to rotate the handle on the panel to switch on the machine.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_state, item, huge basement wall, 1",
+                "change_visible, scene, hallway behind door, True",
+                "change_interact, False"
+              ],
+              "reward": "The machine is turned on now, there's a huge cracking sound, a hidden door opens from basement entrance ..."
+            }
+          ]
+        },
+        {
+          "desc": "The machine control panel with a handle on it, the machine is already turned on."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "basement leftside",
+      "position": "On the wall",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement leftside",
+        "kind": "item",
+        "name": "machine control panel",
+        "logic_sha256": "9b612abbfb0c4b40484d2f6bcdff235dcd9997c65e1abe968a506184f155fc31"
+      }
+    },
+    {
+      "name": "valve handle",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A red valve handle with its own shape and the port's shape both in hexagon.",
+          "apply_to": [
+            "distribution box control"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "basement leftside",
+      "position": "On the water pipe",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement leftside",
+        "kind": "tool",
+        "name": "valve handle",
+        "logic_sha256": "4108a86f1d5f30a4706529bd623f808713f6fc6114021129de5b69746d37bcbf"
+      }
+    },
+    {
+      "name": "spade",
+      "visible": false,
+      "states": [
+        {
+          "desc": "a spade with long wood handle and a head made of iron, still sharp to dig things",
+          "apply_to": [
+            "floor tile area"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "basement leftside",
+      "position": "Inside the cabinate",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "basement leftside",
+        "kind": "tool",
+        "name": "spade",
+        "logic_sha256": "b22ba69b6afbec346bae1ff1a453a1d3eb3beb4d67124a386f801a42b14da9ef"
+      }
+    },
+    {
+      "name": "distribution box control",
+      "states": [
+        {
+          "desc": "There's a hexagon port on the control borad, but seems something is missing now. There's a word 'rotate' above the port on the cabinate surface.",
+          "neg_reward": "You may assemble a tool with right port shape on to it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, valve handle"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, item, gear set, True"
+              ],
+              "reward": "The valve handle is assembled to the port."
+            }
+          ]
+        },
+        {
+          "desc": "The distribution box with the valve handle connected now. But you cannot rotate it now. Solve other puzzles first!",
+          "neg_reward": "You may first explore what is missing else where and get back to it again."
+        },
+        {
+          "desc": "The distribution box with the valve handle connected now. You could rotate the handle to switch on the electric box now.",
+          "neg_reward": "You may simply interact to rotate the valve handle.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 3",
+                "change_visible, tool, used valve handle, True",
+                "change_interact, False"
+              ],
+              "reward": "The electric box is switeched on, the gear set near it starts to move. You may get the valve handle back and use it else where."
+            }
+          ]
+        },
+        {
+          "desc": "The distribution box is now switched on."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "control machine set",
+      "position": "On one metal cabinate surface",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "control machine set",
+        "kind": "item",
+        "name": "distribution box control",
+        "logic_sha256": "aa0cf7ea180b538a2b6590100d7be351f2099fa025a655a85ad65dcd3c7caa04"
+      }
+    },
+    {
+      "name": "gear set",
+      "visible": false,
+      "states": [
+        {
+          "desc": "There's a set of gears but with one independent from all others, seems missing something to connect them all together in order to transmit things.",
+          "neg_reward": "You may try to assemble something in this gear set to make it intact before transmitting things.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, belt"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_state, item, distribution box control, 2",
+                "change_interact, False"
+              ],
+              "reward": "The gears are all connect together now, it could work normally now with power."
+            }
+          ]
+        },
+        {
+          "desc": "The gear set intact and ready now. You may now switch on the power now to make them move."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "control machine set",
+      "position": "Beside the distribution box",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "control machine set",
+        "kind": "item",
+        "name": "gear set",
+        "logic_sha256": "22323804a9f65bde6536643b8c55ab94e10d1f63446e0cbb356052012848970f"
+      }
+    },
+    {
+      "name": "used valve handle",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A red valve handle with its own shape and the port's shape both in hexagon.",
+          "apply_to": [
+            "water pipe"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "control machine set",
+      "position": "On the distribution box control",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "control machine set",
+        "kind": "tool",
+        "name": "used valve handle",
+        "logic_sha256": "86f0084f3ea2c6e5503947461b05892e29b9d339bbc0d4a2d4010e9cbc2fc6f2"
+      }
+    },
+    {
+      "name": "iron door",
+      "states": [
+        {
+          "desc": "The iron door has a digital lock on it, need to input a 4-digit password. There's a wave sign beside the lock, shape like a sound wave.",
+          "neg_reward": "The wave sign maybe related to where the password hint lies. Find 4-digit password hint related to it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 2463"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, False",
+                "finish_team"
+              ],
+              "reward": "The iron door opens, you can escpae from it now. GAME END!"
+            }
+          ]
+        },
+        {
+          "desc": "The iron door is open now."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "hallway behind door",
+      "position": "On the left side wall of the hallway",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "hallway behind door",
+        "kind": "item",
+        "name": "iron door",
+        "logic_sha256": "57454e56e350747c04c7435a0baafe4bf5fcbd44087f2a52ec9671ecc8e1d105"
+      }
+    },
+    {
+      "name": "cabin door lock",
+      "states": [
+        {
+          "desc": "The door is currently locked. The keyhole is old and rusty now, should open the door through a brute force way using some chemicals.",
+          "neg_reward": "You may try to break this lock by pore something into its keyhole to break it. Try to make some chemicals first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, strong acid"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, scene, cabin room, True",
+                "change_interact, False"
+              ],
+              "reward": "The cabin door lock is break open, you can get into the cabin room now."
+            }
+          ]
+        },
+        {
+          "desc": "The door lock is break open by strong acid, you can go into room now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "lab room overview",
+      "position": "In the front",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "lab room overview",
+        "kind": "item",
+        "name": "cabin door lock",
+        "logic_sha256": "4f9523a268a58f68ba06ca66648d00c1aaeeeb80b1ab80e0552242c3955a7ba0"
+      }
+    },
+    {
+      "name": "card reader",
+      "states": [
+        {
+          "desc": "A card reader that is connected to the computer. The computer needs some thing to authorize to open.",
+          "neg_reward": "You may try to find a matched tool to give authorization before using the computer.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key card"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, printed code paper, True",
+                "change_interact, False"
+              ],
+              "reward": "The computer and printer are both on. The printer prints out a code paper."
+            }
+          ]
+        },
+        {
+          "desc": "A normal card reader connected to the computer, which is already authorized now."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "computer desk",
+      "position": "On the left side",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "computer desk",
+        "kind": "item",
+        "name": "card reader",
+        "logic_sha256": "9eb8e819e407c2c8cd4b38568ececcee367ec92a0930bcb42b56397ee71d39b5"
+      }
+    },
+    {
+      "name": "printed code paper",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A code paper that writes 'encryption successful, 7(black)-7(blue)-5(blue)-2(black)-4(black)-0(blue)-8(black)-9(blue)'. Two different background colors seem indicates two different 4-digit password hints."
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "computer desk",
+      "position": "From the printer",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "computer desk",
+        "kind": "tool",
+        "name": "printed code paper",
+        "logic_sha256": "f9630aa2aeb82593c2d9e96622d5957dec5a9892426614e6c1de0e4d8f86ff8d"
+      }
+    },
+    {
+      "name": "lighter",
+      "states": [
+        {
+          "desc": "A normal lighter that could give fire. On it there writes 'IX VII L', the roman numerals seem like password hint if turned into number.",
+          "apply_to": [
+            "alcohol burner"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "computer desk",
+      "position": "Beside the computer",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "computer desk",
+        "kind": "tool",
+        "name": "lighter",
+        "logic_sha256": "42f637dbe35ca55f8a0031b097fea4c75d65c1c25a7b169f6ef4a2bbf83c492f"
+      }
+    },
+    {
+      "name": "safe 1",
+      "states": [
+        {
+          "desc": "There's a key hole on the safe. It's currently locked.",
+          "neg_reward": "You may try to open this safe with a matched key.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, safe key"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, sound list, True",
+                "change_interact, False"
+              ],
+              "reward": "The safe 1 opens, and there's something in it."
+            }
+          ]
+        },
+        {
+          "desc": "The door of safe 1 opens now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "wall of safes",
+      "position": "On the upper left",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "wall of safes",
+        "kind": "item",
+        "name": "safe 1",
+        "logic_sha256": "a75ca84d08e9af20e14973e40dea1c5a0801f30d42f407d6f151fe203180f4ea"
+      }
+    },
+    {
+      "name": "safe 2",
+      "states": [
+        {
+          "desc": "There's a card reader on the safe, and you should authorize the identity first before giving password.",
+          "neg_reward": "You may try to authorize it through something you get first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, key card"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The key card is inserted, authorization succeeds."
+            }
+          ]
+        },
+        {
+          "desc": "The password pad is now on. It needs a 4-digit password input. The background of the password pad is black.",
+          "neg_reward": "Pay attention to the background color, and find the password hints according to it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 7248"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_visible, tool, measuring cup, True",
+                "change_interact, False"
+              ],
+              "reward": "The safe 2 opens, and there's something in it."
+            }
+          ]
+        },
+        {
+          "desc": "The door of safe 2 opens now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "wall of safes",
+      "position": "On the bottom left",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "wall of safes",
+        "kind": "item",
+        "name": "safe 2",
+        "logic_sha256": "572a16dee830b0f2c5bab229c30d63231bc069187acd4ba8cdc1ce195aed4e54"
+      }
+    },
+    {
+      "name": "safe 3",
+      "states": [
+        {
+          "desc": "There's a round disk on the safe, and a circular slot in it, seems something is missing.",
+          "neg_reward": "Find a matched metal tool to fill in the slot first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, iron hoop"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, cable, True",
+                "change_interact, False"
+              ],
+              "reward": "The safe 3 opens, and there's something in it."
+            }
+          ]
+        },
+        {
+          "desc": "The door of safe 3 opens now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "wall of safes",
+      "position": "On the bottom right",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "wall of safes",
+        "kind": "item",
+        "name": "safe 3",
+        "logic_sha256": "49c2b06734fbc42da28965e8b223f75524cbfd92c3a31a7826ae947aa6ea3b11"
+      }
+    },
+    {
+      "name": "sound list",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A list of animal sound on it, inlcuding 'owl, whale, crow(circled), bear, ...' Pay special attention to what is circled."
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "wall of safes",
+      "position": "Inside safe 1",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "wall of safes",
+        "kind": "tool",
+        "name": "sound list",
+        "logic_sha256": "b1d694ced52b00f1044452273cbbfdc3360a9e8ee9c505c3f7817799a0a5be9c"
+      }
+    },
+    {
+      "name": "measuring cup",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A measuring cup about 100ml, currently empty and could get water into it.",
+          "apply_to": [
+            "water box"
+          ]
+        },
+        {
+          "desc": "A measuring cup about 100ml, with some water in it now.",
+          "apply_to": [
+            "flask"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "wall of safes",
+      "position": "Inside safe 2",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "wall of safes",
+        "kind": "tool",
+        "name": "measuring cup",
+        "logic_sha256": "8a9ea5c78abcf9773bfdaf21180c575d0fa803f668374f410994c21eb0f3755f"
+      }
+    },
+    {
+      "name": "cable",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A cable with both ends in USB, may connect some electronic devices together.",
+          "apply_to": [
+            "recorder"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "wall of safes",
+      "position": "Inside safe 3",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "wall of safes",
+        "kind": "tool",
+        "name": "cable",
+        "logic_sha256": "8004492c8db9061a06915d487a55136d92db94e54780214467461b2799b45dd9"
+      }
+    },
+    {
+      "name": "cabinate 1",
+      "states": [
+        {
+          "desc": "The cabinate with a 4-digit number lock. There a sign of fire beside it. Pay attention to hints that may not be in our commonly used number pattern.",
+          "neg_reward": "The sign of fire seems like where the hint lies. Find number hint related to it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 9750"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, alcohol burner, True",
+                "change_interact, False"
+              ],
+              "reward": "The cabinate opens and there's an alcohol burner inside."
+            }
+          ]
+        },
+        {
+          "desc": "The cabinate door is now open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "Above the table",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "item",
+        "name": "cabinate 1",
+        "logic_sha256": "9491d984bc4d98727d1f002bbd7c0636628b5fe8cbb9beb8f2da36e040a73f8e"
+      }
+    },
+    {
+      "name": "experiment table pad",
+      "states": [
+        {
+          "desc": "The pad used for conducting experiment, especially when chemical needs heated. You may apply two things here to conduct experiment.",
+          "neg_reward": "Find the heat source and what is the container for chemical reaction. Make sure all the things are crafted and ready to use for experiment.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, alcohol burner",
+                "apply, flask"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, strong acid, True",
+                "change_interact, False"
+              ],
+              "reward": "The solution is heated, producing a kind of strong acid."
+            }
+          ]
+        },
+        {
+          "desc": "A normal experiment pad where you have just completed a chemical reaction through heating."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "On the table",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "item",
+        "name": "experiment table pad",
+        "logic_sha256": "3f87722c7a6596c3a38dcc384a525940cf9bbb7cc6807504ea42e709a8b22c31"
+      }
+    },
+    {
+      "name": "water box",
+      "states": [
+        {
+          "desc": "A box of water with a tap in the front. Could get water from here.",
+          "neg_reward": "You may get water from here.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, measuring cup"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_state, tool, measuring cup, 1",
+                "change_interact, False"
+              ],
+              "reward": "The measuring cup is now filled with some water."
+            }
+          ]
+        },
+        {
+          "desc": "An empty water box now."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "On the right beside table",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "item",
+        "name": "water box",
+        "logic_sha256": "b03fc65b67438ed810d9a89576cfcee4a81c502b0275805ac53c7e5e9e53b721"
+      }
+    },
+    {
+      "name": "drawer 1",
+      "states": [
+        {
+          "desc": "A drawer that is locked, requiring 4-digit password. The background of the password pad is blue. Find 4-digit password hints with color related to it.",
+          "neg_reward": "Pay attention to the background color, and find the password hints according to it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 7509"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, frequency list, True",
+                "change_interact, False"
+              ],
+              "reward": "The drawer 1 is now open, there's a piece of paper inside it."
+            }
+          ]
+        },
+        {
+          "desc": "The drawer 1 is now unlocked and open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "Beneath the table",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "item",
+        "name": "drawer 1",
+        "logic_sha256": "4f8f7259952e3ee1de5c08f62132d5fe550bc5ab06d852927bbf288734ea058e"
+      }
+    },
+    {
+      "name": "drawer 2",
+      "states": [
+        {
+          "desc": "A drawer that is closed but seems not locked.",
+          "neg_reward": "Simply interact with it to try open it.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, iron hoop, True",
+                "change_interact, False"
+              ],
+              "reward": "The drawer 2 is now open, there's something inside it."
+            }
+          ]
+        },
+        {
+          "desc": "The drawer 2 is now unlocked and open."
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "Beneath the table",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "item",
+        "name": "drawer 2",
+        "logic_sha256": "a02d76c996b8f26c37d8887e2cb42f17332bdb34c418f7f8f7cce397ef6895e6"
+      }
+    },
+    {
+      "name": "blender machine",
+      "states": [
+        {
+          "desc": "A machine with three empty slots, could be used to blend solutions. Three empty slots should fit something of same type.",
+          "neg_reward": "You may fill in all the slot with what you have. Just one tools is needed.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, solution bottles"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, concentrated solution, True",
+                "change_visible, False"
+              ],
+              "reward": "You blend three solutions together and the machine produces a concentration."
+            }
+          ]
+        }
+      ],
+      "kind": "item",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "On the table beside the water box",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "item",
+        "name": "blender machine",
+        "logic_sha256": "a627ae19d9564d004be3460c3fd908c916896880a11fb213ddd1e64753e19941"
+      }
+    },
+    {
+      "name": "alcohol burner",
+      "visible": false,
+      "states": [
+        {
+          "desc": "An alcohol burner, could be used to heat chemicals in experiments, not lighted currently.",
+          "wait_for": [
+            "lighter"
+          ]
+        },
+        {
+          "desc": "An alcohol burner, now with the fire lighted and burning, ready to be used.",
+          "apply_to": [
+            "experiment table pad"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "In cabinate 1",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "alcohol burner",
+        "logic_sha256": "18a66070114f07fbe6cc18ea700d5323c489ef8cf340166b7777679b3766cd2c"
+      }
+    },
+    {
+      "name": "flask",
+      "states": [
+        {
+          "desc": "An normal flask that could be used as container for chemical reaction. It's empty currently.",
+          "wait_for": [
+            "measuring cup"
+          ]
+        },
+        {
+          "desc": "An flask with some water in it, could dilute chemicals further added into it.",
+          "wait_for": [
+            "concentrated solution"
+          ]
+        },
+        {
+          "desc": "An flask with diluted solution in it. It's ready to be used for experiment now.",
+          "apply_to": [
+            "experiment table pad"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "In cabinate 2",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "flask",
+        "logic_sha256": "1dd9ddf7734d5ccbd08d5c716a3a8c90636f227f988934d3ca675e4ca11f1455"
+      }
+    },
+    {
+      "name": "solution bottles",
+      "states": [
+        {
+          "desc": "Three bottles of solutions, should blend them before using.",
+          "apply_to": [
+            "blender machine"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "In cabinate 2",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "solution bottles",
+        "logic_sha256": "5691b9f067768c1de7de8521aa1c3bcfda49ca3816fc2732c13668495f8b1661"
+      }
+    },
+    {
+      "name": "strong acid",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A strong acid with erosion effact, could easily corrode things even like metal.",
+          "apply_to": [
+            "cabin door lock"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "On the experimental table pad",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "strong acid",
+        "logic_sha256": "1705df797d2a78e3adf26e9f4b306f22441e507825ce91e393672c40d2112486"
+      }
+    },
+    {
+      "name": "frequency list",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A list of sound frequency made by different animals, 'owl 125 Hz, crow 130 Hz, whale 230 Hz, bear 200 Hz, penguin 120 Hz, ...' Only one of these seems useful."
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "Inside drawer 1",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "frequency list",
+        "logic_sha256": "44bc37c3b3bc8adc86894b0488a10f9ec7524c4ef9339b6846e0c4579b3aa2bf"
+      }
+    },
+    {
+      "name": "iron hoop",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A circular piece of iron, seems to be fragment of something and could fit somewhere round.",
+          "apply_to": [
+            "safe 3"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "Inside drawer 2",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "iron hoop",
+        "logic_sha256": "c82c7a96fe21ac22e5d3b221380ecd8c042562516804731db2cd41bc4e33b479"
+      }
+    },
+    {
+      "name": "concentrated solution",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A concentrated chemical solution, need to be diluted before using.",
+          "apply_to": [
+            "flask"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "B",
+      "zone": "experiment table area",
+      "position": "In the blender machine",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "experiment table area",
+        "kind": "tool",
+        "name": "concentrated solution",
+        "logic_sha256": "d9e4249fe4a6c39ece08f61ce3254bd96845b2c9024ca1f9bd17d674b91655d1"
+      }
+    },
+    {
+      "name": "recorder",
+      "states": [
+        {
+          "desc": "The recorder is not connected to the waveform detector. It's not working now. Both devices have USB ports.",
+          "neg_reward": "You should try connect these two devices first to power both on first.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, cable"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_interact, item, waveform detector, True",
+                "change_interact, False"
+              ],
+              "reward": "The recorder is connected with the waveform detector now."
+            }
+          ]
+        },
+        {
+          "desc": "The recorder is connected with the waveform detector now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "On the desk left side",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "item",
+        "name": "recorder",
+        "logic_sha256": "88fb393f8c07fbfbfc47b6ee6d6d9e0cd112df73594607b24ecb24fa5cc572d5"
+      }
+    },
+    {
+      "name": "waveform detector",
+      "interactable": false,
+      "states": [
+        {
+          "desc": "The detector screen requires an input. There's a word 'animal' on the screen. Should be an animal of 4 digits.",
+          "neg_reward": "You should try to input the name of a correct target animal from tool hints you have.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, crow"
+              ],
+              "trigger": [
+                "change_state, 1"
+              ],
+              "reward": "The detector screen shows input is correct."
+            }
+          ]
+        },
+        {
+          "desc": "The detector screen requires an input. There's a word 'base frequency' on the screen. You should input a number according to your chosen animal.",
+          "neg_reward": "You should try to input a frequency number using the hint.",
+          "transitions": [
+            {
+              "wait_for": [
+                "input, 130"
+              ],
+              "trigger": [
+                "change_state, 2",
+                "change_interact, False"
+              ],
+              "reward": "The detector screen shows input is correct."
+            }
+          ]
+        },
+        {
+          "desc": "The detector shows a wave, its peak value indicating 2, 4, 6, 3 these four levels respectively. Seems like a 4-digit password hint from wave."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "On the desk right side",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "item",
+        "name": "waveform detector",
+        "logic_sha256": "97022cbd4ed8da2b64ec3e6e86892607fda98a23b1885af774d5127e9f22a270"
+      }
+    },
+    {
+      "name": "blue tool box",
+      "states": [
+        {
+          "desc": "A blue plastic tool box with a broken lock on it, seems you could open it directly.",
+          "neg_reward": "You should try to simply interact to open the box.",
+          "transitions": [
+            {
+              "wait_for": [
+                "click"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, metal plate, True",
+                "change_interact, False"
+              ],
+              "reward": "The tool box opens, and there's a metal plate inside it."
+            }
+          ]
+        },
+        {
+          "desc": "A blue plastic tool box with a broken lock on it, now the box is open."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "In the left corner",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "item",
+        "name": "blue tool box",
+        "logic_sha256": "e9308ee0278a5abcc4f94013a74b18b8f8f9d6549178335bf1ad803037ddccbf"
+      }
+    },
+    {
+      "name": "grinding wheel",
+      "states": [
+        {
+          "desc": "A grinding wheel with a handle, could be used to polish materials like metal and iron.",
+          "neg_reward": "Think about how you might need to use it, and what needs to be polished.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, metal plate"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_state, tool, metal plate, 1",
+                "change_interact, False"
+              ],
+              "reward": "The metal plate is polished, and it's now ready to be used."
+            }
+          ]
+        },
+        {
+          "desc": "A grinding wheel with a handle, nothing special."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "In the right corner",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "item",
+        "name": "grinding wheel",
+        "logic_sha256": "f6217788551baa12fd2ba016a89af110f72465a3a4a4d58bb381a2299cbfff8d"
+      }
+    },
+    {
+      "name": "mechanical case",
+      "states": [
+        {
+          "desc": "A box with a round slot on it, seems needing a gear-like object connect the mechanism inside.",
+          "neg_reward": "You may use a tool that is already polished to fit in.",
+          "transitions": [
+            {
+              "wait_for": [
+                "apply, metal plate"
+              ],
+              "trigger": [
+                "change_state, 1",
+                "change_visible, tool, safe key, True",
+                "change_interact, False"
+              ],
+              "reward": "The mechanical case opens, and there's a safe key inside it."
+            }
+          ]
+        },
+        {
+          "desc": "An open mechanical case now."
+        }
+      ],
+      "kind": "item",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "In the middle of the desk",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "item",
+        "name": "mechanical case",
+        "logic_sha256": "4cb759eff2f75c7b0a597e3b7c44f89eb86548efa11d33825f8235a7b7fc4e58"
+      }
+    },
+    {
+      "name": "metal plate",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A thick metal plate with rough surface, need further polish to be useful.",
+          "apply_to": [
+            "grinding wheel"
+          ]
+        },
+        {
+          "desc": "A polished metal plate, with a mirror-like surface, could be assembled to some device now.",
+          "apply_to": [
+            "mechanical case"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "In the tool box",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "tool",
+        "name": "metal plate",
+        "logic_sha256": "18dfffa66a52dca909676c32989295c467c25bdd6d04c0608fd3772a13374046"
+      }
+    },
+    {
+      "name": "safe key",
+      "visible": false,
+      "states": [
+        {
+          "desc": "A key with a round head, seems could open something.",
+          "apply_to": [
+            "safe 1"
+          ]
+        }
+      ],
+      "kind": "tool",
+      "room": "A",
+      "zone": "cabin room",
+      "position": "In the mechanical case",
+      "source": {
+        "file": "game2-4-easy.yaml",
+        "scene": "cabin room",
+        "kind": "tool",
+        "name": "safe key",
+        "logic_sha256": "e53addb1a01e77c5a4edc992c9d47add46dd7f7802ee3310e43d8ddf84379986"
+      }
+    }
+  ],
+  "annotations": {
+    "information_links": [
+      {
+        "id": "I01",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "printed code paper",
+        "target_entity": "safe 2",
+        "accepted_input": "7248",
+        "evidence_text": [
+          "7(black)-7(blue)-5(blue)-2(black)-4(black)-0(blue)-8(black)-9(blue)"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I05",
+        "holder": "B",
+        "receiver": "A",
+        "source_entity": "frequency list",
+        "target_entity": "waveform detector",
+        "accepted_input": "130",
+        "evidence_text": [
+          "crow 130 Hz"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I06",
+        "holder": "A",
+        "receiver": "B",
+        "source_entity": "waveform detector",
+        "target_entity": "iron door",
+        "accepted_input": "2463",
+        "evidence_text": [
+          "2, 4, 6, 3"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "local_information_links": [
+      {
+        "id": "I02",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "lighter",
+        "target_entity": "cabinate 1",
+        "accepted_input": "9750",
+        "evidence_text": [
+          "IX VII L"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I03",
+        "holder": "B",
+        "receiver": "B",
+        "source_entity": "printed code paper",
+        "target_entity": "drawer 1",
+        "accepted_input": "7509",
+        "evidence_text": [
+          "7(black)-7(blue)-5(blue)-2(black)-4(black)-0(blue)-8(black)-9(blue)"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      },
+      {
+        "id": "I04",
+        "holder": "A",
+        "receiver": "A",
+        "source_entity": "sound list",
+        "target_entity": "waveform detector",
+        "accepted_input": "crow",
+        "evidence_text": [
+          "crow(circled)"
+        ],
+        "evidence_channel": "description_or_action_feedback",
+        "evaluation": "Exposure is not comprehension. Guessed answers are bypasses."
+      }
+    ],
+    "object_links": [
+      {
+        "id": "O01",
+        "object": "silver key",
+        "sender": "A",
+        "receiver": "B",
+        "target": "rusty cabinate"
+      },
+      {
+        "id": "O02",
+        "object": "wrench",
+        "sender": "A",
+        "receiver": "B",
+        "target": "water pipe"
+      },
+      {
+        "id": "O03",
+        "object": "valve handle",
+        "sender": "B",
+        "receiver": "A",
+        "target": "distribution box control"
+      },
+      {
+        "id": "O04",
+        "object": "used valve handle",
+        "sender": "A",
+        "receiver": "B",
+        "target": "water pipe"
+      },
+      {
+        "id": "O05",
+        "object": "spade",
+        "sender": "B",
+        "receiver": "A",
+        "target": "floor tile area"
+      },
+      {
+        "id": "O06",
+        "object": "control handle",
+        "sender": "A",
+        "receiver": "B",
+        "target": "machine control panel"
+      },
+      {
+        "id": "O07",
+        "object": "key card",
+        "sender": "A",
+        "receiver": "B",
+        "target": "card reader"
+      },
+      {
+        "id": "O08",
+        "object": "key card",
+        "sender": "B",
+        "receiver": "A",
+        "target": "safe 2"
+      },
+      {
+        "id": "O09",
+        "object": "measuring cup",
+        "sender": "A",
+        "receiver": "B",
+        "target": "water box"
+      },
+      {
+        "id": "O10",
+        "object": "strong acid",
+        "sender": "B",
+        "receiver": "A",
+        "target": "cabin door lock"
+      },
+      {
+        "id": "O11",
+        "object": "iron hoop",
+        "sender": "B",
+        "receiver": "A",
+        "target": "safe 3"
+      }
+    ],
+    "failure_labels": [
+      "non-discovery",
+      "non-transmission",
+      "non-uptake"
+    ]
+  },
+  "modifications": [
+    "All original scenes, entities, descriptions, initial visibility, tool uses, and transitions retained.",
+    "Scenes are allocated to A/B; freely traversable paths collapse into one move.",
+    "Original remote mechanical effects retained. Each actor observes only their own scenes.",
+    "The original terminal mechanism opens the shared team escape; no added exit puzzle.",
+    "Reference adds exploration of input clues, messages, movement and required object handoffs."
+  ],
+  "source_changes": [
+    {
+      "entity": "iron door",
+      "change": "Append finish_team to original GAME END transition."
+    }
+  ],
+  "remote_environmental_links": [
+    {
+      "entity": "machine control panel",
+      "state": 1,
+      "transition": 0,
+      "trigger": "change_state, item, huge basement wall, 1",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    },
+    {
+      "entity": "water box",
+      "state": 0,
+      "transition": 0,
+      "trigger": "change_state, tool, measuring cup, 1",
+      "reason": "Preserved original mechanical link; no remote observation is sent."
+    }
+  ],
+  "omitted_source_entities": [],
+  "limitations": [
+    "Public static answers can be guessed; communication is not hard-enforced.",
+    "Preserves upstream optional/redundant branches, including any upstream shortcuts.",
+    "No LLM evaluation or automatic semantic failure classifier has been run."
+  ],
+  "preservation": {
+    "source_entities": 47,
+    "retained_entities": 47,
+    "source_scenes": 9,
+    "retained_scenes": 9,
+    "source_key_actions": 57,
+    "replayed_source_key_actions": 57,
+    "source_action_mapping": [
+      {
+        "source_step": 1,
+        "cooperative_step": 2,
+        "action": {
+          "type": "click",
+          "target": "floor tile area"
+        }
+      },
+      {
+        "source_step": 2,
+        "cooperative_step": 3,
+        "action": {
+          "type": "click",
+          "target": "piece of trash paper"
+        }
+      },
+      {
+        "source_step": 3,
+        "cooperative_step": 4,
+        "action": {
+          "type": "click",
+          "target": "key card"
+        }
+      },
+      {
+        "source_step": 4,
+        "cooperative_step": 5,
+        "action": {
+          "type": "click",
+          "target": "silver key"
+        }
+      },
+      {
+        "source_step": 5,
+        "cooperative_step": 6,
+        "action": {
+          "type": "click",
+          "target": "belt"
+        }
+      },
+      {
+        "source_step": 6,
+        "cooperative_step": 7,
+        "action": {
+          "type": "click",
+          "target": "wrench"
+        }
+      },
+      {
+        "source_step": 7,
+        "cooperative_step": 10,
+        "action": {
+          "type": "apply",
+          "tool": "silver key",
+          "target": "rusty cabinate"
+        }
+      },
+      {
+        "source_step": 8,
+        "cooperative_step": 11,
+        "action": {
+          "type": "click",
+          "target": "spade"
+        }
+      },
+      {
+        "source_step": 9,
+        "cooperative_step": 13,
+        "action": {
+          "type": "apply",
+          "tool": "wrench",
+          "target": "water pipe"
+        }
+      },
+      {
+        "source_step": 10,
+        "cooperative_step": 14,
+        "action": {
+          "type": "click",
+          "target": "valve handle"
+        }
+      },
+      {
+        "source_step": 11,
+        "cooperative_step": 17,
+        "action": {
+          "type": "apply",
+          "tool": "valve handle",
+          "target": "distribution box control"
+        }
+      },
+      {
+        "source_step": 12,
+        "cooperative_step": 18,
+        "action": {
+          "type": "apply",
+          "tool": "belt",
+          "target": "gear set"
+        }
+      },
+      {
+        "source_step": 13,
+        "cooperative_step": 19,
+        "action": {
+          "type": "click",
+          "target": "distribution box control"
+        }
+      },
+      {
+        "source_step": 14,
+        "cooperative_step": 20,
+        "action": {
+          "type": "click",
+          "target": "used valve handle"
+        }
+      },
+      {
+        "source_step": 15,
+        "cooperative_step": 22,
+        "action": {
+          "type": "apply",
+          "tool": "used valve handle",
+          "target": "water pipe"
+        }
+      },
+      {
+        "source_step": 16,
+        "cooperative_step": 23,
+        "action": {
+          "type": "click",
+          "target": "water pipe"
+        }
+      },
+      {
+        "source_step": 17,
+        "cooperative_step": 26,
+        "action": {
+          "type": "apply",
+          "tool": "spade",
+          "target": "floor tile area"
+        }
+      },
+      {
+        "source_step": 18,
+        "cooperative_step": 27,
+        "action": {
+          "type": "click",
+          "target": "control handle"
+        }
+      },
+      {
+        "source_step": 19,
+        "cooperative_step": 29,
+        "action": {
+          "type": "apply",
+          "tool": "control handle",
+          "target": "machine control panel"
+        }
+      },
+      {
+        "source_step": 20,
+        "cooperative_step": 30,
+        "action": {
+          "type": "click",
+          "target": "machine control panel"
+        }
+      },
+      {
+        "source_step": 21,
+        "cooperative_step": 33,
+        "action": {
+          "type": "apply",
+          "tool": "key card",
+          "target": "card reader"
+        }
+      },
+      {
+        "source_step": 22,
+        "cooperative_step": 34,
+        "action": {
+          "type": "click",
+          "target": "lighter"
+        }
+      },
+      {
+        "source_step": 23,
+        "cooperative_step": 35,
+        "action": {
+          "type": "click",
+          "target": "printed code paper"
+        }
+      },
+      {
+        "source_step": 24,
+        "cooperative_step": 38,
+        "action": {
+          "type": "apply",
+          "tool": "key card",
+          "target": "safe 2"
+        }
+      },
+      {
+        "source_step": 25,
+        "cooperative_step": 40,
+        "action": {
+          "type": "input",
+          "value": "7248",
+          "target": "safe 2"
+        }
+      },
+      {
+        "source_step": 26,
+        "cooperative_step": 41,
+        "action": {
+          "type": "click",
+          "target": "measuring cup"
+        }
+      },
+      {
+        "source_step": 27,
+        "cooperative_step": 43,
+        "action": {
+          "type": "click",
+          "target": "drawer 2"
+        }
+      },
+      {
+        "source_step": 28,
+        "cooperative_step": 44,
+        "action": {
+          "type": "click",
+          "target": "flask"
+        }
+      },
+      {
+        "source_step": 29,
+        "cooperative_step": 45,
+        "action": {
+          "type": "click",
+          "target": "solution bottles"
+        }
+      },
+      {
+        "source_step": 30,
+        "cooperative_step": 46,
+        "action": {
+          "type": "click",
+          "target": "iron hoop"
+        }
+      },
+      {
+        "source_step": 31,
+        "cooperative_step": 47,
+        "action": {
+          "type": "apply",
+          "tool": "solution bottles",
+          "target": "blender machine"
+        }
+      },
+      {
+        "source_step": 32,
+        "cooperative_step": 48,
+        "action": {
+          "type": "click",
+          "target": "concentrated solution"
+        }
+      },
+      {
+        "source_step": 33,
+        "cooperative_step": 50,
+        "action": {
+          "type": "apply",
+          "tool": "measuring cup",
+          "target": "water box"
+        }
+      },
+      {
+        "source_step": 34,
+        "cooperative_step": 51,
+        "action": {
+          "type": "craft",
+          "first": "measuring cup",
+          "second": "flask"
+        }
+      },
+      {
+        "source_step": 35,
+        "cooperative_step": 52,
+        "action": {
+          "type": "craft",
+          "first": "concentrated solution",
+          "second": "flask"
+        }
+      },
+      {
+        "source_step": 36,
+        "cooperative_step": 53,
+        "action": {
+          "type": "input",
+          "value": "9750",
+          "target": "cabinate 1"
+        }
+      },
+      {
+        "source_step": 37,
+        "cooperative_step": 54,
+        "action": {
+          "type": "click",
+          "target": "alcohol burner"
+        }
+      },
+      {
+        "source_step": 38,
+        "cooperative_step": 55,
+        "action": {
+          "type": "craft",
+          "first": "lighter",
+          "second": "alcohol burner"
+        }
+      },
+      {
+        "source_step": 39,
+        "cooperative_step": 56,
+        "action": {
+          "type": "apply",
+          "tool": "alcohol burner",
+          "target": "experiment table pad"
+        }
+      },
+      {
+        "source_step": 40,
+        "cooperative_step": 57,
+        "action": {
+          "type": "apply",
+          "tool": "flask",
+          "target": "experiment table pad"
+        }
+      },
+      {
+        "source_step": 41,
+        "cooperative_step": 58,
+        "action": {
+          "type": "click",
+          "target": "strong acid"
+        }
+      },
+      {
+        "source_step": 42,
+        "cooperative_step": 59,
+        "action": {
+          "type": "input",
+          "value": "7509",
+          "target": "drawer 1"
+        }
+      },
+      {
+        "source_step": 43,
+        "cooperative_step": 60,
+        "action": {
+          "type": "click",
+          "target": "frequency list"
+        }
+      },
+      {
+        "source_step": 44,
+        "cooperative_step": 63,
+        "action": {
+          "type": "apply",
+          "tool": "strong acid",
+          "target": "cabin door lock"
+        }
+      },
+      {
+        "source_step": 45,
+        "cooperative_step": 65,
+        "action": {
+          "type": "click",
+          "target": "blue tool box"
+        }
+      },
+      {
+        "source_step": 46,
+        "cooperative_step": 66,
+        "action": {
+          "type": "click",
+          "target": "metal plate"
+        }
+      },
+      {
+        "source_step": 47,
+        "cooperative_step": 67,
+        "action": {
+          "type": "apply",
+          "tool": "metal plate",
+          "target": "grinding wheel"
+        }
+      },
+      {
+        "source_step": 48,
+        "cooperative_step": 68,
+        "action": {
+          "type": "apply",
+          "tool": "metal plate",
+          "target": "mechanical case"
+        }
+      },
+      {
+        "source_step": 49,
+        "cooperative_step": 69,
+        "action": {
+          "type": "click",
+          "target": "safe key"
+        }
+      },
+      {
+        "source_step": 50,
+        "cooperative_step": 71,
+        "action": {
+          "type": "apply",
+          "tool": "safe key",
+          "target": "safe 1"
+        }
+      },
+      {
+        "source_step": 51,
+        "cooperative_step": 72,
+        "action": {
+          "type": "click",
+          "target": "sound list"
+        }
+      },
+      {
+        "source_step": 52,
+        "cooperative_step": 74,
+        "action": {
+          "type": "apply",
+          "tool": "iron hoop",
+          "target": "safe 3"
+        }
+      },
+      {
+        "source_step": 53,
+        "cooperative_step": 75,
+        "action": {
+          "type": "click",
+          "target": "cable"
+        }
+      },
+      {
+        "source_step": 54,
+        "cooperative_step": 77,
+        "action": {
+          "type": "apply",
+          "tool": "cable",
+          "target": "recorder"
+        }
+      },
+      {
+        "source_step": 55,
+        "cooperative_step": 78,
+        "action": {
+          "type": "input",
+          "value": "crow",
+          "target": "waveform detector"
+        }
+      },
+      {
+        "source_step": 56,
+        "cooperative_step": 80,
+        "action": {
+          "type": "input",
+          "value": "130",
+          "target": "waveform detector"
+        }
+      },
+      {
+        "source_step": 57,
+        "cooperative_step": 83,
+        "action": {
+          "type": "input",
+          "value": "2463",
+          "target": "iron door"
+        }
+      }
+    ]
+  }
+}

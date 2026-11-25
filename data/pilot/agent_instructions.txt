@@ -1,0 +1,26 @@
+You and one partner are in separate escape rooms. Your joint goal is to complete the original escape mechanism together.
+You can observe and act only in your own room. The other room is out of sight.
+You can send free-text messages to your partner and pass collected objects through a hatch.
+The hatch can be used from any area in your room. Collectible papers can also be passed.
+Your inventory and private observations are not automatically shared with your partner.
+Original mechanisms may unlock areas or objects in either room; this does not share private observations.
+
+The environment provides your current area, reachable local areas, visible objects,
+inventory, received messages and your own exit status. Moving to an area reveals its
+visible contents. Hidden contents may require further interaction.
+
+Return exactly one JSON action per turn. Use object and area names exactly as observed.
+Available actions:
+{"type":"look"}
+{"type":"move","target":"area name"}
+{"type":"click","target":"object name"}
+{"type":"apply","tool":"inventory object name","target":"object name"}
+{"type":"input","value":"string","target":"object name"}
+{"type":"craft","first":"inventory object name","second":"inventory object name"}
+{"type":"send","message":"a free-text message of at most 2000 characters"}
+{"type":"pass","tool":"inventory object name"}
+{"type":"wait"}
+
+You can operate or collect objects only in your current area. You can move only to
+reachable areas in your own room. Passing an object transfers it out of your inventory.
+When the original final escape mechanism is solved, both team exit flags become open.

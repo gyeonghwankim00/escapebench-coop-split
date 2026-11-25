@@ -1,0 +1,725 @@
+[
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "basement entrance"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "floor tile area"
+    },
+    "source_step": 1,
+    "source_action": "click(floor tile area)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "piece of trash paper"
+    },
+    "source_step": 2,
+    "source_action": "click(piece of trash paper)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "key card"
+    },
+    "source_step": 3,
+    "source_action": "click(key card)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "silver key"
+    },
+    "source_step": 4,
+    "source_action": "click(silver key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "belt"
+    },
+    "source_step": 5,
+    "source_action": "click(belt)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "wrench"
+    },
+    "source_step": 6,
+    "source_action": "click(wrench)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "basement leftside"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "silver key"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "silver key",
+      "target": "rusty cabinate"
+    },
+    "source_step": 7,
+    "source_action": "apply(silver key, rusty cabinate)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "spade"
+    },
+    "source_step": 8,
+    "source_action": "click(spade)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "wrench"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "wrench",
+      "target": "water pipe"
+    },
+    "source_step": 9,
+    "source_action": "apply(wrench, water pipe)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "valve handle"
+    },
+    "source_step": 10,
+    "source_action": "click(valve handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "control machine set"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "valve handle"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "valve handle",
+      "target": "distribution box control"
+    },
+    "source_step": 11,
+    "source_action": "apply(valve handle, distribution box control)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "belt",
+      "target": "gear set"
+    },
+    "source_step": 12,
+    "source_action": "apply(belt, gear set)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "distribution box control"
+    },
+    "source_step": 13,
+    "source_action": "click(distribution box control)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "used valve handle"
+    },
+    "source_step": 14,
+    "source_action": "click(used valve handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "used valve handle"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "used valve handle",
+      "target": "water pipe"
+    },
+    "source_step": 15,
+    "source_action": "apply(used valve handle, water pipe)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "water pipe"
+    },
+    "source_step": 16,
+    "source_action": "click(water pipe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "basement entrance"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "spade"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "spade",
+      "target": "floor tile area"
+    },
+    "source_step": 17,
+    "source_action": "apply(spade, floor tile area)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "control handle"
+    },
+    "source_step": 18,
+    "source_action": "click(control handle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "control handle"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "control handle",
+      "target": "machine control panel"
+    },
+    "source_step": 19,
+    "source_action": "apply(control handle, machine control panel)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "machine control panel"
+    },
+    "source_step": 20,
+    "source_action": "click(machine control panel)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "computer desk"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "key card"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "key card",
+      "target": "card reader"
+    },
+    "source_step": 21,
+    "source_action": "apply(key card, card reader)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "lighter"
+    },
+    "source_step": 22,
+    "source_action": "click(lighter)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "printed code paper"
+    },
+    "source_step": 23,
+    "source_action": "click(printed code paper)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "wall of safes"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "key card"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "key card",
+      "target": "safe 2"
+    },
+    "source_step": 24,
+    "source_action": "apply(key card, safe 2)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "printed code paper: A code paper that writes 'encryption successful, 7(black)-7(blue)-5(blue)-2(black)-4(black)-0(blue)-8(black)-9(blue)'. Two different background colors seem indicates two different 4-digit password hints."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "7248",
+      "target": "safe 2"
+    },
+    "source_step": 25,
+    "source_action": "input(7248, safe 2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "measuring cup"
+    },
+    "source_step": 26,
+    "source_action": "click(measuring cup)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "experiment table area"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "drawer 2"
+    },
+    "source_step": 27,
+    "source_action": "click(drawer 2)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "flask"
+    },
+    "source_step": 28,
+    "source_action": "click(flask)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "solution bottles"
+    },
+    "source_step": 29,
+    "source_action": "click(solution bottles)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "iron hoop"
+    },
+    "source_step": 30,
+    "source_action": "click(iron hoop)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "solution bottles",
+      "target": "blender machine"
+    },
+    "source_step": 31,
+    "source_action": "apply(solution bottles, blender machine)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "concentrated solution"
+    },
+    "source_step": 32,
+    "source_action": "click(concentrated solution)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "measuring cup"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "measuring cup",
+      "target": "water box"
+    },
+    "source_step": 33,
+    "source_action": "apply(measuring cup, water box)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "craft",
+      "first": "measuring cup",
+      "second": "flask"
+    },
+    "source_step": 34,
+    "source_action": "craft(measuring cup, flask)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "craft",
+      "first": "concentrated solution",
+      "second": "flask"
+    },
+    "source_step": 35,
+    "source_action": "craft(concentrated solution, flask)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "9750",
+      "target": "cabinate 1"
+    },
+    "source_step": 36,
+    "source_action": "input(9750, cabinate 1)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "alcohol burner"
+    },
+    "source_step": 37,
+    "source_action": "click(alcohol burner)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "craft",
+      "first": "lighter",
+      "second": "alcohol burner"
+    },
+    "source_step": 38,
+    "source_action": "craft(lighter, alcohol burner)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "alcohol burner",
+      "target": "experiment table pad"
+    },
+    "source_step": 39,
+    "source_action": "apply(alcohol burner, experiment table pad)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "flask",
+      "target": "experiment table pad"
+    },
+    "source_step": 40,
+    "source_action": "apply(flask, experiment table pad)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "strong acid"
+    },
+    "source_step": 41,
+    "source_action": "click(strong acid)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "7509",
+      "target": "drawer 1"
+    },
+    "source_step": 42,
+    "source_action": "input(7509, drawer 1)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "frequency list"
+    },
+    "source_step": 43,
+    "source_action": "click(frequency list)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "lab room overview"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "strong acid"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "strong acid",
+      "target": "cabin door lock"
+    },
+    "source_step": 44,
+    "source_action": "apply(strong acid, cabin door lock)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "cabin room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "blue tool box"
+    },
+    "source_step": 45,
+    "source_action": "click(blue tool box)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "metal plate"
+    },
+    "source_step": 46,
+    "source_action": "click(metal plate)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "metal plate",
+      "target": "grinding wheel"
+    },
+    "source_step": 47,
+    "source_action": "apply(metal plate, grinding wheel)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "metal plate",
+      "target": "mechanical case"
+    },
+    "source_step": 48,
+    "source_action": "apply(metal plate, mechanical case)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "safe key"
+    },
+    "source_step": 49,
+    "source_action": "click(safe key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "wall of safes"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "safe key",
+      "target": "safe 1"
+    },
+    "source_step": 50,
+    "source_action": "apply(safe key, safe 1)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "sound list"
+    },
+    "source_step": 51,
+    "source_action": "click(sound list)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "iron hoop"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "iron hoop",
+      "target": "safe 3"
+    },
+    "source_step": 52,
+    "source_action": "apply(iron hoop, safe 3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "cable"
+    },
+    "source_step": 53,
+    "source_action": "click(cable)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "cabin room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "cable",
+      "target": "recorder"
+    },
+    "source_step": 54,
+    "source_action": "apply(cable, recorder)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "crow",
+      "target": "waveform detector"
+    },
+    "source_step": 55,
+    "source_action": "input(crow, waveform detector)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "frequency list: A list of sound frequency made by different animals, 'owl 125 Hz, crow 130 Hz, whale 230 Hz, bear 200 Hz, penguin 120 Hz, ...' Only one of these seems useful."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "130",
+      "target": "waveform detector"
+    },
+    "source_step": 56,
+    "source_action": "input(130, waveform detector)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "waveform detector: The detector shows a wave, its peak value indicating 2, 4, 6, 3 these four levels respectively. Seems like a 4-digit password hint from wave."
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "hallway behind door"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "2463",
+      "target": "iron door"
+    },
+    "source_step": 57,
+    "source_action": "input(2463, iron door)"
+  }
+]

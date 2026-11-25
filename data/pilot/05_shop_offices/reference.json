@@ -1,0 +1,832 @@
+[
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "entrace of a shop"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "bulletin board"
+    },
+    "source_step": 1,
+    "source_action": "click(bulletin board)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "entrance key"
+    },
+    "source_step": 2,
+    "source_action": "click(entrance key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "cable"
+    },
+    "source_step": 3,
+    "source_action": "click(cable)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "entrance key",
+      "target": "entrance door"
+    },
+    "source_step": 4,
+    "source_action": "apply(entrance key, entrance door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "reception room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "pliers"
+    },
+    "source_step": 5,
+    "source_action": "click(pliers)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "craft",
+      "first": "cable",
+      "second": "pliers"
+    },
+    "source_step": 6,
+    "source_action": "craft(cable, pliers)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "administration office"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "flashlight"
+    },
+    "source_step": 7,
+    "source_action": "click(flashlight)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "administration office corner"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "photographic film"
+    },
+    "source_step": 8,
+    "source_action": "click(photographic film)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "pencil"
+    },
+    "source_step": 9,
+    "source_action": "click(pencil)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "waste paper"
+    },
+    "source_step": 10,
+    "source_action": "click(waste paper)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "pencil",
+      "target": "draft"
+    },
+    "source_step": 11,
+    "source_action": "apply(pencil, draft)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "GB24",
+      "target": "desk safe"
+    },
+    "source_step": 12,
+    "source_action": "input(GB24, desk safe)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "mirror"
+    },
+    "source_step": 13,
+    "source_action": "click(mirror)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "flashlight",
+      "target": "air duct"
+    },
+    "source_step": 14,
+    "source_action": "apply(flashlight, air duct)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "mirror"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "mirror",
+      "target": "air duct"
+    },
+    "source_step": 15,
+    "source_action": "apply(mirror, air duct)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "cable",
+      "target": "air duct"
+    },
+    "source_step": 16,
+    "source_action": "apply(cable, air duct)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "golden key"
+    },
+    "source_step": 17,
+    "source_action": "click(golden key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "golden key",
+      "target": "administration office door"
+    },
+    "source_step": 18,
+    "source_action": "apply(golden key, administration office door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "inner office"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "sprayer"
+    },
+    "source_step": 19,
+    "source_action": "click(sprayer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "calendary"
+    },
+    "source_step": 20,
+    "source_action": "click(calendary)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "entrance guard card"
+    },
+    "source_step": 21,
+    "source_action": "click(entrance guard card)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "entrance guard card",
+      "target": "drawer"
+    },
+    "source_step": 22,
+    "source_action": "apply(entrance guard card, drawer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "drawer: The drawer is opened, and there is a paper with a number \"1040\""
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "reception room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "1040",
+      "target": "wall safe"
+    },
+    "source_step": 23,
+    "source_action": "input(1040, wall safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "bronze key"
+    },
+    "source_step": 24,
+    "source_action": "click(bronze key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "left side of inner office"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "scissors"
+    },
+    "source_step": 25,
+    "source_action": "click(scissors)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "bronze key",
+      "target": "left inner office door"
+    },
+    "source_step": 26,
+    "source_action": "apply(bronze key, left inner office door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "store room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "photographic film 2"
+    },
+    "source_step": 27,
+    "source_action": "click(photographic film 2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "photographic film 3"
+    },
+    "source_step": 28,
+    "source_action": "click(photographic film 3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "ladder"
+    },
+    "source_step": 29,
+    "source_action": "click(ladder)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "chemical agent"
+    },
+    "source_step": 30,
+    "source_action": "click(chemical agent)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "sprayer"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "craft",
+      "first": "sprayer",
+      "second": "chemical agent"
+    },
+    "source_step": 31,
+    "source_action": "craft(sprayer, chemical agent)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "art knife"
+    },
+    "source_step": 32,
+    "source_action": "click(art knife)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "electrical cable"
+    },
+    "source_step": 33,
+    "source_action": "click(electrical cable)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "photographic film"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "photographic film",
+      "target": "white board"
+    },
+    "source_step": 34,
+    "source_action": "apply(photographic film, white board)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "photographic film 2",
+      "target": "white board"
+    },
+    "source_step": 35,
+    "source_action": "apply(photographic film 2, white board)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "photographic film 3",
+      "target": "white board"
+    },
+    "source_step": 36,
+    "source_action": "apply(photographic film 3, white board)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "art knife",
+      "target": "store room safe"
+    },
+    "source_step": 37,
+    "source_action": "apply(art knife, store room safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "crowbar"
+    },
+    "source_step": 38,
+    "source_action": "click(crowbar)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "reception room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "crowbar",
+      "target": "cracked floor"
+    },
+    "source_step": 39,
+    "source_action": "apply(crowbar, cracked floor)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "silver key"
+    },
+    "source_step": 40,
+    "source_action": "click(silver key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "code note"
+    },
+    "source_step": 41,
+    "source_action": "click(code note)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "left side of inner office"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "3816",
+      "target": "bookshelf safe"
+    },
+    "source_step": 42,
+    "source_action": "input(3816, bookshelf safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "fragment"
+    },
+    "source_step": 43,
+    "source_action": "click(fragment)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "fragment",
+      "target": "cart safe"
+    },
+    "source_step": 44,
+    "source_action": "apply(fragment, cart safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "screwdriver"
+    },
+    "source_step": 45,
+    "source_action": "click(screwdriver)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "abrasive paper"
+    },
+    "source_step": 46,
+    "source_action": "click(abrasive paper)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "sprayer",
+      "target": "wooden door"
+    },
+    "source_step": 47,
+    "source_action": "apply(sprayer, wooden door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "screwdriver"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "screwdriver",
+      "target": "photo frame"
+    },
+    "source_step": 48,
+    "source_action": "apply(screwdriver, photo frame)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "old photo in frame"
+    },
+    "source_step": 49,
+    "source_action": "click(old photo in frame)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "right side of inner office"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "1986",
+      "target": "bookshelf safe 2"
+    },
+    "source_step": 50,
+    "source_action": "input(1986, bookshelf safe 2)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "photographic film 4"
+    },
+    "source_step": 51,
+    "source_action": "click(photographic film 4)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "store room"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "photographic film 4"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "photographic film 4",
+      "target": "white board"
+    },
+    "source_step": 52,
+    "source_action": "apply(photographic film 4, white board)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "cartridge"
+    },
+    "source_step": 53,
+    "source_action": "click(cartridge)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "control panel"
+    },
+    "source_step": 54,
+    "source_action": "click(control panel)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "entrace of a shop"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "silver key",
+      "target": "mailbox"
+    },
+    "source_step": 55,
+    "source_action": "apply(silver key, mailbox)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "package item"
+    },
+    "source_step": 56,
+    "source_action": "click(package item)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "craft",
+      "first": "scissors",
+      "second": "package item"
+    },
+    "source_step": 57,
+    "source_action": "craft(scissors, package item)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "craft",
+      "first": "abrasive paper",
+      "second": "package item"
+    },
+    "source_step": 58,
+    "source_action": "craft(abrasive paper, package item)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "administration office"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "cartridge",
+      "target": "printer"
+    },
+    "source_step": 59,
+    "source_action": "apply(cartridge, printer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "printed note"
+    },
+    "source_step": 60,
+    "source_action": "click(printed note)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "store room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "control panel",
+      "target": "left bookshelf safe"
+    },
+    "source_step": 61,
+    "source_action": "apply(control panel, left bookshelf safe)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "inner office"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "ladder"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "ladder",
+      "target": "groove"
+    },
+    "source_step": 62,
+    "source_action": "apply(ladder, groove)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "electrical cable"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "electrical cable",
+      "target": "camera"
+    },
+    "source_step": 63,
+    "source_action": "apply(electrical cable, camera)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "package item"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "package item",
+      "target": "large mouse pad"
+    },
+    "source_step": 64,
+    "source_action": "apply(package item, large mouse pad)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "camera: a camera working now, with a word \"Genshin\" on the screen, seeems like a hint"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "Genshin",
+      "target": "left bookshelf safe"
+    },
+    "source_step": 65,
+    "source_action": "input(Genshin, left bookshelf safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "left side of inner office"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "large mouse pad: a mouse pad with a \"XOR\" sign on it, seems like a hint on some binary operation"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "store room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "10011001",
+      "target": "left bookshelf safe"
+    },
+    "source_step": 66,
+    "source_action": "input(10011001, left bookshelf safe)"
+  }
+]

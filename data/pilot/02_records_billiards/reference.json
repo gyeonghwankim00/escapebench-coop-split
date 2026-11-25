@@ -1,0 +1,522 @@
+[
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "the hallway"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "paper 1"
+    },
+    "source_step": 1,
+    "source_action": "click(paper 1)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "left corner of the hallway"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "book"
+    },
+    "source_step": 2,
+    "source_action": "click(book)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "book"
+    },
+    "source_step": 3,
+    "source_action": "click(book)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "book"
+    },
+    "source_step": 4,
+    "source_action": "click(book)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "pipe"
+    },
+    "source_step": 5,
+    "source_action": "click(pipe)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "pipe"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "pipe",
+      "target": "brick wall"
+    },
+    "source_step": 6,
+    "source_action": "apply(pipe, brick wall)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "strange key"
+    },
+    "source_step": 7,
+    "source_action": "click(strange key)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "the elevator room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "strange key"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "strange key",
+      "target": "wooden groove"
+    },
+    "source_step": 8,
+    "source_action": "apply(strange key, wooden groove)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "paper 1: A piece of paper titled experiment participants. It says -- Patient 2 John, Patient 3 Eric, Patient 4 Steven, Patient 7 Patrick, Patient 8 Andera..."
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "left corner of the hallway"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "the elevator room"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "7428",
+      "target": "lockbox"
+    },
+    "source_step": 9,
+    "source_action": "input(7428, lockbox)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "gold key"
+    },
+    "source_step": 10,
+    "source_action": "click(gold key)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "gold key"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "gold key",
+      "target": "black door"
+    },
+    "source_step": 11,
+    "source_action": "apply(gold key, black door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "the billiard room"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "bottle of wine"
+    },
+    "source_step": 12,
+    "source_action": "click(bottle of wine)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "pool ball 1"
+    },
+    "source_step": 13,
+    "source_action": "click(pool ball 1)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "front desk"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "button"
+    },
+    "source_step": 14,
+    "source_action": "click(button)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "knife"
+    },
+    "source_step": 15,
+    "source_action": "click(knife)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "pool table"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "chair"
+    },
+    "source_step": 16,
+    "source_action": "click(chair)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "bronze key"
+    },
+    "source_step": 17,
+    "source_action": "click(bronze key)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "knife"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "knife",
+      "target": "chair"
+    },
+    "source_step": 18,
+    "source_action": "apply(knife, chair)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "paper 2"
+    },
+    "source_step": 19,
+    "source_action": "click(paper 2)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "paper 2: A piece of paper with mathematic calculations. Four graphics are in the middle -- square, triangle, circle and pentagon."
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "4305",
+      "target": "safe"
+    },
+    "source_step": 20,
+    "source_action": "input(4305, safe)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "pool ball 3"
+    },
+    "source_step": 21,
+    "source_action": "click(pool ball 3)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "the billiard room"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "bronze key"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "bronze key",
+      "target": "wooden door"
+    },
+    "source_step": 22,
+    "source_action": "apply(bronze key, wooden door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "key in the wall"
+    },
+    "source_step": 23,
+    "source_action": "click(key in the wall)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "key in the wall",
+      "target": "suitcase"
+    },
+    "source_step": 24,
+    "source_action": "apply(key in the wall, suitcase)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "pool ball 4"
+    },
+    "source_step": 25,
+    "source_action": "click(pool ball 4)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "hammer"
+    },
+    "source_step": 26,
+    "source_action": "click(hammer)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "hammer",
+      "target": "nails and board"
+    },
+    "source_step": 27,
+    "source_action": "apply(hammer, nails and board)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "pool ball 2"
+    },
+    "source_step": 28,
+    "source_action": "click(pool ball 2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "pool ball 1"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "pool ball 1",
+      "target": "pockets"
+    },
+    "source_step": 29,
+    "source_action": "apply(pool ball 1, pockets)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "pool ball 3"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "pool ball 3",
+      "target": "pockets"
+    },
+    "source_step": 30,
+    "source_action": "apply(pool ball 3, pockets)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "pool ball 4"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "pool ball 4",
+      "target": "pockets"
+    },
+    "source_step": 31,
+    "source_action": "apply(pool ball 4, pockets)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "pool ball 2"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "pool ball 2",
+      "target": "pockets"
+    },
+    "source_step": 32,
+    "source_action": "apply(pool ball 2, pockets)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "2134",
+      "target": "pockets"
+    },
+    "source_step": 33,
+    "source_action": "input(2134, pockets)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "key card 1"
+    },
+    "source_step": 34,
+    "source_action": "click(key card 1)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "front desk"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "key card 1"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "key card 1",
+      "target": "cashier"
+    },
+    "source_step": 35,
+    "source_action": "apply(key card 1, cashier)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "bottle of wine",
+      "target": "cashier"
+    },
+    "source_step": 36,
+    "source_action": "apply(bottle of wine, cashier)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "key card 2"
+    },
+    "source_step": 37,
+    "source_action": "click(key card 2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "the hallway"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "key card 2",
+      "target": "exit door"
+    },
+    "source_step": 38,
+    "source_action": "apply(key card 2, exit door)"
+  }
+]

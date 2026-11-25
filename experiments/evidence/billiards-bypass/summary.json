@@ -1,0 +1,25 @@
+{
+  "game": "game1-3-easy",
+  "success": true,
+  "steps": 73,
+  "progress": 71.05,
+  "hints": 0,
+  "forced": 0,
+  "gives": 1,
+  "A_actions": [
+    "apply(key card 2, exit door)",
+    "click(photo)"
+  ],
+  "schedule": "legacy A/B alternating",
+  "oracle": "reference actions/codes known; legal movement; no helper",
+  "upstream_commit": "2d42347446a8e9ed4f058fa415d40afa194166a5",
+  "sha256": {
+    "scripts/reproduce_billiards_bypass.py": "b78785a05797619dfb20ee270dc6562d5436842b605bf0334701dbd3eea22a97",
+    "scripts/coop_original.py": "074b05744739f22b81d2c8ee7db9ce2224bb978ad2237f0edd2128b2f01a5a57",
+    "scripts/original_escape.py": "b4876837a3b8104075f17366e8cc2ec7eff17f2cfc6eab4b92cedaf40cb4ed29",
+    "scripts/split_metrics.py": "5f7a661687746de29871b431db319e42b938f401862620c56d098b529a96d8e3",
+    "data/roles/game1-3-easy.json": "58dec0ac14cdfb7ab6eab9090747fa76fa366904af3ab5a449fda3dbce7446a4",
+    "vendor/escapebench/data/game1-3-easy.yaml": "a1ca0dda3f632a3be56a3a39fc2c4155e13236556f3272ded99d3a274973ff69",
+    "vendor/escapebench/data/reference/key_log_1-3.txt": "695dfa400052f7ba68e5950506bd704cc39cc91bb5e00f0d768b73ad770f71f4"
+  }
+}

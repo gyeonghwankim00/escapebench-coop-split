@@ -1,0 +1,330 @@
+{
+  "protocol": "escapebench-adaptive-v6",
+  "games": [
+    {
+      "game": "game1-1-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 40,
+          "reference_steps_total": 40
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": true,
+          "reference_steps_completed": 6,
+          "reference_steps_total": 40
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": true,
+          "reference_steps_completed": 13,
+          "reference_steps_total": 40
+        }
+      ],
+      "cohort": "control_or_review",
+      "bypass_risk": true,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game1-2-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 45,
+          "reference_steps_total": 45
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 12,
+          "reference_steps_total": 45
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 7,
+          "reference_steps_total": 45
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game1-3-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 38,
+          "reference_steps_total": 38
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": true,
+          "reference_steps_completed": 27,
+          "reference_steps_total": 38
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 11,
+          "reference_steps_total": 38
+        }
+      ],
+      "cohort": "control_or_review",
+      "bypass_risk": true,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game1-4-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 64,
+          "reference_steps_total": 64
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 13,
+          "reference_steps_total": 64
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 29,
+          "reference_steps_total": 64
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game1-5-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 62,
+          "reference_steps_total": 62
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 17,
+          "reference_steps_total": 62
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 16,
+          "reference_steps_total": 62
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game2-1-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 45,
+          "reference_steps_total": 45
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 16,
+          "reference_steps_total": 45
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 11,
+          "reference_steps_total": 45
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game2-2-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 66,
+          "reference_steps_total": 66
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 14,
+          "reference_steps_total": 66
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 20,
+          "reference_steps_total": 66
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game2-3-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 94,
+          "reference_steps_total": 95
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 34,
+          "reference_steps_total": 95
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 19,
+          "reference_steps_total": 95
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game2-4-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 57,
+          "reference_steps_total": 57
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": true,
+          "reference_steps_completed": 16,
+          "reference_steps_total": 57
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": true,
+          "reference_steps_completed": 21,
+          "reference_steps_total": 57
+        }
+      ],
+      "cohort": "control_or_review",
+      "bypass_risk": true,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game2-5-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 58,
+          "reference_steps_total": 58
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 15,
+          "reference_steps_total": 58
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 21,
+          "reference_steps_total": 58
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game3-1-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 72,
+          "reference_steps_total": 72
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 11,
+          "reference_steps_total": 72
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": true,
+          "reference_steps_completed": 16,
+          "reference_steps_total": 72
+        }
+      ],
+      "cohort": "control_or_review",
+      "bypass_risk": true,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    },
+    {
+      "game": "game3-2-easy",
+      "checks": [
+        {
+          "omitted_puzzle_role": null,
+          "escape": true,
+          "reference_steps_completed": 48,
+          "reference_steps_total": 48
+        },
+        {
+          "omitted_puzzle_role": "A",
+          "escape": false,
+          "reference_steps_completed": 8,
+          "reference_steps_total": 48
+        },
+        {
+          "omitted_puzzle_role": "B",
+          "escape": false,
+          "reference_steps_completed": 18,
+          "reference_steps_total": 48
+        }
+      ],
+      "cohort": "main_candidate",
+      "bypass_risk": false,
+      "known_code_assumption": true,
+      "validation": "optimistic structural audit; full costed witness still required"
+    }
+  ],
+  "warning": "Known codes can bypass information dependencies even in the original game. Flags require clue review and a costed witness; absence of bypass is not proof. Flagged games are excluded from primary comparisons pending review."
+}

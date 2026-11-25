@@ -1,0 +1,25 @@
+{
+  "description": "Matched 2x2 solo pilot. Same prompt, history, sampling and token budget; thinking and external hints vary independently. Not an exact EscapeBench reproduction.",
+  "datasets": [
+    "data/pilot/02_records_billiards/environment.json",
+    "data/pilot/06_basement_laboratory/environment.json"
+  ],
+  "seeds": [42],
+  "settings": {
+    "max_steps": 1000,
+    "stuck_steps": 50,
+    "hint_patience": 20,
+    "history_turns": 10,
+    "max_new_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_seconds": 1800
+  },
+  "conditions": [
+    {"id": "direct_nohint", "thinking": false, "hints": false},
+    {"id": "direct_hint50", "thinking": false, "hints": true},
+    {"id": "thinking_nohint", "thinking": true, "hints": false},
+    {"id": "thinking_hint50", "thinking": true, "hints": true}
+  ]
+}

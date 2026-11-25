@@ -1,0 +1,116 @@
+{
+  "version": "v3",
+  "game": "game1-1-easy",
+  "A": [
+    "living room",
+    "telephone cabinet close-up",
+    "bedroom",
+    "toolbox close-up",
+    "cardboard box close-up",
+    "study",
+    "wall close-up",
+    "photo close-up",
+    "desk close-up",
+    "locker close-up"
+  ],
+  "B": [
+    "bathroom",
+    "mirror close-up",
+    "ventilation fan close-up",
+    "dining room and kitchen",
+    "dining table close-up",
+    "cabinet above stove close-up",
+    "left cabinet close-up",
+    "right cabinet close-up",
+    "cabinet above sink close-up",
+    "sink close-up"
+  ],
+  "starts": {
+    "B": "dining room and kitchen"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 40,
+    "alone_A": 13,
+    "alone_B": 6,
+    "together_no_give": 25,
+    "with_give": 40,
+    "b_share": 0.39,
+    "handoffs": 6,
+    "components": {
+      "A": 1,
+      "B": 2
+    },
+    "clue_inputs_cross": 3
+  },
+  "cross_clues": [
+    {
+      "answer": "cs546",
+      "target": "toolbox",
+      "target_role": "A",
+      "partner_sources": [
+        "mirror"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "4713",
+      "target": "safe",
+      "target_role": "B",
+      "partner_sources": [
+        "desk lamp",
+        "study wall"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "655324223",
+      "target": "right door to the exit",
+      "target_role": "A",
+      "partner_sources": [
+        "safe"
+      ],
+      "all_sources_with_partner": true
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "study key",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(study key, left door to the study)"
+    },
+    {
+      "tool": "shard_3",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shard_3, mirror)"
+    },
+    {
+      "tool": "shard_4",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(shard_4, mirror)"
+    },
+    {
+      "tool": "screwdriver",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(screwdriver, ventilation fan)"
+    },
+    {
+      "tool": "locker key",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(locker key, locked locker door)"
+    },
+    {
+      "tool": "flashlight",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(flashlight, study wall)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

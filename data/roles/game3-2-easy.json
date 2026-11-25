@@ -1,0 +1,108 @@
+{
+  "version": "v3",
+  "game": "game3-2-easy",
+  "A": [
+    "laundry room overview",
+    "laundry room left corner",
+    "laundry room right corner",
+    "right corridor overview",
+    "end of right corridor"
+  ],
+  "B": [
+    "left corridor overview",
+    "end of left corridor",
+    "office room overview",
+    "office room right side"
+  ],
+  "starts": {
+    "B": "left corridor overview"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 48,
+    "alone_A": 18,
+    "alone_B": 8,
+    "together_no_give": 26,
+    "with_give": 48,
+    "b_share": 0.53,
+    "handoffs": 5,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 4
+  },
+  "cross_clues": [
+    {
+      "answer": "5974",
+      "target": "information board",
+      "target_role": "A",
+      "partner_sources": [
+        "game machine"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "5891",
+      "target": "office door password pad",
+      "target_role": "B",
+      "partner_sources": [
+        "left half paper",
+        "right half paper"
+      ],
+      "all_sources_with_partner": true
+    },
+    {
+      "answer": "1998",
+      "target": "red mail box",
+      "target_role": "B",
+      "partner_sources": [
+        "graffiti"
+      ],
+      "all_sources_with_partner": false
+    },
+    {
+      "answer": "1232",
+      "target": "tool box",
+      "target_role": "B",
+      "partner_sources": [
+        "code paper"
+      ],
+      "all_sources_with_partner": false
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "game ticket",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(game ticket, game machine)"
+    },
+    {
+      "tool": "dollar coins",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(dollar coins, drying machine)"
+    },
+    {
+      "tool": "besom + clothes",
+      "found_by": "both",
+      "used_by": "either",
+      "action": "craft(clothes, besom)"
+    },
+    {
+      "tool": "besom",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(besom, graffiti)"
+    },
+    {
+      "tool": "gold key",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(gold key, iron gate)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

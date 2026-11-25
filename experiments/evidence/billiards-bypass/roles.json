@@ -1,0 +1,43 @@
+{
+  "version": "v3",
+  "game": "game1-3-easy",
+  "A": [
+    "the hallway",
+    "left corner of the hallway",
+    "the elevator room"
+  ],
+  "B": [
+    "the billiard room",
+    "front desk",
+    "pool table"
+  ],
+  "starts": {
+    "B": "the billiard room"
+  },
+  "low_interdependence": true,
+  "metrics": {
+    "total": 38,
+    "alone_A": 11,
+    "alone_B": 26,
+    "together_no_give": 37,
+    "with_give": 38,
+    "b_share": 0.68,
+    "handoffs": 1,
+    "components": {
+      "A": 1,
+      "B": 1
+    },
+    "clue_inputs_cross": 0
+  },
+  "cross_clues": [],
+  "reference_handoffs": [
+    {
+      "tool": "key card 2",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(key card 2, exit door)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

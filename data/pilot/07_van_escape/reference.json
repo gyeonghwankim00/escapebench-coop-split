@@ -1,0 +1,823 @@
+[
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "van in dessert"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "wood stick"
+    },
+    "source_step": 1,
+    "source_action": "click(wood stick)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "trunk of the van"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "trunk door"
+    },
+    "source_step": 2,
+    "source_action": "click(trunk door)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "rag"
+    },
+    "source_step": 3,
+    "source_action": "click(rag)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "wire cutter"
+    },
+    "source_step": 4,
+    "source_action": "click(wire cutter)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "underneath part of the van"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "bunch of keys"
+    },
+    "source_step": 5,
+    "source_action": "click(bunch of keys)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "wire cutter",
+      "target": "iron wire"
+    },
+    "source_step": 6,
+    "source_action": "apply(wire cutter, iron wire)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "stepladder"
+    },
+    "source_step": 7,
+    "source_action": "click(stepladder)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "top of the van"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "wood stick",
+      "target": "skylight"
+    },
+    "source_step": 8,
+    "source_action": "apply(wood stick, skylight)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "silver key"
+    },
+    "source_step": 9,
+    "source_action": "click(silver key)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "repair kit in the trunk"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "silver key",
+      "target": "repair kit box"
+    },
+    "source_step": 10,
+    "source_action": "apply(silver key, repair kit box)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "engine oil"
+    },
+    "source_step": 11,
+    "source_action": "click(engine oil)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "craft",
+      "first": "engine oil",
+      "second": "rag"
+    },
+    "source_step": 12,
+    "source_action": "craft(engine oil, rag)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "craft",
+      "first": "rag",
+      "second": "bunch of keys"
+    },
+    "source_step": 13,
+    "source_action": "craft(rag, bunch of keys)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "door of the van"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "bunch of keys",
+      "target": "van door"
+    },
+    "source_step": 14,
+    "source_action": "apply(bunch of keys, van door)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "van indoor front overview"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "seat switch"
+    },
+    "source_step": 15,
+    "source_action": "click(seat switch)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "water bottle"
+    },
+    "source_step": 16,
+    "source_action": "click(water bottle)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "front desk"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "left seat"
+    },
+    "source_step": 17,
+    "source_action": "click(left seat)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "solar panel"
+    },
+    "source_step": 18,
+    "source_action": "click(solar panel)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "magazine"
+    },
+    "source_step": 19,
+    "source_action": "click(magazine)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "book shelf"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "wrench"
+    },
+    "source_step": 20,
+    "source_action": "click(wrench)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "computer on the desk"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "old thesis paper"
+    },
+    "source_step": 21,
+    "source_action": "click(old thesis paper)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "passage way in van"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "screwdriver"
+    },
+    "source_step": 22,
+    "source_action": "click(screwdriver)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "shelf door 1"
+    },
+    "source_step": 23,
+    "source_action": "click(shelf door 1)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "cup"
+    },
+    "source_step": 24,
+    "source_action": "click(cup)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "craft",
+      "first": "water bottle",
+      "second": "cup"
+    },
+    "source_step": 25,
+    "source_action": "craft(water bottle, cup)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "microwave"
+    },
+    "source_step": 26,
+    "source_action": "click(microwave)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "cup",
+      "target": "microwave"
+    },
+    "source_step": 27,
+    "source_action": "apply(cup, microwave)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "cup with hot water"
+    },
+    "source_step": 28,
+    "source_action": "click(cup with hot water)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "shelf door 2"
+    },
+    "source_step": 29,
+    "source_action": "click(shelf door 2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "tin foil"
+    },
+    "source_step": 30,
+    "source_action": "click(tin foil)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bed overview"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "battery"
+    },
+    "source_step": 31,
+    "source_action": "click(battery)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "tin foil",
+      "target": "torch light"
+    },
+    "source_step": 32,
+    "source_action": "apply(tin foil, torch light)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "battery",
+      "target": "torch light"
+    },
+    "source_step": 33,
+    "source_action": "apply(battery, torch light)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "bed shelf 1"
+    },
+    "source_step": 34,
+    "source_action": "click(bed shelf 1)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "light bulb"
+    },
+    "source_step": 35,
+    "source_action": "click(light bulb)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "right side of bed"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "wrench",
+      "target": "generator"
+    },
+    "source_step": 36,
+    "source_action": "apply(wrench, generator)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "old thesis paper: a paper with title \"[26] impact of solar panel to [10] years of energy consumption\", seems like a hint for a digital password"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "drawers"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "2610",
+      "target": "top drawer"
+    },
+    "source_step": 37,
+    "source_action": "input(2610, top drawer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "battery clip"
+    },
+    "source_step": 38,
+    "source_action": "click(battery clip)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "battery clip"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "battery clip",
+      "target": "generator"
+    },
+    "source_step": 39,
+    "source_action": "apply(battery clip, generator)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "underneath part of the van"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "screwdriver"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "screwdriver",
+      "target": "license plate space"
+    },
+    "source_step": 40,
+    "source_action": "apply(screwdriver, license plate space)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "license plate"
+    },
+    "source_step": 41,
+    "source_action": "click(license plate)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "torch light with power"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "torch light with power",
+      "target": "license plate space"
+    },
+    "source_step": 42,
+    "source_action": "apply(torch light with power, license plate space)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "shelf key"
+    },
+    "source_step": 43,
+    "source_action": "click(shelf key)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "mental card"
+    },
+    "source_step": 44,
+    "source_action": "click(mental card)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "top of the van"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "light bulb"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "light bulb",
+      "target": "spotlight"
+    },
+    "source_step": 45,
+    "source_action": "apply(light bulb, spotlight)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "solar panel"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "solar panel",
+      "target": "solar panel slot"
+    },
+    "source_step": 46,
+    "source_action": "apply(solar panel, solar panel slot)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "door of the van"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "cup with hot water"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "cup with hot water",
+      "target": "mud"
+    },
+    "source_step": 47,
+    "source_action": "apply(cup with hot water, mud)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bed overview"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "shelf key"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "shelf key",
+      "target": "bed shelf 2"
+    },
+    "source_step": 48,
+    "source_action": "apply(shelf key, bed shelf 2)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "bed shelf inside"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "scraper"
+    },
+    "source_step": 49,
+    "source_action": "click(scraper)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "pass",
+      "tool": "mental card"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "mental card",
+      "target": "safe box"
+    },
+    "source_step": 50,
+    "source_action": "apply(mental card, safe box)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "top of the van"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "spotlight: the spotlight is on, showing the 4 digits \"3149\", seems like a 4-digit password hint"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "3149",
+      "target": "safe box"
+    },
+    "source_step": 51,
+    "source_action": "input(3149, safe box)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "click",
+      "target": "USB flash disk"
+    },
+    "source_step": 52,
+    "source_action": "click(USB flash disk)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "send",
+      "message": "magazine: a magazine with title \"California 06\", seems like a hint for a password"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "drawers"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "input",
+      "value": "05062011",
+      "target": "bottom drawer"
+    },
+    "source_step": 53,
+    "source_action": "input(05062011, bottom drawer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "click",
+      "target": "paper with names"
+    },
+    "source_step": 54,
+    "source_action": "click(paper with names)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "move",
+      "target": "door of the van"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "pass",
+      "tool": "scraper"
+    }
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "apply",
+      "tool": "scraper",
+      "target": "mud"
+    },
+    "source_step": 55,
+    "source_action": "apply(scraper, mud)"
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "computer on the desk"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "apply",
+      "tool": "USB flash disk",
+      "target": "computer"
+    },
+    "source_step": 56,
+    "source_action": "apply(USB flash disk, computer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "mud: the mud is off, there writes Jacob Korakon, seems like the owner of this van"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "Jacob Korakon",
+      "target": "computer"
+    },
+    "source_step": 57,
+    "source_action": "input(Jacob Korakon, computer)"
+  },
+  {
+    "actor": "B",
+    "action": {
+      "type": "send",
+      "message": "paper with names: a paper with different names on it, showing \"Ally Liam Michael Violet\", seems familiar as previously seen on the book shelf"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "book shelf"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "move",
+      "target": "computer on the desk"
+    }
+  },
+  {
+    "actor": "A",
+    "action": {
+      "type": "input",
+      "value": "1927",
+      "target": "computer"
+    },
+    "source_step": 58,
+    "source_action": "input(1927, computer)"
+  }
+]

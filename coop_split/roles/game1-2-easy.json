@@ -1,0 +1,112 @@
+{
+  "version": "v3",
+  "game": "game1-2-easy",
+  "A": [
+    "hallway",
+    "blocked path close-up",
+    "cabinet close-up",
+    "hallway right",
+    "small cabinet close-up",
+    "large cabinet close-up",
+    "room 805 door view",
+    "ventilation fan close-up",
+    "operating room door overview",
+    "operating room",
+    "surgical table close-up",
+    "operating room cabinet close-up",
+    "upper cabinet close-up",
+    "lower cabinet close-up",
+    "anatomy poster close-up"
+  ],
+  "B": [
+    "elevator room",
+    "elevator interior",
+    "room 805",
+    "desk close-up",
+    "left bookshelf close-up",
+    "bedside table close-up",
+    "right bookshelf close-up",
+    "805 right room"
+  ],
+  "starts": {
+    "B": "room 805"
+  },
+  "low_interdependence": false,
+  "metrics": {
+    "total": 45,
+    "alone_A": 7,
+    "alone_B": 12,
+    "together_no_give": 19,
+    "with_give": 45,
+    "b_share": 0.4,
+    "handoffs": 8,
+    "components": {
+      "A": 1,
+      "B": 2
+    },
+    "clue_inputs_cross": 1
+  },
+  "cross_clues": [
+    {
+      "answer": "2333",
+      "target": "safe",
+      "target_role": "A",
+      "partner_sources": [
+        "paper with code"
+      ],
+      "all_sources_with_partner": false
+    }
+  ],
+  "reference_handoffs": [
+    {
+      "tool": "keycard",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(keycard, operating room door)"
+    },
+    {
+      "tool": "paper1",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(paper1, drawer with code lock)"
+    },
+    {
+      "tool": "paper3",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(paper3, drawer with code lock)"
+    },
+    {
+      "tool": "paper4",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(paper4, drawer with code lock)"
+    },
+    {
+      "tool": "lubricant",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(lubricant, padlock)"
+    },
+    {
+      "tool": "battery",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(battery, unfunctional drill)"
+    },
+    {
+      "tool": "drill bit",
+      "found_by": "B",
+      "used_by": "A",
+      "action": "apply(drill bit, unfunctional drill)"
+    },
+    {
+      "tool": "electric drill",
+      "found_by": "A",
+      "used_by": "B",
+      "action": "apply(electric drill, circuit board)"
+    }
+  ],
+  "method": "First-ranked split of scripts/search_splits.py; see scripts/make_roles.py",
+  "note": "Evaluator-only. Clues, handoffs and metrics must never be shown to agents."
+}

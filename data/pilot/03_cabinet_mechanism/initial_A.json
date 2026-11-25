@@ -1,0 +1,15 @@
+{
+  "room": "A",
+  "area": "room A",
+  "description": "You are in room A. Explore your accessible areas. You can send messages and pass held objects to your partner from any area. Original doors and mechanisms can unlock areas in either room. Completing the original escape mechanism lets the team escape.",
+  "areas": [
+    "room A",
+    "letter",
+    "apartment entrance"
+  ],
+  "objects": [],
+  "inventory": [],
+  "messages": [],
+  "own_exit_open": false,
+  "team_success": false
+}

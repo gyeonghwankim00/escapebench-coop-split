@@ -1,0 +1,54 @@
+{
+  "game": "game1-3-easy",
+  "pilot_id": "02_records_billiards",
+  "title": "명부와 당구실",
+  "A": [
+    "the hallway",
+    "the billiard room",
+    "front desk"
+  ],
+  "B": [
+    "left corner of the hallway",
+    "the elevator room",
+    "pool table"
+  ],
+  "clues": [
+    {
+      "holder_source": "paper 1",
+      "target": "lockbox",
+      "answer": "7428",
+      "tokens": [
+        "Patient 2 John",
+        "Patient 3 Eric",
+        "Patient 4 Steven",
+        "Patient 7 Patrick",
+        "Patient 8 Andera"
+      ]
+    },
+    {
+      "holder_source": "book",
+      "target": "lockbox",
+      "answer": "7428",
+      "tokens": [
+        "Patrick, Steven, John, Andera"
+      ]
+    },
+    {
+      "holder_source": "paper 2",
+      "target": "safe",
+      "answer": "4305",
+      "tokens": [
+        "square, triangle, circle and pentagon"
+      ]
+    },
+    {
+      "holder_source": "pockets",
+      "target": "pockets",
+      "answer": "2134",
+      "tokens": [
+        "XI-IX, XV-XIV, X-VII, IX-V"
+      ]
+    }
+  ],
+  "note": "Evaluator-only. Clue answers must never be shown to agents."
+}
